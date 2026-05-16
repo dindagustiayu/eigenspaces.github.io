@@ -2,20 +2,16 @@
 title: Learning more
 ---
 
-## Learn more
+## Inspiration
 
-An excellent overview: **Reproducible authoring with Quarto** - Mine Çetinkaya-Rundel, Feb 2022
-    -   [slides](https://mine-cetinkaya-rundel.github.io/2022-repro-toronto/#/title-slide), [youtube](https://www.youtube.com/watch?v=6p4vOKS6Xls)
-    
-[A Quarto tip a day](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/) in June 2022, from Mine Çetinkaya-Rundel.
+The repositories here was inpired by [Christian Hill](https://www.linkedin.com/in/christian-hill-8066b359/), the author of the book __"Learning Scientific Programming with Python (2nd edition)"__, published by University of Cambridge. The course "book" contains completed topics from general programming concepts like loops and functions, through `NumPy`, `SciPy`, and `Matplotlib` for numerical programming and data visualizations. All topics available for free from [scipython](https://scipython.com/books/book2/).
 
-### Examples in the wild: 
--   [Openscapes Champions Lessons Series](https://openscapes.github.io/series)
--   [Openscapes Approach Guide](https://openscapes.github.io/approach-guide/)\
--   [NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/)
+## Linked Resources
 
-See many more examples at the [quarto gallery](https://quarto.org/docs/gallery/)!
+Here is a list of resources that we are linking to that have been developed by others.
 
-### Inspiration
+- [Computational Chemistry](https://pythoninchemistry.org/ch40208/introduction/about_this_book.html) by Benjamin Morgan and Andrew McCluskey from University of Bath.
+- [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) by Jake T VanderPlas from Google Research.
+- [Drug Discovery with Python](https://github.com/alex-aziz/Drug-Discovery-with-Python) by Zhaohui Jiang and Alex Aziz from Manchester Metropolitan Unversity.
 
-Are you making onboarding documentation? Check out [The Fay Lab Manual](https://thefaylab.github.io/lab-manual/) (now in Quarto!) for inspiration on structure - you could also start there and make it your own.
+
