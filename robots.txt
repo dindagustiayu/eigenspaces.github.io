@@ -1,1 +1,1 @@
-Sitemap: https://randomspace.github.io/sitemap.xml
+Sitemap: https://randomspaces.github.io/sitemap.xml

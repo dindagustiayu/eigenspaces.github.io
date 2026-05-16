@@ -1,45 +1,5 @@
 [
   {
-    "objectID": "explore.html",
-    "href": "explore.html",
-    "title": "Explore and setup",
-    "section": "",
-    "text": "Python is a powerful, object-oriented, high level programming language with dynamic semantics that is well-suited to many of the tasks of scientific computing. Python’s simple, easy to learn syntax emphasizes readibility and therefore reduces the cost of program maintenance. Python also supports modules and packages, which encourages program modularity and code reuse.\nThe Python interpreter and the extensive standard library are available in source or binary form such as Mathematical and MATLAB, without charge for all major computer operating systems (including Windows, Unix, Linux, and macOS), and can be freely distributed. But, in the distribution, Python needs a large number of additional modules and packages. The most notable of these, in the context of scientific computing, are as follows:\n\nNumpy: a fundamental package that provides a multidimensional array objects, various objects (such as arrays and matrices), including mathematical, logical, discrete Fourier transforms, lineral algebra and much more.\nScipy: a library that provides algorithms for optimization, integration, interpolation, differential equations, statistics and many other classes of problems.\nMatplotlib: a library for creating static, animated, and interactive visualizations.\npandas: a library providing high data sets for manipulating tabular data (DataFrame and Series).\nSymPy: a library for symbolic mathematics, with support for computer algebra system (CAS).",
-    "crumbs": [
-      "Explore and setup"
-    ]
-  },
-  {
-    "objectID": "explore.html#introduction-python",
-    "href": "explore.html#introduction-python",
-    "title": "Explore and setup",
-    "section": "",
-    "text": "Python is a powerful, object-oriented, high level programming language with dynamic semantics that is well-suited to many of the tasks of scientific computing. Python’s simple, easy to learn syntax emphasizes readibility and therefore reduces the cost of program maintenance. Python also supports modules and packages, which encourages program modularity and code reuse.\nThe Python interpreter and the extensive standard library are available in source or binary form such as Mathematical and MATLAB, without charge for all major computer operating systems (including Windows, Unix, Linux, and macOS), and can be freely distributed. But, in the distribution, Python needs a large number of additional modules and packages. The most notable of these, in the context of scientific computing, are as follows:\n\nNumpy: a fundamental package that provides a multidimensional array objects, various objects (such as arrays and matrices), including mathematical, logical, discrete Fourier transforms, lineral algebra and much more.\nScipy: a library that provides algorithms for optimization, integration, interpolation, differential equations, statistics and many other classes of problems.\nMatplotlib: a library for creating static, animated, and interactive visualizations.\npandas: a library providing high data sets for manipulating tabular data (DataFrame and Series).\nSymPy: a library for symbolic mathematics, with support for computer algebra system (CAS).",
-    "crumbs": [
-      "Explore and setup"
-    ]
-  },
-  {
-    "objectID": "explore.html#installing-python",
-    "href": "explore.html#installing-python",
-    "title": "Explore and setup",
-    "section": "Installing Python",
-    "text": "Installing Python\nWe can install Python on windows, linux, or macOS using the official installer from www.python.org, it’s easy to follow the instructions. However, there are several full distribution which include the NumPy, SciPy and Matplotlib libraries to save you from having to download and install these yourself:\n\nAnaconda is an isolated Python packages to manage both the Python interpreter itself as well as packaged from multiple programming languages. It’s available for free from https://www.anaconda.com.\nEntought Deployment Manager (EDM) is Entought’s Python environment and application manager that create multiple self-contained Python environments. It can be download from https://docs.enthought.com.",
-    "crumbs": [
-      "Explore and setup"
-    ]
-  },
-  {
-    "objectID": "explore.html#code-editors",
-    "href": "explore.html#code-editors",
-    "title": "Explore and setup",
-    "section": "Code Editors",
-    "text": "Code Editors\nCode editors are very important for coding. They’are literally how we tell the computer what our code is. Every code editor comes in different shapes and sizes. Popular choices include:\n\nVisual Studio Code (Windows, macOS, and Linux). It’s a popular, free, and open source code editor developed by Microsoft.\nNotepad++ (Windows), a very simple, good code editor and a free Windows-only editor.\nSublime Text (Windows, macOS, Linux) is a good editor, altough only free for personal use, we have to buy a license if we’re using it for business.\nVim (Linux and Unix) is a text editor which run is our terminal. It was forked from vi, and more features were added.\nJupyter Notebook (Windows, macOS, Linux) is a free, open standards, and web services for interactive computing across all programming languages. It uses a cell-based system.",
-    "crumbs": [
-      "Explore and setup"
-    ]
-  },
-  {
     "objectID": "learning-more.html",
     "href": "learning-more.html",
     "title": "Learning more",
@@ -70,88 +30,227 @@
     ]
   },
   {
-    "objectID": "quarto-workflows/data-science/basicnumpy.html#reference",
-    "href": "quarto-workflows/data-science/basicnumpy.html#reference",
-    "title": "NumPy and Matplotlib",
-    "section": "Reference:",
-    "text": "Reference:\n\nKinematic Equations and Free Fall",
+    "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#adiabatic-process-and-carnot-cycle",
+    "href": "quarto-workflows/thermodynamics/adiabatic-process.html#adiabatic-process-and-carnot-cycle",
+    "title": "Python for Scientific Computing and Data Visualization",
+    "section": "Adiabatic process and Carnot Cycle",
+    "text": "Adiabatic process and Carnot Cycle",
     "crumbs": [
       "Contents",
-      "Data Science",
-      "NumPy and Matplotlib"
+      "Thermodynamics",
+      "Adiabatic process and Carnot Cycle"
     ]
   },
   {
-    "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.1---correct-einsteins-mistakes",
-    "href": "quarto-workflows/data-science/basicnumpy.html#p5.1---correct-einsteins-mistakes",
-    "title": "NumPy and Matplotlib",
-    "section": "P5.1 - Correct Einstein’s mistakes",
-    "text": "P5.1 - Correct Einstein’s mistakes\nSpecial relativity is the area of physics deling with incredibly large velocities. In special relitivity, the momentum p of an object with velocity v(in m/s), and mass m (in kg) is given as.\n\n\\[p=m.v.\\gamma, \\gamma=\\frac{1}{\\sqrt{1-\\frac{v^{2}}{c^{2}}}}\\]\n\nwhere c\\(\\approx\\) 300.000.000 m/s is the speed of light. The program below attempts to calculate the momentum of an object with speed equal to 1/3 the speed of light, and mass m = 0.14 kg. The program has many errors, and doesn’t work. Copy and run the program. Correct the errors, and make it work like intended.\n# Relativity Einstein\nc = 3e8 # the speed of light in m/s\nv = c / 3 # the velocity 1/3 the speed of light\nm = 0.14 # mass in kg\n\n# Calculate the relativity momentum\nimport numpy as np\ngamma = 1 / (np.sqrt(1-(v/c)**2))\np_momentum = m * v * gamma\n\nprint(f'gamma = {gamma:.6f}')\nprint(f'p_momentum = {p_momentum:.6f}') # the momentum in kg m/s\ngamma = 1.060660\np_momentum = 14849242.404917",
+    "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#introduction-of-thermodynamics",
+    "href": "quarto-workflows/thermodynamics/adiabatic-process.html#introduction-of-thermodynamics",
+    "title": "Python for Scientific Computing and Data Visualization",
+    "section": "Introduction of Thermodynamics",
+    "text": "Introduction of Thermodynamics\nThermodynamics is the study of the relationship between heat (or energy) and work. In other words, thermodynamics looks at how we can put our energy into a system (whether it is a machine or molecule) and make it do work. Alternatively, we might be able to do some work on system and make it produce energy (like spinning the turbines in a power station to produce electricity).\nIn chemistry, we sometimes speak more broadly about “energetics” of reactions (rather than thermodynamics), because energy given off during a reaction may simply be lost to the surroundings without doing useful work. Nevertheless, the ideas are the same: energy can be added to a set of molecules in order to produce a reaction, or a reaction can occur between a set of molecules in order to release energy.\nThermodynamics, on the other hand, is really concerned with the overall energy change from the beginning of a reaction to the end. It compares the energies of two sets of molecules to each other: the nergies of the reactants and the energies of the products.",
     "crumbs": [
       "Contents",
-      "Data Science",
-      "NumPy and Matplotlib"
+      "Thermodynamics",
+      "Adiabatic process and Carnot Cycle"
     ]
   },
   {
-    "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.2---rydbergs-constant",
-    "href": "quarto-workflows/data-science/basicnumpy.html#p5.2---rydbergs-constant",
-    "title": "NumPy and Matplotlib",
-    "section": "P5.2 - Rydberg’s constant",
-    "text": "P5.2 - Rydberg’s constant\nRydberg’s constant \\(R_{\\infty}\\) for a heavy atom is used in physics to calculate the wavelength to spectral lines. The constant has been found to have the following value:\n\n\\[R_{\\infty}=\\frac{m_{e}e_{4}}{8\\varepsilon_{0}{2}h^{3}c}\\]\n\nwhere: - \\(m_{e}=9.109 \\times 10^{-31}\\) m is the mass of an electron - \\(e=1.602 \\times 10^{-19}\\) C is the charge of a proton (also called the elementary charge) - \\(\\varepsilon_{0}=8.854 \\times 10^{-12}C V^{-1} m^{-1}\\) is the electrical constant - h = 6.626 \\(\\times\\) \\(10^{-34}\\) J s is Planck’s constant - c = 3 \\(\\times\\) \\(10^{8}\\) m/s is the speed of light.\nwrite the program that assigns the values of the physical constants to variables, and use the variables to calculate the value of Rydberg’s constant.\n# Calculate Rydberg's constant\nme = 9.109e-31 # mass of an electron\ne = 1.602e-19 # the charge of a proton\nvarepsilon0 = 8.854e-12 # the electrical constant\nh = 6.626e-34 # Planck's constant\nc = 3e8 # speed of the light\n\nR_infinity = (me * e**4)/(8 * varepsilon0**2 * h**3 * c)\nprint(f'R infinity = {R_infinity:.6e}') # the Rydberg's constant\nR infinity = 1.096166e+07",
+    "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#thermodynamics-cycles",
+    "href": "quarto-workflows/thermodynamics/adiabatic-process.html#thermodynamics-cycles",
+    "title": "Python for Scientific Computing and Data Visualization",
+    "section": "Thermodynamics Cycles",
+    "text": "Thermodynamics Cycles\nA thermodynamic cycle consists of a linked sequence of thermodynamic processes that involve transfer of heat and work into and out of the system, while varying pressure, temperature, and other state variables within the system, and eventually return the system to its initial state.\nThermodynamics is concerned with the change in \\(U\\) (and other functions) between states:\n\n\\(\\Delta U= U_{2}-U{1}\\)\n\nsince \\(U\\) is a state function, the path between these states does not affect the value of \\(\\Delta U\\): We can choose the path that is easiest to calculate \\(\\Delta U\\) for, knowing that this quantity is the same for all paths.",
     "crumbs": [
       "Contents",
-      "Data Science",
-      "NumPy and Matplotlib"
+      "Thermodynamics",
+      "Adiabatic process and Carnot Cycle"
     ]
   },
   {
-    "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.3---measure-time",
-    "href": "quarto-workflows/data-science/basicnumpy.html#p5.3---measure-time",
-    "title": "NumPy and Matplotlib",
-    "section": "P5.3 - Measure time",
-    "text": "P5.3 - Measure time\nA ball is dropped straight down from a cliff with height \\(\\mathnormal{h}\\). The position of the ball after a time \\(\\mathnormal{t}\\) can be expressed as:\n\n\\[y(t)=v_{0}t - \\frac{1}{2}at^{2} + h\\]\n\nwhere a is the acceleration (in \\(m/s^{2})\\) and \\(v_{0}\\) is the initial velocity of the ball (Measured in m/s). We wish to find for how long time \\(t_{1}\\) such that \\(y(t_{1})=h_{1}\\). The position of the ball is measured per \\(\\Delta{t}\\) seconds.\nWrite a program which finds out how long time \\(t_{1}\\) it takes before the ball reaches height \\(h_{1}\\) by using a while loop. \\(h=10 m, y_{1}=5 m, \\Delta{t}=0.01, v_{0}=0 m/s\\) and \\(a = 9.81 m/s^{s}\\).\nh = 10 # height in m\ny1 = 5 # position of function of time t1 in m\nv0 = 0 # velocity at t = 0 in m/s\na = 9.81 # acceleration due to gravity in m/s^2\ndt = 0.01 # time step in s\n\n# Calculate how long time t1, if y(t1) = h1.\ny = h # initial positon\nt = 0\nt_values = [t]\ny_values = [y]\n\n\n# The position of the ball is measured per dt seconds\nwhile y &gt; y1:\n    t = t + dt\n    y = v0 * t - 0.5 * a * t**2 + h\n    t_values.append(t)\n    y_values.append(y)\n    \n# at this point, y &lt;= y1\nt1 = t\nprint(f'The ball reaches {y1} m after {t1:.2f} s.')\n\n# The manual instruction\nimport numpy as np\nty1 = np.sqrt(2* (h - y1)/a)\nprint(f'The ball reaches {y1} after {ty1:.3f} s')\n\n# Scatter plot with color map\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.collections import LineCollection\nt = np.linspace(0, 2, 200)\ny = 10 -0.5 * 9.81 * t**2\n\n# Create segments for line\npoints = np.array([t,y]).T.reshape(-1, 1, 2)\nsegments = np.concatenate([points[:-1], points[1:]], axis =1)\n\n# colormap\nLc=LineCollection(segments, cmap='viridis', linewidth=2, norm=plt.Normalize(t.min(), t.max()))\nLc.set_array(t) # color by time\n\nfig, ax = plt.subplots(figsize=(5,4))\nax.scatter(t, y, c=t, cmap='viridis', marker='D')\nax.add_collection(Lc)\nax.autoscale()\n\n# Adding colorbar\ncbar = plt.colorbar(Lc, ax=ax, pad=0.03)\ncbar.set_label('Time (s)')\n\nax.set_xlabel('Time (s)')\nax.set_ylabel('Height (m)')\nax.set_title('Ball Fall Motion with Colormap Line')\nax.grid(True)\nax.set_axisbelow(True)\nplt.savefig('Ballmotion_colormap.svg', bbox_inches='tight')\nplt.show('Ball Fall Motion')\nThe ball reaches 5 m after 1.01 s.\nThe ball reaches 5 after 1.010 s\n\n\n\nFigure 1. Ballmotion_colormap",
+    "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#internal-energy",
+    "href": "quarto-workflows/thermodynamics/adiabatic-process.html#internal-energy",
+    "title": "Python for Scientific Computing and Data Visualization",
+    "section": "Internal Energy",
+    "text": "Internal Energy\nThe internal energy, \\(U\\), of a thermodynamic system is the total energy, potential and kinetic, contained within it. For systems in equilibrium, the internal state can be thought of as entirely defined by the temperature, \\(T\\), volume, \\(V\\), pressure, \\(p\\), and composition, \\(N_{i}\\), of the system.",
     "crumbs": [
       "Contents",
-      "Data Science",
-      "NumPy and Matplotlib"
+      "Thermodynamics",
+      "Adiabatic process and Carnot Cycle"
     ]
   },
   {
-    "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.4---free-fall-motion",
-    "href": "quarto-workflows/data-science/basicnumpy.html#p5.4---free-fall-motion",
-    "title": "NumPy and Matplotlib",
-    "section": "P5.4 - Free Fall Motion",
-    "text": "P5.4 - Free Fall Motion\nA ball is dropped from rest at a height of h = 100 m. The time intervals is 0.1 s up to 5 s. The constant gravitational acceleration g = 9.81 \\(m/s^{2}\\).(a) What time does the ball hit the ground, (b) what is the velocity of the ball and (c) plot the position of the ball vs time as it falls. Free Fall Motion:\n\nImpact time (when y(t)=0)\n\n\\[t_{ground}=\\sqrt{\\frac{2h_{0}}{g}}\\]\n\nInitial Velocity at the ground\n\n\\[v_{ground}=gt_{ground}\\]\n\nPosition\n\n\\[y(t)=h_{0}-\\frac{g}{t^{2}}\\]\n\n\n\n\n\nFigure 2. Fallmotion_colormap",
+    "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#adiabatic-process",
+    "href": "quarto-workflows/thermodynamics/adiabatic-process.html#adiabatic-process",
+    "title": "Python for Scientific Computing and Data Visualization",
+    "section": "Adiabatic process",
+    "text": "Adiabatic process\nAn adiabatic process is one in which no heat is gained or lost by the system. The first law of thermodynamics with Q=0 shows that all the change in internal energy is in the form of work done.\nAn important alternative way the gas can expand is through an adiabatic process: if the cylinder is insulated so it is thermally isolated from its surroundings, \\(q=0\\) and as it does expansion wirk its internal energy must decrease, \\(\\Delta U = w &lt; 0\\) and its temperature drops. The reverse process, adiabatic compression, is familiar from inflating a bicycle tyre: As the air in the pump is compressed (rapidly enough that there is little time for heat flow to the surroundings) its temperature rises.\n\n\\(\\frac{C_{v}}{nR} \\frac{dT}{T} = -\\frac{dV}{V}\\)\n\nwhich can be integrated for a reversible expansion between the state (\\(V_{1}, T_{1})\\)) and (\\(V_{2}, T_{2})\\)) to give\n\n\\(\\frac{C_V}{nR}ln \\frac{dT}{T} = -ln\\frac{V_{2}}{V_{1}}\\)\n\nThis expression is usually presented in the quivalent form \\(T_{1} V_{1}^{c}=T_{2} V_{2}^{c}\\) where \\(c=\\frac{C_{v}}{nR}\\). The corresponding relation between pressure and volume is found from the fact that, for an ideal gas\n\n\\(\\frac{T_{2}}{V_{2}} = \\frac{p_{2}V_{2}}{p_{1}V_{1}}\\)\n\nwhich leads to\n\n\\(p_{1}V_{1}^{\\gamma}=p_{2}V_{2}^{\\gamma}\\)\n\nfor a (monoatomic) ideal gas. That is, \\(pV^{\\gamma}\\) is constant along an adiabat.",
     "crumbs": [
       "Contents",
-      "Data Science",
-      "NumPy and Matplotlib"
+      "Thermodynamics",
+      "Adiabatic process and Carnot Cycle"
     ]
   },
   {
-    "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.5--relativistic-momentum",
-    "href": "quarto-workflows/data-science/basicnumpy.html#p5.5--relativistic-momentum",
-    "title": "NumPy and Matplotlib",
-    "section": "P5.5 -Relativistic Momentum",
-    "text": "P5.5 -Relativistic Momentum\nIn classical physics, we define the momentum \\(\\mathnormal{p}\\) of an object with mass \\(\\mathnormal{m}\\) and velocity \\(\\mathnormal{v}\\) as\n\n\\[p=m\\times v\\]\n\nA satellite with mass m = 1200 kg is trapped in the gravity of a black hole. It accelerates quickly from velocity \\(v=0\\) to \\(v=0.9c\\), where \\(\\mathnormal{c}\\) is the speed of light, \\(c\\approx3x10^{8}\\) m/s.\n\nwrite a program which prints a nicely formatted table to the terminal, containing the speed of the satellite in one column, and the momentum of the satellite in the other. Use time-intervals of \\(0.1c\\) between \\(0c\\) and \\(0.9c\\).\n\nHint: Use scientific notation ‘%e’ when printing the values, to avoid incredibly large floats. Alternatively, ‘%g’, which picks the best notation for you. Try to limit the number of decimals to a reasonable number.\n# Parameters \nm = 1200 # mass of satellite in kg\nc = 3e8 # the speed of light on m/s\n \nprint(f'{'Velocity (m/s)':&gt;20} | {'Momentum (kg.m/s)':&gt;25}')\nprint('-' * 45)\n\n# Calculate momentum with the interval velocity 0 to 0.9c\n# Use time-intervals 0f 0.1c between 0c and 0.9c\nfor i in range(10): # time interval from 0c to 0.9c\n    v = i * 0.1 * c # velocity 0 - 0.9c, where c is the the speed of  light.\n    p = m * v\n    print('%20.3g | %25.3g' % (v, p)) # use scientific notation '%g' to limit the number of decimals.\n     Velocity (m/s) |         Momentum (kg.m/s)\n------------------------------------------------\n                   0 |                         0\n               3e+07 |                   3.6e+10\n               6e+07 |                   7.2e+10\n               9e+07 |                  1.08e+11\n             1.2e+08 |                  1.44e+11\n             1.5e+08 |                   1.8e+11\n             1.8e+08 |                  2.16e+11\n             2.1e+08 |                  2.52e+11\n             2.4e+08 |                  2.88e+11\n             2.7e+08 |                  3.24e+11\nAdding figure with MatPlotLib\n# Scatter plot with color map\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.collections import LineCollection\nv = np.linspace(0.0, 0.9, 10) * c\np = m * v #Classical Momentum\n\n# Create segments for line\npoints = np.array([v,p]).T.reshape(-1, 1, 2)\nsegments = np.concatenate([points[:-1], points[1:]], axis =1)\n\n# colormap\nLc=LineCollection(segments, cmap='magma', linewidth=3, norm=plt.Normalize(p.min(), p.max()))\nLc.set_array(p) # color by momentum\n\nfig, ax = plt.subplots(figsize=(10,6))\nax.scatter(v,p, c=p, cmap='magma', marker='o')\nax.add_collection(Lc)\nax.autoscale()\n\n# Adding colorbar\nimport matplotlib.ticker as ticker\nfrom matplotlib.ticker import FormatStrFormatter\ncbar = plt.colorbar(Lc, ax=ax, pad =0.02)\ncbar.set_label('Momentum (kg.m/s)')\ncbar.formatter = ticker.FormatStrFormatter('%.2e')\ncbar.update_ticks()\n\n# Axis labels and formatting\nimport matplotlib.ticker as ticker\nfrom matplotlib.ticker import FormatStrFormatter\nax.set_xlabel('Velocity (m/s)')\nax.set_ylabel('Momentum (kg.m/s)')\nax.set_title('Relativistic Momentum', fontsize=14)\nax.xaxis.set_major_formatter(ticker.FormatStrFormatter('%.2e'))\nax.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.2e'))\nplt.grid(True)\nax.set_axisbelow(True)\n\n# Add momentum values\n\nfor vx, px in zip(v, p):\n    ax.text(vx, px, f'{px:.2e}', fontsize=7.5, ha='right', va='bottom')\nplt.savefig('Relativistic_colormap.svg', bbox_inches='tight')\nplt.show('Relativistic Momentum')\n\n\n\nFigure 3. Relativistic_colormap",
+    "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#carnot-cycle",
+    "href": "quarto-workflows/thermodynamics/adiabatic-process.html#carnot-cycle",
+    "title": "Python for Scientific Computing and Data Visualization",
+    "section": "Carnot Cycle",
+    "text": "Carnot Cycle\nAnother important thermodynamic cycle, the Carnot cycle, is based on a sequence of reversible isothermal and adiabatic processes between four states, A, B, C, and D.\nI. \\(A\\rightarrow B\\): a reversible isothermal has expansion process from a state \\((p_{A}, V_{A})\\) to \\((p_{B}, V_{B})\\) at a high temperature, \\(T_{high}\\). During this step, the system absorbs \\(q_{in}\\), expands and does work surroundings.\n\n\\(B\\rightarrow C\\): a reversible adiabatic gas expansion process from state \\((p_{B}, V_{B})\\) to \\((p_{C}, V_{C})\\) at a lower temperature, \\(T_{low}\\). This time the system is placed in thermal contact with a reservoir which receives heat.\n\\(C\\rightarrow D\\): a reversible isothermal gas compression process from state \\((p_{C}, V_{C})\\) to \\((p_{D}, V_{D})\\) at a contant temperature, \\(T_{low}\\), and causes a loss of heat, \\(q_{out}\\).\n\\(D\\rightarrow A\\): a reversible adiabatic gas compression process from state \\((p_{D}, V_{D})\\) to \\((p_{A}, V_{A})\\). The system is insulated so no heat can flow and its temperature returns to \\(T_{high}\\).\n\nThis Python script to illustrate the Carnot Cycle with labelled plot for states A, B, C, and D with following parameters:\n\n\\(V_{1}=0.2 m^{3}\\)\n\\(T_{high}\\)= 800 K$\nIsothermal compression ratio, \\(r_{i}=V_{B}/V_{A}=2\\)\nAdiabatic compression ratio,\\(r_{a}=V_{C}/V_{B}=2\\)\n\nDemonstrate that the efficiency, defined as \\(\\nu=w/q-hot\\) where \\(w\\) is the work done and \\(q-hot\\) is the heat put into system in step \\(A\\rightarrow B\\), is given by,\n\n\\(\\nu=1-\\frac{T_{cold}}{T_{hot}}\\)\n\n\nStep 1: Set up and use function\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.constants import R\n\n# number of molecule gas\nn = 1\ndef get_p(V, T):\n    \"\"\"\n    Return the pressure of 1 mol of an ideal gas at (V, T).\n    \"\"\"\n    return n * R * T / V\n\ndef plot_isotherm(Vmin, Vmax, T, c='k'):\n    \"\"\"\n    plot a single isoterm for temperature T between Vmin and Vmax.\n    Returns the arrays of V, p values defining the isoterm.\n    \"\"\"\n    V = np.linspace(Vmin, Vmax, 1000)\n    p = get_p(V, T)\n    plt.plot(V, p, c=c, label=f'{T:.1f} K', lw=1)\n    return V, p\n\ndef plot_adiabatic(Vmin, Vmax, p0, V0, c='k', gamma=5/3):\n    \"\"\"\n    plot a single adiabatic for between Vmin and Vmax.\n    p0, V0, is a fixed point on the adiabatic, the function returns the arrays of V, p values defining the adiabatic.\n    \"\"\"\n    V = np.linspace(Vmin, Vmax, 1000)\n    p = p0 * (V/V0)**(-gamma)\n    plt.plot(V, p, c=c, lw=1)\n    return V, p\n\ndef carnot_cycle(V1, T_high, r_i, r_a):\n    \"\"\"\n    Plot a p-V diagram for a Carnot Cycle for an ideal gas starting at a compressed state (V1, T_high) \n    defined by isothermal compression ratio \n    r_i = V2/V1 and adiabatic compression ratio, \n    r_a = V3/V2.\n    \"\"\"\n\n    # Constant-volume heat capacity, \"gamma\" parameter (Cp/Cv)\n    C_V, gamma = 3/2 * R, 5/3\n\n\nStep 2: Volumes at each state\n    # Calculate the state variables at each stage of the cycle.\n    V2 = V1 * r_i\n    V3 = V2 * r_a\n    V4 = V3 * V1/V2\n\n\\(V_{1}\\): initial compressed volume.\n\\(V_{2}\\): after isothermal expansion (ratio, \\(r_{i}\\)).\n\\(V_{3}\\): after adiabatic expansion (ratio \\(r_{a})\\).\n\\(V_{4}\\): after isothermal compression, derived so the cycle closes.\n\n\n\nStep 3: Pressures and Temperature\n    # State Pressure \n    p1, p2 = get_p(V1, T_high), get_p(V2, T_high)\n    T_low = T_high * (V2/V3) ** (gamma - 1)\n    p3, p4 = get_p(V3, T_low), get_p(V4, T_low)\n\nCompute pressures at each state using ideal gas law.\n\\(T_{low}\\) is found from adiabatic relation, \\(TV^{\\gamma-1}\\)\n\n\n\nStep 4: Plot the cycle\n# Plot the isotherms and adiabatic for the cycle.\n    plot_isotherm(V1, V2, T_high, c='r')\n    plot_adiabatic(V2, V3, p2, V2, c='g', gamma=gamma)\n    plot_isotherm(V4, V3, T_low, c='b')\n    plot_adiabatic(V1, V4, p1, V1, c='m', gamma=gamma)\n\nRed = isothermal expansion (high temperature).\nGreen = adiabatic expansion.\nBlue = isothermal compression(low temperature).\nMagenta = adiabatic compression.\n\n\n\nStep 5: Work and Heat calculation\n# Step 1: isothermal expansion, V1 =&gt; v2 AT T_high\n    w1 = - n * R * T_high * np.log(V2 / V1)\n    q1 = -w1\n\n    # Step 2: adiabatic expansion, (V2, T_high) =&gt; (V3, T_low)\n    w2 = n * C_V * (T_low - T_high)\n    q2 = 0\n\n    # Step 3: Isothermal compression, V3 =&gt; V4, at T_low\n    w3 = -n * R * T_low * np.log(V4 / V3)\n    q3 = -w3\n\n    # Step 4: adiabatic compression, (V4, T_low =&gt; V1, T_high).\n    w4 = n * C_V * (T_high - T_low)\n    q4 = 0\n\nWork and heat are calculated for each step.\nisothermal \\(w = -nRT(V_{final}-V_{initial})\\).\nAdiabatic, \\(w = nC_{V}(T_{final}-T_{initial})\\).\nHeat \\(q\\) is zero for adiabatic steps.\n\n\n\nStep 6: Efficiency\n    # Total energy input through heating:\n    q_in = q1\n\n    # Total work done *on* the gas:\n    w_total = w1 + w2 + w3 + w4\n\n    # Efficiency\n    eta = -w_total /q_in\n    print('Efficiency = {:.1f} %'.format(eta * 100))\n    \n\nEfficiency = work output/heat input\nPrints Carnot efficiency.\n\n\n\nStep 7: Plot Labels\n  # Label the states\n    states = [(p1, V1), (p2, V2), (p3, V3), (p4, V4)]\n    for i, (p, V) in enumerate(states):\n        plt.text(V, p, \"ABCD\" [i])\n\n\nStep 8: Running the code\n# Run\n\nplt.figure(figsize=(6, 5))\ncarnot_cycle(V1=0.01, T_high=800, r_i=2, r_a=2)\nplt.savefig('Carnot Cycle p-V Diagram (Ideal Gas).svg', bbox_inches='tight')\nplt.show()\n\nCreates a figure\nRuns the Carnot Cycle with chosen parameters.\nSaves the plot as an SVG.\nDisplays the diagram.\n\nEfficiency = 37.0%\n\n\n\nFigure 1. Carnot Cycle p-V Diagram (Ideal Gas)",
     "crumbs": [
       "Contents",
-      "Data Science",
-      "NumPy and Matplotlib"
+      "Thermodynamics",
+      "Adiabatic process and Carnot Cycle"
     ]
   },
   {
-    "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.6--relativistic-momentum",
-    "href": "quarto-workflows/data-science/basicnumpy.html#p5.6--relativistic-momentum",
-    "title": "NumPy and Matplotlib",
-    "section": "P5.6 -Relativistic Momentum",
-    "text": "P5.6 -Relativistic Momentum\n\nIn exercise about - Correct Einstein’s mistakes, we saw the momentum of an object is defined in special relative;y, which dealswith physics at very large velocities. We defines the momentum as\n\n\\[p=m.v.\\gamma, \\gamma=\\frac{1}{\\sqrt{1-\\frac{v^{2}}{c^{2}}}}\\]\n\n\nThis is actual momentum of any object, but the classical version in exercise a) is a good approximation at “small’velocities. Expand your program such that it prints a table with three columns, the third one containing the momentum ad defined in special relativity.\n# Parameters \nm = 1200 # mass of satellite in kg\nc = 3e8 # the speed of light on m/s\n\ncw = 23 # column width\nprint(f'{\"Special velocity (m/s)\":^{cw}} | {\"Momentum (kg.m/s)\":^{cw}} | {\"gamma\":^{cw}} |')\nprint('-' * (cw * 3 + 10))\n\n# (b) Calculate special momentum with the interval velocity 0 to 0.9c\n# Use time-intervals 0f 0.1c between 0c and 0.9c\nimport numpy as np\nfor i in range(10): # time interval from 0c to 0.9c\n    v = i * 0.1 * c # velocity 0 - 0.9c, where c is the the speed of  light.\n    gamma = 1 / (np.sqrt(1-(v/c)**2))\n    p_rel = m * v * gamma\n    print(f'{v:^{cw}.2e} | {p_rel:^{cw}.3e} | {gamma:^{cw}.3f}|') # use scientific notation 'e and f' to limit the number of decimals.\nSpecial velocity (m/s)  |    Momentum (kg.m/s)    |          gamma          |\n-------------------------------------------------------------------------------\n       0.00e+00         |        0.000e+00        |          1.000         |\n       3.00e+07         |        3.618e+10        |          1.005         |\n       6.00e+07         |        7.348e+10        |          1.021         |\n       9.00e+07         |        1.132e+11        |          1.048         |\n       1.20e+08         |        1.571e+11        |          1.091         |\n       1.50e+08         |        2.078e+11        |          1.155         |\n       1.80e+08         |        2.700e+11        |          1.250         |\n       2.10e+08         |        3.529e+11        |          1.400         |\n       2.40e+08         |        4.800e+11        |          1.667         |\n       2.70e+08         |        7.433e+11        |          2.294         |\nAdding a barchart for relativistic visualizations.\n# Create histogram from the data\nimport numpy as np\nimport matplotlib.pyplot as plt\nv= np.linspace(0.0, 0.9*c, 10)\ngamma = 1 / (np.sqrt(1-(v/c)**2))\np_rel = m * v * gamma\n\nimport matplotlib.pyplot as plt\nplt.hist(p_rel, label='Momentum (kg.m/s)', bins=10, facecolor='c', edgecolor='black', hatch='//', rwidth=8)\nplt.xlabel('Special Velocity (m/s)', fontsize=12)\nplt.ylabel('Momentum (kg.m/s)', fontsize=12)\nplt.title('Einsten Momentum', fontsize=16)\nplt.legend(fontsize=23)\nplt.legend(framealpha=0, handleheight=2.0, handlelength=3)\nplt.savefig('Einsten Momentum.svg', bbox_inches='tight')\nplt.show()\n\n\n\nFigure 4. Einsten Momentum",
+    "objectID": "quarto-workflows/browser.html",
+    "href": "quarto-workflows/browser.html",
+    "title": "From the Browser",
+    "section": "",
+    "text": "A workflow from the browser if good for getting started (since you do not need to install additional software) and for making small contributions, but is definitely limited. Once you feel comfortable here, you can move to a different setup.\nHere’s an example of editing content on an existing page."
+  },
+  {
+    "objectID": "quarto-workflows/browser.html#edit-content-on-an-existing-page",
+    "href": "quarto-workflows/browser.html#edit-content-on-an-existing-page",
+    "title": "From the Browser",
+    "section": "Edit content on an existing page",
+    "text": "Edit content on an existing page\nLet’s change the date on the home page of this website.\nIn your repository, navigate to index.md. Then, click the pencil icon in the top right to edit directly.\n\n\n\n\n\nWe are now in the “Edit file” tab of the editor, where we can make modifications. Let’s change the date to today’s date. Click the “Preview” tab to see your changes. You can even check the “Show diff” box on the right side to see the changes you’ve made.\n\n\n\n\n\nWhile you’re here, see if there are additional changes to the text you’d like to make. Maybe changing the title or author at the top, or for the main text on the home page of the website.\nOur index.md file is written in Markdown, which enables you to make simple text formatting. As you go back and forth from “Edit file” to “Preview”, notice the patterns of how the Markdown text looks when it is as source (“Edit file”) and when it is formatted (“Preview”). For example, in Markdown, you can make text as a header with # symbols, bold or italic with * symbols, and hyperlinks with [](). Notice that spacing is important: for example, there are carriage returns (when you hit the “return” key) before any bullet points. You can learn the short list of Markdown rules here: https://quarto.org/docs/authoring/markdown-basics."
+  },
+  {
+    "objectID": "quarto-workflows/browser.html#commit-and-publish",
+    "href": "quarto-workflows/browser.html#commit-and-publish",
+    "title": "From the Browser",
+    "section": "Commit and publish",
+    "text": "Commit and publish\nCommit your changes by scrolling to the bottom of the page and writing a commit message - a note to yourself and others about what changes you made. Write your commit message and then click the green “Commit changes” button.\n\n\n\n\n\nNow, click back to the main page of your GitHub repository. You should see the orange dot confirming your website is published. You’ll have to wait for the GitHub Action to tell quarto to build your site for you to see the update, but it will be there!"
+  },
+  {
+    "objectID": "quarto-workflows/browser.html#limitations",
+    "href": "quarto-workflows/browser.html#limitations",
+    "title": "From the Browser",
+    "section": "Limitations",
+    "text": "Limitations\nWhile awesome that we can edit using GitHub directly from the browser, there are obvious limitations. One is that to see your edits show up in your book, you have to publish using the GitHub Action. This is slow. Another limitation is that we can only work on one file at a time and commit them each separately, which also is slow. Using additional software can make things much better, as we explore in subsequent chapters."
+  },
+  {
+    "objectID": "quarto-workflows/data-science/the-fourier-series.html#sawtooth-wave",
+    "href": "quarto-workflows/data-science/the-fourier-series.html#sawtooth-wave",
+    "title": "The Fourier Series",
+    "section": "1. Sawtooth Wave",
+    "text": "1. Sawtooth Wave\n\nThe sawtooth wave is derived from the frequencies of the harmonic series.\nHarmonics = all harmonics.\nAmplitude = 1 / (harmonic number).\nIf a sawtooth wave is an infinite sum of sine waves, then let’s use summation notation to express the wave.\n\nShifting the phase of the even harmonics by 180 degrees will make a sawtooth wave that ramps up instead of ramping down. No difference in how we perceive the sound.\n\n\\(f_{saw}(t) =\\;\\frac{1}{2}-\\frac{1}{\\pi}\\sum_{k=1}^{\\infty}{\\frac{(-1)^{k}}{k}}\\;sin(2\\pi kvt)\\)\n\nwhere: - \\(f_{saw}(t)\\) is a sawtooth wave as a function of \\(t\\) (time) in seconds. - \\(v\\) is a fundamental frequency. - \\(A\\) is a fundamental amplitude. - \\(n\\) represents the harmonic number where \\(n=1\\) is the fundamental.\n\nKey arguments\n\nn: sets the number of sample, higher n smoother curves.\nT and nu: defines the period and frequency.\nduration: creates time vector\nt = np.arange(0, duration, duration/n): this is the x-axis for plotting.\nf_saw = (t + 0.5) %1: generates the sawtooth wave, keeps values between 0 and 1, producing the repeating ramp shape of a sawtooth.\ndef fourier_expansion_sawtooth(nterms):: defines a function that computes the Fourier series a[[roximation of the sawtooth wave.\nfor icol in range(3):: loops over the three subplots.\nnterms = (icol + 1) * 3: each iteration increases the number of Fourier terms.\naxes[icol].plot(t, fourier_expansion_sawtooth(nterms),...): Plots the Fourier approximation on the same subplot.\nplt.tight_layout(): ensures the labels and titles don’t overlap.\n\nThis Python script demonstrates the Sawtooth wave with multiple axes. In the simple case, they can be arranged in a grid of rows and columns as follows.\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Number of sample points\nn = 2048\n\n# period in s\nT = 1\n\n# Frequency\nnu = 1 / T\n\n# Length sampling, s\nduration = 2\nt = np.arange(0, duration, duration/n)\n\n# Sawtooh, /|/|/|\nf_saw = (t + 0.5) % 1\n\ndef fourier_expansion_sawtooth(nterms):\n    fourier_sawtooth = np.zeros(n)\n    for k in range(1, nterms+1):\n        fourier_sawtooth +=  (-1) ** k * np.sin(2 * np.pi * k * nu * t) / k\n    return 0.5 - (1/np.pi) * fourier_sawtooth\n    \n# Plotting\nfig, axes = plt.subplots(ncols =3, figsize=(12, 4))\n\n# different expansion depths\nfor icol in range(3):\n    nterms = (icol +1) * 3\n    axes[icol].plot(t, f_saw, label='Sawtooth', color='black')\n    axes[icol].plot(t, fourier_expansion_sawtooth(nterms), label='Fourier', linestyle='--')\n    axes[icol].legend()\n    axes[icol].set_title(f\"Sawtooth vs Fourier (n={nterms})\")\n    axes[icol].set_xlabel('Time [s]')\n    axes[icol].set_ylabel('Amplitude')\n\nplt.savefig('Sawtooth vs Fourier.svg', bbox_inches='tight')\nplt.tight_layout()    \nplt.show()\n\n\n\nFigure 1. Sawtooth vs Fourier",
     "crumbs": [
       "Contents",
       "Data Science",
-      "NumPy and Matplotlib"
+      "The Fourier Series"
     ]
+  },
+  {
+    "objectID": "quarto-workflows/data-science/the-fourier-series.html#triangle-wave",
+    "href": "quarto-workflows/data-science/the-fourier-series.html#triangle-wave",
+    "title": "The Fourier Series",
+    "section": "2. Triangle wave",
+    "text": "2. Triangle wave\nA triangular wave or triangle wave is a non-sinusoidal waveform named for its triangular shape. Like a square wave, the triangle wave contains only odd harmonics. - Harmonics: only odd-numbered harmonics - Amplitude: 1/(Harmonic Number)^2 - Phase: Every other harmonic is 180 degrees out of phase.\n\n\\(f_{tria}(t)=-\\frac{8}{\\pi^2}\\sum_{k=1}^{\\infty}\\frac{(-1)^k}{(2k-1)^2}sin(2\\pi(2k-1)t)\\)\n\nwhere: - Odd harmonics: \\(2k-1\\) - Amplitudo scalling: \\(-\\frac{8}{\\pi^{2}}\\) - Alternating sign: \\((-1)^{k}\\) - Decay: \\(\\frac{1}{2k-1}^{2}\\)\nThis summation makes use of the fact that \\(-sin(x)=sin(x+\\pi)\\) to handle alternating odd harmonics 180 degrees our of phase.\nThis Python script demonstrates the Triangle wave with multiple axes. In the simple case, they can be arranged in a grid of rows and columns as follows. Parameters: - nterms: number of terms in the expansion. - t: time array. - nu: fundamental frequency (default 1 Hz).\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Number of sample points\nn = 2048\n\n# period in s\nT = 1\n\n# Fundamental Frequency\nnu = 1 / T \n\n# Length sampling, s\nduration = 2\nt = np.arange(0, duration, duration/n)\n\ndef fourier_expansion_triangle(nterms, t, nu=1):\n    \"\"\"\n    Fourier expansion of a triangle wave using nterms harmonics.\n    \"\"\"\n    fourier_triangle = np.zeros_like(t)\n    for k in range(1, nterms+1):\n        harmonic = 2*k-1\n        fourier_triangle += ((-1)**k / (harmonic**2)) * np.sin(2*np.pi*harmonic*nu*t)\n    return -(8/(np.pi**2)) * fourier_triangle\n\nf_triangle = 2 * np.abs((t %1) - 0.5)\n\n# plotting\nfig, axes = plt.subplots(ncols=3, figsize=(12, 4))\n\nfor icol in range(3):\n    nterms = (icol + 1) * 3\n    axes[icol].plot(t, f_triangle, label='triangle', color='black')\n    axes[icol].plot(t, fourier_expansion_triangle(nterms, t, nu=1), label='Fourier', linestyle='--')\n    axes[icol].legend()\n    axes[icol].set_title(f\"Triangle vs Fourier (n={nterms})\")\n    axes[icol].set_xlabel(\"Time [s]\")\n    axes[icol].set_ylabel(\"Amplitudo\")\n\nplt.savefig('Triangle vs Fourier.svg', bbox_inches='tight')\nplt.tight_layout()\nplt.show()\n\n\n\nFigure 2. Triangle vs Fourier",
+    "crumbs": [
+      "Contents",
+      "Data Science",
+      "The Fourier Series"
+    ]
+  },
+  {
+    "objectID": "quarto-workflows/data-science/the-fourier-series.html#square-wave",
+    "href": "quarto-workflows/data-science/the-fourier-series.html#square-wave",
+    "title": "The Fourier Series",
+    "section": "3. Square Wave",
+    "text": "3. Square Wave\nA square wave is a non-sinusoidal periodic waveform in which the amplitude alternates at a steady frequency between fixed minimum and maximum values, with the same duration at minimum and maximum. - Harmonics: Odd-numbered harmonics. - Amplitudes: 1/Harmonic Number. - Phase: All harmonics in phase.\n\n\\(f_{sq}(t)=\\frac{4}{\\pi}\\sum^{\\infty}_{k=1}sin[2\\pi(2k-1)vt]\\)\n\nWrite the partials of a square wave using summation notation. Recall that a square wave has only odd harmonics, the amplitudes of the harmonics are (1/harmonic number), and all harmonics are in phase.\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Number of sample points\nn = 2048\n\n# period in s\nT = 1\n\n# Frequency\nnu = 1 / T\n\n# Length sampling, s\nduration = 2\nt = np.arange(0, duration, duration/n)\n\n# square-wave, _|_|_|\nf_sq = np.where((t % T) &lt; T/2, 1, -1)\n\ndef fourier_expansion_square(nterms):\n    fourier_square = np.zeros(n)\n    for k in range(1, nterms+1):\n        fac = 2 * k - 1\n        fourier_square += np.sin(2 * np.pi * fac * nu * t)/ fac\n    return 4 / np.pi * fourier_square\n\n# Plotting\nfig, axes = plt.subplots(ncols =3, figsize=(12, 4))\n\n# different expansion depths\nfor icol in range(3):\n    nterms = (icol +1) * 3\n    axes[icol].plot(t, f_sq, label='Sawtooth', color='black')\n    axes[icol].plot(t, fourier_expansion_square(nterms), label='Fourier', linestyle='--')\n    axes[icol].legend()\n    axes[icol].set_title(f\"Square vs Fourier (n={nterms})\")\n    axes[icol].set_xlabel('Time [s]')\n    axes[icol].set_ylabel('Amplitude')\n\nplt.savefig('Square vs Fourier.svg', bbox_inches='tight')\nplt.tight_layout()    \nplt.show()\n\n\n\nFigure 3. Square vs Fourier",
+    "crumbs": [
+      "Contents",
+      "Data Science",
+      "The Fourier Series"
+    ]
+  },
+  {
+    "objectID": "quarto-workflows/data-science/the-fourier-series.html#pulserectangle-wave",
+    "href": "quarto-workflows/data-science/the-fourier-series.html#pulserectangle-wave",
+    "title": "The Fourier Series",
+    "section": "4. Pulse/Rectangle wave",
+    "text": "4. Pulse/Rectangle wave\nA pulse wave, pulse train, or rectangular wave is a sequence of discrete pulses occurring in a signal over time. - Pulse waves is rectangular waves are generalizations of the square waves. - A square wave’s period has an equal portion at high and low amplitudes. In a rectangular wave, those proportions need be equal. Therefore, all square waves are rectanglular waves but not vice versa.\nThe equation for a Pulse wave is more complicated, but it still relies upon summing sinusoids (in this case cosine waves). Note that the sine in this equation is simply a scaling factor for amplitude, as it is not a function of time.\n\n\\(f_{pulse}(t)=dA + \\sum_{n=1}^{\\infty} \\frac{2A}{\\pi n}sin(\\pi dn)cos(2\\pi fnt)\\)\n\nThis Python script demonstrates the Pulse/Rectangle wave with multiple axes. In the simple case, they can be arranged in a grid of rows and columns as follows.\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Number of sample points\nn = 2048\n\n# period in s\nT = 1\n\n# Frequency\nnu = 1 / T\n\n# Length sampling, s\nduration = 2\nt = np.linspace(0, duration, n)\n\n# Duty cycle (fraction of period high)\nduty = 0.25\n\n# Pulse wave: +1 for futy fraction\nf_pulse = np.where((t % T) &lt; duty * T, 1, 0)\n\ndef fourier_expansion_pulse(nterms, t, nu=1, duty=0.25):\n    fourier_pulse = np.zeros_like(t)\n    for k in range(1, nterms+1):\n        fourier_pulse += (np.sin(k * np.pi * duty)/ k ) * np.cos(2 * np.pi * k * nu * t)\n    return duty + (2/np.pi) * fourier_pulse\n\n# Plotting\nfig, axes = plt.subplots(ncols =3, figsize=(12, 4))\n\n# different expansion depths\nfor icol in range(3):\n    nterms = (icol +1) * 3\n    axes[icol].plot(t, f_pulse, label='Pulse', color='black')\n    axes[icol].plot(t, fourier_expansion_pulse(nterms, t, nu, duty), label='Fourier', linestyle='--')\n    axes[icol].legend()\n    axes[icol].set_title(f\"Pulse vs Fourier (n={nterms}, duty={duty})\")\n    axes[icol].set_xlabel('Time [s]')\n    axes[icol].set_ylabel('Amplitude')\n\nplt.savefig('Pulse vs Fourier.svg', bbox_inches='tight')\nplt.tight_layout()    \nplt.show()\n\n\n\nFigure 4. Pulse vs Fourier.svg",
+    "crumbs": [
+      "Contents",
+      "Data Science",
+      "The Fourier Series"
+    ]
+  },
+  {
+    "objectID": "quarto-workflows/data-science/the-fourier-series.html#in-summary",
+    "href": "quarto-workflows/data-science/the-fourier-series.html#in-summary",
+    "title": "The Fourier Series",
+    "section": "In summary",
+    "text": "In summary\n\nAny periodic signal can be constructed from a sum of sine waves.\n\nThe process of creating complex sounds from sine waves or other constituent parts is called additive synthesis.\n\nThe sine wave, sawtooth wave, triangle wave, and pulse waves are classic waveforms since the advent of electronic music.\n\nThey are used everywhere in the music we hear today, and we are the basis for many synthesizers.\n\nSawtooth waves, triangle waves, and pulse waves come in band-limited and non-band-limited forms.\n\nNon-bandlimited forms can produce strange artifacts at higher frequencies (see aliasing coming up).\nBandlimited forms are “safer” but are not as rich harmonically - they do not truly represent the waveforms.",
+    "crumbs": [
+      "Contents",
+      "Data Science",
+      "The Fourier Series"
+    ]
+  },
+  {
+    "objectID": "quarto-workflows/data-science/string-list.html#key-equation",
+    "href": "quarto-workflows/data-science/string-list.html#key-equation",
+    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "section": "Key Equation",
+    "text": "Key Equation\n\nDensity Computations\n\n\\(\\rho=\\frac{m}{v}=\\frac{nA}{V_{C}N_{A}}\\)\n\nAvogadro’s number\n\n6.022 x \\(10^{23}\\), 1 amu/atom (or molecule) = 1 g/mol"
+  },
+  {
+    "objectID": "quarto-workflows/data-science/string-list.html#p3.1",
+    "href": "quarto-workflows/data-science/string-list.html#p3.1",
+    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "section": "P3.1",
+    "text": "P3.1\nProduce a nicely formatted list of the values of the physical constants, h, c, \\(k_{B}\\), R, and \\(N_{A}\\), to four significant figures, with their units.\nh, h_units = 6.62607015e-34, 'J.s'\nc, c_units = 299792458, 'm.s-1'\nkB, kB_units = 1.380649e-23, 'J.K-1'\nR, R_units = 8.314462618, 'J.K.mol-1'\nN_A, N_A_units = 6.02214076e+23, 'mol-1'\n\ns1 = (f'h = {h:9.3e} {h_units}\\t'\n     f'c = {c:9.3e} {c_units}\\t' \n      f'kB = {kB:9.3e} {kB_units}\\t'\n       f'R = {R:9.3e} {R_units}\\t'\n        f'N_A = {N_A:9.3e} {N_A_units}\\t')\n\ns2 = (f'h   = {h:9.3e}{h_units}\\n'\n      f'c   = {c:9.3e}{c_units}\\n' \n      f'kB  = {kB:9.3e}{kB_units}\\n'\n      f'R   = {R:9.3e}{R_units}\\n'\n      f'N_A = {N_A:9.3e}{N_A_units}\\n')\nprint(s1)\n\nprint(s2)\nh = 6.626e-34 J.s   c = 2.998e+08 m.s-1 kB = 1.381e-23 J.K-1    R = 8.314e+00 J.K.mol-1 N_A = 6.022e+23 mol-1   \nh   = 6.626e-34J.s\nc   = 2.998e+08m.s-1\nkB  = 1.381e-23J.K-1\nR   = 8.314e+00J.K.mol-1\nN_A = 6.022e+23mol-1"
+  },
+  {
+    "objectID": "quarto-workflows/data-science/string-list.html#p3.2",
+    "href": "quarto-workflows/data-science/string-list.html#p3.2",
+    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "section": "P3.2",
+    "text": "P3.2\nThe following variables define some thermodynamic properties of \\(CO_{2}\\) and \\(H_{2}O\\).\n# Triple point of CO2 (K, Pa)\nT3_CO2, p3_CO2 = 216.58, 5.185e5\n# Entalphy of fusion of CO2 (kJ.mol-1).\nDfusH_CO2 = 9.019\n# Entrophy of fusion os CO2 (J.K-1.mol-1).\nDfusS_CO2 = 40\n# Entalphy of vaporization of CO2 (kJ.mol-1).\nDvapH_CO2 = 15.326\n# Entrophy of vaporization of CO2 (J.K-1.mol-1).\nDvapS_CO2 = 70.8\n\n# Triple point of H2O (K, Pa)\nT3_H2O, p3_H2O = 273.16, 611.73\n# Entalphy of fusion of H2O (kJ.mol-1).\nDfusH_H2O = 6.01\n# Entrophy of fusion of H2O (J.K-1.mol-1).\nDfusS_H2O = 22.0\n# Entalphy of vaporization of H2O (kJ.mol-1).\nDvapH_H2O = 40.68\n# Entrophy of vaporization of H2O (J.K-1.mol-1).\nDvapS_H2O = 118.89\n\nprint(' '*22 + 'CO2' + ' '*9 + 'H20')\nprint('_'*40)\nprint('p3     /pa         ', f'{p3_CO2:5.0f}      {p3_H2O:5.2f}')\nprint('T3     /K          ', f'{T3_CO2:5.2f}      {T3_H2O:5.2f}')\nprint('DfusH  /kJ.mol-1   ', f'{DfusH_CO2:5.3f}       {DfusH_H2O:5.3f}')\nprint('DfusS  /J.K-1.mol-1', f'{DfusS_CO2:4.1f}      {DfusS_H2O:6.1f}')\nprint('DvapH  /kJ.mol-1   ', f'{DvapH_CO2:5.3f}    {DvapH_H2O:8.3f}')\nprint('DvapS  /j.k-1.mol-1', f'{DvapS_CO2:5.1f}       {DvapS_H2O:5.1f}')\n                      CO2         H20\n________________________________________\np3     /pa          518500      611.73\nT3     /K           216.58      273.16\nDfusH  /kJ.mol-1    9.019       6.010\nDfusS  /J.K-1.mol-1 40.0        22.0\nDvapH  /kJ.mol-1    15.326      40.680\nDvapS  /j.k-1.mol-1  70.8       118.9"
+  },
+  {
+    "objectID": "quarto-workflows/data-science/string-list.html#p3.3",
+    "href": "quarto-workflows/data-science/string-list.html#p3.3",
+    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "section": "P3.3",
+    "text": "P3.3\nNuclear binding energy and the mass defect. A neutron has a slightly larger mass than the proton. These are often given in terms of an atomic mass unit, where one atomic mass unit (u) is defined as 1/12th the mass of a carbon-12 atom.\n# Mass Particle constant, in kg.\natomic_kg = 1.660540 * 10 ** -27\nneutron_kg = 1.674929 * 10 ** -27\nproton_kg = 1.672623 * 10 ** -27 \nelectron_kg = 9.109390 * 10 ** -31\n\n# Mass particle, in u.\natomic_u = 1.000 \nneutron_u = neutron_kg / atomic_kg \nproton_u = proton_kg / atomic_kg\nelectron_u = electron_kg / atomic_kg\n\n# Mass particle, in MeV/c2\natomic_ev = 931.5\nneutron_ev = neutron_u * atomic_ev\nproton_ev = proton_u * atomic_ev\nelectron_ev = electron_u * atomic_ev\n\n\ntitle = '|' + ' '*19 + '{:43}'.format('Binding Nuclear Energy') + '|'\nline = '+' + '-'*16 + '+' + ('-'*14 + '+')*3\nrow = '|{:&lt;15} |' + ' {:12} |'*3\nheader = '| {:^14} |'.format('Particle') + (' {:^12} |'*3). format('Mass (kg)', 'Mass (u)', 'Mass (Mev/c2)')\n\nprint('+' + '-'*(len(title)-2) + '+',\n      title,\n      line,\n      header,\n      line,\n      row.format('atomic mass', atomic_kg, f'{atomic_u:8.3f}', f'{atomic_ev:6}'),\n      row.format('neutron', neutron_kg, f'{neutron_u:8.7f}', f'{neutron_ev:8.2f}'),\n      row.format('proton', proton_kg, f'{proton_u:8.7f}', f'{proton_ev:8.2f}'), \n      row.format('electron', electron_kg, f'{electron_u:8.7f}', f'{electron_ev:8.3f}'),\n      line,\n      sep='\\n')\n                                                                   \n+--------------------------------------------------------------+\n|                   Binding Nuclear Energy                     |\n+----------------+--------------+--------------+--------------+\n|    Particle    |  Mass (kg)   |   Mass (u)   | Mass (Mev/c2) |\n+----------------+--------------+--------------+--------------+\n|atomic mass     |  1.66054e-27 |    1.000     |  931.5       |\n|neutron         | 1.674929e-27 | 1.0086653    |   939.57     |\n|proton          | 1.672623e-27 | 1.0072765    |   938.28     |\n|electron        |  9.10939e-31 | 0.0005486    |    0.511     |\n+----------------+--------------+--------------+--------------+"
+  },
+  {
+    "objectID": "quarto-workflows/data-science/string-list.html#list-and-loops",
+    "href": "quarto-workflows/data-science/string-list.html#list-and-loops",
+    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "section": "2. List and Loops",
+    "text": "2. List and Loops"
+  },
+  {
+    "objectID": "quarto-workflows/data-science/string-list.html#p3.4",
+    "href": "quarto-workflows/data-science/string-list.html#p3.4",
+    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "section": "P3.4",
+    "text": "P3.4\nStraight-chain alkanes are hydrocarbons with the general stoichiometric formula \\(C_{n}H_{2n+2}\\), in which the carbon atoms form a simple shain: for example, butane, \\(C_{4}H_{10}\\) has the structural formula that may be depicted \\(H_{3}CC_{2}CH_{2}CH_{3}\\). Write a progra, to output the structural formula of such an alkane, given its stoichiometry (assume \\(n\\geq1\\)).\n# Assume n = 5\nstoich = 'C5H12'\nfragments = stoich.split('H')\nnC = int(fragments[0][1:])\nnH = int(fragments[1])\nif nH != 2*nC + 2:\n    print('{} is not alkane!'.format(atoich))\nelse:\n    print('H\\u2083C', end='')\n    for i in range(nC-2):\n        print('-CH\\u2082', end='')\n    print('-CH\\u2083')\nH₃C-CH₂-CH₂-CH₂-CH₃"
+  },
+  {
+    "objectID": "quarto-workflows/data-science/string-list.html#p3.5",
+    "href": "quarto-workflows/data-science/string-list.html#p3.5",
+    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "section": "P3.5",
+    "text": "P3.5\nProduce a table if the FCC element symbols abd their corresponding atomic radius (nm) and atomic weight (g/mol).\nsymbols = ['Al', 'Cu', 'Au', 'Pb', 'Ni', 'Pt', 'Ag']\nAtomic_radiuss = [0.1431, 0.1278, 0.1442, 0.1750, 0.1246, 0.1387, 0.1445]\nAtomic_weigth = [26.981, 63.546, 196.966, 206.14, 58.693, 195.084, 107.868]\nline = '-'*52\nprint(line)\nprint('Elements | Atomic Radii (nm) | Atomic weight (g/mol)')\nprint(line)\nfor i in range(len(symbols)):\n    print(' '*2, symbols[i], ' '*5, Atomic_radiuss[i], ' '*13, Atomic_weigth[i])\n    print(line)\n----------------------------------------------------\nElements | Atomic Radii (nm) | Atomic weight (g/mol)\n----------------------------------------------------\n   Al       0.1431               26.981\n----------------------------------------------------\n   Cu       0.1278               63.546\n----------------------------------------------------\n   Au       0.1442               196.966\n----------------------------------------------------\n   Pb       0.175               206.14\n----------------------------------------------------\n   Ni       0.1246               58.693\n----------------------------------------------------\n   Pt       0.1387               195.084\n----------------------------------------------------\n   Ag       0.1445               107.868\n----------------------------------------------------"
+  },
+  {
+    "objectID": "quarto-workflows/data-science/string-list.html#p3.6",
+    "href": "quarto-workflows/data-science/string-list.html#p3.6",
+    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "section": "P3.6",
+    "text": "P3.6\nreference: - Atomic radii of the elements\nAlumunium, copper and lead has an atomic radius of 121, 132, and 146 nm, respectively, an FCC crystal structure, and atomic weight of 26.98, 63.55, and 207.20 g/mol. Compute their theoretical density and compare the answer with their measured density.\nin the FCC unit cell illustrated, the atoms touch one another across a face-diagonal, the length of which is 4R. Because the unit cell is a cube, its volume is \\(a^{3}\\), where a is the cell edge length. From the right triangle on the face.\n\n\\[a^{2} + a^{2} = (4R)^{2}\\]\n\nSolving for a,\n\n\\[a=2R\\sqrt{2}\\]\n\nThe FCC unit cell volume \\(V_{C}\\) may be computed from\n\n\\[V_{C}=a^{3}=(2\\sqrt{2})^{3}=16R^{3}\\sqrt{2}\\]\n\nimport numpy as np\n# Avogadro's number , in atoms/mol.\nNA = 6.022 * 10 **23\n\n# The number of atoms per unit cell in FCC\nn = 4\n\n# The atomic weight, and Radii of atoms (use floats/ints instead of strings)\nAtomics = ['Al', 'Cu', 'Pb'] # use string ' '\nA_weight = [26.98, 63.55, 207.20] # atomic weights in g/mol use float\nRadii = [143 * 10 **-10, 128 * 10 **-10, 180 * 10 **-10] # radii in cm (converted from pm) use float/integers\n\n# Computational density\nfor atom, weight, radius in zip(Atomics, A_weight, Radii):\n    V_cell = 16 * (radius**3) * np.sqrt(2)\n    m_cell = 4 * weight\n    rho = m_cell / (V_cell *NA)\n    print(f\" {atom}: V_cell={V_cell:.3e} cm^3, m_cell={m_cell:.3e} g, rho={rho:.3f} g/cm^3\")\n Al: V_cell=6.617e-23 cm^3, m_cell=1.079e+02 g, rho=2.708 g/cm^3\n Cu: V_cell=4.745e-23 cm^3, m_cell=2.542e+02 g, rho=8.895 g/cm^3\n Pb: V_cell=1.320e-22 cm^3, m_cell=8.288e+02 g, rho=10.429 g/cm^3"
+  },
+  {
+    "objectID": "quarto-workflows/data-science/string-list.html#p3.7",
+    "href": "quarto-workflows/data-science/string-list.html#p3.7",
+    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "section": "P3.7",
+    "text": "P3.7\nDetermine whether each of the following electron configurations is an inert gas, a halogen, an alkali metal, an alkaline earth metal, or a transition metal. Justify your choices.\n(a) 1s2.2s2.2p6.3s2.3p5\n(b) 1s2.2s2.2p6.3s2.3p6.3d7.4s2\n(c) 1s2.2s2.2p6.3s2.3p6.3d7.4s2.4P6\n(d) 1s2.2s2.2p6.3s2.3p6.4s1\n(e) 1s2.2s2.2p6.3s2.3p6.3d7.4s2.4p6.4d10.5s2\n(f) 1s2.2s2.2p6.3s2\n# Electron configuration\nconfigs = {\n    '(a)': '1s2.2s2.2p6.3s2.3p5',\n    '(b)': '1s2.2s2.2p6.3s2.3p6.3d7.4s2',\n    '(c)': '1s2.2s2.2p6.3s2.3p6.3d10.4s2.4p6',\n    '(d)': '1s2.2s2.2p6.3s2.3p6.4s1',\n    '(e)': '1s2.2s2.2p6.3s2.3p6.3d7.4s2.4p6.4d5.5s2',\n    '(f)': '1s2.2s2.2p6.3s2'}\n\ndef classify_configuration(cfg: str):\n    subshells = cfg.split(\".\")\n    parsed = []\n\n    # Parse subshells into (n, orbital, electrons)\n    for s in subshells:\n        try:\n            n = int(s[0])          # principal quantum number\n            orbital = s[1]         # orbital type (s, p, d, f)\n            electrons = int(s[2:]) # electron count\n            parsed.append((n, orbital, electrons))\n        except:\n            continue\n\n    if not parsed:\n        return \"Unknown\"\n\n    #Classify configuration electron by the last and the second-last subshells\n    last_orbital, last_e = parsed[-1][1], parsed[-1][2]\n    second_orbital, second_e = parsed[-2][1], parsed[-2][2] if len(parsed) &gt;= 2 else (None, None)\n\n    # Rules\n    if last_orbital == \"p\" and last_e == 6:\n        return \"Inert gas (Noble gas)\"\n    elif last_orbital == \"p\" and last_e == 5:\n        return \"Halogen\"\n    elif last_orbital == \"s\" and last_e == 1:\n        return \"Alkali metal\"\n    elif last_orbital == \"s\" and last_e ==2:\n        if second_orbital == \"p\" and second_e == 6:\n            return \"Akaline Earth metal\"\n        elif second_orbital ==\"d\" and second_e &lt;10:\n            return \"Transition metal\"\n \n# print results\nfor label, cfg in configs.items():\n    print(f\"{label} {cfg} =&gt; {classify_configuration(cfg)}\")\n(a) 1s2.2s2.2p6.3s2.3p5 =&gt; Halogen\n(b) 1s2.2s2.2p6.3s2.3p6.3d7.4s2 =&gt; Transition metal\n(c) 1s2.2s2.2p6.3s2.3p6.3d10.4s2.4p6 =&gt; Inert gas (Noble gas)\n(d) 1s2.2s2.2p6.3s2.3p6.4s1 =&gt; Alkali metal\n(e) 1s2.2s2.2p6.3s2.3p6.3d7.4s2.4p6.4d5.5s2 =&gt; Transition metal\n(f) 1s2.2s2.2p6.3s2 =&gt; Akaline Earth metal"
   },
   {
     "objectID": "quarto-workflows/data-science/linear-algebra.html#linear-algebra",
@@ -310,6 +409,140 @@
     ]
   },
   {
+    "objectID": "quarto-workflows/index.html",
+    "href": "quarto-workflows/index.html",
+    "title": "Contents",
+    "section": "",
+    "text": "By learning and practicing the materials in this blog, we will gradually be able to:\n\nUse Python as a computational tool for solving physics and chemistry problems.\nApply Mathematic concepts to real scientific problems.\nVisualize scientific data using Matplotlib and Scikit-Learn.\nExplore the fundamental of Quantum Mechanical (Harmonic Oscillator and Hydrogen atom).",
+    "crumbs": [
+      "Contents"
+    ]
+  },
+  {
+    "objectID": "quarto-workflows/index.html#learning-objectives",
+    "href": "quarto-workflows/index.html#learning-objectives",
+    "title": "Contents",
+    "section": "",
+    "text": "By learning and practicing the materials in this blog, we will gradually be able to:\n\nUse Python as a computational tool for solving physics and chemistry problems.\nApply Mathematic concepts to real scientific problems.\nVisualize scientific data using Matplotlib and Scikit-Learn.\nExplore the fundamental of Quantum Mechanical (Harmonic Oscillator and Hydrogen atom).",
+    "crumbs": [
+      "Contents"
+    ]
+  },
+  {
+    "objectID": "transition-from-rmarkdown.html",
+    "href": "transition-from-rmarkdown.html",
+    "title": "Transition from RMarkdown",
+    "section": "",
+    "text": "You may already have workflows in RMarkdown and are interested in transitioning to Quarto. There’s no hurry to migrate to Quarto. Keep using Rmarkdown and when you’re ready the migration will be fine.\nHere are some notes as we migrate RMarkdown sites and books.\nTODO: translating R code chunks"
+  },
+  {
+    "objectID": "transition-from-rmarkdown.html#bookdown-to-quarto",
+    "href": "transition-from-rmarkdown.html#bookdown-to-quarto",
+    "title": "Transition from RMarkdown",
+    "section": "Bookdown to Quarto",
+    "text": "Bookdown to Quarto\nConverting a Bookdown book to Quarto is slightly more involved than converting a website. A book has chapters whose order must be defined, and likely has citations and cross-refs. Still, conversion is not that hard.\nWe got some practice converting from Bookdown to Quarto by helping Gavin Fay convert his lab’s fantastic onboarding documentation, the Faylab Lab Manual. Here’s the GitHub view before and after.\nOur best first reference material for this was Nick Tierney’s Notes on Changing from Rmarkdown/Bookdown to Quarto. Nick shares some scripts in that post to automate some changes. In our case, the book was small enough that we made all changes manually. Quarto documentation was indispensable.\n\nExperimenting in a low-risk environment\nWe forked a copy of the Faylab Lab manual to the Openscapes organization, and worked in a branch so we could make changes relatively risk-free. We could always fork a new copy of the original if we “broke” something. (Caution: the default when making a pull request from a fork is to push changes to the original upstream repo, not your fork and it does this without warning if you have write-access to that repo.) With local previews it’s easy to test / play with settings to see what they do. We tended to make a change, Preview, then compare the look and functionality of the book to the original. It was helpful to comment out some elements of the configuration file _output.yml after their counterparts had been added to the Quarto configuration file _quarto.yml, or to confirm they were no longer needed, before making the drastic move of deleting them.\n\n\nThe conversion\nHere are the main steps to convert the Faylab Lab manual from Bookdown to Quarto.\nCreate new empty file called _quarto.yml and add book metadata there. The screenshots below\nSet project type as book.\nMove metadata out of index.qmd and into _quarto.yml. Title, author, and publication date were in index.qmd with date set using date: \"Last updated:r Sys.Date()\". Now these are in _quarto.yml with date set using date: last-modified. Note that having R code would require you to adjust code chunk options in the Quarto style (#|). This tripped us up a bit; see GitHub Actions.\nMove chapters listing out of _bookdown.yml and into _quarto.yml.\nAdd page footer to _quarto.yml.\nHere’s what ours looked like when we finished the steps above (_quarto.yml).\n\n\n\n\n\n\n\n\n\n_quarto.yml contents\n\n\n\n\n\n\n\nFaylab Lab Manual\n\n\n\n\n\nChange insertion of images from html style to Quarto style. (Note Quarto calls them “figures”, not “images”.) The following snippet will insert the GitHub octocat logo in a page:\n![](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png){fig-align=\"left\" width=\"35px\"}\nChange all filename extensions .Rmd -&gt; .qmd (you could Preview after this change and see that the book looks the same). Note that Quarto works with .Rmd files just as well as it does .qmd, so this change is not urgent. In fact, if you have a lot of R code in your .Rmds (unlike the Faylab Lab Manual), there will be additional tinkering needed to make the code chunks happy.\n\n\nCitations\nThe Faylab Lab Manual cited two papers, presenting us with an opportunity to see how easy it is to add references to a Quarto book. Briefly, in the Visual Editor, Insert &gt; Citation &gt; DOI. Pasting the DOI or its full URL, we can insert the citation. This automatically creates a references.bib file and adds the full citations at the bottom of the chapter page (watch demo). In July 2022, we had to manually add a ## References heading, but this may not be necessary in future Quarto updates.\n\n\n\n\n\n\n\n\n\nInsert citation via its DOI using RStudio Visual Editor\n\n\n\n\n\n\n\n\n\n\nPublishing notes\nIf the book’s output is strictly html, there’s no need to specify output-dir in _quarto.yml. The output directory default is _book/, which is what we’d like. If we wanted other types of output like like PDF or EPUB, etc. those single file outputs are also written to the output-dir (Quarto docs).\nIf you currently have a docs/ folder, delete it.\nUpdate .gitignore to ignore _book/. At the same time, we have it ignore caches and a .quarto file:\n/.quarto/\n*_cache/\n_book/\nOnce all is settled, delete _output.yml.\nOnce the Openscapes fork was fully reviewed, we made a pull request from that to the main branch of the book’s repo. Once that was merged, we set up GitHub Actions to render the book. (TODO: instructions for GitHub Actions)\n\n\nGitHub Actions\nThis book was mostly prose and screenshots without any R code. This made the conversion from RMarkdown to Quarto likely more straightforward than if you also needed to adjust code chunk options in the quarto style (#|). Our initial GitHub Action to render the converted Faylab Lab Manual failed because we had a piece of R code - even though the code was commented out! This was resolved when we deleted the line."
+  },
+  {
+    "objectID": "transition-from-rmarkdown.html#distill-to-quarto",
+    "href": "transition-from-rmarkdown.html#distill-to-quarto",
+    "title": "Transition from RMarkdown",
+    "section": "Distill to quarto",
+    "text": "Distill to quarto\nWe transitioned our events site from distill to quarto in May 2022 (github view before and after). We followed excellent notes and examples from Nick Tierney and Danielle Navarro.\nAfter we had changed all the files, the Build tab in the RStudio IDE still showed “Build website” rather then “Render Website” and “Preview Website”, and would error when we pushed them (because that button was expecting a distill site, not a quarto site). To fix this, we updated the .Rproj file. Clicking on the .Rproj file in the RStudio IDE will open a dialog box where you can click things you want (you can also open these in a text editor or from the GitHub website to see the actual text). To fix this situation with the Build tab: Project Options &gt; Build Tools &gt; Project Build Tools &gt; None.\nLooking at files /posts/_metadata.yml and _quarto.yml helps see where things are defined. For example, to make event post citations appear, we added citation: true to /posts/_metadata.yml and in _quarto.yml under the website key we set site-url: https://openscapes.github.io/events. We deleted footer.html used with distill because footer is now defined in quarto.yml.\n\nPublishing notes\n\nBackground: Our distill site had been set up to output to a docs folder, and had GitHub Settings &gt; Pages set to look there rather gh-pages branch. (Julie note: this was a new-to-me capability when we set up the events distill site in Spring 2021 so I had forgotten that was an option). We’ve inititally kept this same set-up for now with our events page in _quarto.yml: output-dir: docs. However, this is sub-optimal; better to not have to commit and push these files but to instead have a GitHub Action generate them upon a commit. So the following is what we did -\n\nDon’t specify output-dir in _quarto.yml. The output directory default is _site/, which is what we’d like.\nIf you currently have a docs/ folder (like we did as we were experimenting), delete it.\nUpdate .gitignore to ignore _site/. At the same time, we have it ignore caches and a .quarto file:\n/.quarto/\n*_cache/\n_site/\nPush these changes, merge into main.\nOn GitHub.com, in your repo, set up GitHub publishing\nFollow instructions from the explore and setup chapter."
+  },
+  {
+    "objectID": "transition-from-rmarkdown.html#troubleshooting",
+    "href": "transition-from-rmarkdown.html#troubleshooting",
+    "title": "Transition from RMarkdown",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\nGitHub Action fails, says you need RMarkdown but you don’t have R code!\nAnd you changed all .Rmds to .qmds!\nYou likely have a few setup code chunks from RMarkdown, that look like this:\n{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = FALSE)\nYou can find them by opening each of your files and having a look, or use GitHub’s search for the keyword knitr"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Python for Scientific Computing and Data Visualizations",
+    "section": "",
+    "text": "Welcome to Random Spaces! This blog is a celebration of the fascinating world of computational chemistry. I hope you find the content useful, and I hope you enjoy reading along and learning with me!\nAnd me? Well, I’m Dinda Gusti Ayu. I just a person who interested in using Machine Learning to learn the rules of Quantum Mechanics and Simulate Disordered Material systems. As a beginner, this blog aims to documenting my learning journey. Behind that, I earned an MS in chemistry physics at Universitas Sumatera Utara, Indonesia where I studied the fundamental optical properties and defects modelling of direct band-gap semiconductors for materials research.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Python for Scientific Computing and Data Visualizations",
+    "section": "",
+    "text": "Welcome to Random Spaces! This blog is a celebration of the fascinating world of computational chemistry. I hope you find the content useful, and I hope you enjoy reading along and learning with me!\nAnd me? Well, I’m Dinda Gusti Ayu. I just a person who interested in using Machine Learning to learn the rules of Quantum Mechanics and Simulate Disordered Material systems. As a beginner, this blog aims to documenting my learning journey. Behind that, I earned an MS in chemistry physics at Universitas Sumatera Utara, Indonesia where I studied the fundamental optical properties and defects modelling of direct band-gap semiconductors for materials research.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#what-is-random-spaces",
+    "href": "index.html#what-is-random-spaces",
+    "title": "Python for Scientific Computing and Data Visualizations",
+    "section": "What is Random Spaces?",
+    "text": "What is Random Spaces?\nRandom Spaces is a free, open-source learning resources for students and researchers interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The tutorials here bridge the gap beetween condensed matter physics, chemistry and computational tools.\nAll materials are shared openly on my repositories \nLet’s get down with computational chemistry!",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "quarto-workflows/rstudio.html",
+    "href": "quarto-workflows/rstudio.html",
+    "title": "From RStudio",
+    "section": "",
+    "text": "The RStudio software (called an IDE, integrated development environment) is an excellent way to edit files and interface with GitHub. Plus, as it is made by the same folks who make Quarto, it has many integrated features for streamlining your workflow with Quarto, including how it previews your edits and provides debugging support for yaml! Quarto's RStudio tutorials has great instructions on getting started with RStudio, including computations and authoring.\nHere is what you’ll need to do to set up and use RStudio with Quarto."
+  },
+  {
+    "objectID": "quarto-workflows/rstudio.html#setup",
+    "href": "quarto-workflows/rstudio.html#setup",
+    "title": "From RStudio",
+    "section": "Setup",
+    "text": "Setup\n\nRStudio and GitHub\nFor a workflow with RStudio and GitHub on your local computer, you will need four things:\n\nR\nRStudio\nGit\nGitHub\n\nFollow the UCSB MEDS Installation Guide for detailed instructions on how to create accounts, download, install, and configure on Mac and Windows. This takes about 20 minutes. (For an even more detailed walk-through, see Allison Horst’s ESM 206 Google Doc).\n\n\nClone your repo\nYou’ll start by cloning your repository into RStudio.\nFile &gt; New Project &gt; Version Control &gt; Git &gt; paste your repository name.\nR for Excel Users: Clone your repository using RStudio has detailed instructions and screenshots of these steps.\n\n\nInstall Quarto\nNext, you’ll install Quarto: https://quarto.org/docs/get-started/. After downloading, follow the installation wizard on your computer. When it is complete, you won’t see an application or any new software, but it is now available to RStudio (as well as all other applications on your computer, including the command line).\n\n\nRStudio orientation\nNow let’s take a moment to get oriented. This is an RStudio project, which is indicated in the top-right. The bottom right pane shows all the files in your project; everything we’ve cloned from GitHub. We can open any RStudio project by opening its .Rproj file, or from RStudio File &gt; Open Project ….\n\n\n\nRStudio IDE highlighting the project name and files pane\n\n\n\n\nVisual Editor\nThe RStudio Visual Editor is quite new and has features that improve your writing experience. Working in the Visual Editor feels a bit like working in a Google Doc.\nHere’s an example showing the same file in the original Source Editor with content in markdown format and in the Visual Editor with content that looks more like it will appear in a live site. You can switch freely between these modes.\n\n\n\n\n\n\n\n\n\nRStudio IDE highlighting the Source Editor\n\n\n\n\n\n\n\nRStudio IDE highlighting the Visual Editor\n\n\n\n\n\nAlready have some content formatted in a Google Doc? You can copy-paste it into the Visual Editor and most formatting will be retained.\nThe editing bar provides familiar point and click access to text formatting options like bulleted or numbered lists.\n\n\n\nRStudio IDE highlighting the point and click editing bar\n\n\n\nKeyboard shortcuts\nThe Visual Editor also lets you use many keyboard shortcuts that might be familiar for adding boldface (command-b), italics (command-i), or headers. On a Mac, option-command-2 will make a level 2 header. Try it with option-command-1, or option-command-0 for normal text!\n\n\nInsert an image or figure\nTo insert an image (called a figure in Quarto), click the image icon. This brings up a window in which we can select the image, set its alignment, give it a caption and alt text, hyperlink it, or edit other metadata.\n\n\n\nInsert image or figure using the Visual Editor\n\n\nOnce an image is added, clicking on that image gives us editing options. We can resize it dynamically by clicking in the image and dragging a corner or side to resize. When an image is selected, its dimensions are displayed for editing. Clicking on the gray ellipsis to the right of the dimensions opens the pop-up window to access more metadata edits.\n\n\nInsert a table\nSimilar to adding an image, to insert a table, we click the Table dropdown."
+  },
+  {
+    "objectID": "quarto-workflows/rstudio.html#quarto-render",
+    "href": "quarto-workflows/rstudio.html#quarto-render",
+    "title": "From RStudio",
+    "section": "Quarto render",
+    "text": "Quarto render\nIn the Build tab in the top-right pane, click “Render Website”. This will build the .html files and preview your website. It’s equivalent to “knitting” in RMarkdown.\nNote that you can also click “Preview Website”. With “Render Website” in RStudio, Quarto is able to render and preview in one step.\nIf you’d ever like to stop the preview, in the bottom-left, click on the Jobs tab and then the red Stop button.\n\nMake a small change and render it\nClick on index.md. This will open this markdown file in a fourth pane; the editor pane. Make a small change, for example change to today’s date on Line 4. Then, save your file; there is a disc icon at the top of the file.\nThen, render this file: press “Render” which is to the right of the disc icon that saves the file. This will render only this single file, as opposed to rerendering the whole website like when we clicked “Render Website” in the top right pane. Checking Render on Save (between the disc icon and the Render button) is a great strategy for doing this in one step."
+  },
+  {
+    "objectID": "quarto-workflows/rstudio.html#create-a-new-.rmd-page",
+    "href": "quarto-workflows/rstudio.html#create-a-new-.rmd-page",
+    "title": "From RStudio",
+    "section": "Create a new .Rmd page",
+    "text": "Create a new .Rmd page\nNew &gt; RMarkdown document &gt; OK\nThe starter RMarkdown document has some R code inside: it displays a summary of the cars dataset that is pre-loaded into R (summary(cars)) and plots the pressure data that is also pre-loaded (plot(pressure)).\nSave this document as r-example.rmd."
+  },
+  {
+    "objectID": "quarto-workflows/rstudio.html#update-_quarto.yml",
+    "href": "quarto-workflows/rstudio.html#update-_quarto.yml",
+    "title": "From RStudio",
+    "section": "Update _quarto.yml",
+    "text": "Update _quarto.yml\nNow we’ll add r-example.rmd to our _quarto.yml file; this is where we register all files to include in our site. Let’s add it after the section called “Quarto Workflows”.\nOpen _quarto.yml by clicking on it from the file directory.\nScroll down to review the current contents in the sidebar: section under contents:. It’s there we see all the file arrangement that we see in the previewed site.\nAdd - r-example.rmd in its own line, making sure that your indentation aligns with the other pages.\nFrom the Build tab, clicking Preview Website will recreate your website!"
+  },
+  {
+    "objectID": "quarto-workflows/rstudio.html#authoring-tips",
+    "href": "quarto-workflows/rstudio.html#authoring-tips",
+    "title": "From RStudio",
+    "section": "Authoring tips",
+    "text": "Authoring tips\nChecking “Render on Save” is really helpful when iterating quickly on a document.\nIf the document is very code-heavy, consider using freeze that will not run the code each time.\nQuarto.org has details about authoring, including specific instructions about authoring in RStudio."
+  },
+  {
+    "objectID": "quarto-workflows/rstudio.html#commit-and-push",
+    "href": "quarto-workflows/rstudio.html#commit-and-push",
+    "title": "From RStudio",
+    "section": "Commit and push!",
+    "text": "Commit and push!\nCommitting and pushing will make the changes you see locally live on your website (using the GitHub Action we set up earlier)."
+  },
+  {
+    "objectID": "quarto-workflows/rstudio.html#troubleshooting",
+    "href": "quarto-workflows/rstudio.html#troubleshooting",
+    "title": "From RStudio",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\nIf you have trouble rendering your website after for example changing the extenstion of a file from .md to .qmd, refreshing your RStudio often helps. Do this by clicking the project name at the upper right of the RStudio window (in this case, quarto-website-tutorial), and underneath the “close project” section, click the same name of your project: quarto-website-tutorial. This will relaunch your whole project afresh."
+  },
+  {
     "objectID": "quarto-workflows/data-science/Gaussian.html#standard-normal-probability-density-function-pdf",
     "href": "quarto-workflows/data-science/Gaussian.html#standard-normal-probability-density-function-pdf",
     "title": "Gaussian Distribution Functions",
@@ -356,380 +589,6 @@
       "Data Science",
       "Gaussian Distribution Functions"
     ]
-  },
-  {
-    "objectID": "quarto-workflows/quantum-mechanics/particles-2d.html#the-key-arguments",
-    "href": "quarto-workflows/quantum-mechanics/particles-2d.html#the-key-arguments",
-    "title": "Particles in Multidimensions",
-    "section": "The key arguments:",
-    "text": "The key arguments:\n\nLx and Ly: to set the boundaries of the particle-in-a-box problem. The wavefunction is defined only within \\(0\\leq x\\leq L_{x}\\) and \\(0\\leq y \\leq L_{y}\\).\nnpts = 101: number of points used in the grid for plotting.\nx and y: are 1D arrays of evenly spaced points between 0 and box length.\nX, Y: are 2D arrays created by np.meshgrid, representing all coordinate pairs.\nnx, ny: Quantum numbers in x and y directions.\nax.contourf: to make a filled contour plot.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Choose to use a square well and define a meshgrid of coordinate points\nLx = Ly = 1\nnpts = 101\nx = np.linspace(0, Lx, npts)\ny = np.linspace(0, Ly, npts)\nX, Y = np.meshgrid(x, y)\n\ndef psi_nxny(x, y, nx, ny):\n    \"\"\"\n    The two-dimensional particle-in-a-box wavefunction for state nx, ny.\n    X, Y can be single point or compatible arrays of such points.\n    \"\"\"\n    N = 2 / np.sqrt(Lx * Ly)\n    return N * np.sin(nx * np.pi * x /Lx) * np.sin(ny * np.pi * y /Ly)\n\ndef contour_plot(ax, nx, ny):\n    \"\"\"\n    Make a contour plot of the wavefunction defined by (nx, ny) on the provided Axes object, ax.\n    \"\"\"\n    ax.contourf(X, Y, psi_nxny(X, Y, nx, ny), cmap='hot')\n\n    # ratio: i.e squares appear square.\n    ax.axis('square')\n    \n    # add labels and title\n    ax.set_xlabel('$\\\\mathit{x}$ [a.u]')\n    ax.set_ylabel('$\\\\mathit{y}$ [a.u.]')\n    ax.set_title(f\"Particle in 2D Box $\\\\Psi$({nx}, {ny})\")\n\n# A 2 x 2 grid of Axes\nfig, axes = plt.subplots(nrows=2, ncols=2, figsize=(6,6))\n\n# Ensure that the x- and y-axes appear with the same aspect\ncontour_plot(axes[0, 0], 1, 1)\ncontour_plot(axes[1, 0], 2, 1)\ncontour_plot(axes[0, 1], 1, 2)\ncontour_plot(axes[1, 1], 2, 2)\n\n# necessary to call tight-layout() to add some padding around\nplt.savefig('Contour particle 2D.svg', bbox_inches='tight')\nplt.tight_layout()\nplt.show()\n\n\n\nFigure 1. Contour plots of the first four states of the particle in a two-dimensional square box\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Choose to use a square well and define a meshgrid of coordinate points\nLx = Ly = 1\nnpts = 101\nx = np.linspace(0, Lx, npts)\ny = np.linspace(0, Ly, npts)\nX, Y = np.meshgrid(x, y)\n\ndef surface_plot(ax, nx, ny):\n    \"\"\"\n    Make a surface plot of the wavefunction defined by (nx, ny) on the provided Axes object, ax. \n    Axes 3D must have been imported from mpl.toolkits.mplot3d for this work!.\n    \"\"\"\n\n# plot the wavefunction in \"3D\", coloring the surface\n    ax.plot_surface(X, Y, psi_nxny(X, Y, nx, ny), cmap='hot')\n\n# create a 3D figure, and plot the wavefunction as a surface\nfig = plt.figure()\nax = fig.add_subplot(projection='3d')\n   \n# add labels and title\nax.set_xlabel('$\\\\mathit{x}$ [a.u]')\nax.set_ylabel('$\\\\mathit{y}$ [a.u.]')\nax.set_title(r'Particle Surface plot in 2D Box $n_{x}$=2, $n_{y}$=4')\n\n# plot the chosen state\nnx, ny = 2, 4\nsurface_plot(ax, nx, ny)\n\nplt.savefig('Particle surface plot in 2D.svg', bbox_inches='tight')\nplt.tight_layout()\nplt.show()\n\n\n\nFigure 2. Surface plot of the \\(n_{x}\\)=2, \\(n_{y}=4\\) state of the particle in a two-dimensional square box",
-    "crumbs": [
-      "Contents",
-      "Quantum Mechanics",
-      "Particles in Multidimensions"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#adiabatic-process-and-carnot-cycle",
-    "href": "quarto-workflows/thermodynamics/adiabatic-process.html#adiabatic-process-and-carnot-cycle",
-    "title": "Python for Scientific Computing and Data Visualization",
-    "section": "Adiabatic process and Carnot Cycle",
-    "text": "Adiabatic process and Carnot Cycle",
-    "crumbs": [
-      "Contents",
-      "Thermodynamics",
-      "Adiabatic process and Carnot Cycle"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#introduction-of-thermodynamics",
-    "href": "quarto-workflows/thermodynamics/adiabatic-process.html#introduction-of-thermodynamics",
-    "title": "Python for Scientific Computing and Data Visualization",
-    "section": "Introduction of Thermodynamics",
-    "text": "Introduction of Thermodynamics\nThermodynamics is the study of the relationship between heat (or energy) and work. In other words, thermodynamics looks at how we can put our energy into a system (whether it is a machine or molecule) and make it do work. Alternatively, we might be able to do some work on system and make it produce energy (like spinning the turbines in a power station to produce electricity).\nIn chemistry, we sometimes speak more broadly about “energetics” of reactions (rather than thermodynamics), because energy given off during a reaction may simply be lost to the surroundings without doing useful work. Nevertheless, the ideas are the same: energy can be added to a set of molecules in order to produce a reaction, or a reaction can occur between a set of molecules in order to release energy.\nThermodynamics, on the other hand, is really concerned with the overall energy change from the beginning of a reaction to the end. It compares the energies of two sets of molecules to each other: the nergies of the reactants and the energies of the products.",
-    "crumbs": [
-      "Contents",
-      "Thermodynamics",
-      "Adiabatic process and Carnot Cycle"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#thermodynamics-cycles",
-    "href": "quarto-workflows/thermodynamics/adiabatic-process.html#thermodynamics-cycles",
-    "title": "Python for Scientific Computing and Data Visualization",
-    "section": "Thermodynamics Cycles",
-    "text": "Thermodynamics Cycles\nA thermodynamic cycle consists of a linked sequence of thermodynamic processes that involve transfer of heat and work into and out of the system, while varying pressure, temperature, and other state variables within the system, and eventually return the system to its initial state.\nThermodynamics is concerned with the change in \\(U\\) (and other functions) between states:\n\n\\(\\Delta U= U_{2}-U{1}\\)\n\nsince \\(U\\) is a state function, the path between these states does not affect the value of \\(\\Delta U\\): We can choose the path that is easiest to calculate \\(\\Delta U\\) for, knowing that this quantity is the same for all paths.",
-    "crumbs": [
-      "Contents",
-      "Thermodynamics",
-      "Adiabatic process and Carnot Cycle"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#internal-energy",
-    "href": "quarto-workflows/thermodynamics/adiabatic-process.html#internal-energy",
-    "title": "Python for Scientific Computing and Data Visualization",
-    "section": "Internal Energy",
-    "text": "Internal Energy\nThe internal energy, \\(U\\), of a thermodynamic system is the total energy, potential and kinetic, contained within it. For systems in equilibrium, the internal state can be thought of as entirely defined by the temperature, \\(T\\), volume, \\(V\\), pressure, \\(p\\), and composition, \\(N_{i}\\), of the system.",
-    "crumbs": [
-      "Contents",
-      "Thermodynamics",
-      "Adiabatic process and Carnot Cycle"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#adiabatic-process",
-    "href": "quarto-workflows/thermodynamics/adiabatic-process.html#adiabatic-process",
-    "title": "Python for Scientific Computing and Data Visualization",
-    "section": "Adiabatic process",
-    "text": "Adiabatic process\nAn adiabatic process is one in which no heat is gained or lost by the system. The first law of thermodynamics with Q=0 shows that all the change in internal energy is in the form of work done.\nAn important alternative way the gas can expand is through an adiabatic process: if the cylinder is insulated so it is thermally isolated from its surroundings, \\(q=0\\) and as it does expansion wirk its internal energy must decrease, \\(\\Delta U = w &lt; 0\\) and its temperature drops. The reverse process, adiabatic compression, is familiar from inflating a bicycle tyre: As the air in the pump is compressed (rapidly enough that there is little time for heat flow to the surroundings) its temperature rises.\n\n\\(\\frac{C_{v}}{nR} \\frac{dT}{T} = -\\frac{dV}{V}\\)\n\nwhich can be integrated for a reversible expansion between the state (\\(V_{1}, T_{1})\\)) and (\\(V_{2}, T_{2})\\)) to give\n\n\\(\\frac{C_V}{nR}ln \\frac{dT}{T} = -ln\\frac{V_{2}}{V_{1}}\\)\n\nThis expression is usually presented in the quivalent form \\(T_{1} V_{1}^{c}=T_{2} V_{2}^{c}\\) where \\(c=\\frac{C_{v}}{nR}\\). The corresponding relation between pressure and volume is found from the fact that, for an ideal gas\n\n\\(\\frac{T_{2}}{V_{2}} = \\frac{p_{2}V_{2}}{p_{1}V_{1}}\\)\n\nwhich leads to\n\n\\(p_{1}V_{1}^{\\gamma}=p_{2}V_{2}^{\\gamma}\\)\n\nfor a (monoatomic) ideal gas. That is, \\(pV^{\\gamma}\\) is constant along an adiabat.",
-    "crumbs": [
-      "Contents",
-      "Thermodynamics",
-      "Adiabatic process and Carnot Cycle"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#carnot-cycle",
-    "href": "quarto-workflows/thermodynamics/adiabatic-process.html#carnot-cycle",
-    "title": "Python for Scientific Computing and Data Visualization",
-    "section": "Carnot Cycle",
-    "text": "Carnot Cycle\nAnother important thermodynamic cycle, the Carnot cycle, is based on a sequence of reversible isothermal and adiabatic processes between four states, A, B, C, and D.\nI. \\(A\\rightarrow B\\): a reversible isothermal has expansion process from a state \\((p_{A}, V_{A})\\) to \\((p_{B}, V_{B})\\) at a high temperature, \\(T_{high}\\). During this step, the system absorbs \\(q_{in}\\), expands and does work surroundings.\n\n\\(B\\rightarrow C\\): a reversible adiabatic gas expansion process from state \\((p_{B}, V_{B})\\) to \\((p_{C}, V_{C})\\) at a lower temperature, \\(T_{low}\\). This time the system is placed in thermal contact with a reservoir which receives heat.\n\\(C\\rightarrow D\\): a reversible isothermal gas compression process from state \\((p_{C}, V_{C})\\) to \\((p_{D}, V_{D})\\) at a contant temperature, \\(T_{low}\\), and causes a loss of heat, \\(q_{out}\\).\n\\(D\\rightarrow A\\): a reversible adiabatic gas compression process from state \\((p_{D}, V_{D})\\) to \\((p_{A}, V_{A})\\). The system is insulated so no heat can flow and its temperature returns to \\(T_{high}\\).\n\nThis Python script to illustrate the Carnot Cycle with labelled plot for states A, B, C, and D with following parameters:\n\n\\(V_{1}=0.2 m^{3}\\)\n\\(T_{high}\\)= 800 K$\nIsothermal compression ratio, \\(r_{i}=V_{B}/V_{A}=2\\)\nAdiabatic compression ratio,\\(r_{a}=V_{C}/V_{B}=2\\)\n\nDemonstrate that the efficiency, defined as \\(\\nu=w/q-hot\\) where \\(w\\) is the work done and \\(q-hot\\) is the heat put into system in step \\(A\\rightarrow B\\), is given by,\n\n\\(\\nu=1-\\frac{T_{cold}}{T_{hot}}\\)\n\n\nStep 1: Set up and use function\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.constants import R\n\n# number of molecule gas\nn = 1\ndef get_p(V, T):\n    \"\"\"\n    Return the pressure of 1 mol of an ideal gas at (V, T).\n    \"\"\"\n    return n * R * T / V\n\ndef plot_isotherm(Vmin, Vmax, T, c='k'):\n    \"\"\"\n    plot a single isoterm for temperature T between Vmin and Vmax.\n    Returns the arrays of V, p values defining the isoterm.\n    \"\"\"\n    V = np.linspace(Vmin, Vmax, 1000)\n    p = get_p(V, T)\n    plt.plot(V, p, c=c, label=f'{T:.1f} K', lw=1)\n    return V, p\n\ndef plot_adiabatic(Vmin, Vmax, p0, V0, c='k', gamma=5/3):\n    \"\"\"\n    plot a single adiabatic for between Vmin and Vmax.\n    p0, V0, is a fixed point on the adiabatic, the function returns the arrays of V, p values defining the adiabatic.\n    \"\"\"\n    V = np.linspace(Vmin, Vmax, 1000)\n    p = p0 * (V/V0)**(-gamma)\n    plt.plot(V, p, c=c, lw=1)\n    return V, p\n\ndef carnot_cycle(V1, T_high, r_i, r_a):\n    \"\"\"\n    Plot a p-V diagram for a Carnot Cycle for an ideal gas starting at a compressed state (V1, T_high) \n    defined by isothermal compression ratio \n    r_i = V2/V1 and adiabatic compression ratio, \n    r_a = V3/V2.\n    \"\"\"\n\n    # Constant-volume heat capacity, \"gamma\" parameter (Cp/Cv)\n    C_V, gamma = 3/2 * R, 5/3\n\n\nStep 2: Volumes at each state\n    # Calculate the state variables at each stage of the cycle.\n    V2 = V1 * r_i\n    V3 = V2 * r_a\n    V4 = V3 * V1/V2\n\n\\(V_{1}\\): initial compressed volume.\n\\(V_{2}\\): after isothermal expansion (ratio, \\(r_{i}\\)).\n\\(V_{3}\\): after adiabatic expansion (ratio \\(r_{a})\\).\n\\(V_{4}\\): after isothermal compression, derived so the cycle closes.\n\n\n\nStep 3: Pressures and Temperature\n    # State Pressure \n    p1, p2 = get_p(V1, T_high), get_p(V2, T_high)\n    T_low = T_high * (V2/V3) ** (gamma - 1)\n    p3, p4 = get_p(V3, T_low), get_p(V4, T_low)\n\nCompute pressures at each state using ideal gas law.\n\\(T_{low}\\) is found from adiabatic relation, \\(TV^{\\gamma-1}\\)\n\n\n\nStep 4: Plot the cycle\n# Plot the isotherms and adiabatic for the cycle.\n    plot_isotherm(V1, V2, T_high, c='r')\n    plot_adiabatic(V2, V3, p2, V2, c='g', gamma=gamma)\n    plot_isotherm(V4, V3, T_low, c='b')\n    plot_adiabatic(V1, V4, p1, V1, c='m', gamma=gamma)\n\nRed = isothermal expansion (high temperature).\nGreen = adiabatic expansion.\nBlue = isothermal compression(low temperature).\nMagenta = adiabatic compression.\n\n\n\nStep 5: Work and Heat calculation\n# Step 1: isothermal expansion, V1 =&gt; v2 AT T_high\n    w1 = - n * R * T_high * np.log(V2 / V1)\n    q1 = -w1\n\n    # Step 2: adiabatic expansion, (V2, T_high) =&gt; (V3, T_low)\n    w2 = n * C_V * (T_low - T_high)\n    q2 = 0\n\n    # Step 3: Isothermal compression, V3 =&gt; V4, at T_low\n    w3 = -n * R * T_low * np.log(V4 / V3)\n    q3 = -w3\n\n    # Step 4: adiabatic compression, (V4, T_low =&gt; V1, T_high).\n    w4 = n * C_V * (T_high - T_low)\n    q4 = 0\n\nWork and heat are calculated for each step.\nisothermal \\(w = -nRT(V_{final}-V_{initial})\\).\nAdiabatic, \\(w = nC_{V}(T_{final}-T_{initial})\\).\nHeat \\(q\\) is zero for adiabatic steps.\n\n\n\nStep 6: Efficiency\n    # Total energy input through heating:\n    q_in = q1\n\n    # Total work done *on* the gas:\n    w_total = w1 + w2 + w3 + w4\n\n    # Efficiency\n    eta = -w_total /q_in\n    print('Efficiency = {:.1f} %'.format(eta * 100))\n    \n\nEfficiency = work output/heat input\nPrints Carnot efficiency.\n\n\n\nStep 7: Plot Labels\n  # Label the states\n    states = [(p1, V1), (p2, V2), (p3, V3), (p4, V4)]\n    for i, (p, V) in enumerate(states):\n        plt.text(V, p, \"ABCD\" [i])\n\n\nStep 8: Running the code\n# Run\n\nplt.figure(figsize=(6, 5))\ncarnot_cycle(V1=0.01, T_high=800, r_i=2, r_a=2)\nplt.savefig('Carnot Cycle p-V Diagram (Ideal Gas).svg', bbox_inches='tight')\nplt.show()\n\nCreates a figure\nRuns the Carnot Cycle with chosen parameters.\nSaves the plot as an SVG.\nDisplays the diagram.\n\nEfficiency = 37.0%\n\n\n\nFigure 1. Carnot Cycle p-V Diagram (Ideal Gas)",
-    "crumbs": [
-      "Contents",
-      "Thermodynamics",
-      "Adiabatic process and Carnot Cycle"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/jupyter.html",
-    "href": "quarto-workflows/jupyter.html",
-    "title": "From Jupyter",
-    "section": "",
-    "text": "You can interact with Quarto through JupyterLab or JupyterHub. Your Jupyter setup will involve .ipynb notebooks and the command line. Quarto’s JupyterLab tutorials has great instructions on getting started with JupyterLab, including computations and authoring.\nHere we will demonstrate how to work with this Quarto tutorial site in JupyterHub and add a Jupyter Notebook (.ipynb file). This example uses the NASA-Openscapes JupyterHub that already has all python environments as well as Quarto installed."
-  },
-  {
-    "objectID": "quarto-workflows/jupyter.html#setup",
-    "href": "quarto-workflows/jupyter.html#setup",
-    "title": "From Jupyter",
-    "section": "Setup",
-    "text": "Setup\n\nJupyterHub\nOur JupyterHub is already setup with python environments as well as Quarto (through nasa-openscapes/corn), so there is no further installation required.\n\n\nClone your repo\nYou’ll start by cloning your repository into JupyterHub. Do this by opening a terminal (File &gt; New &gt; Terminal). In the Terminal, git clone your repository and cd into it:\ngit clone https://github.com/openscapes/quarto-website-tutorial\ncd quarto-website-tutorial\n\n\nInstall Quarto\nNot needed - Quarto is already installed on the NASA-Openscapes JupyterHub! But to install elsewhere you would do so from https://quarto.org/docs/get-started/.\nQuarto is a Command Line Interface (CLI), like git. Once download is complete, follow the installation prompts on your computer like you do for other software. You won’t see an application to click on when it is installed.\nNote for Mac users: If you do not have administrative privileges, please select “Install for me only” during the Destination Selection installation step (you will first click on “Change Install Location” at the Installation Type step).\nYou can check to confirm that Quarto is installed properly from the command line:\nquarto check install\n\n\n\n\n\n\nNoteAdditional checks\n\n\n\n\n\nYou can also run:\n\nquarto check knitr to locate R, verify we have the rmarkdown package, and do a basic render\nquarto check jupyter to locate Python, verify we have Jupyter, and do a basic render\nquarto check to run all of these checks together\n\n\n\n\n\n\n\n\n\n\nTipHistorical aside: Install Quarto in a docker container\n\n\n\n\n\nIn Summer 2021 some NASA Mentors trying to install quarto locally was not an option, but they were able to install it inside a container using the following Dockerfile:\n#| fold: true\n#| summary: \"Show the Dockerfile\"\n\n##############################\n# This Dockerfile installs quarto and then runs quarto serve against the\n# internal /home/quarto/to_serve.\n#\n# BUILD\n# -----\n# To build this container, run\n#\n#     docker build -t quarto_serve .\n#\n# Add the --no-cache option to force docker to build fresh and get the most\n# recent version of quarto.\n#\n#\n# RUN\n# ---\n# 1. Find the directory you want quarto to serve. Let's call this /PATH/TO/earthdata-cloud-cookbook.\n# 2. Run docker:\n#\n#     docker run --rm -it -p 4848:4848 -v /PATH/TO/earthdata-cloud-cookbook:/home/quarto/to_serve quarto_serve\n#\n# 3. Open your browser and go to http://127.0.0.1:4848/\n#\n##############################\n\nFROM ubuntu:hirsute\n\n######\n# Install some command line tools we'll need\n######\nRUN apt-get update\nRUN apt-get -y install wget\nRUN apt-get -y install gdebi-core\nRUN apt-get -y install git\n\n\n######\n# Install quarto (https://quarto.org/)\n######\n\n# This is a quick and dirty way of getting the newest version number from\n# https://github.com/quarto-dev/quarto-cli/releases/latest. What's happening is\n# we're pulling the version number out of the redirect URL. This will end up\n# with QVER set to something like 0.2.11.\nRUN QVER=`wget --max-redirect 0 https://github.com/quarto-dev/quarto-cli/releases/latest 2&gt;&1 | grep \"Location\" | sed 's/L.*tag\\/v//' | sed 's/ .*//'` \\\n    && wget -O quarto.deb \"https://github.com/quarto-dev/quarto-cli/releases/download/v$QVER/quarto-$QVER-amd64.deb\"\nRUN gdebi -n quarto.deb\n\n# Run this to make sure quarto installed correctly\nRUN quarto check install\n\n\n######\n# Create a non-root user called quarto\n######\nRUN useradd -ms /bin/bash quarto\nUSER quarto\nRUN mkdir /home/quarto/to_serve\nWORKDIR /home/quarto/to_serve\n\n\n######\n# Start quarto serve\n######\n\nCMD quarto serve --no-browse --host 0.0.0.0 --port 4848"
-  },
-  {
-    "objectID": "quarto-workflows/jupyter.html#quarto-preview",
-    "href": "quarto-workflows/jupyter.html#quarto-preview",
-    "title": "From Jupyter",
-    "section": "Quarto preview",
-    "text": "Quarto preview\nLet’s start off by previewing our quarto site locally. In Terminal, type quarto preview, which will provide a URL with a preview of our site!\nquarto preview\n# Preparing to preview\n# Watching files for changes\n# Browse at https://openscapes.2i2c.cloud/user/jules32/proxy/4593/\nCopy this URL into another browser window; and arrange them so you can see them both. I make a bit more space in Jupyter by collapsing the left file menu by clicking on the file icon at the top of the left sidebar.\n\n\n\n\n\n\nMake a small change and preview it\nNow we’ll be able to see live changes in the preview as we edit in our .md files. Let’s try it: Change the date in index.md by opening it from the file directory. Change to today’s date, and save. Your preview window will refresh automatically! If it does not, you can also refresh the page manually. The refreshed previewed site will now display your changes!"
-  },
-  {
-    "objectID": "quarto-workflows/jupyter.html#create-a-new-.ipynb-page",
-    "href": "quarto-workflows/jupyter.html#create-a-new-.ipynb-page",
-    "title": "From Jupyter",
-    "section": "Create a new .ipynb page",
-    "text": "Create a new .ipynb page\nLet’s add a new page to our site. Instead of an .md file like the others, let’s add a .ipynb file.\nFile &gt; New &gt; Notebook. Accept the default kernel by clicking Select.\n\nFirst chunk: raw yaml\nBy default, this Notebook will give us a first chunk that is code. Let’s change it to raw so that we can write our yaml at the top.\n\n\n\n\n\nIn our Raw code chunk, let’s write the title of this document. We need three dashes --- on separate lines preceding and following the title:, which you can name as you’d like.\n---\ntitle: Python Example\n---\n\n\nSecond chunk: Markdown\nLet’s add a new chunk that is Markdown so we can write some description of what this page will be.\nClick the + symbol at the top of the document, and this will add a new chunk, which by default again is a Code chunk. Change it to a Markdown Chunk following the steps we did above when switching to Raw.\nHere, write a little bit of text in Markdown. Since your title is effectively a level-1 header, avoid using level-1 headers in the rest of your document. Here is some example text I wrote:\n## Introduction\n\nThis example has some Python code that will be a part of our Quarto site.\n\n\nThird chunk: Code\nNow let’s create a new chunk with the default Code setting.\nPaste the following code (or write some of your own to test):\n#| label: fig-polar\n#| fig-cap: \"A line plot on a polar axis\"\nimport numpy as np\nimport matplotlib.pyplot as plt\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\nNow, go ahead and execute this code chunk like you normally would, by clicking the cursor in a code block and clicking the sideways “play” triangle to run the selected cells (and advance to the next cell). This code produces a plot.\nNote that the code runs as it normally would; the code options in the comments are just comments.\n\n\nSave your file\nSave your document - I’ll call mine python-example.ipynb in the main repository."
-  },
-  {
-    "objectID": "quarto-workflows/jupyter.html#update-_quarto.yml",
-    "href": "quarto-workflows/jupyter.html#update-_quarto.yml",
-    "title": "From Jupyter",
-    "section": "Update _quarto.yml",
-    "text": "Update _quarto.yml\nNow we’ll add python-example.ipynb to our _quarto.yml file; this is where we register of all files to include in our site. Let’s add it after the section called “Basic Workflows”.\nOpen _quarto.yml by clicking on it from the file directory.\nScroll down to review the current contents in the sidebar: section. It’s there we see all the file arrangement that we see in the previewed site.\nAdd - python-example.ipynb to line 46, making sure that your indentation aligns with the other pages.\n\n\n\n\n\nYou’ll see that our new page shows up in our Preview, and the code is executed since we did that in the Jupyter Notebook itself. By default, Quarto will not execute code chunks since your computations will likely become more complex and you will want to control when they are executed (or “run”).\nSince Quarto is still previewing our website and the python-example.ipynb, the plot also displays in the notebook after the code is run and the file is saved, as shown below.\n\n\n\n\n\nSo, your normal workflow for creating and running code blocks in your Jupyter Notebook is the same one you’ll use as Quarto displays the preview."
-  },
-  {
-    "objectID": "quarto-workflows/jupyter.html#quarto-render",
-    "href": "quarto-workflows/jupyter.html#quarto-render",
-    "title": "From Jupyter",
-    "section": "Quarto render",
-    "text": "Quarto render\nSo far we have used Quarto preview to view our website as we develop it. Quarto render will build the html elements of the website that we can see when we preview. Rendering will format the markdown text and code nicely as a website (or however is indicated in the _quarto.yml).\nBy default, Quarto render does not execute code in a Jupyter notebook. It will never run .ipynb files unless you tell it to.\n\nRender whole notebook\nIf you would like it to specifically execute code in a Jupyter notebook, you can do so in Terminal.\nOur Terminal is still busy previewing our website, so let’s open a new Terminal.\nFile &gt; New &gt; Terminal. Then type:\ncd quarto-website-tutorial\nquarto render python-example.ipynb --execute"
-  },
-  {
-    "objectID": "quarto-workflows/jupyter.html#authoring-tips",
-    "href": "quarto-workflows/jupyter.html#authoring-tips",
-    "title": "From Jupyter",
-    "section": "Authoring tips",
-    "text": "Authoring tips\nQuarto.org has details about authoring, including specific instructions about authoring in Jupyter: quarto.org/docs/reference/cells/cells-jupyter."
-  },
-  {
-    "objectID": "quarto-workflows/jupyter.html#commit-and-push",
-    "href": "quarto-workflows/jupyter.html#commit-and-push",
-    "title": "From Jupyter",
-    "section": "Commit and push!",
-    "text": "Commit and push!\nCommitting and pushing will make the changes you see locally live on your website (using the GitHub Action we set up earlier)."
-  },
-  {
-    "objectID": "quarto-workflows/jupyter.html#troubleshooting",
-    "href": "quarto-workflows/jupyter.html#troubleshooting",
-    "title": "From Jupyter",
-    "section": "Troubleshooting",
-    "text": "Troubleshooting\n\nMy changes don’t show up in preview\nMake sure you’ve saved your file! There might be a slight delay depending on your JupyterHub/Lab setup.\n\n\nQuarto render hangs / does not complete\nCheck the specific notebook, are there any `—` throughout to denote line breaks rather than yaml? They might be causing the issue; consider deleting those.\nAlso check how long the first raw cell is. Are there level-1 headers (#)? Try removing them."
-  },
-  {
-    "objectID": "quarto-workflows/rstudio.html",
-    "href": "quarto-workflows/rstudio.html",
-    "title": "From RStudio",
-    "section": "",
-    "text": "The RStudio software (called an IDE, integrated development environment) is an excellent way to edit files and interface with GitHub. Plus, as it is made by the same folks who make Quarto, it has many integrated features for streamlining your workflow with Quarto, including how it previews your edits and provides debugging support for yaml! Quarto's RStudio tutorials has great instructions on getting started with RStudio, including computations and authoring.\nHere is what you’ll need to do to set up and use RStudio with Quarto."
-  },
-  {
-    "objectID": "quarto-workflows/rstudio.html#setup",
-    "href": "quarto-workflows/rstudio.html#setup",
-    "title": "From RStudio",
-    "section": "Setup",
-    "text": "Setup\n\nRStudio and GitHub\nFor a workflow with RStudio and GitHub on your local computer, you will need four things:\n\nR\nRStudio\nGit\nGitHub\n\nFollow the UCSB MEDS Installation Guide for detailed instructions on how to create accounts, download, install, and configure on Mac and Windows. This takes about 20 minutes. (For an even more detailed walk-through, see Allison Horst’s ESM 206 Google Doc).\n\n\nClone your repo\nYou’ll start by cloning your repository into RStudio.\nFile &gt; New Project &gt; Version Control &gt; Git &gt; paste your repository name.\nR for Excel Users: Clone your repository using RStudio has detailed instructions and screenshots of these steps.\n\n\nInstall Quarto\nNext, you’ll install Quarto: https://quarto.org/docs/get-started/. After downloading, follow the installation wizard on your computer. When it is complete, you won’t see an application or any new software, but it is now available to RStudio (as well as all other applications on your computer, including the command line).\n\n\nRStudio orientation\nNow let’s take a moment to get oriented. This is an RStudio project, which is indicated in the top-right. The bottom right pane shows all the files in your project; everything we’ve cloned from GitHub. We can open any RStudio project by opening its .Rproj file, or from RStudio File &gt; Open Project ….\n\n\n\nRStudio IDE highlighting the project name and files pane\n\n\n\n\nVisual Editor\nThe RStudio Visual Editor is quite new and has features that improve your writing experience. Working in the Visual Editor feels a bit like working in a Google Doc.\nHere’s an example showing the same file in the original Source Editor with content in markdown format and in the Visual Editor with content that looks more like it will appear in a live site. You can switch freely between these modes.\n\n\n\n\n\n\nRStudio IDE highlighting the Source Editor\n\n\n\n\n\n\n\nRStudio IDE highlighting the Visual Editor\n\n\n\n\n\nAlready have some content formatted in a Google Doc? You can copy-paste it into the Visual Editor and most formatting will be retained.\nThe editing bar provides familiar point and click access to text formatting options like bulleted or numbered lists.\n\n\n\nRStudio IDE highlighting the point and click editing bar\n\n\n\nKeyboard shortcuts\nThe Visual Editor also lets you use many keyboard shortcuts that might be familiar for adding boldface (command-b), italics (command-i), or headers. On a Mac, option-command-2 will make a level 2 header. Try it with option-command-1, or option-command-0 for normal text!\n\n\nInsert an image or figure\nTo insert an image (called a figure in Quarto), click the image icon. This brings up a window in which we can select the image, set its alignment, give it a caption and alt text, hyperlink it, or edit other metadata.\n\n\n\nInsert image or figure using the Visual Editor\n\n\nOnce an image is added, clicking on that image gives us editing options. We can resize it dynamically by clicking in the image and dragging a corner or side to resize. When an image is selected, its dimensions are displayed for editing. Clicking on the gray ellipsis to the right of the dimensions opens the pop-up window to access more metadata edits.\n\n\nInsert a table\nSimilar to adding an image, to insert a table, we click the Table dropdown."
-  },
-  {
-    "objectID": "quarto-workflows/rstudio.html#quarto-render",
-    "href": "quarto-workflows/rstudio.html#quarto-render",
-    "title": "From RStudio",
-    "section": "Quarto render",
-    "text": "Quarto render\nIn the Build tab in the top-right pane, click “Render Website”. This will build the .html files and preview your website. It’s equivalent to “knitting” in RMarkdown.\nNote that you can also click “Preview Website”. With “Render Website” in RStudio, Quarto is able to render and preview in one step.\nIf you’d ever like to stop the preview, in the bottom-left, click on the Jobs tab and then the red Stop button.\n\nMake a small change and render it\nClick on index.md. This will open this markdown file in a fourth pane; the editor pane. Make a small change, for example change to today’s date on Line 4. Then, save your file; there is a disc icon at the top of the file.\nThen, render this file: press “Render” which is to the right of the disc icon that saves the file. This will render only this single file, as opposed to rerendering the whole website like when we clicked “Render Website” in the top right pane. Checking Render on Save (between the disc icon and the Render button) is a great strategy for doing this in one step."
-  },
-  {
-    "objectID": "quarto-workflows/rstudio.html#create-a-new-.rmd-page",
-    "href": "quarto-workflows/rstudio.html#create-a-new-.rmd-page",
-    "title": "From RStudio",
-    "section": "Create a new .Rmd page",
-    "text": "Create a new .Rmd page\nNew &gt; RMarkdown document &gt; OK\nThe starter RMarkdown document has some R code inside: it displays a summary of the cars dataset that is pre-loaded into R (summary(cars)) and plots the pressure data that is also pre-loaded (plot(pressure)).\nSave this document as r-example.rmd."
-  },
-  {
-    "objectID": "quarto-workflows/rstudio.html#update-_quarto.yml",
-    "href": "quarto-workflows/rstudio.html#update-_quarto.yml",
-    "title": "From RStudio",
-    "section": "Update _quarto.yml",
-    "text": "Update _quarto.yml\nNow we’ll add r-example.rmd to our _quarto.yml file; this is where we register all files to include in our site. Let’s add it after the section called “Quarto Workflows”.\nOpen _quarto.yml by clicking on it from the file directory.\nScroll down to review the current contents in the sidebar: section under contents:. It’s there we see all the file arrangement that we see in the previewed site.\nAdd - r-example.rmd in its own line, making sure that your indentation aligns with the other pages.\nFrom the Build tab, clicking Preview Website will recreate your website!"
-  },
-  {
-    "objectID": "quarto-workflows/rstudio.html#authoring-tips",
-    "href": "quarto-workflows/rstudio.html#authoring-tips",
-    "title": "From RStudio",
-    "section": "Authoring tips",
-    "text": "Authoring tips\nChecking “Render on Save” is really helpful when iterating quickly on a document.\nIf the document is very code-heavy, consider using freeze that will not run the code each time.\nQuarto.org has details about authoring, including specific instructions about authoring in RStudio."
-  },
-  {
-    "objectID": "quarto-workflows/rstudio.html#commit-and-push",
-    "href": "quarto-workflows/rstudio.html#commit-and-push",
-    "title": "From RStudio",
-    "section": "Commit and push!",
-    "text": "Commit and push!\nCommitting and pushing will make the changes you see locally live on your website (using the GitHub Action we set up earlier)."
-  },
-  {
-    "objectID": "quarto-workflows/rstudio.html#troubleshooting",
-    "href": "quarto-workflows/rstudio.html#troubleshooting",
-    "title": "From RStudio",
-    "section": "Troubleshooting",
-    "text": "Troubleshooting\nIf you have trouble rendering your website after for example changing the extenstion of a file from .md to .qmd, refreshing your RStudio often helps. Do this by clicking the project name at the upper right of the RStudio window (in this case, quarto-website-tutorial), and underneath the “close project” section, click the same name of your project: quarto-website-tutorial. This will relaunch your whole project afresh."
-  },
-  {
-    "objectID": "quarto-workflows/browser.html",
-    "href": "quarto-workflows/browser.html",
-    "title": "From the Browser",
-    "section": "",
-    "text": "A workflow from the browser if good for getting started (since you do not need to install additional software) and for making small contributions, but is definitely limited. Once you feel comfortable here, you can move to a different setup.\nHere’s an example of editing content on an existing page."
-  },
-  {
-    "objectID": "quarto-workflows/browser.html#edit-content-on-an-existing-page",
-    "href": "quarto-workflows/browser.html#edit-content-on-an-existing-page",
-    "title": "From the Browser",
-    "section": "Edit content on an existing page",
-    "text": "Edit content on an existing page\nLet’s change the date on the home page of this website.\nIn your repository, navigate to index.md. Then, click the pencil icon in the top right to edit directly.\n\n\n\n\n\nWe are now in the “Edit file” tab of the editor, where we can make modifications. Let’s change the date to today’s date. Click the “Preview” tab to see your changes. You can even check the “Show diff” box on the right side to see the changes you’ve made.\n\n\n\n\n\nWhile you’re here, see if there are additional changes to the text you’d like to make. Maybe changing the title or author at the top, or for the main text on the home page of the website.\nOur index.md file is written in Markdown, which enables you to make simple text formatting. As you go back and forth from “Edit file” to “Preview”, notice the patterns of how the Markdown text looks when it is as source (“Edit file”) and when it is formatted (“Preview”). For example, in Markdown, you can make text as a header with # symbols, bold or italic with * symbols, and hyperlinks with [](). Notice that spacing is important: for example, there are carriage returns (when you hit the “return” key) before any bullet points. You can learn the short list of Markdown rules here: https://quarto.org/docs/authoring/markdown-basics."
-  },
-  {
-    "objectID": "quarto-workflows/browser.html#commit-and-publish",
-    "href": "quarto-workflows/browser.html#commit-and-publish",
-    "title": "From the Browser",
-    "section": "Commit and publish",
-    "text": "Commit and publish\nCommit your changes by scrolling to the bottom of the page and writing a commit message - a note to yourself and others about what changes you made. Write your commit message and then click the green “Commit changes” button.\n\n\n\n\n\nNow, click back to the main page of your GitHub repository. You should see the orange dot confirming your website is published. You’ll have to wait for the GitHub Action to tell quarto to build your site for you to see the update, but it will be there!"
-  },
-  {
-    "objectID": "quarto-workflows/browser.html#limitations",
-    "href": "quarto-workflows/browser.html#limitations",
-    "title": "From the Browser",
-    "section": "Limitations",
-    "text": "Limitations\nWhile awesome that we can edit using GitHub directly from the browser, there are obvious limitations. One is that to see your edits show up in your book, you have to publish using the GitHub Action. This is slow. Another limitation is that we can only work on one file at a time and commit them each separately, which also is slow. Using additional software can make things much better, as we explore in subsequent chapters."
-  },
-  {
-    "objectID": "quarto-workflows/index.html",
-    "href": "quarto-workflows/index.html",
-    "title": "Contents",
-    "section": "",
-    "text": "By learning and practicing the materials in this blog, we will gradually be able to:\n\nUse Python as a computational tool for solving physics and chemistry problems.\nApply Mathematic concepts to real scientific problems.\nVisualize scientific data using Matplotlib and Scikit-Learn.\nExplore the fundamental of Quantum Mechanical (Harmonic Oscillator and Hydrogen atom).",
-    "crumbs": [
-      "Contents"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/index.html#learning-objectives",
-    "href": "quarto-workflows/index.html#learning-objectives",
-    "title": "Contents",
-    "section": "",
-    "text": "By learning and practicing the materials in this blog, we will gradually be able to:\n\nUse Python as a computational tool for solving physics and chemistry problems.\nApply Mathematic concepts to real scientific problems.\nVisualize scientific data using Matplotlib and Scikit-Learn.\nExplore the fundamental of Quantum Mechanical (Harmonic Oscillator and Hydrogen atom).",
-    "crumbs": [
-      "Contents"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/data-science/the-fourier-series.html#sawtooth-wave",
-    "href": "quarto-workflows/data-science/the-fourier-series.html#sawtooth-wave",
-    "title": "The Fourier Series",
-    "section": "1. Sawtooth Wave",
-    "text": "1. Sawtooth Wave\n\nThe sawtooth wave is derived from the frequencies of the harmonic series.\nHarmonics = all harmonics.\nAmplitude = 1 / (harmonic number).\nIf a sawtooth wave is an infinite sum of sine waves, then let’s use summation notation to express the wave.\n\nShifting the phase of the even harmonics by 180 degrees will make a sawtooth wave that ramps up instead of ramping down. No difference in how we perceive the sound.\n\n\\(f_{saw}(t) =\\;\\frac{1}{2}-\\frac{1}{\\pi}\\sum_{k=1}^{\\infty}{\\frac{(-1)^{k}}{k}}\\;sin(2\\pi kvt)\\)\n\nwhere: - \\(f_{saw}(t)\\) is a sawtooth wave as a function of \\(t\\) (time) in seconds. - \\(v\\) is a fundamental frequency. - \\(A\\) is a fundamental amplitude. - \\(n\\) represents the harmonic number where \\(n=1\\) is the fundamental.\n\nKey arguments\n\nn: sets the number of sample, higher n smoother curves.\nT and nu: defines the period and frequency.\nduration: creates time vector\nt = np.arange(0, duration, duration/n): this is the x-axis for plotting.\nf_saw = (t + 0.5) %1: generates the sawtooth wave, keeps values between 0 and 1, producing the repeating ramp shape of a sawtooth.\ndef fourier_expansion_sawtooth(nterms):: defines a function that computes the Fourier series a[[roximation of the sawtooth wave.\nfor icol in range(3):: loops over the three subplots.\nnterms = (icol + 1) * 3: each iteration increases the number of Fourier terms.\naxes[icol].plot(t, fourier_expansion_sawtooth(nterms),...): Plots the Fourier approximation on the same subplot.\nplt.tight_layout(): ensures the labels and titles don’t overlap.\n\nThis Python script demonstrates the Sawtooth wave with multiple axes. In the simple case, they can be arranged in a grid of rows and columns as follows.\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Number of sample points\nn = 2048\n\n# period in s\nT = 1\n\n# Frequency\nnu = 1 / T\n\n# Length sampling, s\nduration = 2\nt = np.arange(0, duration, duration/n)\n\n# Sawtooh, /|/|/|\nf_saw = (t + 0.5) % 1\n\ndef fourier_expansion_sawtooth(nterms):\n    fourier_sawtooth = np.zeros(n)\n    for k in range(1, nterms+1):\n        fourier_sawtooth +=  (-1) ** k * np.sin(2 * np.pi * k * nu * t) / k\n    return 0.5 - (1/np.pi) * fourier_sawtooth\n    \n# Plotting\nfig, axes = plt.subplots(ncols =3, figsize=(12, 4))\n\n# different expansion depths\nfor icol in range(3):\n    nterms = (icol +1) * 3\n    axes[icol].plot(t, f_saw, label='Sawtooth', color='black')\n    axes[icol].plot(t, fourier_expansion_sawtooth(nterms), label='Fourier', linestyle='--')\n    axes[icol].legend()\n    axes[icol].set_title(f\"Sawtooth vs Fourier (n={nterms})\")\n    axes[icol].set_xlabel('Time [s]')\n    axes[icol].set_ylabel('Amplitude')\n\nplt.savefig('Sawtooth vs Fourier.svg', bbox_inches='tight')\nplt.tight_layout()    \nplt.show()\n\n\n\nFigure 1. Sawtooth vs Fourier",
-    "crumbs": [
-      "Contents",
-      "Data Science",
-      "The Fourier Series"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/data-science/the-fourier-series.html#triangle-wave",
-    "href": "quarto-workflows/data-science/the-fourier-series.html#triangle-wave",
-    "title": "The Fourier Series",
-    "section": "2. Triangle wave",
-    "text": "2. Triangle wave\nA triangular wave or triangle wave is a non-sinusoidal waveform named for its triangular shape. Like a square wave, the triangle wave contains only odd harmonics. - Harmonics: only odd-numbered harmonics - Amplitude: 1/(Harmonic Number)^2 - Phase: Every other harmonic is 180 degrees out of phase.\n\n\\(f_{tria}(t)=-\\frac{8}{\\pi^2}\\sum_{k=1}^{\\infty}\\frac{(-1)^k}{(2k-1)^2}sin(2\\pi(2k-1)t)\\)\n\nwhere: - Odd harmonics: \\(2k-1\\) - Amplitudo scalling: \\(-\\frac{8}{\\pi^{2}}\\) - Alternating sign: \\((-1)^{k}\\) - Decay: \\(\\frac{1}{2k-1}^{2}\\)\nThis summation makes use of the fact that \\(-sin(x)=sin(x+\\pi)\\) to handle alternating odd harmonics 180 degrees our of phase.\nThis Python script demonstrates the Triangle wave with multiple axes. In the simple case, they can be arranged in a grid of rows and columns as follows. Parameters: - nterms: number of terms in the expansion. - t: time array. - nu: fundamental frequency (default 1 Hz).\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Number of sample points\nn = 2048\n\n# period in s\nT = 1\n\n# Fundamental Frequency\nnu = 1 / T \n\n# Length sampling, s\nduration = 2\nt = np.arange(0, duration, duration/n)\n\ndef fourier_expansion_triangle(nterms, t, nu=1):\n    \"\"\"\n    Fourier expansion of a triangle wave using nterms harmonics.\n    \"\"\"\n    fourier_triangle = np.zeros_like(t)\n    for k in range(1, nterms+1):\n        harmonic = 2*k-1\n        fourier_triangle += ((-1)**k / (harmonic**2)) * np.sin(2*np.pi*harmonic*nu*t)\n    return -(8/(np.pi**2)) * fourier_triangle\n\nf_triangle = 2 * np.abs((t %1) - 0.5)\n\n# plotting\nfig, axes = plt.subplots(ncols=3, figsize=(12, 4))\n\nfor icol in range(3):\n    nterms = (icol + 1) * 3\n    axes[icol].plot(t, f_triangle, label='triangle', color='black')\n    axes[icol].plot(t, fourier_expansion_triangle(nterms, t, nu=1), label='Fourier', linestyle='--')\n    axes[icol].legend()\n    axes[icol].set_title(f\"Triangle vs Fourier (n={nterms})\")\n    axes[icol].set_xlabel(\"Time [s]\")\n    axes[icol].set_ylabel(\"Amplitudo\")\n\nplt.savefig('Triangle vs Fourier.svg', bbox_inches='tight')\nplt.tight_layout()\nplt.show()\n\n\n\nFigure 2. Triangle vs Fourier",
-    "crumbs": [
-      "Contents",
-      "Data Science",
-      "The Fourier Series"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/data-science/the-fourier-series.html#square-wave",
-    "href": "quarto-workflows/data-science/the-fourier-series.html#square-wave",
-    "title": "The Fourier Series",
-    "section": "3. Square Wave",
-    "text": "3. Square Wave\nA square wave is a non-sinusoidal periodic waveform in which the amplitude alternates at a steady frequency between fixed minimum and maximum values, with the same duration at minimum and maximum. - Harmonics: Odd-numbered harmonics. - Amplitudes: 1/Harmonic Number. - Phase: All harmonics in phase.\n\n\\(f_{sq}(t)=\\frac{4}{\\pi}\\sum^{\\infty}_{k=1}sin[2\\pi(2k-1)vt]\\)\n\nWrite the partials of a square wave using summation notation. Recall that a square wave has only odd harmonics, the amplitudes of the harmonics are (1/harmonic number), and all harmonics are in phase.\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Number of sample points\nn = 2048\n\n# period in s\nT = 1\n\n# Frequency\nnu = 1 / T\n\n# Length sampling, s\nduration = 2\nt = np.arange(0, duration, duration/n)\n\n# square-wave, _|_|_|\nf_sq = np.where((t % T) &lt; T/2, 1, -1)\n\ndef fourier_expansion_square(nterms):\n    fourier_square = np.zeros(n)\n    for k in range(1, nterms+1):\n        fac = 2 * k - 1\n        fourier_square += np.sin(2 * np.pi * fac * nu * t)/ fac\n    return 4 / np.pi * fourier_square\n\n# Plotting\nfig, axes = plt.subplots(ncols =3, figsize=(12, 4))\n\n# different expansion depths\nfor icol in range(3):\n    nterms = (icol +1) * 3\n    axes[icol].plot(t, f_sq, label='Sawtooth', color='black')\n    axes[icol].plot(t, fourier_expansion_square(nterms), label='Fourier', linestyle='--')\n    axes[icol].legend()\n    axes[icol].set_title(f\"Square vs Fourier (n={nterms})\")\n    axes[icol].set_xlabel('Time [s]')\n    axes[icol].set_ylabel('Amplitude')\n\nplt.savefig('Square vs Fourier.svg', bbox_inches='tight')\nplt.tight_layout()    \nplt.show()\n\n\n\nFigure 3. Square vs Fourier",
-    "crumbs": [
-      "Contents",
-      "Data Science",
-      "The Fourier Series"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/data-science/the-fourier-series.html#pulserectangle-wave",
-    "href": "quarto-workflows/data-science/the-fourier-series.html#pulserectangle-wave",
-    "title": "The Fourier Series",
-    "section": "4. Pulse/Rectangle wave",
-    "text": "4. Pulse/Rectangle wave\nA pulse wave, pulse train, or rectangular wave is a sequence of discrete pulses occurring in a signal over time. - Pulse waves is rectangular waves are generalizations of the square waves. - A square wave’s period has an equal portion at high and low amplitudes. In a rectangular wave, those proportions need be equal. Therefore, all square waves are rectanglular waves but not vice versa.\nThe equation for a Pulse wave is more complicated, but it still relies upon summing sinusoids (in this case cosine waves). Note that the sine in this equation is simply a scaling factor for amplitude, as it is not a function of time.\n\n\\(f_{pulse}(t)=dA + \\sum_{n=1}^{\\infty} \\frac{2A}{\\pi n}sin(\\pi dn)cos(2\\pi fnt)\\)\n\nThis Python script demonstrates the Pulse/Rectangle wave with multiple axes. In the simple case, they can be arranged in a grid of rows and columns as follows.\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Number of sample points\nn = 2048\n\n# period in s\nT = 1\n\n# Frequency\nnu = 1 / T\n\n# Length sampling, s\nduration = 2\nt = np.linspace(0, duration, n)\n\n# Duty cycle (fraction of period high)\nduty = 0.25\n\n# Pulse wave: +1 for futy fraction\nf_pulse = np.where((t % T) &lt; duty * T, 1, 0)\n\ndef fourier_expansion_pulse(nterms, t, nu=1, duty=0.25):\n    fourier_pulse = np.zeros_like(t)\n    for k in range(1, nterms+1):\n        fourier_pulse += (np.sin(k * np.pi * duty)/ k ) * np.cos(2 * np.pi * k * nu * t)\n    return duty + (2/np.pi) * fourier_pulse\n\n# Plotting\nfig, axes = plt.subplots(ncols =3, figsize=(12, 4))\n\n# different expansion depths\nfor icol in range(3):\n    nterms = (icol +1) * 3\n    axes[icol].plot(t, f_pulse, label='Pulse', color='black')\n    axes[icol].plot(t, fourier_expansion_pulse(nterms, t, nu, duty), label='Fourier', linestyle='--')\n    axes[icol].legend()\n    axes[icol].set_title(f\"Pulse vs Fourier (n={nterms}, duty={duty})\")\n    axes[icol].set_xlabel('Time [s]')\n    axes[icol].set_ylabel('Amplitude')\n\nplt.savefig('Pulse vs Fourier.svg', bbox_inches='tight')\nplt.tight_layout()    \nplt.show()\n\n\n\nFigure 4. Pulse vs Fourier.svg",
-    "crumbs": [
-      "Contents",
-      "Data Science",
-      "The Fourier Series"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/data-science/the-fourier-series.html#in-summary",
-    "href": "quarto-workflows/data-science/the-fourier-series.html#in-summary",
-    "title": "The Fourier Series",
-    "section": "In summary",
-    "text": "In summary\n\nAny periodic signal can be constructed from a sum of sine waves.\n\nThe process of creating complex sounds from sine waves or other constituent parts is called additive synthesis.\n\nThe sine wave, sawtooth wave, triangle wave, and pulse waves are classic waveforms since the advent of electronic music.\n\nThey are used everywhere in the music we hear today, and we are the basis for many synthesizers.\n\nSawtooth waves, triangle waves, and pulse waves come in band-limited and non-band-limited forms.\n\nNon-bandlimited forms can produce strange artifacts at higher frequencies (see aliasing coming up).\nBandlimited forms are “safer” but are not as rich harmonically - they do not truly represent the waveforms.",
-    "crumbs": [
-      "Contents",
-      "Data Science",
-      "The Fourier Series"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/data-science/string-list.html#key-equation",
-    "href": "quarto-workflows/data-science/string-list.html#key-equation",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
-    "section": "Key Equation",
-    "text": "Key Equation\n\nDensity Computations\n\n\\(\\rho=\\frac{m}{v}=\\frac{nA}{V_{C}N_{A}}\\)\n\nAvogadro’s number\n\n6.022 x \\(10^{23}\\), 1 amu/atom (or molecule) = 1 g/mol"
-  },
-  {
-    "objectID": "quarto-workflows/data-science/string-list.html#p3.1",
-    "href": "quarto-workflows/data-science/string-list.html#p3.1",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
-    "section": "P3.1",
-    "text": "P3.1\nProduce a nicely formatted list of the values of the physical constants, h, c, \\(k_{B}\\), R, and \\(N_{A}\\), to four significant figures, with their units.\nh, h_units = 6.62607015e-34, 'J.s'\nc, c_units = 299792458, 'm.s-1'\nkB, kB_units = 1.380649e-23, 'J.K-1'\nR, R_units = 8.314462618, 'J.K.mol-1'\nN_A, N_A_units = 6.02214076e+23, 'mol-1'\n\ns1 = (f'h = {h:9.3e} {h_units}\\t'\n     f'c = {c:9.3e} {c_units}\\t' \n      f'kB = {kB:9.3e} {kB_units}\\t'\n       f'R = {R:9.3e} {R_units}\\t'\n        f'N_A = {N_A:9.3e} {N_A_units}\\t')\n\ns2 = (f'h   = {h:9.3e}{h_units}\\n'\n      f'c   = {c:9.3e}{c_units}\\n' \n      f'kB  = {kB:9.3e}{kB_units}\\n'\n      f'R   = {R:9.3e}{R_units}\\n'\n      f'N_A = {N_A:9.3e}{N_A_units}\\n')\nprint(s1)\n\nprint(s2)\nh = 6.626e-34 J.s   c = 2.998e+08 m.s-1 kB = 1.381e-23 J.K-1    R = 8.314e+00 J.K.mol-1 N_A = 6.022e+23 mol-1   \nh   = 6.626e-34J.s\nc   = 2.998e+08m.s-1\nkB  = 1.381e-23J.K-1\nR   = 8.314e+00J.K.mol-1\nN_A = 6.022e+23mol-1"
-  },
-  {
-    "objectID": "quarto-workflows/data-science/string-list.html#p3.2",
-    "href": "quarto-workflows/data-science/string-list.html#p3.2",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
-    "section": "P3.2",
-    "text": "P3.2\nThe following variables define some thermodynamic properties of \\(CO_{2}\\) and \\(H_{2}O\\).\n# Triple point of CO2 (K, Pa)\nT3_CO2, p3_CO2 = 216.58, 5.185e5\n# Entalphy of fusion of CO2 (kJ.mol-1).\nDfusH_CO2 = 9.019\n# Entrophy of fusion os CO2 (J.K-1.mol-1).\nDfusS_CO2 = 40\n# Entalphy of vaporization of CO2 (kJ.mol-1).\nDvapH_CO2 = 15.326\n# Entrophy of vaporization of CO2 (J.K-1.mol-1).\nDvapS_CO2 = 70.8\n\n# Triple point of H2O (K, Pa)\nT3_H2O, p3_H2O = 273.16, 611.73\n# Entalphy of fusion of H2O (kJ.mol-1).\nDfusH_H2O = 6.01\n# Entrophy of fusion of H2O (J.K-1.mol-1).\nDfusS_H2O = 22.0\n# Entalphy of vaporization of H2O (kJ.mol-1).\nDvapH_H2O = 40.68\n# Entrophy of vaporization of H2O (J.K-1.mol-1).\nDvapS_H2O = 118.89\n\nprint(' '*22 + 'CO2' + ' '*9 + 'H20')\nprint('_'*40)\nprint('p3     /pa         ', f'{p3_CO2:5.0f}      {p3_H2O:5.2f}')\nprint('T3     /K          ', f'{T3_CO2:5.2f}      {T3_H2O:5.2f}')\nprint('DfusH  /kJ.mol-1   ', f'{DfusH_CO2:5.3f}       {DfusH_H2O:5.3f}')\nprint('DfusS  /J.K-1.mol-1', f'{DfusS_CO2:4.1f}      {DfusS_H2O:6.1f}')\nprint('DvapH  /kJ.mol-1   ', f'{DvapH_CO2:5.3f}    {DvapH_H2O:8.3f}')\nprint('DvapS  /j.k-1.mol-1', f'{DvapS_CO2:5.1f}       {DvapS_H2O:5.1f}')\n                      CO2         H20\n________________________________________\np3     /pa          518500      611.73\nT3     /K           216.58      273.16\nDfusH  /kJ.mol-1    9.019       6.010\nDfusS  /J.K-1.mol-1 40.0        22.0\nDvapH  /kJ.mol-1    15.326      40.680\nDvapS  /j.k-1.mol-1  70.8       118.9"
-  },
-  {
-    "objectID": "quarto-workflows/data-science/string-list.html#p3.3",
-    "href": "quarto-workflows/data-science/string-list.html#p3.3",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
-    "section": "P3.3",
-    "text": "P3.3\nNuclear binding energy and the mass defect. A neutron has a slightly larger mass than the proton. These are often given in terms of an atomic mass unit, where one atomic mass unit (u) is defined as 1/12th the mass of a carbon-12 atom.\n# Mass Particle constant, in kg.\natomic_kg = 1.660540 * 10 ** -27\nneutron_kg = 1.674929 * 10 ** -27\nproton_kg = 1.672623 * 10 ** -27 \nelectron_kg = 9.109390 * 10 ** -31\n\n# Mass particle, in u.\natomic_u = 1.000 \nneutron_u = neutron_kg / atomic_kg \nproton_u = proton_kg / atomic_kg\nelectron_u = electron_kg / atomic_kg\n\n# Mass particle, in MeV/c2\natomic_ev = 931.5\nneutron_ev = neutron_u * atomic_ev\nproton_ev = proton_u * atomic_ev\nelectron_ev = electron_u * atomic_ev\n\n\ntitle = '|' + ' '*19 + '{:43}'.format('Binding Nuclear Energy') + '|'\nline = '+' + '-'*16 + '+' + ('-'*14 + '+')*3\nrow = '|{:&lt;15} |' + ' {:12} |'*3\nheader = '| {:^14} |'.format('Particle') + (' {:^12} |'*3). format('Mass (kg)', 'Mass (u)', 'Mass (Mev/c2)')\n\nprint('+' + '-'*(len(title)-2) + '+',\n      title,\n      line,\n      header,\n      line,\n      row.format('atomic mass', atomic_kg, f'{atomic_u:8.3f}', f'{atomic_ev:6}'),\n      row.format('neutron', neutron_kg, f'{neutron_u:8.7f}', f'{neutron_ev:8.2f}'),\n      row.format('proton', proton_kg, f'{proton_u:8.7f}', f'{proton_ev:8.2f}'), \n      row.format('electron', electron_kg, f'{electron_u:8.7f}', f'{electron_ev:8.3f}'),\n      line,\n      sep='\\n')\n                                                                   \n+--------------------------------------------------------------+\n|                   Binding Nuclear Energy                     |\n+----------------+--------------+--------------+--------------+\n|    Particle    |  Mass (kg)   |   Mass (u)   | Mass (Mev/c2) |\n+----------------+--------------+--------------+--------------+\n|atomic mass     |  1.66054e-27 |    1.000     |  931.5       |\n|neutron         | 1.674929e-27 | 1.0086653    |   939.57     |\n|proton          | 1.672623e-27 | 1.0072765    |   938.28     |\n|electron        |  9.10939e-31 | 0.0005486    |    0.511     |\n+----------------+--------------+--------------+--------------+"
-  },
-  {
-    "objectID": "quarto-workflows/data-science/string-list.html#list-and-loops",
-    "href": "quarto-workflows/data-science/string-list.html#list-and-loops",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
-    "section": "2. List and Loops",
-    "text": "2. List and Loops"
-  },
-  {
-    "objectID": "quarto-workflows/data-science/string-list.html#p3.4",
-    "href": "quarto-workflows/data-science/string-list.html#p3.4",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
-    "section": "P3.4",
-    "text": "P3.4\nStraight-chain alkanes are hydrocarbons with the general stoichiometric formula \\(C_{n}H_{2n+2}\\), in which the carbon atoms form a simple shain: for example, butane, \\(C_{4}H_{10}\\) has the structural formula that may be depicted \\(H_{3}CC_{2}CH_{2}CH_{3}\\). Write a progra, to output the structural formula of such an alkane, given its stoichiometry (assume \\(n\\geq1\\)).\n# Assume n = 5\nstoich = 'C5H12'\nfragments = stoich.split('H')\nnC = int(fragments[0][1:])\nnH = int(fragments[1])\nif nH != 2*nC + 2:\n    print('{} is not alkane!'.format(atoich))\nelse:\n    print('H\\u2083C', end='')\n    for i in range(nC-2):\n        print('-CH\\u2082', end='')\n    print('-CH\\u2083')\nH₃C-CH₂-CH₂-CH₂-CH₃"
-  },
-  {
-    "objectID": "quarto-workflows/data-science/string-list.html#p3.5",
-    "href": "quarto-workflows/data-science/string-list.html#p3.5",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
-    "section": "P3.5",
-    "text": "P3.5\nProduce a table if the FCC element symbols abd their corresponding atomic radius (nm) and atomic weight (g/mol).\nsymbols = ['Al', 'Cu', 'Au', 'Pb', 'Ni', 'Pt', 'Ag']\nAtomic_radiuss = [0.1431, 0.1278, 0.1442, 0.1750, 0.1246, 0.1387, 0.1445]\nAtomic_weigth = [26.981, 63.546, 196.966, 206.14, 58.693, 195.084, 107.868]\nline = '-'*52\nprint(line)\nprint('Elements | Atomic Radii (nm) | Atomic weight (g/mol)')\nprint(line)\nfor i in range(len(symbols)):\n    print(' '*2, symbols[i], ' '*5, Atomic_radiuss[i], ' '*13, Atomic_weigth[i])\n    print(line)\n----------------------------------------------------\nElements | Atomic Radii (nm) | Atomic weight (g/mol)\n----------------------------------------------------\n   Al       0.1431               26.981\n----------------------------------------------------\n   Cu       0.1278               63.546\n----------------------------------------------------\n   Au       0.1442               196.966\n----------------------------------------------------\n   Pb       0.175               206.14\n----------------------------------------------------\n   Ni       0.1246               58.693\n----------------------------------------------------\n   Pt       0.1387               195.084\n----------------------------------------------------\n   Ag       0.1445               107.868\n----------------------------------------------------"
-  },
-  {
-    "objectID": "quarto-workflows/data-science/string-list.html#p3.6",
-    "href": "quarto-workflows/data-science/string-list.html#p3.6",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
-    "section": "P3.6",
-    "text": "P3.6\nreference: - Atomic radii of the elements\nAlumunium, copper and lead has an atomic radius of 121, 132, and 146 nm, respectively, an FCC crystal structure, and atomic weight of 26.98, 63.55, and 207.20 g/mol. Compute their theoretical density and compare the answer with their measured density.\nin the FCC unit cell illustrated, the atoms touch one another across a face-diagonal, the length of which is 4R. Because the unit cell is a cube, its volume is \\(a^{3}\\), where a is the cell edge length. From the right triangle on the face.\n\n\\[a^{2} + a^{2} = (4R)^{2}\\]\n\nSolving for a,\n\n\\[a=2R\\sqrt{2}\\]\n\nThe FCC unit cell volume \\(V_{C}\\) may be computed from\n\n\\[V_{C}=a^{3}=(2\\sqrt{2})^{3}=16R^{3}\\sqrt{2}\\]\n\nimport numpy as np\n# Avogadro's number , in atoms/mol.\nNA = 6.022 * 10 **23\n\n# The number of atoms per unit cell in FCC\nn = 4\n\n# The atomic weight, and Radii of atoms (use floats/ints instead of strings)\nAtomics = ['Al', 'Cu', 'Pb'] # use string ' '\nA_weight = [26.98, 63.55, 207.20] # atomic weights in g/mol use float\nRadii = [143 * 10 **-10, 128 * 10 **-10, 180 * 10 **-10] # radii in cm (converted from pm) use float/integers\n\n# Computational density\nfor atom, weight, radius in zip(Atomics, A_weight, Radii):\n    V_cell = 16 * (radius**3) * np.sqrt(2)\n    m_cell = 4 * weight\n    rho = m_cell / (V_cell *NA)\n    print(f\" {atom}: V_cell={V_cell:.3e} cm^3, m_cell={m_cell:.3e} g, rho={rho:.3f} g/cm^3\")\n Al: V_cell=6.617e-23 cm^3, m_cell=1.079e+02 g, rho=2.708 g/cm^3\n Cu: V_cell=4.745e-23 cm^3, m_cell=2.542e+02 g, rho=8.895 g/cm^3\n Pb: V_cell=1.320e-22 cm^3, m_cell=8.288e+02 g, rho=10.429 g/cm^3"
-  },
-  {
-    "objectID": "quarto-workflows/data-science/string-list.html#p3.7",
-    "href": "quarto-workflows/data-science/string-list.html#p3.7",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
-    "section": "P3.7",
-    "text": "P3.7\nDetermine whether each of the following electron configurations is an inert gas, a halogen, an alkali metal, an alkaline earth metal, or a transition metal. Justify your choices.\n(a) 1s2.2s2.2p6.3s2.3p5\n(b) 1s2.2s2.2p6.3s2.3p6.3d7.4s2\n(c) 1s2.2s2.2p6.3s2.3p6.3d7.4s2.4P6\n(d) 1s2.2s2.2p6.3s2.3p6.4s1\n(e) 1s2.2s2.2p6.3s2.3p6.3d7.4s2.4p6.4d10.5s2\n(f) 1s2.2s2.2p6.3s2\n# Electron configuration\nconfigs = {\n    '(a)': '1s2.2s2.2p6.3s2.3p5',\n    '(b)': '1s2.2s2.2p6.3s2.3p6.3d7.4s2',\n    '(c)': '1s2.2s2.2p6.3s2.3p6.3d10.4s2.4p6',\n    '(d)': '1s2.2s2.2p6.3s2.3p6.4s1',\n    '(e)': '1s2.2s2.2p6.3s2.3p6.3d7.4s2.4p6.4d5.5s2',\n    '(f)': '1s2.2s2.2p6.3s2'}\n\ndef classify_configuration(cfg: str):\n    subshells = cfg.split(\".\")\n    parsed = []\n\n    # Parse subshells into (n, orbital, electrons)\n    for s in subshells:\n        try:\n            n = int(s[0])          # principal quantum number\n            orbital = s[1]         # orbital type (s, p, d, f)\n            electrons = int(s[2:]) # electron count\n            parsed.append((n, orbital, electrons))\n        except:\n            continue\n\n    if not parsed:\n        return \"Unknown\"\n\n    #Classify configuration electron by the last and the second-last subshells\n    last_orbital, last_e = parsed[-1][1], parsed[-1][2]\n    second_orbital, second_e = parsed[-2][1], parsed[-2][2] if len(parsed) &gt;= 2 else (None, None)\n\n    # Rules\n    if last_orbital == \"p\" and last_e == 6:\n        return \"Inert gas (Noble gas)\"\n    elif last_orbital == \"p\" and last_e == 5:\n        return \"Halogen\"\n    elif last_orbital == \"s\" and last_e == 1:\n        return \"Alkali metal\"\n    elif last_orbital == \"s\" and last_e ==2:\n        if second_orbital == \"p\" and second_e == 6:\n            return \"Akaline Earth metal\"\n        elif second_orbital ==\"d\" and second_e &lt;10:\n            return \"Transition metal\"\n \n# print results\nfor label, cfg in configs.items():\n    print(f\"{label} {cfg} =&gt; {classify_configuration(cfg)}\")\n(a) 1s2.2s2.2p6.3s2.3p5 =&gt; Halogen\n(b) 1s2.2s2.2p6.3s2.3p6.3d7.4s2 =&gt; Transition metal\n(c) 1s2.2s2.2p6.3s2.3p6.3d10.4s2.4p6 =&gt; Inert gas (Noble gas)\n(d) 1s2.2s2.2p6.3s2.3p6.4s1 =&gt; Alkali metal\n(e) 1s2.2s2.2p6.3s2.3p6.3d7.4s2.4p6.4d5.5s2 =&gt; Transition metal\n(f) 1s2.2s2.2p6.3s2 =&gt; Akaline Earth metal"
   },
   {
     "objectID": "quarto-workflows/data-science/numpy-and-matplot.html#p6.1---maxwell-boltzmann-distribution",
@@ -792,61 +651,202 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Python for Scientific Computing and Data Visualizations",
-    "section": "",
-    "text": "Welcome to Random Spaces! This blog is a celebration of the fascinating world of computational chemistry. I hope you find the content useful, and I hope you enjoy reading along and learning with me!\nAnd me? Well, I’m Dinda Gusti Ayu. I just a person who interested in using Machine Learning to learn the rules of Quantum Mechanics and Simulate Disordered Material systems. As a beginner, this blog aims to documenting my learning journey. Behind that, I earned an MS in chemistry physics at Universitas Sumatera Utara, Indonesia where I studied the fundamental optical properties and defects modelling of direct band-gap semiconductors for materials research.",
+    "objectID": "quarto-workflows/data-science/basicnumpy.html#reference",
+    "href": "quarto-workflows/data-science/basicnumpy.html#reference",
+    "title": "NumPy and Matplotlib",
+    "section": "Reference:",
+    "text": "Reference:\n\nKinematic Equations and Free Fall",
     "crumbs": [
-      "Welcome"
+      "Contents",
+      "Data Science",
+      "NumPy and Matplotlib"
     ]
   },
   {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
-    "title": "Python for Scientific Computing and Data Visualizations",
-    "section": "",
-    "text": "Welcome to Random Spaces! This blog is a celebration of the fascinating world of computational chemistry. I hope you find the content useful, and I hope you enjoy reading along and learning with me!\nAnd me? Well, I’m Dinda Gusti Ayu. I just a person who interested in using Machine Learning to learn the rules of Quantum Mechanics and Simulate Disordered Material systems. As a beginner, this blog aims to documenting my learning journey. Behind that, I earned an MS in chemistry physics at Universitas Sumatera Utara, Indonesia where I studied the fundamental optical properties and defects modelling of direct band-gap semiconductors for materials research.",
+    "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.1---correct-einsteins-mistakes",
+    "href": "quarto-workflows/data-science/basicnumpy.html#p5.1---correct-einsteins-mistakes",
+    "title": "NumPy and Matplotlib",
+    "section": "P5.1 - Correct Einstein’s mistakes",
+    "text": "P5.1 - Correct Einstein’s mistakes\nSpecial relativity is the area of physics deling with incredibly large velocities. In special relitivity, the momentum p of an object with velocity v(in m/s), and mass m (in kg) is given as.\n\n\\[p=m.v.\\gamma, \\gamma=\\frac{1}{\\sqrt{1-\\frac{v^{2}}{c^{2}}}}\\]\n\nwhere c\\(\\approx\\) 300.000.000 m/s is the speed of light. The program below attempts to calculate the momentum of an object with speed equal to 1/3 the speed of light, and mass m = 0.14 kg. The program has many errors, and doesn’t work. Copy and run the program. Correct the errors, and make it work like intended.\n# Relativity Einstein\nc = 3e8 # the speed of light in m/s\nv = c / 3 # the velocity 1/3 the speed of light\nm = 0.14 # mass in kg\n\n# Calculate the relativity momentum\nimport numpy as np\ngamma = 1 / (np.sqrt(1-(v/c)**2))\np_momentum = m * v * gamma\n\nprint(f'gamma = {gamma:.6f}')\nprint(f'p_momentum = {p_momentum:.6f}') # the momentum in kg m/s\ngamma = 1.060660\np_momentum = 14849242.404917",
     "crumbs": [
-      "Welcome"
+      "Contents",
+      "Data Science",
+      "NumPy and Matplotlib"
     ]
   },
   {
-    "objectID": "index.html#what-is-random-spaces",
-    "href": "index.html#what-is-random-spaces",
-    "title": "Python for Scientific Computing and Data Visualizations",
-    "section": "What is Random Spaces?",
-    "text": "What is Random Spaces?\nRandom Spaces is a free, open-source learning resources for students and researchers interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The tutorials here bridge the gap beetween condensed matter physics, chemistry and computational tools.\nAll materials are shared openly on my repositories \nLet’s get down with computational chemistry!",
+    "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.2---rydbergs-constant",
+    "href": "quarto-workflows/data-science/basicnumpy.html#p5.2---rydbergs-constant",
+    "title": "NumPy and Matplotlib",
+    "section": "P5.2 - Rydberg’s constant",
+    "text": "P5.2 - Rydberg’s constant\nRydberg’s constant \\(R_{\\infty}\\) for a heavy atom is used in physics to calculate the wavelength to spectral lines. The constant has been found to have the following value:\n\n\\[R_{\\infty}=\\frac{m_{e}e_{4}}{8\\varepsilon_{0}{2}h^{3}c}\\]\n\nwhere: - \\(m_{e}=9.109 \\times 10^{-31}\\) m is the mass of an electron - \\(e=1.602 \\times 10^{-19}\\) C is the charge of a proton (also called the elementary charge) - \\(\\varepsilon_{0}=8.854 \\times 10^{-12}C V^{-1} m^{-1}\\) is the electrical constant - h = 6.626 \\(\\times\\) \\(10^{-34}\\) J s is Planck’s constant - c = 3 \\(\\times\\) \\(10^{8}\\) m/s is the speed of light.\nwrite the program that assigns the values of the physical constants to variables, and use the variables to calculate the value of Rydberg’s constant.\n# Calculate Rydberg's constant\nme = 9.109e-31 # mass of an electron\ne = 1.602e-19 # the charge of a proton\nvarepsilon0 = 8.854e-12 # the electrical constant\nh = 6.626e-34 # Planck's constant\nc = 3e8 # speed of the light\n\nR_infinity = (me * e**4)/(8 * varepsilon0**2 * h**3 * c)\nprint(f'R infinity = {R_infinity:.6e}') # the Rydberg's constant\nR infinity = 1.096166e+07",
     "crumbs": [
-      "Welcome"
+      "Contents",
+      "Data Science",
+      "NumPy and Matplotlib"
     ]
   },
   {
-    "objectID": "transition-from-rmarkdown.html",
-    "href": "transition-from-rmarkdown.html",
-    "title": "Transition from RMarkdown",
+    "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.3---measure-time",
+    "href": "quarto-workflows/data-science/basicnumpy.html#p5.3---measure-time",
+    "title": "NumPy and Matplotlib",
+    "section": "P5.3 - Measure time",
+    "text": "P5.3 - Measure time\nA ball is dropped straight down from a cliff with height \\(\\mathnormal{h}\\). The position of the ball after a time \\(\\mathnormal{t}\\) can be expressed as:\n\n\\[y(t)=v_{0}t - \\frac{1}{2}at^{2} + h\\]\n\nwhere a is the acceleration (in \\(m/s^{2})\\) and \\(v_{0}\\) is the initial velocity of the ball (Measured in m/s). We wish to find for how long time \\(t_{1}\\) such that \\(y(t_{1})=h_{1}\\). The position of the ball is measured per \\(\\Delta{t}\\) seconds.\nWrite a program which finds out how long time \\(t_{1}\\) it takes before the ball reaches height \\(h_{1}\\) by using a while loop. \\(h=10 m, y_{1}=5 m, \\Delta{t}=0.01, v_{0}=0 m/s\\) and \\(a = 9.81 m/s^{s}\\).\nh = 10 # height in m\ny1 = 5 # position of function of time t1 in m\nv0 = 0 # velocity at t = 0 in m/s\na = 9.81 # acceleration due to gravity in m/s^2\ndt = 0.01 # time step in s\n\n# Calculate how long time t1, if y(t1) = h1.\ny = h # initial positon\nt = 0\nt_values = [t]\ny_values = [y]\n\n\n# The position of the ball is measured per dt seconds\nwhile y &gt; y1:\n    t = t + dt\n    y = v0 * t - 0.5 * a * t**2 + h\n    t_values.append(t)\n    y_values.append(y)\n    \n# at this point, y &lt;= y1\nt1 = t\nprint(f'The ball reaches {y1} m after {t1:.2f} s.')\n\n# The manual instruction\nimport numpy as np\nty1 = np.sqrt(2* (h - y1)/a)\nprint(f'The ball reaches {y1} after {ty1:.3f} s')\n\n# Scatter plot with color map\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.collections import LineCollection\nt = np.linspace(0, 2, 200)\ny = 10 -0.5 * 9.81 * t**2\n\n# Create segments for line\npoints = np.array([t,y]).T.reshape(-1, 1, 2)\nsegments = np.concatenate([points[:-1], points[1:]], axis =1)\n\n# colormap\nLc=LineCollection(segments, cmap='viridis', linewidth=2, norm=plt.Normalize(t.min(), t.max()))\nLc.set_array(t) # color by time\n\nfig, ax = plt.subplots(figsize=(5,4))\nax.scatter(t, y, c=t, cmap='viridis', marker='D')\nax.add_collection(Lc)\nax.autoscale()\n\n# Adding colorbar\ncbar = plt.colorbar(Lc, ax=ax, pad=0.03)\ncbar.set_label('Time (s)')\n\nax.set_xlabel('Time (s)')\nax.set_ylabel('Height (m)')\nax.set_title('Ball Fall Motion with Colormap Line')\nax.grid(True)\nax.set_axisbelow(True)\nplt.savefig('Ballmotion_colormap.svg', bbox_inches='tight')\nplt.show('Ball Fall Motion')\nThe ball reaches 5 m after 1.01 s.\nThe ball reaches 5 after 1.010 s\n\n\n\nFigure 1. Ballmotion_colormap",
+    "crumbs": [
+      "Contents",
+      "Data Science",
+      "NumPy and Matplotlib"
+    ]
+  },
+  {
+    "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.4---free-fall-motion",
+    "href": "quarto-workflows/data-science/basicnumpy.html#p5.4---free-fall-motion",
+    "title": "NumPy and Matplotlib",
+    "section": "P5.4 - Free Fall Motion",
+    "text": "P5.4 - Free Fall Motion\nA ball is dropped from rest at a height of h = 100 m. The time intervals is 0.1 s up to 5 s. The constant gravitational acceleration g = 9.81 \\(m/s^{2}\\).(a) What time does the ball hit the ground, (b) what is the velocity of the ball and (c) plot the position of the ball vs time as it falls. Free Fall Motion:\n\nImpact time (when y(t)=0)\n\n\\[t_{ground}=\\sqrt{\\frac{2h_{0}}{g}}\\]\n\nInitial Velocity at the ground\n\n\\[v_{ground}=gt_{ground}\\]\n\nPosition\n\n\\[y(t)=h_{0}-\\frac{g}{t^{2}}\\]\n\n\n\n\n\nFigure 2. Fallmotion_colormap",
+    "crumbs": [
+      "Contents",
+      "Data Science",
+      "NumPy and Matplotlib"
+    ]
+  },
+  {
+    "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.5--relativistic-momentum",
+    "href": "quarto-workflows/data-science/basicnumpy.html#p5.5--relativistic-momentum",
+    "title": "NumPy and Matplotlib",
+    "section": "P5.5 -Relativistic Momentum",
+    "text": "P5.5 -Relativistic Momentum\nIn classical physics, we define the momentum \\(\\mathnormal{p}\\) of an object with mass \\(\\mathnormal{m}\\) and velocity \\(\\mathnormal{v}\\) as\n\n\\[p=m\\times v\\]\n\nA satellite with mass m = 1200 kg is trapped in the gravity of a black hole. It accelerates quickly from velocity \\(v=0\\) to \\(v=0.9c\\), where \\(\\mathnormal{c}\\) is the speed of light, \\(c\\approx3x10^{8}\\) m/s.\n\nwrite a program which prints a nicely formatted table to the terminal, containing the speed of the satellite in one column, and the momentum of the satellite in the other. Use time-intervals of \\(0.1c\\) between \\(0c\\) and \\(0.9c\\).\n\nHint: Use scientific notation ‘%e’ when printing the values, to avoid incredibly large floats. Alternatively, ‘%g’, which picks the best notation for you. Try to limit the number of decimals to a reasonable number.\n# Parameters \nm = 1200 # mass of satellite in kg\nc = 3e8 # the speed of light on m/s\n \nprint(f'{'Velocity (m/s)':&gt;20} | {'Momentum (kg.m/s)':&gt;25}')\nprint('-' * 45)\n\n# Calculate momentum with the interval velocity 0 to 0.9c\n# Use time-intervals 0f 0.1c between 0c and 0.9c\nfor i in range(10): # time interval from 0c to 0.9c\n    v = i * 0.1 * c # velocity 0 - 0.9c, where c is the the speed of  light.\n    p = m * v\n    print('%20.3g | %25.3g' % (v, p)) # use scientific notation '%g' to limit the number of decimals.\n     Velocity (m/s) |         Momentum (kg.m/s)\n------------------------------------------------\n                   0 |                         0\n               3e+07 |                   3.6e+10\n               6e+07 |                   7.2e+10\n               9e+07 |                  1.08e+11\n             1.2e+08 |                  1.44e+11\n             1.5e+08 |                   1.8e+11\n             1.8e+08 |                  2.16e+11\n             2.1e+08 |                  2.52e+11\n             2.4e+08 |                  2.88e+11\n             2.7e+08 |                  3.24e+11\nAdding figure with MatPlotLib\n# Scatter plot with color map\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.collections import LineCollection\nv = np.linspace(0.0, 0.9, 10) * c\np = m * v #Classical Momentum\n\n# Create segments for line\npoints = np.array([v,p]).T.reshape(-1, 1, 2)\nsegments = np.concatenate([points[:-1], points[1:]], axis =1)\n\n# colormap\nLc=LineCollection(segments, cmap='magma', linewidth=3, norm=plt.Normalize(p.min(), p.max()))\nLc.set_array(p) # color by momentum\n\nfig, ax = plt.subplots(figsize=(10,6))\nax.scatter(v,p, c=p, cmap='magma', marker='o')\nax.add_collection(Lc)\nax.autoscale()\n\n# Adding colorbar\nimport matplotlib.ticker as ticker\nfrom matplotlib.ticker import FormatStrFormatter\ncbar = plt.colorbar(Lc, ax=ax, pad =0.02)\ncbar.set_label('Momentum (kg.m/s)')\ncbar.formatter = ticker.FormatStrFormatter('%.2e')\ncbar.update_ticks()\n\n# Axis labels and formatting\nimport matplotlib.ticker as ticker\nfrom matplotlib.ticker import FormatStrFormatter\nax.set_xlabel('Velocity (m/s)')\nax.set_ylabel('Momentum (kg.m/s)')\nax.set_title('Relativistic Momentum', fontsize=14)\nax.xaxis.set_major_formatter(ticker.FormatStrFormatter('%.2e'))\nax.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.2e'))\nplt.grid(True)\nax.set_axisbelow(True)\n\n# Add momentum values\n\nfor vx, px in zip(v, p):\n    ax.text(vx, px, f'{px:.2e}', fontsize=7.5, ha='right', va='bottom')\nplt.savefig('Relativistic_colormap.svg', bbox_inches='tight')\nplt.show('Relativistic Momentum')\n\n\n\nFigure 3. Relativistic_colormap",
+    "crumbs": [
+      "Contents",
+      "Data Science",
+      "NumPy and Matplotlib"
+    ]
+  },
+  {
+    "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.6--relativistic-momentum",
+    "href": "quarto-workflows/data-science/basicnumpy.html#p5.6--relativistic-momentum",
+    "title": "NumPy and Matplotlib",
+    "section": "P5.6 -Relativistic Momentum",
+    "text": "P5.6 -Relativistic Momentum\n\nIn exercise about - Correct Einstein’s mistakes, we saw the momentum of an object is defined in special relative;y, which dealswith physics at very large velocities. We defines the momentum as\n\n\\[p=m.v.\\gamma, \\gamma=\\frac{1}{\\sqrt{1-\\frac{v^{2}}{c^{2}}}}\\]\n\n\nThis is actual momentum of any object, but the classical version in exercise a) is a good approximation at “small’velocities. Expand your program such that it prints a table with three columns, the third one containing the momentum ad defined in special relativity.\n# Parameters \nm = 1200 # mass of satellite in kg\nc = 3e8 # the speed of light on m/s\n\ncw = 23 # column width\nprint(f'{\"Special velocity (m/s)\":^{cw}} | {\"Momentum (kg.m/s)\":^{cw}} | {\"gamma\":^{cw}} |')\nprint('-' * (cw * 3 + 10))\n\n# (b) Calculate special momentum with the interval velocity 0 to 0.9c\n# Use time-intervals 0f 0.1c between 0c and 0.9c\nimport numpy as np\nfor i in range(10): # time interval from 0c to 0.9c\n    v = i * 0.1 * c # velocity 0 - 0.9c, where c is the the speed of  light.\n    gamma = 1 / (np.sqrt(1-(v/c)**2))\n    p_rel = m * v * gamma\n    print(f'{v:^{cw}.2e} | {p_rel:^{cw}.3e} | {gamma:^{cw}.3f}|') # use scientific notation 'e and f' to limit the number of decimals.\nSpecial velocity (m/s)  |    Momentum (kg.m/s)    |          gamma          |\n-------------------------------------------------------------------------------\n       0.00e+00         |        0.000e+00        |          1.000         |\n       3.00e+07         |        3.618e+10        |          1.005         |\n       6.00e+07         |        7.348e+10        |          1.021         |\n       9.00e+07         |        1.132e+11        |          1.048         |\n       1.20e+08         |        1.571e+11        |          1.091         |\n       1.50e+08         |        2.078e+11        |          1.155         |\n       1.80e+08         |        2.700e+11        |          1.250         |\n       2.10e+08         |        3.529e+11        |          1.400         |\n       2.40e+08         |        4.800e+11        |          1.667         |\n       2.70e+08         |        7.433e+11        |          2.294         |\nAdding a barchart for relativistic visualizations.\n# Create histogram from the data\nimport numpy as np\nimport matplotlib.pyplot as plt\nv= np.linspace(0.0, 0.9*c, 10)\ngamma = 1 / (np.sqrt(1-(v/c)**2))\np_rel = m * v * gamma\n\nimport matplotlib.pyplot as plt\nplt.hist(p_rel, label='Momentum (kg.m/s)', bins=10, facecolor='c', edgecolor='black', hatch='//', rwidth=8)\nplt.xlabel('Special Velocity (m/s)', fontsize=12)\nplt.ylabel('Momentum (kg.m/s)', fontsize=12)\nplt.title('Einsten Momentum', fontsize=16)\nplt.legend(fontsize=23)\nplt.legend(framealpha=0, handleheight=2.0, handlelength=3)\nplt.savefig('Einsten Momentum.svg', bbox_inches='tight')\nplt.show()\n\n\n\nFigure 4. Einsten Momentum",
+    "crumbs": [
+      "Contents",
+      "Data Science",
+      "NumPy and Matplotlib"
+    ]
+  },
+  {
+    "objectID": "quarto-workflows/jupyter.html",
+    "href": "quarto-workflows/jupyter.html",
+    "title": "From Jupyter",
     "section": "",
-    "text": "You may already have workflows in RMarkdown and are interested in transitioning to Quarto. There’s no hurry to migrate to Quarto. Keep using Rmarkdown and when you’re ready the migration will be fine.\nHere are some notes as we migrate RMarkdown sites and books.\nTODO: translating R code chunks"
+    "text": "You can interact with Quarto through JupyterLab or JupyterHub. Your Jupyter setup will involve .ipynb notebooks and the command line. Quarto’s JupyterLab tutorials has great instructions on getting started with JupyterLab, including computations and authoring.\nHere we will demonstrate how to work with this Quarto tutorial site in JupyterHub and add a Jupyter Notebook (.ipynb file). This example uses the NASA-Openscapes JupyterHub that already has all python environments as well as Quarto installed."
   },
   {
-    "objectID": "transition-from-rmarkdown.html#bookdown-to-quarto",
-    "href": "transition-from-rmarkdown.html#bookdown-to-quarto",
-    "title": "Transition from RMarkdown",
-    "section": "Bookdown to Quarto",
-    "text": "Bookdown to Quarto\nConverting a Bookdown book to Quarto is slightly more involved than converting a website. A book has chapters whose order must be defined, and likely has citations and cross-refs. Still, conversion is not that hard.\nWe got some practice converting from Bookdown to Quarto by helping Gavin Fay convert his lab’s fantastic onboarding documentation, the Faylab Lab Manual. Here’s the GitHub view before and after.\nOur best first reference material for this was Nick Tierney’s Notes on Changing from Rmarkdown/Bookdown to Quarto. Nick shares some scripts in that post to automate some changes. In our case, the book was small enough that we made all changes manually. Quarto documentation was indispensable.\n\nExperimenting in a low-risk environment\nWe forked a copy of the Faylab Lab manual to the Openscapes organization, and worked in a branch so we could make changes relatively risk-free. We could always fork a new copy of the original if we “broke” something. (Caution: the default when making a pull request from a fork is to push changes to the original upstream repo, not your fork and it does this without warning if you have write-access to that repo.) With local previews it’s easy to test / play with settings to see what they do. We tended to make a change, Preview, then compare the look and functionality of the book to the original. It was helpful to comment out some elements of the configuration file _output.yml after their counterparts had been added to the Quarto configuration file _quarto.yml, or to confirm they were no longer needed, before making the drastic move of deleting them.\n\n\nThe conversion\nHere are the main steps to convert the Faylab Lab manual from Bookdown to Quarto.\nCreate new empty file called _quarto.yml and add book metadata there. The screenshots below\nSet project type as book.\nMove metadata out of index.qmd and into _quarto.yml. Title, author, and publication date were in index.qmd with date set using date: \"Last updated:r Sys.Date()\". Now these are in _quarto.yml with date set using date: last-modified. Note that having R code would require you to adjust code chunk options in the Quarto style (#|). This tripped us up a bit; see GitHub Actions.\nMove chapters listing out of _bookdown.yml and into _quarto.yml.\nAdd page footer to _quarto.yml.\nHere’s what ours looked like when we finished the steps above (_quarto.yml).\n\n\n\n\n\n\n_quarto.yml contents\n\n\n\n\n\n\n\nFaylab Lab Manual\n\n\n\n\n\nChange insertion of images from html style to Quarto style. (Note Quarto calls them “figures”, not “images”.) The following snippet will insert the GitHub octocat logo in a page:\n![](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png){fig-align=\"left\" width=\"35px\"}\nChange all filename extensions .Rmd -&gt; .qmd (you could Preview after this change and see that the book looks the same). Note that Quarto works with .Rmd files just as well as it does .qmd, so this change is not urgent. In fact, if you have a lot of R code in your .Rmds (unlike the Faylab Lab Manual), there will be additional tinkering needed to make the code chunks happy.\n\n\nCitations\nThe Faylab Lab Manual cited two papers, presenting us with an opportunity to see how easy it is to add references to a Quarto book. Briefly, in the Visual Editor, Insert &gt; Citation &gt; DOI. Pasting the DOI or its full URL, we can insert the citation. This automatically creates a references.bib file and adds the full citations at the bottom of the chapter page (watch demo). In July 2022, we had to manually add a ## References heading, but this may not be necessary in future Quarto updates.\n\n\n\n\n\n\nInsert citation via its DOI using RStudio Visual Editor\n\n\n\n\n\n\n\n\n\n\nPublishing notes\nIf the book’s output is strictly html, there’s no need to specify output-dir in _quarto.yml. The output directory default is _book/, which is what we’d like. If we wanted other types of output like like PDF or EPUB, etc. those single file outputs are also written to the output-dir (Quarto docs).\nIf you currently have a docs/ folder, delete it.\nUpdate .gitignore to ignore _book/. At the same time, we have it ignore caches and a .quarto file:\n/.quarto/\n*_cache/\n_book/\nOnce all is settled, delete _output.yml.\nOnce the Openscapes fork was fully reviewed, we made a pull request from that to the main branch of the book’s repo. Once that was merged, we set up GitHub Actions to render the book. (TODO: instructions for GitHub Actions)\n\n\nGitHub Actions\nThis book was mostly prose and screenshots without any R code. This made the conversion from RMarkdown to Quarto likely more straightforward than if you also needed to adjust code chunk options in the quarto style (#|). Our initial GitHub Action to render the converted Faylab Lab Manual failed because we had a piece of R code - even though the code was commented out! This was resolved when we deleted the line."
+    "objectID": "quarto-workflows/jupyter.html#setup",
+    "href": "quarto-workflows/jupyter.html#setup",
+    "title": "From Jupyter",
+    "section": "Setup",
+    "text": "Setup\n\nJupyterHub\nOur JupyterHub is already setup with python environments as well as Quarto (through nasa-openscapes/corn), so there is no further installation required.\n\n\nClone your repo\nYou’ll start by cloning your repository into JupyterHub. Do this by opening a terminal (File &gt; New &gt; Terminal). In the Terminal, git clone your repository and cd into it:\ngit clone https://github.com/openscapes/quarto-website-tutorial\ncd quarto-website-tutorial\n\n\nInstall Quarto\nNot needed - Quarto is already installed on the NASA-Openscapes JupyterHub! But to install elsewhere you would do so from https://quarto.org/docs/get-started/.\nQuarto is a Command Line Interface (CLI), like git. Once download is complete, follow the installation prompts on your computer like you do for other software. You won’t see an application to click on when it is installed.\nNote for Mac users: If you do not have administrative privileges, please select “Install for me only” during the Destination Selection installation step (you will first click on “Change Install Location” at the Installation Type step).\nYou can check to confirm that Quarto is installed properly from the command line:\nquarto check install\n\n\n\n\n\n\nAdditional checks\n\n\n\n\n\nYou can also run:\n\nquarto check knitr to locate R, verify we have the rmarkdown package, and do a basic render\nquarto check jupyter to locate Python, verify we have Jupyter, and do a basic render\nquarto check to run all of these checks together\n\n\n\n\n\n\n\n\n\n\nHistorical aside: Install Quarto in a docker container\n\n\n\n\n\nIn Summer 2021 some NASA Mentors trying to install quarto locally was not an option, but they were able to install it inside a container using the following Dockerfile:\n#| fold: true\n#| summary: \"Show the Dockerfile\"\n\n##############################\n# This Dockerfile installs quarto and then runs quarto serve against the\n# internal /home/quarto/to_serve.\n#\n# BUILD\n# -----\n# To build this container, run\n#\n#     docker build -t quarto_serve .\n#\n# Add the --no-cache option to force docker to build fresh and get the most\n# recent version of quarto.\n#\n#\n# RUN\n# ---\n# 1. Find the directory you want quarto to serve. Let's call this /PATH/TO/earthdata-cloud-cookbook.\n# 2. Run docker:\n#\n#     docker run --rm -it -p 4848:4848 -v /PATH/TO/earthdata-cloud-cookbook:/home/quarto/to_serve quarto_serve\n#\n# 3. Open your browser and go to http://127.0.0.1:4848/\n#\n##############################\n\nFROM ubuntu:hirsute\n\n######\n# Install some command line tools we'll need\n######\nRUN apt-get update\nRUN apt-get -y install wget\nRUN apt-get -y install gdebi-core\nRUN apt-get -y install git\n\n\n######\n# Install quarto (https://quarto.org/)\n######\n\n# This is a quick and dirty way of getting the newest version number from\n# https://github.com/quarto-dev/quarto-cli/releases/latest. What's happening is\n# we're pulling the version number out of the redirect URL. This will end up\n# with QVER set to something like 0.2.11.\nRUN QVER=`wget --max-redirect 0 https://github.com/quarto-dev/quarto-cli/releases/latest 2&gt;&1 | grep \"Location\" | sed 's/L.*tag\\/v//' | sed 's/ .*//'` \\\n    && wget -O quarto.deb \"https://github.com/quarto-dev/quarto-cli/releases/download/v$QVER/quarto-$QVER-amd64.deb\"\nRUN gdebi -n quarto.deb\n\n# Run this to make sure quarto installed correctly\nRUN quarto check install\n\n\n######\n# Create a non-root user called quarto\n######\nRUN useradd -ms /bin/bash quarto\nUSER quarto\nRUN mkdir /home/quarto/to_serve\nWORKDIR /home/quarto/to_serve\n\n\n######\n# Start quarto serve\n######\n\nCMD quarto serve --no-browse --host 0.0.0.0 --port 4848"
   },
   {
-    "objectID": "transition-from-rmarkdown.html#distill-to-quarto",
-    "href": "transition-from-rmarkdown.html#distill-to-quarto",
-    "title": "Transition from RMarkdown",
-    "section": "Distill to quarto",
-    "text": "Distill to quarto\nWe transitioned our events site from distill to quarto in May 2022 (github view before and after). We followed excellent notes and examples from Nick Tierney and Danielle Navarro.\nAfter we had changed all the files, the Build tab in the RStudio IDE still showed “Build website” rather then “Render Website” and “Preview Website”, and would error when we pushed them (because that button was expecting a distill site, not a quarto site). To fix this, we updated the .Rproj file. Clicking on the .Rproj file in the RStudio IDE will open a dialog box where you can click things you want (you can also open these in a text editor or from the GitHub website to see the actual text). To fix this situation with the Build tab: Project Options &gt; Build Tools &gt; Project Build Tools &gt; None.\nLooking at files /posts/_metadata.yml and _quarto.yml helps see where things are defined. For example, to make event post citations appear, we added citation: true to /posts/_metadata.yml and in _quarto.yml under the website key we set site-url: https://openscapes.github.io/events. We deleted footer.html used with distill because footer is now defined in quarto.yml.\n\nPublishing notes\n\nBackground: Our distill site had been set up to output to a docs folder, and had GitHub Settings &gt; Pages set to look there rather gh-pages branch. (Julie note: this was a new-to-me capability when we set up the events distill site in Spring 2021 so I had forgotten that was an option). We’ve inititally kept this same set-up for now with our events page in _quarto.yml: output-dir: docs. However, this is sub-optimal; better to not have to commit and push these files but to instead have a GitHub Action generate them upon a commit. So the following is what we did -\n\nDon’t specify output-dir in _quarto.yml. The output directory default is _site/, which is what we’d like.\nIf you currently have a docs/ folder (like we did as we were experimenting), delete it.\nUpdate .gitignore to ignore _site/. At the same time, we have it ignore caches and a .quarto file:\n/.quarto/\n*_cache/\n_site/\nPush these changes, merge into main.\nOn GitHub.com, in your repo, set up GitHub publishing\nFollow instructions from the explore and setup chapter."
+    "objectID": "quarto-workflows/jupyter.html#quarto-preview",
+    "href": "quarto-workflows/jupyter.html#quarto-preview",
+    "title": "From Jupyter",
+    "section": "Quarto preview",
+    "text": "Quarto preview\nLet’s start off by previewing our quarto site locally. In Terminal, type quarto preview, which will provide a URL with a preview of our site!\nquarto preview\n# Preparing to preview\n# Watching files for changes\n# Browse at https://openscapes.2i2c.cloud/user/jules32/proxy/4593/\nCopy this URL into another browser window; and arrange them so you can see them both. I make a bit more space in Jupyter by collapsing the left file menu by clicking on the file icon at the top of the left sidebar.\n\n\n\n\n\n\nMake a small change and preview it\nNow we’ll be able to see live changes in the preview as we edit in our .md files. Let’s try it: Change the date in index.md by opening it from the file directory. Change to today’s date, and save. Your preview window will refresh automatically! If it does not, you can also refresh the page manually. The refreshed previewed site will now display your changes!"
   },
   {
-    "objectID": "transition-from-rmarkdown.html#troubleshooting",
-    "href": "transition-from-rmarkdown.html#troubleshooting",
-    "title": "Transition from RMarkdown",
+    "objectID": "quarto-workflows/jupyter.html#create-a-new-.ipynb-page",
+    "href": "quarto-workflows/jupyter.html#create-a-new-.ipynb-page",
+    "title": "From Jupyter",
+    "section": "Create a new .ipynb page",
+    "text": "Create a new .ipynb page\nLet’s add a new page to our site. Instead of an .md file like the others, let’s add a .ipynb file.\nFile &gt; New &gt; Notebook. Accept the default kernel by clicking Select.\n\nFirst chunk: raw yaml\nBy default, this Notebook will give us a first chunk that is code. Let’s change it to raw so that we can write our yaml at the top.\n\n\n\n\n\nIn our Raw code chunk, let’s write the title of this document. We need three dashes --- on separate lines preceding and following the title:, which you can name as you’d like.\n---\ntitle: Python Example\n---\n\n\nSecond chunk: Markdown\nLet’s add a new chunk that is Markdown so we can write some description of what this page will be.\nClick the + symbol at the top of the document, and this will add a new chunk, which by default again is a Code chunk. Change it to a Markdown Chunk following the steps we did above when switching to Raw.\nHere, write a little bit of text in Markdown. Since your title is effectively a level-1 header, avoid using level-1 headers in the rest of your document. Here is some example text I wrote:\n## Introduction\n\nThis example has some Python code that will be a part of our Quarto site.\n\n\nThird chunk: Code\nNow let’s create a new chunk with the default Code setting.\nPaste the following code (or write some of your own to test):\n#| label: fig-polar\n#| fig-cap: \"A line plot on a polar axis\"\nimport numpy as np\nimport matplotlib.pyplot as plt\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\nNow, go ahead and execute this code chunk like you normally would, by clicking the cursor in a code block and clicking the sideways “play” triangle to run the selected cells (and advance to the next cell). This code produces a plot.\nNote that the code runs as it normally would; the code options in the comments are just comments.\n\n\nSave your file\nSave your document - I’ll call mine python-example.ipynb in the main repository."
+  },
+  {
+    "objectID": "quarto-workflows/jupyter.html#update-_quarto.yml",
+    "href": "quarto-workflows/jupyter.html#update-_quarto.yml",
+    "title": "From Jupyter",
+    "section": "Update _quarto.yml",
+    "text": "Update _quarto.yml\nNow we’ll add python-example.ipynb to our _quarto.yml file; this is where we register of all files to include in our site. Let’s add it after the section called “Basic Workflows”.\nOpen _quarto.yml by clicking on it from the file directory.\nScroll down to review the current contents in the sidebar: section. It’s there we see all the file arrangement that we see in the previewed site.\nAdd - python-example.ipynb to line 46, making sure that your indentation aligns with the other pages.\n\n\n\n\n\nYou’ll see that our new page shows up in our Preview, and the code is executed since we did that in the Jupyter Notebook itself. By default, Quarto will not execute code chunks since your computations will likely become more complex and you will want to control when they are executed (or “run”).\nSince Quarto is still previewing our website and the python-example.ipynb, the plot also displays in the notebook after the code is run and the file is saved, as shown below.\n\n\n\n\n\nSo, your normal workflow for creating and running code blocks in your Jupyter Notebook is the same one you’ll use as Quarto displays the preview."
+  },
+  {
+    "objectID": "quarto-workflows/jupyter.html#quarto-render",
+    "href": "quarto-workflows/jupyter.html#quarto-render",
+    "title": "From Jupyter",
+    "section": "Quarto render",
+    "text": "Quarto render\nSo far we have used Quarto preview to view our website as we develop it. Quarto render will build the html elements of the website that we can see when we preview. Rendering will format the markdown text and code nicely as a website (or however is indicated in the _quarto.yml).\nBy default, Quarto render does not execute code in a Jupyter notebook. It will never run .ipynb files unless you tell it to.\n\nRender whole notebook\nIf you would like it to specifically execute code in a Jupyter notebook, you can do so in Terminal.\nOur Terminal is still busy previewing our website, so let’s open a new Terminal.\nFile &gt; New &gt; Terminal. Then type:\ncd quarto-website-tutorial\nquarto render python-example.ipynb --execute"
+  },
+  {
+    "objectID": "quarto-workflows/jupyter.html#authoring-tips",
+    "href": "quarto-workflows/jupyter.html#authoring-tips",
+    "title": "From Jupyter",
+    "section": "Authoring tips",
+    "text": "Authoring tips\nQuarto.org has details about authoring, including specific instructions about authoring in Jupyter: quarto.org/docs/reference/cells/cells-jupyter."
+  },
+  {
+    "objectID": "quarto-workflows/jupyter.html#commit-and-push",
+    "href": "quarto-workflows/jupyter.html#commit-and-push",
+    "title": "From Jupyter",
+    "section": "Commit and push!",
+    "text": "Commit and push!\nCommitting and pushing will make the changes you see locally live on your website (using the GitHub Action we set up earlier)."
+  },
+  {
+    "objectID": "quarto-workflows/jupyter.html#troubleshooting",
+    "href": "quarto-workflows/jupyter.html#troubleshooting",
+    "title": "From Jupyter",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\n\nGitHub Action fails, says you need RMarkdown but you don’t have R code!\nAnd you changed all .Rmds to .qmds!\nYou likely have a few setup code chunks from RMarkdown, that look like this:\n{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = FALSE)\nYou can find them by opening each of your files and having a look, or use GitHub’s search for the keyword knitr"
+    "text": "Troubleshooting\n\nMy changes don’t show up in preview\nMake sure you’ve saved your file! There might be a slight delay depending on your JupyterHub/Lab setup.\n\n\nQuarto render hangs / does not complete\nCheck the specific notebook, are there any `—` throughout to denote line breaks rather than yaml? They might be causing the issue; consider deleting those.\nAlso check how long the first raw cell is. Are there level-1 headers (#)? Try removing them."
+  },
+  {
+    "objectID": "quarto-workflows/quantum-mechanics/particles-2d.html#the-key-arguments",
+    "href": "quarto-workflows/quantum-mechanics/particles-2d.html#the-key-arguments",
+    "title": "Particles in Multidimensions",
+    "section": "The key arguments:",
+    "text": "The key arguments:\n\nLx and Ly: to set the boundaries of the particle-in-a-box problem. The wavefunction is defined only within \\(0\\leq x\\leq L_{x}\\) and \\(0\\leq y \\leq L_{y}\\).\nnpts = 101: number of points used in the grid for plotting.\nx and y: are 1D arrays of evenly spaced points between 0 and box length.\nX, Y: are 2D arrays created by np.meshgrid, representing all coordinate pairs.\nnx, ny: Quantum numbers in x and y directions.\nax.contourf: to make a filled contour plot.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Choose to use a square well and define a meshgrid of coordinate points\nLx = Ly = 1\nnpts = 101\nx = np.linspace(0, Lx, npts)\ny = np.linspace(0, Ly, npts)\nX, Y = np.meshgrid(x, y)\n\ndef psi_nxny(x, y, nx, ny):\n    \"\"\"\n    The two-dimensional particle-in-a-box wavefunction for state nx, ny.\n    X, Y can be single point or compatible arrays of such points.\n    \"\"\"\n    N = 2 / np.sqrt(Lx * Ly)\n    return N * np.sin(nx * np.pi * x /Lx) * np.sin(ny * np.pi * y /Ly)\n\ndef contour_plot(ax, nx, ny):\n    \"\"\"\n    Make a contour plot of the wavefunction defined by (nx, ny) on the provided Axes object, ax.\n    \"\"\"\n    ax.contourf(X, Y, psi_nxny(X, Y, nx, ny), cmap='hot')\n\n    # ratio: i.e squares appear square.\n    ax.axis('square')\n    \n    # add labels and title\n    ax.set_xlabel('$\\\\mathit{x}$ [a.u]')\n    ax.set_ylabel('$\\\\mathit{y}$ [a.u.]')\n    ax.set_title(f\"Particle in 2D Box $\\\\Psi$({nx}, {ny})\")\n\n# A 2 x 2 grid of Axes\nfig, axes = plt.subplots(nrows=2, ncols=2, figsize=(6,6))\n\n# Ensure that the x- and y-axes appear with the same aspect\ncontour_plot(axes[0, 0], 1, 1)\ncontour_plot(axes[1, 0], 2, 1)\ncontour_plot(axes[0, 1], 1, 2)\ncontour_plot(axes[1, 1], 2, 2)\n\n# necessary to call tight-layout() to add some padding around\nplt.savefig('Contour particle 2D.svg', bbox_inches='tight')\nplt.tight_layout()\nplt.show()\n\n\n\nFigure 1. Contour plots of the first four states of the particle in a two-dimensional square box\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Choose to use a square well and define a meshgrid of coordinate points\nLx = Ly = 1\nnpts = 101\nx = np.linspace(0, Lx, npts)\ny = np.linspace(0, Ly, npts)\nX, Y = np.meshgrid(x, y)\n\ndef surface_plot(ax, nx, ny):\n    \"\"\"\n    Make a surface plot of the wavefunction defined by (nx, ny) on the provided Axes object, ax. \n    Axes 3D must have been imported from mpl.toolkits.mplot3d for this work!.\n    \"\"\"\n\n# plot the wavefunction in \"3D\", coloring the surface\n    ax.plot_surface(X, Y, psi_nxny(X, Y, nx, ny), cmap='hot')\n\n# create a 3D figure, and plot the wavefunction as a surface\nfig = plt.figure()\nax = fig.add_subplot(projection='3d')\n   \n# add labels and title\nax.set_xlabel('$\\\\mathit{x}$ [a.u]')\nax.set_ylabel('$\\\\mathit{y}$ [a.u.]')\nax.set_title(r'Particle Surface plot in 2D Box $n_{x}$=2, $n_{y}$=4')\n\n# plot the chosen state\nnx, ny = 2, 4\nsurface_plot(ax, nx, ny)\n\nplt.savefig('Particle surface plot in 2D.svg', bbox_inches='tight')\nplt.tight_layout()\nplt.show()\n\n\n\nFigure 2. Surface plot of the \\(n_{x}\\)=2, \\(n_{y}=4\\) state of the particle in a two-dimensional square box",
+    "crumbs": [
+      "Contents",
+      "Quantum Mechanics",
+      "Particles in Multidimensions"
+    ]
+  },
+  {
+    "objectID": "explore.html",
+    "href": "explore.html",
+    "title": "Explore and setup",
+    "section": "",
+    "text": "Python is a powerful, object-oriented, high level programming language with dynamic semantics that is well-suited to many of the tasks of scientific computing. Python’s simple, easy to learn syntax emphasizes readibility and therefore reduces the cost of program maintenance. Python also supports modules and packages, which encourages program modularity and code reuse.\nThe Python interpreter and the extensive standard library are available in source or binary form such as Mathematical and MATLAB, without charge for all major computer operating systems (including Windows, Unix, Linux, and macOS), and can be freely distributed. But, in the distribution, Python needs a large number of additional modules and packages. The most notable of these, in the context of scientific computing, are as follows:\n\nNumpy: a fundamental package that provides a multidimensional array objects, various objects (such as arrays and matrices), including mathematical, logical, discrete Fourier transforms, lineral algebra and much more.\nScipy: a library that provides algorithms for optimization, integration, interpolation, differential equations, statistics and many other classes of problems.\nMatplotlib: a library for creating static, animated, and interactive visualizations.\npandas: a library providing high data sets for manipulating tabular data (DataFrame and Series).\nSymPy: a library for symbolic mathematics, with support for computer algebra system (CAS).",
+    "crumbs": [
+      "Explore and setup"
+    ]
+  },
+  {
+    "objectID": "explore.html#introduction-python",
+    "href": "explore.html#introduction-python",
+    "title": "Explore and setup",
+    "section": "",
+    "text": "Python is a powerful, object-oriented, high level programming language with dynamic semantics that is well-suited to many of the tasks of scientific computing. Python’s simple, easy to learn syntax emphasizes readibility and therefore reduces the cost of program maintenance. Python also supports modules and packages, which encourages program modularity and code reuse.\nThe Python interpreter and the extensive standard library are available in source or binary form such as Mathematical and MATLAB, without charge for all major computer operating systems (including Windows, Unix, Linux, and macOS), and can be freely distributed. But, in the distribution, Python needs a large number of additional modules and packages. The most notable of these, in the context of scientific computing, are as follows:\n\nNumpy: a fundamental package that provides a multidimensional array objects, various objects (such as arrays and matrices), including mathematical, logical, discrete Fourier transforms, lineral algebra and much more.\nScipy: a library that provides algorithms for optimization, integration, interpolation, differential equations, statistics and many other classes of problems.\nMatplotlib: a library for creating static, animated, and interactive visualizations.\npandas: a library providing high data sets for manipulating tabular data (DataFrame and Series).\nSymPy: a library for symbolic mathematics, with support for computer algebra system (CAS).",
+    "crumbs": [
+      "Explore and setup"
+    ]
+  },
+  {
+    "objectID": "explore.html#installing-python",
+    "href": "explore.html#installing-python",
+    "title": "Explore and setup",
+    "section": "Installing Python",
+    "text": "Installing Python\nWe can install Python on windows, linux, or macOS using the official installer from www.python.org, it’s easy to follow the instructions. However, there are several full distribution which include the NumPy, SciPy and Matplotlib libraries to save you from having to download and install these yourself:\n\nAnaconda is an isolated Python packages to manage both the Python interpreter itself as well as packaged from multiple programming languages. It’s available for free from https://www.anaconda.com.\nEntought Deployment Manager (EDM) is Entought’s Python environment and application manager that create multiple self-contained Python environments. It can be download from https://docs.enthought.com.",
+    "crumbs": [
+      "Explore and setup"
+    ]
+  },
+  {
+    "objectID": "explore.html#code-editors",
+    "href": "explore.html#code-editors",
+    "title": "Explore and setup",
+    "section": "Code Editors",
+    "text": "Code Editors\nCode editors are very important for coding. They’are literally how we tell the computer what our code is. Every code editor comes in different shapes and sizes. Popular choices include:\n\nVisual Studio Code (Windows, macOS, and Linux). It’s a popular, free, and open source code editor developed by Microsoft.\nNotepad++ (Windows), a very simple, good code editor and a free Windows-only editor.\nSublime Text (Windows, macOS, Linux) is a good editor, altough only free for personal use, we have to buy a license if we’re using it for business.\nVim (Linux and Unix) is a text editor which run is our terminal. It was forked from vi, and more features were added.\nJupyter Notebook (Windows, macOS, Linux) is a free, open standards, and web services for interactive computing across all programming languages. It uses a cell-based system.",
+    "crumbs": [
+      "Explore and setup"
+    ]
   }
 ]
