@@ -3,53 +3,82 @@ project:
   
 website: 
   page-navigation: true
-  title: "Making sharable documents with Quarto" 
-  site-url: "https://openscapes.github.io/quarto-website-tutorial" 
-  repo-url: https://github.com/openscapes/quarto-website-tutorial 
+  title: "Random Spaces" 
+  site-url: "" 
+  repo-url: https://github.com/dindagustiayu/randomspaces.github.io 
   repo-actions: [edit, issue]
   
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    left: "&copy; CC-By Openscapes, 2024"
+    left: "&copy; CC-By randomspaces, 2026"
     
   sidebar:
-    logo: "images/openscapes_hex.png"
+    logo: "images/randomspaces.png"
     pinned: true
     align: center
     tools: 
       - icon: globe
-        href: https://openscapes.org
-        text: "Openscapes.org"
+        href: https://dindagustiayu.github.io/
+        text: "dindagustiayu.github.io"
       - icon: github
-        href: https://github.com/openscapes/quarto-website-tutorial
-        text: "Quarto website tutorial"
-      - icon: twitter
-        href: https://twitter.com/openscapes
-        text: "Openscapes Twitter"         
+        href: https://github.com/dindagustiayu/randomspaces.github.io
+        text: "Random Spaces"
+      - icon: linkedin
+        href: https://linkedin.com/in/dindagustiayu
+        text: "Dinda Gusti Ayu"
 
     style: "docked"
     search: true
     collapse-level: 1
     contents:
       - href: index.qmd
-        text: Welcome
+        text: Home
       - explore.qmd
       - section: quarto-workflows/index.qmd
         contents: 
-          - quarto-workflows/browser.md
-          - quarto-workflows/rstudio.qmd
-          - quarto-workflows/jupyter.md 
+          - section: Data Science
+            contents:
+              - quarto-workflows/data-science/Gaussian.md
+              - quarto-workflows/data-science/the-fourier-series.md
+              - quarto-workflows/data-science/linear-algebra.md
+              - quarto-workflows/data-science/numpy-and-matplot.md
+              - quarto-workflows/data-science/basicnumpy.md
+              - quarto-workflows/data-science/chemspy.md
+              - quarto-workflows/data-science/pandas.md
+              - quarto-workflows/data-science/morenumpy.md
+              - quarto-workflows/data-science/errorbar.md
+              - quarto-workflows/data-science/menten.md
+              - quarto-workflows/data-science/integration.md
+              - quarto-workflows/data-science/multiintegral.md
+              - quarto-workflows/data-science/optimization.md
+              - quarto-workflows/data-science/differential.md
+              - quarto-workflows/data-science/singleorder.md
+          - section: Quantum Mechanics
+            contents:
+              - quarto-workflows/quantum-mechanics/particles-2d.md
+              - quarto-workflows/quantum-mechanics/ssaproximation.md
+              - quarto-workflows/quantum-mechanics/uncertainty.md
+              - quarto-workflows/quantum-mechanics/inertia.md
+              - quarto-workflows/quantum-mechanics/QHO.md
+              - quarto-workflows/quantum-mechanics/approxiqho.md
+              - quarto-workflows/quantum-mechanics/hermite.md
+              - quarto-workflows/quantum-mechanics/anharmonicity.md
+          - section: Thermodynamics
+            contents:
+              - quarto-workflows/thermodynamics/adiabatic-process.md
+              - quarto-workflows/thermodynamics/boltzman.md
       - learning-more.qmd
-      - href: transition-from-rmarkdown.qmd
-        text: Transition from Rmd
-
-
+       
+       
 format:
   html:
-    theme: cosmo
+    theme: 
+       light: flatly
+       dark: darkly
     code-copy: true
     code-overflow: wrap
     toc: true
+    fig-align: center
 
 
 filters:

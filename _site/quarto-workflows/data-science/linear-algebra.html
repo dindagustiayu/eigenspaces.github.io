@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>linear-algebra – Python for Scientific Computing and Data Visualization</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../quarto-workflows/data-science/numpy-and-matplot.html" rel="next">
+<link href="../../quarto-workflows/data-science/the-fourier-series.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-06ed227a9486c91a3f6dbcae3df49f27.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/linear-algebra.html">Balancing a Chemical Reaction and Permutation Group</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/openscapes_hex.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://randomspaces.github.io" title="randomspaces.github.io" class="quarto-navigation-tool px-1" aria-label="randomspaces.github.io"><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/dindagustiayu/randomspaces.github.io" title="Random Spaces" class="quarto-navigation-tool px-1" aria-label="Random Spaces"><i class="bi bi-github"></i></a>
+    <a href="https://linkedin.com/in/dindagustiayu" title="Dinda Gusti Ayu" class="quarto-navigation-tool px-1" aria-label="Dinda Gusti Ayu"><i class="bi bi-linked in"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../explore.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore and setup</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../quarto-workflows/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contents</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Data Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/Gaussian.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gaussian Distribution Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/the-fourier-series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Fourier Series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/linear-algebra.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Balancing a Chemical Reaction and Permutation Group</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/numpy-and-matplot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aggregation Indexing Boleean</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/basicnumpy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NumPy and Matplotlib</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Quantum Mechanics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/quantum-mechanics/particles-2d.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Particles in Multidimensions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Thermodynamics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/thermodynamics/adiabatic-process.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Adiabatic process and Carnot Cycle</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../learning-more.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learning more</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#balancing-a-chemical-reaction-and-permutation-group" id="toc-balancing-a-chemical-reaction-and-permutation-group" class="nav-link active" data-scroll-target="#balancing-a-chemical-reaction-and-permutation-group">Balancing a Chemical Reaction and Permutation Group</a>
+  <ul class="collapse">
+  <li><a href="#linear-algebra" id="toc-linear-algebra" class="nav-link" data-scroll-target="#linear-algebra">Linear Algebra</a></li>
+  <li><a href="#foundations-of-linear" id="toc-foundations-of-linear" class="nav-link" data-scroll-target="#foundations-of-linear">Foundations of Linear</a></li>
+  <li><a href="#scalar" id="toc-scalar" class="nav-link" data-scroll-target="#scalar">1. Scalar</a></li>
+  <li><a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors">2. Vectors</a></li>
+  <li><a href="#vector-spaces" id="toc-vector-spaces" class="nav-link" data-scroll-target="#vector-spaces">3. Vector spaces</a></li>
+  <li><a href="#matrices" id="toc-matrices" class="nav-link" data-scroll-target="#matrices">4. Matrices</a></li>
+  <li><a href="#matrix-operations" id="toc-matrix-operations" class="nav-link" data-scroll-target="#matrix-operations">5. Matrix operations</a></li>
+  </ul></li>
+  <li><a href="#linear-algebra-in-chemistry" id="toc-linear-algebra-in-chemistry" class="nav-link" data-scroll-target="#linear-algebra-in-chemistry">Linear Algebra in Chemistry</a>
+  <ul class="collapse">
+  <li><a href="#p18.1-exercise-balancing-a-redox-reaction" id="toc-p18.1-exercise-balancing-a-redox-reaction" class="nav-link" data-scroll-target="#p18.1-exercise-balancing-a-redox-reaction">P18.1 Exercise: Balancing a redox reaction</a></li>
+  <li><a href="#p18.2-exercise-balancing-a-complex-reaction" id="toc-p18.2-exercise-balancing-a-complex-reaction" class="nav-link" data-scroll-target="#p18.2-exercise-balancing-a-complex-reaction">P18.2 Exercise: Balancing a complex reaction</a></li>
+  <li><a href="#p18.3-exercise-the-reaction-between-copper-and-nitric-acid" id="toc-p18.3-exercise-the-reaction-between-copper-and-nitric-acid" class="nav-link" data-scroll-target="#p18.3-exercise-the-reaction-between-copper-and-nitric-acid">P18.3 Exercise: The reaction between copper and nitric acid</a></li>
+  <li><a href="#p18.4-construction-the-cayley-table-for-a-permutation-group" id="toc-p18.4-construction-the-cayley-table-for-a-permutation-group" class="nav-link" data-scroll-target="#p18.4-construction-the-cayley-table-for-a-permutation-group">P18.4 Construction the Cayley Table for a Permutation Group</a></li>
+  <li><a href="#mathematical-meaning" id="toc-mathematical-meaning" class="nav-link" data-scroll-target="#mathematical-meaning">Mathematical meaning</a></li>
+  <li><a href="#the-key-arguments" id="toc-the-key-arguments" class="nav-link" data-scroll-target="#the-key-arguments">The key arguments:</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/data-science/linear-algebra.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/linear-algebra.html">Balancing a Chemical Reaction and Permutation Group</a></li></ol></nav></header>
+
+
+
+
+<p><a href="https://github.com/dindagustiayu/-Linear-Algebra-in-Balancing-a-Chemical-Reaction-/tree/main"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
+<section id="balancing-a-chemical-reaction-and-permutation-group" class="level1">
+<h1>Balancing a Chemical Reaction and Permutation Group</h1>
+<section id="linear-algebra" class="level2">
+<h2 class="anchored" data-anchor-id="linear-algebra">Linear Algebra</h2>
+<p>Linear Algebra is the branch of mathematics that focuses on the study of vectors, vector spaces, matrices, and linear tranformations. It deals with linear equations, linear functions, and their representations through matrices and determinants. It has a wide range of appliation in Physics and Mathematics, It is the basic concept for machine learning and data science.</p>
+</section>
+<section id="foundations-of-linear" class="level2">
+<h2 class="anchored" data-anchor-id="foundations-of-linear">Foundations of Linear</h2>
+<p>Linear Algebra is trikingly similar to the algebra we learned in hihg school, except that in the place of ordinary single numbers, it deals with vectors. Elementary linear algebra introduces the foundational concepts that form the building blocks of the subject. It covers basic operations on matrices, solving system of equations, and understanding vectors. 1. Scalar 2. Vector 3. Vector Spaces 4. Matrices 5. Matrix Operations</p>
+</section>
+<section id="scalar" class="level2">
+<h2 class="anchored" data-anchor-id="scalar">1. Scalar</h2>
+<p>A scalar is a number. Examples of scalars are temperature, distances, speed, or mass, all quantities that have a magnitude but no “direction” other than perhaps positive or negative.</p>
+</section>
+<section id="vectors" class="level2">
+<h2 class="anchored" data-anchor-id="vectors">2. Vectors</h2>
+<p>In mathematics, vectors are fundamental objects that represent quantities with both magnitude and direction. A vector is <em>a list of numbers</em>. There are (at least) two ways to intrepret what this list of numbers mean: One way to think of the vector as being <em>a point in a space</em>. Another way to think of a vector is <em>a magnitude and a direction</em>.</p>
+</section>
+<section id="vector-spaces" class="level2">
+<h2 class="anchored" data-anchor-id="vector-spaces">3. Vector spaces</h2>
+<p>A basis set is a linearly independent set of vectors that, when used in linear combinations, can combination represent every vector in agiven vector space. All vectors live within a <em>vector space</em>. A vector space is exactly what it sounds like the space in which vectors live. The vector space is intuitively spatial since all available directions of motion can be plotted directly onto a spacial map of the room.</p>
+</section>
+<section id="matrices" class="level2">
+<h2 class="anchored" data-anchor-id="matrices">4. Matrices</h2>
+<p>A matrix, like a vector, is also a collection of numbers. The difference is that a matrix is a set of numbers rather than a list. Many of the same rules we juct outlined for vectors above apply equally well to matrices. Matrices are rectangular arrays of numbers, symbols, or characters where all of these elements are arranged in each row and column. - A matrix is identified by its order, which is given in the form of rows x and columns and the location of each element is given by the row and column it belongs to. - A matrix is represented as (<span class="math inline">\([P]_{m \times n}\)</span>), where P is the matrix, m is the number of rows and n is the number of columns.</p>
+</section>
+<section id="matrix-operations" class="level2">
+<h2 class="anchored" data-anchor-id="matrix-operations">5. Matrix operations</h2>
+<p>Matrix operations mainly involve three algebraic operations, which are the addition of matrices, subtraction of matrices, and multipication of matrices. To add or substract matrices, these must be of identical order, and for multipication, the number of columns in the first matrix equals the number of rows in the second matrix. Examples of matrix operations: - transpose, sum and difference, scalar multiplication. - matrix multiplication, matrix-vector product. - matrix inverse.</p>
+</section>
+</section>
+<section id="linear-algebra-in-chemistry" class="level1">
+<h1>Linear Algebra in Chemistry</h1>
+<p>Linear Algebra is the study of vectors in vector spaces, and linear transformation in that vector spaces. The study of vector spaces and linear transformations in said spaces is called Linear Algebra. In this work, we will solving a set of linear equation for balancing reaction a chemical reaction.</p>
+<section id="p18.1-exercise-balancing-a-redox-reaction" class="level2">
+<h2 class="anchored" data-anchor-id="p18.1-exercise-balancing-a-redox-reaction">P18.1 Exercise: Balancing a redox reaction</h2>
+Balance the equation ofr the reaction of permanganate and iodide ions in basic solution:
+<p align="center">
+<span class="math display">\[MnO_{4}^{-} (aq) + I^{-} (aq) \longrightarrow MnO_{2} (s) + I_{2} (aq)\]</span>
+</p>
+<p><strong>Hint</strong>: You will need to add <span class="math inline">\(OH^{-}\)</span> ions <span class="math inline">\(H_{2}O\)</span> molecules to the reaction in stoichiometric amounts to be determined.</p>
+In this redox reaction, the hydroxide ions and water molecules added before it can be balanced:
+<p align="center">
+<span class="math display">\[aMnO_{4}^{-} (aq) + bI^{-} (aq) + cH_{2}O (l) \longrightarrow dMnO_{2} (s) + eI_{2} (aq) + fOH^{-} (aq)\]</span>
+</p>
+We must also conserve the charge, which leads to the following four equations:
+<p align="center">
+Mn: a + d = 0 O: 4a + c + 2d + f = 0 I: b + 2e = 0 H: 2c + f = 0 charge: a + b + f = 0
+</p>
+The problem is undertermined but we can set the constraint a = 1 since we know we can scale all the coefficients by the same amount and keep the reaction balanced. Therefore, in matrix form:
+<p align="center">
+<span class="math display">\[\begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\4 &amp; 0 &amp; 1 &amp; 2 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 0 &amp; 0 &amp; 2 &amp; 0\\0 &amp; 0 &amp; 2 &amp; 0 &amp; 0 &amp; 1\\1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{pmatrix}  \begin{pmatrix} a\\b\\c\\d\\e\\f  \end{pmatrix} = \begin{pmatrix} 0\\0\\0\\0\\0\\1 \end{pmatrix}\]</span>
+</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], <span class="co"># Mn</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>], <span class="co"># O</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">0</span>], <span class="co"># I</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], <span class="co"># H</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], <span class="co"># charge</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]]) <span class="co"># constraint a = 1</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>coeffs <span class="op">=</span> np.linalg.solve(A, x)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'a, b, c, d, e, f ='</span>, coeffs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>a, b, c, d, e, f = [ 1. 3. 2. -1. -1.5 -4. ]</p>
+The balanced reaction is therefore:
+<p align="center">
+<span class="math display">\[2\;MnO_{4}^{-} (aq) + 6\;I^{-} (aq) + 4\;H_{2}O (l) \longrightarrow 2\;MnO_{2} (s) + 3\;I_{2} (aq) + 8\;OH^{-} (aq)\]</span>
+</p>
+</section>
+<section id="p18.2-exercise-balancing-a-complex-reaction" class="level2">
+<h2 class="anchored" data-anchor-id="p18.2-exercise-balancing-a-complex-reaction">P18.2 Exercise: Balancing a complex reaction</h2>
+Balance the following equation [R. J. Stout, _J.Chem.Educ.<strong>72</strong>, 1125 (1995)]:
+<p align="center">
+<span class="math display">\[aCr_{7}N_{66}H_{96}C_{42}O_{24} + MnO_{4}^{-} + H^{+} \longrightarrow Cr_{2}O_{7}^{2-} + Mn^{2+} + CO_{2} + NO_{3}^{-} + H_{2}O\]</span>
+</p>
+The stoichiometric constraints can be written as a sequence of three equations, one for each of the atoms Cr, N, H, C, O, and Mn.
+<p align="center">
+</p><pre><code>    Cr: 7a + 2d = 0
+    N : 66a + g = 0
+    H : 96a + c + 2h = 0
+    C : 42a + f = 0
+    O : 24a + 4b + 7d + 2f + 3g + h = 0
+    Mn: b + e = 0
+Charge: b + c + d + e + g = 0</code></pre>
+<p></p>
+Again, The problem is undertermined but we can set the constraint a = 1 since we know we can scale all the coefficients by the same amount and keep the reaction balanced. Therefore, in matrix form:
+<p align="center">
+<span class="math display">\[\begin{pmatrix} 7 &amp; 0 &amp; 0 &amp; 2 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\ 66 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\ 96 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 2\\ 42 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\ 24 &amp; 4 &amp; 0 &amp; 7 &amp; 0 &amp; 2 &amp; 3 &amp; 1\\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; -1 &amp; 1 &amp; -2 &amp; 2 &amp; 0 &amp; -1 &amp; 0\\ 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{pmatrix} \begin{pmatrix} a\\b\\c\\d\\e\\f\\g\\h \end{pmatrix} = \begin{pmatrix} 0\\0\\0\\0\\0\\0\\0\\1 \end{pmatrix}\]</span>
+</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">7</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>], </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">66</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>,<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>], </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">96</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>], </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">42</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">24</span>, <span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">7</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>], </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>], </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>], </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]])</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>coeffs <span class="op">=</span> np.linalg.solve(A, x)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'a, b, c, d, e, f, g, h='</span>, coeffs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>a, b, c, d, e, f, g, h= [ 1. 117.6 279.8 -3.5 -117.6 -42. -66. -187.9]</p>
+The balanced reaction is therefore:
+<p align="center">
+<span class="math display">\[10\;Cr_{7}N_{66}H_{96}C_{42}O_{24} + 1176\;MnO_{4}^{-} + 2798\;H^{+} \longrightarrow 35\;Cr_{2}O_{7}^{2-} + 11760\;Mn^{2+} + 420\;CO_{2} + 660\;NO_{3}^{-} + 1879\;H_{2}O\]</span>
+</p>
+</section>
+<section id="p18.3-exercise-the-reaction-between-copper-and-nitric-acid" class="level2">
+<h2 class="anchored" data-anchor-id="p18.3-exercise-the-reaction-between-copper-and-nitric-acid">P18.3 Exercise: The reaction between copper and nitric acid</h2>
+Copper metal may be thought of as reacting with nitric acid according to the followeing reaction:
+<p align="center">
+<span class="math display">\[aCu\;(s) + bHNO_{3}\;(aq) \longrightarrow cCu(NO_{3})_{2}\;(aq) + dNO\;(g) + eNO_{2}\;(g) + fH_{2}O\;(l)\]</span>
+</p>
+<p>Show that this reaction is carried put with concentrated nitric acid the favored gaseous product is nitrogen dioxide instead of nitric oxide (d = 0); conversely, in dilute nitric acid nitric oxide is produced of <span class="math inline">\(NO_{2}\)</span> (e = 0). Write balanced equations for these two cases.</p>
+With concentrate <span class="math inline">\(HNO_{3}\)</span>, we can eliminate the column corresponding to NO since <span class="math inline">\(NO_{2}\)</span> is observed to be the product.
+<p align="center">
+<span class="math display">\[aCu\;(s) + bHNO_{3}\;(aq) \longrightarrow cCu(NO_{3})_{2}\;(aq) + dNO_{2}\;(g) + eH_{2}O\;(l)\]</span>
+</p>
+The equations giverning the balance of the reaction can be written as,
+<p align="center">
+</p><pre><code>Cu: a + c = 0
+H:  b + 2e = 0
+N:  b + 2c + d = 0
+O: 3b + 6c + 2d + e = 0</code></pre>
+<p></p>
+Again, The problem is undertermined but we can set the constraint a = 1 since we know we can scale all the coefficients by the same amount and keep the reaction balanced. Therefore, in matrix form:
+<p align="center">
+<span class="math display">\[\begin{pmatrix} 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 2\\ 0 &amp; 1 &amp; 2 &amp; 1 &amp; 0\\ 0 &amp; 3 &amp; 6 &amp; 2 &amp; 1\\1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\end{pmatrix} \begin{pmatrix} a\\b\\c\\d\\e \end{pmatrix} = \begin{pmatrix} 0\\0\\0\\0\\1 \end{pmatrix}\]</span>
+</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>],</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>],</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>],</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]])</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>coeffs <span class="op">=</span> np.linalg.solve(A, x)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'a, b, c, d, e='</span>, coeffs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>a, b, c, d, e= [ 1. 4. -1. -2. -2.]</p>
+The balanced reaction in this case is therefore:
+<p lign="center">
+<span class="math display">\[Cu\;(s) + 4\;HNO_{3}\;(aq) \longrightarrow Cu(NO_{3})_{2}\;(aq) + 2\;NO_{2}\;(g) + 2\;H_{2}O\;(l)\]</span>
+</p>
+In dilute nitric acid, we can eliminate the column corresponding to <span class="math inline">\(NO_{2}\)</span> instead:
+<p align="center">
+<span class="math display">\[aCu\;(s) + bHNO_{3}\;(aq) \longrightarrow cCu(NO_{3})_{2}\;(aq) + dNO\;(g) + eH_{2}O\;(l)\]</span>
+</p>
+The equations giverning the balance of the reaction can be written as,
+<p align="center">
+</p><pre><code>Cu: a + c = 0
+H:  b + 2e = 0
+N:  b + 2c + d = 0
+O: 3b + 6c + d + e = 0</code></pre>
+<p></p>
+Again, The problem is undertermined but we can set the constraint a = 1 since we know we can scale all the coefficients by the same amount and keep the reaction balanced. Therefore, in matrix form:
+<p align="center">
+<span class="math display">\[\begin{pmatrix} 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 2\\ 0 &amp; 1 &amp; 2 &amp; 1 &amp; 0\\ 0 &amp; 3 &amp; 6 &amp; 1 &amp; 1\\1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\end{pmatrix} \begin{pmatrix} a\\b\\c\\d\\e \end{pmatrix} = \begin{pmatrix} 0\\0\\0\\0\\1 \end{pmatrix}\]</span>
+</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>],</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>],</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>],</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">1</span>],</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]])</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>coeffs <span class="op">=</span> np.linalg.solve(A, x)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'a, b, c, d, e='</span>, coeffs)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>coeffs <span class="op">*</span> <span class="dv">3</span> <span class="co"># To get integer coefficients, multiply by 3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p align="left">
+a, b, c, d, e= [ 1. 2.66666667 -1. -0.66666667 -1.33333333] array([ 3., 8., -3., -2., -4.])
+</p>
+The balanced reaction in this case is
+<p lign="center">
+<span class="math display">\[3Cu\;(s) + 8\;HNO_{3}\;(aq) \longrightarrow 3Cu(NO_{3})_{2}\;(aq) + 2\;NO\;(g) + 4\;H_{2}O\;(l)\]</span>
+</p>
+</section>
+<section id="p18.4-construction-the-cayley-table-for-a-permutation-group" class="level2">
+<h2 class="anchored" data-anchor-id="p18.4-construction-the-cayley-table-for-a-permutation-group">P18.4 Construction the Cayley Table for a Permutation Group</h2>
+<p>What is the most effective way to shuffle a pack of cards?. To answer this question we need to return to the ideas about permutations. We will see that permutations provide an example of a mathematical structure called a <em>groups.</em> Groups plan an important role in many areas of mathematics.</p>
+<p>Caycle’s theorem states that every group G is isomorphic to a subgroup of the symmetric group acting on G. In this context, it means that if we have a vector of permutations tha comprise a group, then we can nicely represent its stucture using a table.</p>
+The distinct rearrangements of three objects, [1, 2, 3], can be described by six distinct permutations, written in cycle notation as
+<p align="center">
+e, (12), (13), (23), (123), (132).
+</p>
+<p>Here, e represent the identity permutation (which leaves the objects undisturbed) and, for example, (12) swaps objects 1 and 2; (123) is the cyclic permutation (<span class="math inline">\(1\rightarrow 2, 2\rightarrow 3, 3\rightarrow 1\)</span>).</p>
+<ul>
+<li><ol type="a">
+<li>Demonstrate that the inverse of each <span class="math inline">\(3\times3\)</span> permuation matrix is its transpose (i.e., the permutation matrices are <em>orthogonal</em>)</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>Show that there is some power of each permutation matrix that is the identity matrix.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>The <em>parity</em> of a permutation is -1 or +1 according to whether the number of distinct pairwise swaps it can be broken down into is odd or even, repectively. Show that the parity of each permutation is equal to the determinant of its corresponding permutation matrix.</li>
+</ol></li>
+</ul>
+</section>
+<section id="mathematical-meaning" class="level2">
+<h2 class="anchored" data-anchor-id="mathematical-meaning">Mathematical meaning</h2>
+<p>This code is finding the order of each element in the group <span class="math inline">\(S_{3}\)</span>: - The order of an element g in a group is the smallest positive integer n such that <span class="math inline">\(g^{n}=e\)</span>. - If true, it prints that the matrix is <strong>orthogonal</strong> (since orthogonal matrices satisfy <span class="math inline">\(m^{-1}=m^{T}\)</span>). - In <span class="math inline">\(S_{3}\)</span>: - The identity e has order 1 - Transpositions like (12), (13), (23)have order 2. - 3-cycles like (123), (132) have order 3.</p>
+</section>
+<section id="the-key-arguments" class="level2">
+<h2 class="anchored" data-anchor-id="the-key-arguments">The key arguments:</h2>
+<ul>
+<li><code>np.eye(3, dtype=int)</code>: creates the 3 x 3 identity matrix (the permutation ‘e’).</li>
+<li><code>np.array([...], dtype=int)</code>: the nested list <code>[[...], [...], [...]]</code> species the matrix.</li>
+<li><code>np.allclose(minv, m.T)</code>: compares two matrices element-wise to check if they are approximately equal.</li>
+<li><code>minv</code>: the inverse of the matrix.</li>
+<li><code>m.T</code>: the transpose of the matrix.</li>
+<li><code>enumerate</code>: <code>s</code> (list of matrices), iterates through the list <code>s</code>, returning both index <code>i</code> and matrix <code>m</code>.</li>
+<li><code>np.linalg.matrix_power(m, n)</code>: <code>m</code> (matrix), <code>n</code> (integer).</li>
+</ul>
+<ol type="a">
+<li>Demonstrate that the inverse of each 3 x 3 permutation matrix is its transpose (i.e., the permutation matrices are <em>orthogonal</em>)</li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> [<span class="va">None</span>] <span class="op">*</span> <span class="dv">6</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">'e'</span>, <span class="st">'(12)'</span>, <span class="st">'(13)'</span>, <span class="st">'(23)'</span>, <span class="st">'(123)'</span>, <span class="st">'(132)'</span>]</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">0</span>] <span class="op">=</span> np.eye(<span class="dv">3</span>, dtype<span class="op">=</span><span class="bu">int</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">1</span>] <span class="op">=</span> np.array([[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>]], dtype<span class="op">=</span><span class="bu">int</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">2</span>] <span class="op">=</span> np.array([[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>]], dtype<span class="op">=</span><span class="bu">int</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">3</span>] <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>]], dtype<span class="op">=</span><span class="bu">int</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">4</span>] <span class="op">=</span> np.array([[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>]], dtype<span class="op">=</span><span class="bu">int</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">5</span>] <span class="op">=</span> np.array([[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>]], dtype<span class="op">=</span><span class="bu">int</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, m <span class="kw">in</span> <span class="bu">enumerate</span>(s):</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    minv <span class="op">=</span> np.linalg.inv(m)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> np.allclose(minv, m.T):</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f's[</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">] is orthogonal'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p align="left">
+s[0] is orthogonal s[1] is orthogonal s[2] is orthogonal s[3] is orthogonal s[4] is orthogonal s[5] is orthogonal
+</p>
+<ol start="2" type="a">
+<li>Show that there is some power of each permutation matrix that is the identity matrix.</li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, m <span class="kw">in</span> <span class="bu">enumerate</span>(s):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="kw">not</span> np.allclose(np.linalg.matrix_power(m, n), s[<span class="dv">0</span>]):</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        n <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f's[</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">]^</span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> = e'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p align="left">
+s[1]^2 = e s[2]^2 = e s[3]^2 = e s[4]^2 = e s[4]^3 = e s[5]^2 = e s[5]^3 = e
+</p>
+<ol start="3" type="a">
+<li>The <em>parity</em> of a permutation is -1 or +1 according to whether the number of distinct pairwise swaps it can be broken down into is odd or even, repectively.</li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>parities <span class="op">=</span> [<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, parity <span class="kw">in</span> <span class="bu">zip</span>(names, parities):</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>name<span class="sc">:&gt;5s}</span><span class="ss">: </span><span class="sc">{</span>parity<span class="sc">:2d}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p align="left">
+e: 1 (12): -1 (13): -1 (23): -1 (123): 1 (132): 1
+</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/randomspaces\.github\.io");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../quarto-workflows/data-science/the-fourier-series.html" class="pagination-link" aria-label="The Fourier Series">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The Fourier Series</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../quarto-workflows/data-science/numpy-and-matplot.html" class="pagination-link" aria-label="Aggregation Indexing Boleean">
+        <span class="nav-page-text">Aggregation Indexing Boleean</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© CC-By Randomspaces, 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/data-science/linear-algebra.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

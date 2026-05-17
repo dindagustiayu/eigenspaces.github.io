@@ -1,46 +1,26 @@
 ---
-title: "Making shareable documents with Quarto"
-subtitle: "Create open-source tutorials, onboarding docs, and much more"
+title: "Python for Scientific Computing and Data Visualizations"
+subtitle: "Open-source tutorials for everyone who want to use Python in their works"
 ---
 
 ## Welcome {#welcome}
 
-It's possible to create beautiful documentation to share online with [Quarto](https://quarto.org) that auto-updates with [GitHub](http://github.com). This is very new and incredibly cool. This tutorial is an example of a quarto website --- it is a really powerful way to create and share your work. You can communicate about science using the same reproducible workflow you and/or your colleagues use for analyses, whether or not you write code.
+Welcome to __Random Spaces!__ This blog is as a knowledge base in understanding  application of computational tools for physics or chemistry problems. I hope you find the content useful, and I hope you enjoy reading along and learning with me!
 
-Creating websites with Quarto can be done without knowing R, Python or HTML, CSS, etc, and that's where we'll start. However, Quarto integrates with these tools so you can make your websites as complex and beautiful as you like as you see examples and reuse and remix from others in the open community. This tutorial borrows heavily from a lot of great tutorials and resources you should check out too -- there are links throughout.
+And me? Well, I'm __Dinda Gusti Ayu__ [![GitHub](https://img.shields.io/badge/--%23181717?logo=github&logoColor=white&style=for-the-badge)](https://github.com/dindagustiayu). I'm interested in using Machine Learning to learn the rules of Quantum Mechanics and Simulate Crystalline and Amorphous Solid Systems. I earned an MS in chemistry physics at Universitas Sumatera Utara, Indonesia where I studied the fundamental optical properties and defects modelling of direct band-gap semiconductors for materials research.
 
-## What is Quarto?
+## What is Random Spaces?
 
-Quarto helps you have your ideas and your code in one place, and present it in a beautiful way. 
+__Random Spaces__ is a free, open-source learning resources for students and researchers interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The tutorials here bridge the gap beetween condensed matter physics, chemistry and computational tools.
 
-**Quarto unifies and extends the RMarkdown ecosystem** - it unifies by combining the functionality of R Markdown, bookdown, distill, xaringian, etc into a single consistent system. And it extends in several ways: all features are possible beyond R too, including Python and Javascript. It also has more “guardrails”: accessibility and inclusion are centered in the design. Quarto is for people who love RMarkdown, and it's for people who have never used RMarkdown. 
- 
+All materials are shared openly on my repositories [![Badge](https://img.shields.io/badge/github-repositories-black?style=for-the-badge&logo=github&logoColor=black&logoSize=auto&label=github&labelColor=hex&color=black)](https://github.com/dindagustiayu?tab=repositories)
 
-The ability for Quarto to streamline collaboration has been so cool and important for our [NASA Openscapes](https://nasa-openscapes.github.io/) project. Quarto has been a common place for us to collaborate - across R and Python languages and coding expertise. 
+## Navigation {#navigation}
 
-## What is this tutorial?
+We can quickly navigate through the sections using the navigation bar on the left side, and the sub navigation bar on the right side. There is also a search box to help we find any content in this page swiftly.
 
-This is a 1-hour tutorial that can be used to teach or as self-paced learning. 
+## Contact
 
-We introduce Quarto by exploring this tutorial website, and practicing the basic Quarto workflow using different tools (GitHub browser, RStudio, and Jupyter) for editing your website.
+Feel free to contact me thorugh email: dindagustiayuedu@gmail.com [![](https://img.shields.io/badge/--%23EA4335?logo=gmail&logoColor=white&style=for-the-badge)](mailto:dindagustiayuedu.gmail.com@gmail.com). If you have inquiries and/ or suggestion. Looking forward to hearing from you!
 
-We'll start off from the browser so you don't need to install any additional software, however this approach is very limited and you will soon outgrow its capabilities. If you don't already have a workflow to edit files and sync to GitHub from your computer, I recommend RStudio. You don't need to know R to use RStudio, and it has powerful editor features that make for happy workflows.
-
-[Quarto.org](https://quarto.org) is the go-to place for full documentation and more tutorials! 
-
-## Example Quarto sites
-
-A few Quarto websites from Openscapes - so far we have been using Quarto for documentation using Quarto and Markdown files and Jupyter Notebooks.
-
--   [Champions Lessons Series](https://openscapes.github.io/series)
--   [Openscapes Approach Guide](https://openscapes.github.io/approach-guide/)
--   [NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/)
--   [2021 NASA Cloud Hackathon](https://nasa-openscapes.github.io/2021-Cloud-Hackathon/)
--   [Faylab Lab Manual](https://thefaylab.github.io/lab-manual/)
--   [A Quarto tip a day](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/), by Mine Çetinkaya-Rundel
-
-## About
-
-[Openscapes](https://openscapes.org) is about better science for future us. We help researchers reimagine data analysis, develop modern skills that are of immediate value to them, and cultivate collaborative and inclusive research teams as part of the broader global open movement.
-
-We're developing this tutorial to help folks with different levels of technical skills use [Quarto](https://quarto.org) for documentation and tutorial building. This tutorial was originally created for several different audiences: [NASA-Openscapes](https://nasa-openscapes.github.io) researcher support engineers using Python, communications directors at organizations promoting open science who do not identify as coders, and fisheries scientists curious about transitioning from RMarkdown. We're hoping it's useful to folks with backgrounds as wide as these; if you find it useful or have suggestions for improvement, please let us know by clicking "Edit this page" or "Report an issue" at the upper right side of any page.
+Let's get down with Random Spaces!
