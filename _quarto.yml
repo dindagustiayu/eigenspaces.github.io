@@ -3,7 +3,7 @@ project:
   
 website: 
   page-navigation: true
-  title: "Python for Scientific Computing and Data Visualization" 
+  title: "Random Spaces" 
   site-url: "" 
   repo-url: https://github.com/dindagustiayu/randomspaces.github.io 
   repo-actions: [edit, issue]
