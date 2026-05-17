@@ -5,15 +5,22 @@ subtitle: "Open-source tutorials for everyone who want to use Python in their wo
 
 ## Welcome {#welcome}
 
-Welcome to __Random Spaces!__ This blog is a celebration of the fascinating world of __computational chemistry__. I hope you find the content useful, and I hope you enjoy reading along and learning with me!
+Welcome to __Random Spaces!__ This blog is as a knowledge base in understanding  application of computational tools for physics or chemistry problems. I hope you find the content useful, and I hope you enjoy reading along and learning with me!
 
-And me? Well, I'm __Dinda Gusti Ayu__. I just a person who interested in using __Machine Learning to learn the rules of Quantum Mechanics and Simulate Disordered Material systems__. As a beginner, this blog aims to documenting my learning journey. Behind that, I earned an MS in chemistry physics at Universitas Sumatera Utara, Indonesia where I studied the fundamental optical properties and defects modelling of direct band-gap semiconductors for materials research.
+And me? Well, I'm __Dinda Gusti Ayu__ [![GitHub](https://img.shields.io/badge/--%23181717?logo=github&logoColor=white&style=for-the-badge)](https://github.com/dindagustiayu). I'm interested in using Machine Learning to learn the rules of Quantum Mechanics and Simulate Crystalline and Amorphous Solid Systems. I earned an MS in chemistry physics at Universitas Sumatera Utara, Indonesia where I studied the fundamental optical properties and defects modelling of direct band-gap semiconductors for materials research.
 
 ## What is Random Spaces?
 
-Random Spaces is a free, open-source learning resources for students and researchers interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The tutorials here bridge the gap beetween condensed matter physics, chemistry and computational tools.
+__Random Spaces__ is a free, open-source learning resources for students and researchers interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The tutorials here bridge the gap beetween condensed matter physics, chemistry and computational tools.
 
-All materials are shared openly on my repositories ![Static Badge](https://img.shields.io/badge/github-repositories-black?style=for-the-badge&logo=github&logoColor=black&logoSize=auto&label=github&labelColor=hex&color=black&link=https%3A%2F%2Fgithub.com%2Fdindagustiayu)
+All materials are shared openly on my repositories [![Badge](https://img.shields.io/badge/github-repositories-black?style=for-the-badge&logo=github&logoColor=black&logoSize=auto&label=github&labelColor=hex&color=black)](https://github.com/dindagustiayu?tab=repositories)
 
+## Navigation {#navigation}
 
-Let's get down with computational chemistry!
+We can quickly navigate through the sections using the navigation bar on the left side, and the sub navigation bar on the right side. There is also a search box to help we find any content in this page swiftly.
+
+## Contact
+
+Feel free to contact me thorugh email: dindagustiayuedu@gmail.com [![](https://img.shields.io/badge/--%23EA4335?logo=gmail&logoColor=white&style=for-the-badge)](mailto:dindagustiayuedu.gmail.com@gmail.com). If you have inquiries and/ or suggestion. Looking forward to hearing from you!
+
+Let's get down with Random Spaces!

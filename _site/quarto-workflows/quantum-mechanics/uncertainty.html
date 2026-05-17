@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>uncertainty – Python for Scientific Computing and Data Visualization</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../quarto-workflows/quantum-mechanics/inertia.html" rel="next">
+<link href="../../quarto-workflows/quantum-mechanics/ssaproximation.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-81265bad880cb714d97327d3b99584fa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-bc296522584f82904d8f916f841e7e10.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/uncertainty.html">Propagation of Uncertainty</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/openscapes_hex.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://dindagustiayu.github.io/" title="dindagustiayu.github.io" class="quarto-navigation-tool px-1" aria-label="dindagustiayu.github.io"><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/dindagustiayu/randomspaces.github.io" title="Random Spaces" class="quarto-navigation-tool px-1" aria-label="Random Spaces"><i class="bi bi-github"></i></a>
+    <a href="https://linkedin.com/in/dindagustiayu" title="Dinda Gusti Ayu" class="quarto-navigation-tool px-1" aria-label="Dinda Gusti Ayu"><i class="bi bi-linkedin"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../explore.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore and setup</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../quarto-workflows/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contents</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Data Science</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/Gaussian.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gaussian Distribution Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/the-fourier-series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Fourier Series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/linear-algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Balancing a Chemical Reaction and Permutation Group</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/numpy-and-matplot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aggregation Indexing Boleean</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/basicnumpy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NumPy and Matplotlib</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/chemspy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Storing and Transmitting Chemical Information</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/pandas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data structures and Pandas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/morenumpy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Numpy functions in Atomic Scale</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/errorbar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Error Bars in Atomic Scale</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/menten.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Michael-Menten model and Linear-Burk Plot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/multiintegral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multiple Integrals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/optimization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mathematical Optimization</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Quantum Mechanics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/quantum-mechanics/particles-2d.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Particles in Multidimensions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/quantum-mechanics/ssaproximation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Steady State Approximation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/quantum-mechanics/uncertainty.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Propagation of Uncertainty</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/quantum-mechanics/inertia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The moment inertia of a molecule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/quantum-mechanics/QHO.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quantum Harmonic Oscillator (QHO)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/quantum-mechanics/approxiqho.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Approximation in Quantum Chemistry</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Thermodynamics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/thermodynamics/adiabatic-process.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Adiabatic process and Carnot Cycle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/thermodynamics/boltzman.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maxwell-Boltzmann Distribution</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../learning-more.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learning more</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#propagation-of-uncertainty" id="toc-propagation-of-uncertainty" class="nav-link active" data-scroll-target="#propagation-of-uncertainty">Propagation of Uncertainty</a>
+  <ul class="collapse">
+  <li><a href="#why-we-need-to-calculate-error-propagation" id="toc-why-we-need-to-calculate-error-propagation" class="nav-link" data-scroll-target="#why-we-need-to-calculate-error-propagation">Why we need to calculate error propagation</a></li>
+  <li><a href="#formula-for-error-propagation" id="toc-formula-for-error-propagation" class="nav-link" data-scroll-target="#formula-for-error-propagation">Formula for error propagation</a></li>
+  <li><a href="#error-propagation-worked-example" id="toc-error-propagation-worked-example" class="nav-link" data-scroll-target="#error-propagation-worked-example">Error propagation worked example</a></li>
+  <li><a href="#p20.1-case-study-random-uncertainties" id="toc-p20.1-case-study-random-uncertainties" class="nav-link" data-scroll-target="#p20.1-case-study-random-uncertainties">P20.1 Case study: Random uncertainties</a></li>
+  <li><a href="#p20.2-case-study-the-gravitational-acceleration" id="toc-p20.2-case-study-the-gravitational-acceleration" class="nav-link" data-scroll-target="#p20.2-case-study-the-gravitational-acceleration">P20.2 Case study: The gravitational acceleration</a>
+  <ul class="collapse">
+  <li><a href="#step-1-calculate-the-uncertainties-in-the-measurements-of-h-and-l1" id="toc-step-1-calculate-the-uncertainties-in-the-measurements-of-h-and-l1" class="nav-link" data-scroll-target="#step-1-calculate-the-uncertainties-in-the-measurements-of-h-and-l1">Step 1: Calculate the uncertainties in the measurements of h and l1</a></li>
+  <li><a href="#step-2-measured-distance-h-and-l1-in-cm" id="toc-step-2-measured-distance-h-and-l1-in-cm" class="nav-link" data-scroll-target="#step-2-measured-distance-h-and-l1-in-cm">Step 2: Measured distance h and l1 in cm</a></li>
+  <li><a href="#step-3-measure-a-straight-line-fit-y-a-pm-bx" id="toc-step-3-measure-a-straight-line-fit-y-a-pm-bx" class="nav-link" data-scroll-target="#step-3-measure-a-straight-line-fit-y-a-pm-bx">Step 3: Measure a straight line fit, <span class="math inline">\(y = a \pm bx\)</span></a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/uncertainty.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/uncertainty.html">Propagation of Uncertainty</a></li></ol></nav></header>
+
+
+
+
+<p><a href="https://github.com/dindagustiayu/Uncertainty-and-The-Gravitational-Acceleration/blob/main/Uncertainties.py"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
+<section id="propagation-of-uncertainty" class="level1">
+<h1>Propagation of Uncertainty</h1>
+<p>Propagation of Error (or Propagation of Uncertainty) is defined as the effect on a function by a variable’s uncertainty. It is a calculus derived statistical calculation designed to combine uncertainties from multiple variables to provide an accurate measurement of uncertainty.</p>
+<section id="why-we-need-to-calculate-error-propagation" class="level2">
+<h2 class="anchored" data-anchor-id="why-we-need-to-calculate-error-propagation">Why we need to calculate error propagation</h2>
+<p>It’s common for errors when combining many uncertain values or using calculations that amplify small differences (like multipication, division, or exponentation). Consequently, the final result can be much less precise than the original measurement error values suggest.</p>
+<p>Understanding error propagation helps us avoid overconfidence in results and recognize when further precision in measurement is necessary.</p>
+</section>
+<section id="formula-for-error-propagation" class="level2">
+<h2 class="anchored" data-anchor-id="formula-for-error-propagation">Formula for error propagation</h2>
+<p>If the uncertainties (random errors) in the measured quantities, <span class="math inline">\(p,\;q,\;r,...\)</span> can be assumed to be <em>uncorrelated</em>, a common approach is to propagate their uncertainties into an uncertainty in the function <span class="math inline">\(y=y(p,\;q,\;r,...)\)</span> with the formula:</p>
+<p align="center">
+<span class="math display">\[\sigma_y=\sqrt{\left (\frac{\partial y}{\partial p} \right)^2 \; \sigma_p^2 \;+\; \left (\frac{\partial y}{\partial q} \right)^2 \; \sigma_q^2 \;+\; \left (\frac{\partial y}{\partial r} \right)^2 \; \sigma_r^2 \;+\;...}\]</span>
+</p>
+<p>This is effectively the first non-zero term in a multivariate Taylor series expansion of the variances, <span class="math inline">\(\sigma_{i}^2\)</span>, and is therefore only approximate: For highly non-linear functions <span class="math inline">\(y\)</span> it might be expected to give flawed results.</p>
+<p>This approach assumes that: - The input variables are independent of each other. - The errors are random and normally distributed. - The function <span class="math inline">\(y\)</span> is differentiable with respect to each quantities <span class="math inline">\((p,\; q,\; r,...)\)</span></p>
+</section>
+<section id="error-propagation-worked-example" class="level2">
+<h2 class="anchored" data-anchor-id="error-propagation-worked-example">Error propagation worked example</h2>
+</section>
+<section id="p20.1-case-study-random-uncertainties" class="level2">
+<h2 class="anchored" data-anchor-id="p20.1-case-study-random-uncertainties">P20.1 Case study: Random uncertainties</h2>
+<p>Use the equation above to show that the uncorrelated random uncertainties, <span class="math inline">\(\sigma p\)</span>, <span class="math inline">\(\sigma q\)</span> and <span class="math inline">\(\sigma x\)</span> in the paramters <span class="math inline">\(p,\; q\)</span> and <span class="math inline">\(x\)</span> propagate into an uncertainty in the following functions of <span class="math inline">\(y\)</span> as follows (the quantities <span class="math inline">\(a,\; b\)</span> and <span class="math inline">\(c\)</span> may be assumed to be precisely known):</p>
+<ol type="1">
+<li>If you measure,
+<p align="center">
+<span class="math display">\[y=ap\pm bq  \Rightarrow  \sigma y = \sqrt{a^2 \sigma_p^2 + b^2 \sigma_q^2}\]</span>
+</p></li>
+</ol>
+<p align="center">
+<span class="math display">\[\begin{align} y&amp; = ap \pm bq \\ \frac{\partial y}{\partial p} &amp;= a \; \; \; \frac{\partial y}{\partial q}= \pm b \\ \sigma_y &amp;=\sqrt{\left (\frac{\partial y}{\partial p} \right)^2 \; \sigma_p^2 \; + \; \left(\frac{\partial y}{\partial q} \right)^2 \; \sigma_q^2} \\ &amp;= \sqrt{a^2 \sigma_p^2 + b^2 \sigma_q^2} \end{align} \]</span>
+</p>
+<ol start="2" type="1">
+<li>If you measure,
+<p align="center">
+<span class="math display">\[y = cpq \; \Rightarrow \; \sigma_y = |y| \sqrt{\left (\frac{\sigma_p}{p} \right)^2 \; + \; \left (\frac{\sigma q}{q} \right)^2}\]</span>
+</p></li>
+</ol>
+<p align="center">
+<span class="math display">\[\begin{align} y&amp; = cpq \\ \frac{\partial y}{\partial p} &amp;=cq \;\;\; \frac{\partial y}{\partial q} = cp \\ \sigma_y &amp;= \sqrt{\left (\frac{\partial y}{\partial p} \right)^2 \; \sigma_p^2 \; + \; \left (\frac{\partial y}{\partial q} \right)^2 \; \sigma_q^2} \\&amp;= \sqrt{(cq)^2\; \sigma_p^2 \;+\; (cp)^2\; \sigma_q^2} \\ &amp;=\sqrt{c^2 q^2 \sigma_p^2\;+\; c^2 q^2 \sigma_q^2} \\ &amp;=c\sqrt{p^2 q^2 \left (\frac{\sigma_p}{p} \right)^2\;+\; p^2 q^2 \left(\frac{\sigma_q}{q} \right)^2} \\ &amp;=|cpq| \sqrt{\left(\frac{\sigma_p}{p} \right)^2\; +\; \left(\frac{\sigma_q}{q} \right)^2} \\ &amp;=|y| \sqrt{\left(\frac{\sigma_p}{p} \right)^2\; +\; \left(\frac{\sigma_q}{q} \right)^2}\end{align}\]</span>
+</p>
+<ol start="3" type="1">
+<li>If you measure,
+<p align="center">
+<span class="math display">\[y=ln(bx) \; \Rightarrow \; \sigma_y=\left |\frac{a}{x} \right|\sigma_x\]</span></p></li>
+</ol>
+<p align="center">
+<span class="math display">\[\begin{align} y&amp;=ln(bx)\\ &amp;=\frac{\partial_y}{\partial_x}= \frac{a}{x} \\ &amp;=\sqrt{\left (\frac{\partial y}{\partial x} \right)^2 \; \sigma_x^2} \\ &amp;= \sqrt{\left (\frac{a}{x} \right)^2} \\ &amp;=\left |\frac{a}{x} \right| \; \sigma_x \end{align}\]</span>
+</p>
+<ol start="4" type="1">
+<li>If you measure,
+<p align="center">
+<span class="math display">\[y=ae^{bx} \; \Rightarrow \; \sigma_y= |by| \sigma_x\]</span>
+</p></li>
+</ol>
+<p align="center">
+<span class="math display">\[\begin{align} y&amp;=ae^{bx} \\ y&amp;=abx^{bx} \\ &amp;=\frac{\partial y}{\partial x}=by \\ \sigma_y&amp;=\sqrt{\left (\frac{\partial y}{\partial x} \right)^2 \sigma_x^2} \\&amp;=\sqrt{(by)^2 \sigma_x^2} \\&amp;=|by|\sigma_x \end{align}\]</span>
+</p>
+</section>
+<section id="p20.2-case-study-the-gravitational-acceleration" class="level2">
+<h2 class="anchored" data-anchor-id="p20.2-case-study-the-gravitational-acceleration">P20.2 Case study: The gravitational acceleration</h2>
+<p>A novel way to measure the gravitational acceleration, <span class="math inline">\(g\)</span>, involves an indirect measurement of the pressure inside a submerged, inverted test tube containing a small amount of water. The experimental set-up proposed by Quiroga et. al.</p>
+<p>Let the ambient pressure be <span class="math inline">\(p_0\)</span>, and the length and cross-sectional area of the test tube be <span class="math inline">\(l_0\)</span> and A, respectively, so that it has a volume <span class="math inline">\(V_0=Al_0\)</span>. Treating the <span class="math inline">\(n\)</span> moles of air inside it as an ideal gas at temperature <span class="math inline">\(T\)</span>, we have <span class="math inline">\(p_0 V_0=nRT\)</span>.</p>
+<p>When the tube is submerged to a distance <span class="math inline">\(h\)</span>, water rises inside it, and the air it contains is compressed to a pressure <span class="math inline">\(p_1\)</span> and volume <span class="math inline">\(V_1\)</span>, where <span class="math inline">\(p_1 V_1=p_0 V_0\)</span> if the temperature is constant. The new pressure is <span class="math inline">\(p_1=p_0 + \rho g l_1\)</span>, where <span class="math inline">\(\rho = 1 g\;cm^-1\)</span> is the water density, <span class="math inline">\(g\)</span> is the gravitational acceleration (to be determined) and <span class="math inline">\(l_1\)</span> is the measured distance from the bulk water surface to the top of the water level in the test tube.</p>
+The <span class="math inline">\(V_1=A[l_0 - (h-l_1)]\)</span>, and so
+<p align="center">
+<span class="math display">\[p_1=\frac{l_0}{l_0 - (h - l_1)} p_0\]</span>
+</p>
+therefore,
+<p align="center">
+<span class="math display">\[\left [\frac{l_0}{l_0 - (h-l_1)} - 1 \right] \; p_0 = \rho g l_1 \]</span>
+</p>
+<p>That is, if measurements of <span class="math inline">\(l_1\)</span> are made for different submersion depths, <span class="math inline">\(h\)</span>, a plot of the left-hand side of this equation against <span class="math inline">\(l_1\)</span> should yield a straight line with gradient <span class="math inline">\(\rho g\)</span>, from which <span class="math inline">\(g\)</span> can be deduced.</p>
+Assuming that <span class="math inline">\(\sigma_h\)</span> and <span class="math inline">\(\sigma l_1\)</span> (the uncertainties in the measurements of <span class="math inline">\(h\)</span> and <span class="math inline">\(l_1\)</span>, respectively) dominate and that they are connected, show that the uncertainty in the quantity,
+<p align="center">
+<span class="math display">\[y=p_1 - p_0 = \left [\frac{l_0}{l_0 - (h-l_1)} -1 \right] \; p_0=\rho g l_1\]</span>
+</p>
+is
+<p align="center">
+<span class="math display">\[\sigma_y=\frac{l_0 p_0}{[l_0 - (h - l_1]^2} \sqrt{\sigma_h^2 + \sigma_{l_1}^2}\]</span>
+</p>
+<p>Use the following data to estimate <span class="math inline">\(g\)</span> from a linear least squares fit and the uncertainty in this estimate. Take an average value for <span class="math inline">\(\sigma_y\)</span>, calculated using the above formula.</p>
+<p>These data were collected on a day with an ambient air pressure of <span class="math inline">\(p_0=1037\)</span> mbar and using a test tube of length 20 cm. Take <span class="math inline">\(\sigma_h = \sigma_{l_0} = 1 mm\)</span>. These data are given in the file <a href="../../quarto-workflows">h and L1.txt</a></p>
+<pre><code>    # Measured distance, h and L1, in cm
+    h        L1
+    29.9     29.3
+    35       34.3
+    39.9     39.2
+    45.1     44.5
+    50       49.1
+    55       54
+    59.9     58.7
+    65       64
+    70.1     68.9
+    74.9     73.5
+    80.1     78.6
+    85.1     83.7
+    90.1     88.6
+    95       93.4
+    </code></pre>
+<section id="step-1-calculate-the-uncertainties-in-the-measurements-of-h-and-l1" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-calculate-the-uncertainties-in-the-measurements-of-h-and-l1">Step 1: Calculate the uncertainties in the measurements of h and l1</h3>
+<p align="center">
+<span class="math display">\[\begin{align} y &amp;= p_1 - p_0 = \left [\frac{l_0}{l_0 - (h -l_1)} \right] \; p_0 = \rho g l_1 \\ \frac{\partial y}{\partial h} &amp;=\frac{l_0 p_0}{[l_0 - (h -l_1)]^2} \\ \frac{\partial y}{\partial l_1} &amp;= - \frac{l_0 p_0}{[l_0 - (h-l_1)]^2} \\ \sigma_y&amp;=\sqrt{\left (\frac{\partial y}{\partial h} \right)^2 \sigma_h^2\;+\; \left (\frac{\partial y}{\partial l_1} \right)^2 \sigma_{l_1^2}} \\ &amp;= \sqrt{\frac{l_0^2 p_0^2}{[l_0 - (h-l_1)]^4} (\sigma_h^2 + \sigma_{l_1}^2) } \\ &amp;=\frac{l_0 p_0}{[l_0 - (h-l_1)]^2} \sqrt{\sigma_h^2 + \sigma_{l_1}^2 } \end{align}\]</span>
+</p>
+</section>
+<section id="step-2-measured-distance-h-and-l1-in-cm" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-measured-distance-h-and-l1-in-cm">Step 2: Measured distance h and l1 in cm</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Open file data</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>h, l1 <span class="op">=</span> np.genfromtxt(<span class="st">'h and L1.txt'</span>, unpack<span class="op">=</span><span class="va">True</span>, skip_header<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">len</span>(h)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># convert from cm to m</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> h <span class="op">/</span><span class="dv">100</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>l1 <span class="op">=</span> l1 <span class="op">/</span> <span class="dv">100</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Parameters</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>p0 <span class="op">=</span> <span class="dv">1037</span> <span class="op">*</span> <span class="dv">100</span> <span class="co"># mbar to pa</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="dv">1</span> <span class="op">*</span> <span class="dv">1000</span> <span class="co"># g. cm-1 to kg. m-3</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>l0 <span class="op">=</span> <span class="dv">20</span> <span class="op">/</span> <span class="dv">100</span> <span class="co"># length the test tube (cm to m)</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>sig_h <span class="op">=</span> sig_l1 <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span><span class="dv">1000</span> <span class="co"># uncertainties (mm to m)</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the uncertainties</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> l1</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> l0 <span class="op">-</span>(h<span class="op">-</span>l1)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> p1_minus_p0 <span class="op">=</span> (l0 <span class="op">/</span>z <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> p0</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>sigma_y<span class="op">=</span> l0 <span class="op">*</span> p0 <span class="op">/</span> (z)<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.sqrt(sig_h<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> sig_l1<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co">#Plotting error bar</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_data():</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    plt.errorbar(l1, p1_minus_p0, yerr<span class="op">=</span>sigma_y, xerr<span class="op">=</span>sig_l1, marker<span class="op">=</span><span class="st">'o'</span>, c<span class="op">=</span><span class="st">'k'</span>, ls<span class="op">=</span><span class="st">''</span>, capsize<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="vs">r'$l_1 \; /\; \mathrm</span><span class="sc">{m}</span><span class="vs">$'</span>)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="vs">r'$p_1 - p_0 \; /\;\mathrm</span><span class="sc">{Pa}</span><span class="vs">$'</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    plt.savefig(<span class="st">'Uncertainty in The gravitational acceleration.svg'</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>plot_data()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../quarto-workflows/images/Uncertainty in The gravitational acceleration.svg" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. Uncertainty in The gravitational acceleration</figcaption>
+</figure>
+</div>
+</section>
+<section id="step-3-measure-a-straight-line-fit-y-a-pm-bx" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-measure-a-straight-line-fit-y-a-pm-bx">Step 3: Measure a straight line fit, <span class="math inline">\(y = a \pm bx\)</span></h3>
+A straight line fit, <span class="math inline">\(y = a \pm bx\)</span> through these data provides an estimated value for g:
+<p align="left">
+<span class="math display">\[\hat{\beta}=\begin{pmatrix} a\\b\end{pmatrix}\;where\;a=\frac{S_y S_{xx} - S_{xy} S_x}{nS_{xx} - S^2_x}\;and\;b=\frac{nS_{xy} S_y S_x}{nS_{xx} - S^2_x},\]</span>
+</p>
+where
+<p align="center">
+<span class="math display">\[S_x=\overset{n}{\underset{i=1}{\sum x_i}},\;S_y=\overset{n}{\underset{i=1}{\sum Y_i}},\;S_{xx}=\overset{n}{\underset{i=1}{\sum x_i^2}},\;S_{xy}=\overset{n}{\underset{i=1}{\sum x_iy_i}}.\]</span>
+</p>
+The uncertainty in the fitted parameter b is,
+<p align="center">
+<span class="math display">\[\sigma_b = \sigma_y \sqrt{\frac{n}{nS_{xx} - S_x^2}}\]</span>
+</p>
+<p>and we can estimate the uncertainty in g:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit data</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Sx, Sy, Sxx, Sxy <span class="op">=</span> np.<span class="bu">sum</span>(x), np.<span class="bu">sum</span>(y), np.<span class="bu">sum</span>(x<span class="op">*</span>x), np.<span class="bu">sum</span>(x<span class="op">*</span>y)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Delta <span class="op">=</span> n <span class="op">*</span> Sxx <span class="op">-</span> Sx<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> (Sy<span class="op">*</span>Sxx <span class="op">-</span> Sxy <span class="op">*</span> Sx) <span class="op">/</span> Delta</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> (n <span class="op">*</span> Sxy <span class="op">-</span> Sy <span class="op">*</span> Sx) <span class="op">/</span> Delta</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'a, b ='</span>, a, b)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>g_est <span class="op">=</span> b <span class="op">/</span>rho</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'g-estimated ='</span>, g_est)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate uncertainty in the fitted parameter b</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>sigma_b <span class="op">=</span> np.mean(sigma_y) <span class="op">*</span> np.sqrt(n <span class="op">/</span> Delta) <span class="op">/</span>rho</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'sigma-b='</span>,sigma_b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>a, b = 113.64118138687233 9633.702167054678
+g-estimated = 9.633702167054679
+sigma-b= 1.1051296914381148</code></pre>
+<p>The result of this experiment is therefore <span class="math inline">\(g = 9.6 \pm 1.1 m.s^{-2}\)</span>.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../quarto-workflows/quantum-mechanics/ssaproximation.html" class="pagination-link" aria-label="Steady State Approximation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Steady State Approximation</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../quarto-workflows/quantum-mechanics/inertia.html" class="pagination-link" aria-label="The moment inertia of a molecule">
+        <span class="nav-page-text">The moment inertia of a molecule</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© CC-By randomspaces, 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/uncertainty.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

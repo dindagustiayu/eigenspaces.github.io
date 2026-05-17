@@ -65,6 +65,7 @@ R infinity = 1.096166e+07
 
 ## P5.3 - Measure time
 A ball is dropped straight down from a cliff with height $\mathnormal{h}$. The position of the ball after a time $\mathnormal{t}$ can be expressed as:
+
 <p align='center'>
   $$y(t)=v_{0}t - \frac{1}{2}at^{2} + h$$
 </p>
@@ -141,7 +142,7 @@ The ball reaches 5 m after 1.01 s.
 The ball reaches 5 after 1.010 s
 ```
 
-![Figure 1. Ballmotion_colormap](/images/basicnumpy/Ballmotion_colormap.svg)
+![Figure 1. Ballmotion_colormap](/quarto-workflows/images/basicnumpy/Ballmotion_colormap.svg)
 
 
 ## P5.4 - Free Fall Motion
@@ -162,7 +163,7 @@ A ball is dropped from rest at a height of h = 100 m. The time intervals is 0.1 
     $$y(t)=h_{0}-\frac{g}{t^{2}}$$
  </p>
  
-![Figure 2. Fallmotion_colormap](quarto-workflows/images/basicnumpy/Fallmotion_colormap.svg)
+![Figure 2. Fallmotion_colormap](/quarto-workflows/images/basicnumpy/Fallmotion_colormap.svg)
 
 
 ## P5.5 -Relativistic Momentum
@@ -256,7 +257,7 @@ for vx, px in zip(v, p):
 plt.savefig('Relativistic_colormap.svg', bbox_inches='tight')
 plt.show('Relativistic Momentum')
 ```
-![Figure 3. Relativistic_colormap](quarto-workflows/images/basicnumpy/Relativistic_colormap.svg)
+![Figure 3. Relativistic_colormap](/quarto-workflows/images/basicnumpy/Relativistic_colormap.svg)
 
 
 ## P5.6 -Relativistic Momentum
@@ -316,7 +317,8 @@ plt.ylabel('Momentum (kg.m/s)', fontsize=12)
 plt.title('Einsten Momentum', fontsize=16)
 plt.legend(fontsize=23)
 plt.legend(framealpha=0, handleheight=2.0, handlelength=3)
-plt.savefig('Einsten Momentum.svg', bbox_inches='tight')
+plt.savefig('Einstein_momentum.svg', bbox_inches='tight')
 plt.show()
 ```
-![Figure 4. Einsten Momentum](quarto-workflows/images/basicnumpy/Einsten Momentum.svg)
+
+![Figure 4. Einstein Momentum](/quarto-workflows/images/basicnumpy/Einsten_momentum.svg)

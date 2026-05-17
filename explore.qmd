@@ -5,33 +5,35 @@ title: Explore and setup
 ## Introduction Python {#introduction-python}
 Python is a powerful, object-oriented, high level programming language with dynamic semantics that is well-suited to many of the tasks of scientific computing. Python's simple, easy to learn syntax emphasizes readibility and therefore reduces the cost of program maintenance. Python also supports modules and packages, which encourages program modularity and code reuse. 
 
-The Python interpreter and the extensive standard library are available in source or binary form such as Mathematical and MATLAB, without charge for all major computer operating systems (including Windows, Unix, Linux, and macOS), and can be freely distributed. But, in the distribution, Python needs a large number of additional modules and packages. The most notable of these, in the context of scientific computing, are as follows: 
+The Python interpreter and the extensive standard library are available in source or binary form such as Mathematical and MATLAB, without charge for all major computer operating systems (including Windows, Unix, Linux, and macOS), and can be freely distributed. 
 
-- [Numpy](https://numpy.org/devdocs/user/whatisnumpy.html): a fundamental package that provides a multidimensional array objects, various objects (such as arrays and matrices), including mathematical, logical, discrete Fourier transforms, lineral algebra and much more.
+But, in the distribution, Python needs a large number of additional modules and packages. The most notable of these, in the context of scientific computing, are as follows: 
 
-- [Scipy](https://scipy.org/): a library that provides algorithms for optimization, integration, interpolation, differential equations, statistics and many other classes of problems.
+1. [Numpy](https://numpy.org/devdocs/user/whatisnumpy.html): a fundamental package that provides a multidimensional array objects, various objects (such as arrays and matrices), including mathematical, logical, discrete Fourier transforms, lineral algebra and much more.
 
-- [Matplotlib](https://matplotlib.org/): a library for creating static, animated, and interactive visualizations.
+2. [Scipy](https://scipy.org/): a library that provides algorithms for optimization, integration, interpolation, differential equations, statistics and many other classes of problems.
 
-- [pandas](https://pandas.pydata.org/): a library providing high data sets for manipulating tabular data (DataFrame and Series).
+3. [Matplotlib](https://matplotlib.org/): a library for creating static, animated, and interactive visualizations.
 
-- [SymPy](https://www.sympy.org/en/index.html): a library for symbolic mathematics, with support for computer algebra system (CAS).
+4. [pandas](https://pandas.pydata.org/): a library providing high data sets for manipulating tabular data (DataFrame and Series).
+
+5. [SymPy](https://www.sympy.org/en/index.html): a library for symbolic mathematics, with support for computer algebra system (CAS).
 
 
 ## Installing Python
 We can install Python on windows, linux, or macOS using the official installer from [www.python.org](https://www.python.org/downloads/), it's easy to follow the instructions. However, there are several full distribution which include the NumPy, SciPy and Matplotlib libraries to save you from having to download and install these yourself:
 
-- _Anaconda_ is an isolated Python packages to manage both the Python interpreter itself as well as packaged from multiple programming languages. It's available for free from [https://www.anaconda.com](https://www.anaconda.com/docs/getting-started/concepts/what-is-an-environment).
+1. _Anaconda_ is an isolated Python packages to manage both the Python interpreter itself as well as packaged from multiple programming languages. It's available for free from [https://www.anaconda.com](https://www.anaconda.com/docs/getting-started/concepts/what-is-an-environment).
 
-- _Entought Deployment Manager (EDM)_ is Entought's Python environment and application manager that create multiple self-contained Python environments. It can be download from [https://docs.enthought.com](https://docs.enthought.com/edm/installation.html).
+2. _Entought Deployment Manager (EDM)_ is Entought's Python environment and application manager that create multiple self-contained Python environments. It can be download from [https://docs.enthought.com](https://docs.enthought.com/edm/installation.html).
 
 
 ## Code Editors {#code-editors}
 
 Code editors are very important for coding. They'are literally how we tell the computer what our code is. Every code editor comes in different shapes and sizes. Popular choices include:
 
-- __Visual Studio Code__ (Windows, macOS, and Linux). It's a popular, free, and open source code editor developed by Microsoft.
-- __Notepad++__ (Windows), a very simple, good code editor and a free Windows-only editor.
-- __Sublime Text__ (Windows, macOS, Linux) is a good editor, altough only free for personal use, we have to buy  a license if we're using it for business.
-- __Vim__ (Linux and Unix) is a text editor which run is our terminal. It was forked from vi, and more features were added.
-- __Jupyter Notebook__ (Windows, macOS, Linux) is a free, open standards, and web services for interactive computing across all programming languages. It uses a cell-based system.
+1. `Visual Studio Code` (Windows, macOS, and Linux). It's a popular, free, and open source code editor developed by Microsoft.
+2. `Notepad++` (Windows), a very simple, good code editor and a free Windows-only editor.
+3. `Sublime Text` (Windows, macOS, Linux) is a good editor, altough only free for personal use, we have to buy  a license if we're using it for business.
+3. `Vim` (Linux and Unix) is a text editor which run is our terminal. It was forked from vi, and more features were added.
+4. `Jupyter Notebook` (Windows, macOS, Linux) is a free, open standards, and web services for interactive computing across all programming languages. It uses a cell-based system.
