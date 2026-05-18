@@ -10,7 +10,7 @@ website:
   
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    left: "&copy; CC-By randomspaces, 2026"
+    left: "&copy; CC-By Dinda Gusti Ayu, 2026"
     
   sidebar:
     logo: "images/randomspaces.png"
@@ -73,8 +73,8 @@ website:
 format:
   html:
     theme: 
-       light: flatly
        dark: darkly
+       light: flatly
     code-copy: true
     code-overflow: wrap
     toc: true
