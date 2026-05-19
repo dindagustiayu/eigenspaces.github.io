@@ -581,13 +581,13 @@ window.Quarto = {
 
 
 
-<p><a href="Gaussian-function.py"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
+<p><a href="https://github.com/dindagustiayu/Gaussian-Distribution-Function/blob/main/Gaussian-function.py"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
 <section id="gaussian-distribution-functions" class="level1">
 <h1>Gaussian Distribution Functions</h1>
 <p>The Gaussian distribution is defined by two parameters: the mean (<span class="math inline">\(\mu\)</span>) and the standard deviation (<span class="math inline">\(\sigma\)</span>). These determine the centre and spread of the distribution, respectively. The probability density function (PDF) of the Gaussian distribution describes the likelihood of observing a value x given the distribution’s parameters.</p>
 <section id="standard-normal-probability-density-function-pdf" class="level2">
 <h2 class="anchored" data-anchor-id="standard-normal-probability-density-function-pdf">Standard Normal Probability Density Function (PDF)</h2>
-In one dimension, the standard normal probability density function <span class="math inline">\(f(x)\)</span> describes the probability density of observing a value <span class="math inline">\(x\)</span> from a standard normal distribution. It is defined as:
+<p>In one dimension, the standard normal probability density function <span class="math inline">\(f(x)\)</span> describes the probability density of observing a value <span class="math inline">\(x\)</span> from a standard normal distribution. It is defined as:</p>
 <p align="center">
 <span class="math inline">\(f(x\;|\;\mu,\;\sigma)=\frac{1}{\sigma\sqrt{2\pi}}exp[-\frac{x-\mu^{2}}{2\sigma^{2}}]\)</span>
 </p>
@@ -595,8 +595,15 @@ In one dimension, the standard normal probability density function <span class="
 </section>
 <section id="function-arguments" class="level2">
 <h2 class="anchored" data-anchor-id="function-arguments">Function arguments</h2>
-<p>This script requires the following function arguments: - <code>make_gauss</code>: Plot multiple Gaussian curves by defining a Gaussian function factory. - <code>N</code> (amplitudo): Controls the overall height of the Gaussian.<br>
-- <code>sig</code> (standard deviation, <span class="math inline">\(\sigma\)</span>): Determines the spread of the Gaussian. - <code>mu</code> (mean, <span class="math inline">\(\mu\)</span>): Sets the center of the Gaussian. - <code>return lambda</code>: creates a function of <code>x</code> that computes the Gaussian formula.</p>
+<p>This script requires the following function arguments:</p>
+<ul>
+<li><code>make_gauss</code>: Plot multiple Gaussian curves by defining a Gaussian function factory.</li>
+<li><code>N</code> (amplitudo): Controls the overall height of the Gaussian.<br>
+</li>
+<li><code>sig</code> (standard deviation, <span class="math inline">\(\sigma\)</span>): Determines the spread of the Gaussian.</li>
+<li><code>mu</code> (mean, <span class="math inline">\(\mu\)</span>): Sets the center of the Gaussian.</li>
+<li><code>return lambda</code>: creates a function of <code>x</code> that computes the Gaussian formula.</li>
+</ul>
 <p>This Python script demonstrates the Gaussian distribution function, also known as the normal distribution.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -637,7 +644,7 @@ In one dimension, the standard normal probability density function <span class="
 </section>
 <section id="two-dimensional-gaussian-function" class="level2">
 <h2 class="anchored" data-anchor-id="two-dimensional-gaussian-function">Two-dimensional Gaussian Function</h2>
-In two dimensions, the circular Gaussian is the distribution function for uncorrelated variates <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> having a bivariate normal distribution and equal standard deviation <span class="math inline">\(\sigma=\sigma_{x}=\sigma_{y}\)</span>.
+<p>In two dimensions, the circular Gaussian is the distribution function for uncorrelated variates <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> having a bivariate normal distribution and equal standard deviation <span class="math inline">\(\sigma=\sigma_{x}=\sigma_{y}\)</span>.</p>
 <p align="center">
 <span class="math inline">\((x,\;y)=exp(-x^{2}-y^{2})\)</span>
 </p>
@@ -648,7 +655,13 @@ In two dimensions, the circular Gaussian is the distribution function for uncorr
 </section>
 <section id="function-arguments-1" class="level2">
 <h2 class="anchored" data-anchor-id="function-arguments-1">Function arguments</h2>
-<p>This script requires the following function arguments: - <code>X, Y</code>: are the meshgrid coordinates. - <code>Z</code>: is the function value at <code>X, Y</code>. - <code>fig.add_subplot(111)</code>: is to set up a 3D subplot with 1 row, 1 column, and the first subplot. - <code>projection='3d'</code>: is matplotlib to make a 3D axis.</p>
+<p>This script requires the following function arguments:</p>
+<ul>
+<li><code>X, Y</code>: are the meshgrid coordinates.</li>
+<li><code>Z</code>: is the function value at <code>X, Y</code>.</li>
+<li><code>fig.add_subplot(111)</code>: is to set up a 3D subplot with 1 row, 1 column, and the first subplot.</li>
+<li><code>projection='3d'</code>: is matplotlib to make a 3D axis.</li>
+</ul>
 <p>This Python script demonstrates the Gaussian distribution function, also known as the normal distribution.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
