@@ -9,7 +9,7 @@ This work is a short reference for some useful functionality of Numpy to study m
 2. Scientific Python (SciPy). The package, `scipy.constants` provides the numerical values of many pf the constants used in physics and chemistry. The more common ones, in SI units, can be import directly.
 
 Physical constants that can be directly imported from scipy.constants in SI units
-<div style="width:60%; margin:auto;">
+<div style="width:90%; margin:auto;">
     
 |symbol   | values                          | SI (units)                          |
 |:-------|-------------------------------|:-----------------------------------|

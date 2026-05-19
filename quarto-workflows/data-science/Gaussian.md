@@ -1,10 +1,11 @@
-[![](https://colab.research.google.com/assets/colab-badge.svg)](Gaussian-function.py)
+[![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Gaussian-Distribution-Function/blob/main/Gaussian-function.py)
 
 # Gaussian Distribution Functions
 The Gaussian distribution is defined by two parameters: the mean ($\mu$) and the standard deviation ($\sigma$). These determine the centre and spread of the distribution, respectively. The probability density function (PDF) of the Gaussian distribution describes the likelihood of observing a value x given the distribution's parameters.
 
 ## Standard Normal Probability Density Function (PDF)
 In one dimension, the standard normal probability density function $f(x)$ describes the probability density of observing a value $x$ from a standard normal distribution. It is defined as:
+
 <p align='center'>
     $f(x\;|\;\mu,\;\sigma)=\frac{1}{\sigma\sqrt{2\pi}}exp[-\frac{x-\mu^{2}}{2\sigma^{2}}]$
 </p>
@@ -15,7 +16,9 @@ where:
 - $\sigma$ is the standard deviation of the distribution.
 
 ## Function arguments
+
 This script requires the following function arguments:
+
 - `make_gauss`: Plot multiple Gaussian curves by defining a Gaussian function factory.
 - `N` (amplitudo): Controls the overall height of the Gaussian.  
 - `sig` (standard deviation, $\sigma$): Determines the spread of the Gaussian.
@@ -62,7 +65,9 @@ main()
     
     
 ## Two-dimensional Gaussian Function
+
 In two dimensions, the circular Gaussian is the distribution function for uncorrelated variates $x$ and $y$ having a bivariate normal distribution and equal standard deviation $\sigma=\sigma_{x}=\sigma_{y}$.
+
 <p align='center'>
     $(x,\;y)=exp(-x^{2}-y^{2})$
 </p>
@@ -76,7 +81,9 @@ where:
 - $\sigma_{x}$ and $\sigma_{y}$ are the X and Y spreads of the blob.
 
 ## Function arguments
+
 This script requires the following function arguments:
+
 - `X, Y`: are the meshgrid coordinates.
 - `Z`: is the function value at `X, Y`.
 - `fig.add_subplot(111)`: is to set up a 3D subplot with 1 row, 1 column, and the first subplot.

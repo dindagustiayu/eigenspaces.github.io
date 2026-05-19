@@ -10,11 +10,15 @@ Michaelis-Menten kinetics describes the rate of enzymatic reactions, providing a
 </p>
 The enzyme interacts with the substrate by binding to its active site to form the enzyme-substrate complex, ES. That reastion is followed by the decomposition of ES to generate the free enzyme, E, and the new product, P.
 
+<div style="width60%;, margin:auto;">
+
 | Rate constant | Reaction |
-| ------------- | -------- |
+| :------------: | -------- |
 | $k_{1}$ | The binding of the enzyme to the substrate, forming the enzyme-substrate complex. |
 | $k_{2}$ | Catalytic rate; the catalysis reaction producing the final reaction product and regenerating the free enzyme. This is the rate-limiting step. |
 
+</div>    
+    
 ## Lineweaver-Burk Plot
 For many such catalyzed reactions, it is found that:
 <p align='center'>
@@ -172,5 +176,5 @@ plt.title('Lineweaver-Burk Plot for Pepsin')
 plt.legend()
 plt.show()
 ```
-![Figure 2. Linearweaver-Burk Plot for pepsin](/quarto-workflows/images/Linearweaver-Burk Plot for pepsin.svg)
+![Figure 2. Linearweaver-Burk Plot for pepsin](/quarto-workflows/images/menten/Linearweaver-Burk Plot for pepsin.svg)
 

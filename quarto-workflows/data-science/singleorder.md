@@ -112,13 +112,9 @@ plt.savefig('Numerical Integration vs Exact calculation of QHO.svg', bbox_inches
 plt.show()
 ```
 The solver successfully reached the end of the integration interval.
-<div align='center'>
-<img src="Numerical Integration vs Exact calculation of QHO.svg">
-</div>
 
-<p align='center'>
-Figure 1. Numerical and exact solutions to the harmonic oscillator ODE for a mass, $m$ = 1 kg and force constant $k = 2 \ N \ m^{-1}$ with initial conditions $x(0)=1$ cm and $v(0)=0$.
-</p>
+![Figure 1. Numerical and exact solutions to the harmonic oscillator ODE for a mass, $m$ = 1 kg and force constant $k = 2 \ N \ m^{-1}$ with initial conditions x(0)=1 cm and v(0)=0](/quarto-workflows/images/Numerical Integration vs Exact calculation of QHO.svg)
+
 
 
 ## Conclusion

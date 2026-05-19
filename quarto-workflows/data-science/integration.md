@@ -142,9 +142,10 @@ plt.legend()
 plt.savefig('cos(3x+4).svg', bbox_inches='tight')
 plt.show()
 ```
-![](/quarto-workflows/images/integration/cos(3x+4).svg)
+![Figure 1. Visualization of cos(3x+4)](/quarto-workflows/images/integration/cos(3x+4).svg)
 
 ## Exercise 1:
+
 1. In each case, use a substitution to find the integral:
 
 <p align='center'>
@@ -253,9 +254,11 @@ ax4.legend()
 plt.savefig('Integral substitution 1.svg', bbox_inches='tight')
 plt.show()
 ```
-![](/quarto-workflows/images/integration/Integral substitution 1.svg)
+![Figure 2. Visualization Integral substitution](/quarto-workflows/images/integration/Integral substitution 1.svg)
 
-  ## Exercise 2:
+
+## Exercise 2:
+
 2. In each case use a subtitution to find the integral:
 
 <p align='center'>
@@ -363,4 +366,4 @@ plt.savefig('Integration by substitution 2.svg', bbox_inches='tight')
 plt.show()
 ```
 
-![](/quarto-workflows/images/integration/Integration by substitution 2.svg)
+![Figure 3. Visualization of Integration by substitution](/quarto-workflows/images/integration/Integration by substitution 2.svg)

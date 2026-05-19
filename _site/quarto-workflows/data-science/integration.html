@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>integration – Python for Scientific Computing and Data Visualization</title>
+<title>integration – Random Spaces</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,17 +63,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../quarto-workflows/data-science/multiintegral.html" rel="next">
+<link href="../../quarto-workflows/data-science/menten.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-81265bad880cb714d97327d3b99584fa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-bc296522584f82904d8f916f841e7e10.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-dark-bc296522584f82904d8f916f841e7e10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -143,7 +145,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/integration.html">Integration</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -158,7 +160,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../images/openscapes_hex.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../images/randomspaces1.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://dindagustiayu.github.io/" title="dindagustiayu.github.io" class="quarto-navigation-tool px-1" aria-label="dindagustiayu.github.io"><i class="bi bi-globe"></i></a>
@@ -190,20 +192,20 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../quarto-workflows/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contents</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Data Science</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/Gaussian.html" class="sidebar-item-text sidebar-link">
@@ -264,6 +266,36 @@ window.Quarto = {
  <span class="menu-text">The Michael-Menten model and Linear-Burk Plot</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/integration.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/multiintegral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multiple Integrals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/optimization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mathematical Optimization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/differential.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ordinary Differential Equation of Chemistry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/singleorder.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Second Order Differential Equations</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -299,6 +331,30 @@ window.Quarto = {
  <span class="menu-text">The moment inertia of a molecule</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/quantum-mechanics/QHO.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quantum Harmonic Oscillator (QHO)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/quantum-mechanics/approxiqho.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Approximation in Quantum Chemistry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/quantum-mechanics/hermite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vibrational Spectroscopy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vibrational Anharmonicity</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -329,7 +385,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../learning-more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Learning more</span></a>
+ <span class="menu-text">Acknowledgments</span></a>
   </div>
 </li>
     </ul>
@@ -356,12 +412,13 @@ window.Quarto = {
   <li><a href="#integration-by-substituting-uaxb" id="toc-integration-by-substituting-uaxb" class="nav-link" data-scroll-target="#integration-by-substituting-uaxb">Integration by substituting <span class="math inline">\(u=ax+b\)</span></a></li>
   <li><a href="#case-study-integral-uaxb" id="toc-case-study-integral-uaxb" class="nav-link" data-scroll-target="#case-study-integral-uaxb">Case study: Integral <span class="math inline">\(u=ax+b\)</span></a></li>
   <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1:</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2:</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/data-science/integration.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/integration.html">Integration</a></li></ol></nav></header>
 
 
 
@@ -500,7 +557,12 @@ For example, we calculate the definite integral from 0 to 2.
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'cos(3x+4).svg'</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
 <span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><img src="../../quarto-workflows/images/integration/cos(3x+4).svg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../quarto-workflows/images/integration/cos(3x+4).svg" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. Visualization of cos(3x+4)</figcaption>
+</figure>
+</div>
 </section>
 <section id="exercise-1" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-1">Exercise 1:</h2>
@@ -602,8 +664,18 @@ Integral result: (4.0, 4.440892098500626e-14)</code></pre>
 <span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>ax4.legend()</span>
 <span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'Integral substitution 1.svg'</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
 <span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><img src="../../quarto-workflows/images/integration/Integral substitution 1.svg" class="img-fluid"></p>
-<p>## Exercise 2: 2. In each case use a subtitution to find the integral:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../quarto-workflows/images/integration/Integral substitution 1.svg" class="img-fluid figure-img"></p>
+<figcaption>Figure 2. Visualization Integral substitution</figcaption>
+</figure>
+</div>
+</section>
+<section id="exercise-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2:</h2>
+<ol start="2" type="1">
+<li>In each case use a subtitution to find the integral:</li>
+</ol>
 <p align="center">
 <span class="math display">\[\begin {align} (a)\; \int_0^1 sin(7x-3)dx \;\; (b)\; \int_0^1 e^{3x-2}dx \;\; (c)\; \int_0^{\pi /2} cos (1-x)dx \;\; (d)\; \int_{-1}^1 \frac{1}{7x+5}dx \end{align}\]</span>
 </p>
@@ -697,7 +769,12 @@ Integral result: (4.0, 4.440892098500626e-14)</code></pre>
 <span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'Integration by substitution 2.svg'</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
 <span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><img src="../../quarto-workflows/images/integration/Integration by substitution 2.svg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../quarto-workflows/images/integration/Integration by substitution 2.svg" class="img-fluid figure-img"></p>
+<figcaption>Figure 3. Visualization of Integration by substitution</figcaption>
+</figure>
+</div>
 
 
 </section>
@@ -840,7 +917,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = false;
+  const darkModeDefault = true;
   let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
@@ -1265,11 +1342,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../quarto-workflows/data-science/menten.html" class="pagination-link" aria-label="The Michael-Menten model and Linear-Burk Plot">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The Michael-Menten model and Linear-Burk Plot</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../quarto-workflows/data-science/multiintegral.html" class="pagination-link" aria-label="Multiple Integrals">
+        <span class="nav-page-text">Multiple Integrals</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© CC-By randomspaces, 2026</p>
+<p>© CC-By Dinda Gusti Ayu, 2026</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

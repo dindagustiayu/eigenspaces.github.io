@@ -116,11 +116,14 @@ The crystal lattice structures of the first row transition metal elements are gi
 (b) exist  in two of these structures
 (c) do not form an hcp structure.
 
+
+
 | Lattice |      Elements           |
-|:--------|------------------------:|
+|:-------:|:-----------------------:|
 |FCC      | Cu, Co, Fe, Mn, Ni, Sc  |
 |BCC      | Cr, Fe, Mn, Ti, V       |
 |HCP      | Co, Ni, Sc, Ti, Zn      |
+    
 
 ```python
 # set the elements in fcc, bcc, and hcp by lattice type
@@ -165,7 +168,7 @@ The magnetic properties are related to metals. Some elements have different prop
 - (c) exist  in three of these magnetic.
 
 | category    |      Elements         |
-|:------------|----------------------:|
+|:-----------:|:---------------------:|
 |Diamagnetic  | Zn, Cu, Sc, Ti        |
 |Paramagnetic | Cr, Mn, V, Fe, Cu, Ti |
 |Non-magnetic | Al, Zn, Sc            |
@@ -178,7 +181,7 @@ The magnetic properties are related to metals. Some elements have different prop
 - (c) exist  in three of these magnetic.
 
 | category    |      Elements         |
-|:------------|----------------------:|
+|:-----------:|:---------------------:|
 |Diamagnetic  | Zn, Cu, Sc, Ti        |
 |Paramagnetic | Cr, Mn, V, Fe, Cu, Ti |
 |Non-magnetic | Al, Zn, Sc            |
@@ -216,7 +219,10 @@ print('(c) Diamagnetic and Paramagnetic and Non_magnetic:', Diamagnetic & Parama
 
 ## 3. File Input/Output
 
+<div align='center'>
 Table. Python file open modes
+</div>
+
 <div style="width:60%; margin:auto;">
     
 | **Character**  |         **Description**                                  | 
