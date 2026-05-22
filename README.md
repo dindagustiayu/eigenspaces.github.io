@@ -3,13 +3,18 @@
 > Welcome to 🌐[Random Spaces](https://dindagustiayu.github.io/randomspaces.github.io/) \
 This blog is as a knowledge base in understanding application of computational tools for physics or chemistry problems. I hope you find the contents useful, and I hope you enjoy reading along and learning with me!
 >
+---
 
 ---
 
 <div align='center'>
+<<<<<<< HEAD
     
 <img src="images/logorandomspaces.png" width="600">
     
+=======
+<img src="images/logorandomspaces.png" width="600">  
+>>>>>>> 113e7f62d0f5274eb2a7970195908a188782dd86
 </div>
 
 
@@ -27,4 +32,8 @@ Feel free to contact me thorugh email: [dindagustiayuedu@gmail.com](mailto:dinda
 
 ## LICENSE
 
+<<<<<<< HEAD
 ©️ CC-By 2026, Dinda Gusti Ayu
+=======
+©️ CC-By 2026, Dinda Gusti Ayu
+>>>>>>> 113e7f62d0f5274eb2a7970195908a188782dd86
