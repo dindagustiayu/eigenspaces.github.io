@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>hermite – Python for Scientific Computing and Data Visualization</title>
+<title>hermite – Random Spaces</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,11 +71,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-81265bad880cb714d97327d3b99584fa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-bc296522584f82904d8f916f841e7e10.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-dark-bc296522584f82904d8f916f841e7e10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -160,7 +160,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../images/openscapes_hex.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../images/logorandomspaces.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://dindagustiayu.github.io/" title="dindagustiayu.github.io" class="quarto-navigation-tool px-1" aria-label="dindagustiayu.github.io"><i class="bi bi-globe"></i></a>
@@ -284,6 +284,18 @@ window.Quarto = {
  <span class="menu-text">Mathematical Optimization</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/differential.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ordinary Differential Equation of Chemistry</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/singleorder.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Second Order Differential Equations</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -343,12 +355,6 @@ window.Quarto = {
  <span class="menu-text">Vibrational Anharmonicity</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../quarto-workflows/quantum-mechanics/orbital.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Atomic Orbitals Visualizations</span></a>
-  </div>
-</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -379,7 +385,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../learning-more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Learning more</span></a>
+ <span class="menu-text">Acknowledgments</span></a>
   </div>
 </li>
     </ul>
@@ -459,16 +465,16 @@ window.Quarto = {
 <h1>Hermite Polynomials</h1>
 <p>Hermite polynomials, named after the French mathematician <a href="https://en.wikipedia.org/wiki/Charles_Hermite">Charles Hermite</a>, are orthogonal polynomials, in a sense to be described below, of the form</p>
 <p align="center">
-<span class="math display">\[H_n(x) = (-1)^n e^{x^2} \frac{d^n}{dx^n} e^{-x^2} \quad (1)\]</span>
+<span class="math display">\[H_n(x) = (-1)^n e^{x^2} \frac{d^n}{dx^n} e^{-x^2} \tag{1}\]</span>
 </p>
 <p>for <span class="math inline">\(n=0, \ 1, \ 2, \ 3, \ldots\)</span> The first few Hermite polynomials are - for <span class="math inline">\(n=0\)</span> we have <span class="math inline">\(H_0 (x) = 1\)</span> - for <span class="math inline">\(n=1\)</span> we have <span class="math inline">\(H_1 (x) = 2x\)</span> - for <span class="math inline">\(n=2\)</span> we have <span class="math inline">\(H_2 (x) = 4x^2 - 2\)</span> - for <span class="math inline">\(n=3\)</span> we have <span class="math inline">\(H_3 (x) = 8x^3 - 12x\)</span> - for <span class="math inline">\(n=4\)</span> we have <span class="math inline">\(H_4 (x) = 16x^4 - 48x^2 + 12\)</span> - for <span class="math inline">\(n=5\)</span> we have <span class="math inline">\(H_5 (x) = 32x^5 - 160x^3 + 120x\)</span> - for <span class="math inline">\(n=6\)</span> we have <span class="math inline">\(H_6 (x) = 64x^6 - 480x^4 + 720x^2 -120\)</span> - for <span class="math inline">\(n=7\)</span> we have <span class="math inline">\(H_7 (x) = 128x^7 - 1344x^5 + 3360x^3 - 1680x\)</span></p>
 For <span class="math inline">\(n \in \mathbb{N}\)</span>, we define Hermite polynomials <span class="math inline">\(H_n (x)\)</span> by
 <p align="center">
-<span class="math display">\[\sum_{n=0}^{\infty} \frac{H_n (x)}{n!} r^n = e^{2xr - r^2}, \quad for |r| &lt; \infty \quad (2) \]</span>
+<span class="math display">\[\sum_{n=0}^{\infty} \frac{H_n (x)}{n!} r^n = e^{2xr - r^2}, \quad for |r| &lt; \infty \tag{2} \]</span>
 </p>
 To find <span class="math inline">\(H_n (x)\)</span>, expand the right-hand side of eq.(2) as a Maclaurin series in <span class="math inline">\(r\)</span> and equate coefficients. From eq.(2) we drive the closed expression
 <p align="center">
-<span class="math display">\[H_n (x) = \sum_{k=0}^{[n/2]} \frac{(-1)^k n!}{k! (n-2k)!} (2x)^{n-2k} \quad (3) \]</span>
+<span class="math display">\[H_n (x) = \sum_{k=0}^{[n/2]} \frac{(-1)^k n!}{k! (n-2k)!} (2x)^{n-2k} \tag{3} \]</span>
 </p>
 <p>where <span class="math inline">\([x]\)</span> denotes the largest integer less than or equal to <span class="math inline">\(x\)</span>. Checking with <span class="math inline">\(n = 0, \ 1, \ 2, \ldots\)</span> we find that eq.(3) yields the expected Hermite polynomials. To prove that eq.(3) holds in general.</p>
 </section>
@@ -476,40 +482,40 @@ To find <span class="math inline">\(H_n (x)\)</span>, expand the right-hand side
 <h1>Connection with Harmonic Oscillator</h1>
 <p>In this final part, we will show the connection of Hermite Polynomials with the Quantum Harmonic Oscillator. First of all, the analogue of the classical Harmonic Oscillator in Quantum Mechanics is described by the <span class="math inline">\(Schr\ddot{o}dinger\)</span> equation</p>
 <p align="center">
-<span class="math display">\[ -\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} + \frac{1}{2} m \omega^2 x^2 \psi = E \psi \quad (4)\]</span>
+<span class="math display">\[ -\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} + \frac{1}{2} m \omega^2 x^2 \psi = E \psi \tag{4}\]</span>
 </p>
 There are a bunch of constants sitting in eq.(4) and life is simpler if we can just get rid of them. To this end, define
 <p align="center">
-<span class="math display">\[ y = \sqrt{\frac{m \omega}{\hbar} x} \quad \mbox{and} \quad \tilde{E} = \frac{2E}{\hbar \omega} \quad (5)\]</span>
+<span class="math display">\[ y = \sqrt{\frac{m \omega}{\hbar} x} \quad \mbox{and} \quad \tilde{E} = \frac{2E}{\hbar \omega} \tag{5}\]</span>
 </p>
 Then the <span class="math inline">\(Schr\ddot{o}dinger\)</span> equation takes the cleaner form
 <p align="center">
-<span class="math display">\[\frac{d^2 \psi}{dy^2} - y^2 \psi = - \tilde{E} \psi \quad (6)\]</span>
+<span class="math display">\[\frac{d^2 \psi}{dy^2} - y^2 \psi = - \tilde{E} \psi \tag{6}\]</span>
 </p>
 <p>The derivatives are <span class="math inline">\(\psi' = -y \psi\)</span> and <span class="math inline">\(\psi" = y^2\psi - \psi\)</span>, so we see that this obeys the <span class="math inline">\(Schr\ddot{o}inger\)</span> with (rescaled) energy <span class="math inline">\(\tilde{E} = 1\)</span>.</p>
 <p>Furthermore, it’s simple to see that all normalisable solutions should fall off in the same exponential fashion, with <span class="math inline">\(\psi \thicksim e^{-y^2 /2}\)</span> as <span class="math inline">\(y \rightarrow \pm \infty\)</span>. This follows from looking at the large <span class="math inline">\(y\)</span> behaviour of (eq.5), where the <span class="math inline">\(\tilde{E} \psi\)</span> term is necessarily neglible compared to the <span class="math inline">\(y^2 \psi\)</span>. This motivated the general ansatz</p>
 <p align="center">
-<span class="math display">\[\psi (y) = h(y) e^{-y^2 /2} \quad (7)\]</span>
+<span class="math display">\[\psi (y) = h(y) e^{-y^2 /2} \tag{7}\]</span>
 </p>
 <p>In general, the functions <span class="math inline">\(h(y)\)</span> are known as <em>Hermite Polynomials</em> and have a number of nice properties.</p>
 <section id="the-wavefunctions" class="level2">
 <h2 class="anchored" data-anchor-id="the-wavefunctions">The Wavefunctions</h2>
 <p>The wavefunctions for the quantum harmonic oscillator contain the Gaussian form, which allows them to satisfy the necessary boundary conditions at infinity. In the wavefunction associated with a given value of the quantum number <span class="math inline">\(n\)</span>, the Gaussian is multiplied by a polynomial of order <span class="math inline">\(n\)</span> called a <strong>Hermite polynomial</strong>. The expressions are simplified by making the substitution,</p>
 <p align="center">
-<span class="math display">\[\psi (y) = e^{-y^2 / 2} \quad (8)\]</span>
+<span class="math display">\[\psi (y) = e^{-y^2 / 2} \tag{8}\]</span>
 </p>
 <p>Because of the association of the wavefunction with a probability density, it is necessary for the wavefunction to include a normalization constant, <span class="math inline">\(N_n\)</span>.</p>
 <p align="center">
-<span class="math display">\[N_n = \frac{1}{(2^n n! \sqrt{\pi})^{1/2}} \quad (9)\]</span>
+<span class="math display">\[N_n = \frac{1}{(2^n n! \sqrt{\pi})^{1/2}} \tag{9}\]</span>
 </p>
 The final form of the harmonic oscillator wavefunction is this
 <p align="center">
-<span class="math display">\[\psi_n (y) = N_n H_n (y) e^{-y^2 /2} \quad (10) \]</span>
+<span class="math display">\[\psi_n (y) = N_n H_n (y) e^{-y^2 /2} \tag{10} \]</span>
 </p>
 <p>where <span class="math inline">\(y = \sqrt{\alpha} x\)</span> and <span class="math inline">\(\alpha = \frac{m \omega}{\hbar}\)</span>.</p>
 The general formula for the normalized wavefunctions is
 <p align="center">
-<span class="math display">\[\psi_n (y) = \left(\frac{\alpha}{\pi} \right)^{1/4} \frac{1}{\sqrt{2^n n!}} H_n (y)e^{-y^2 /2} \quad (11)\]</span>
+<span class="math display">\[\psi_n (y) = \left(\frac{\alpha}{\pi} \right)^{1/4} \frac{1}{\sqrt{2^n n!}} H_n (y)e^{-y^2 /2} \tag{11}\]</span>
 </p>
 where <span class="math inline">\(H_n\)</span> is the Hermite polynomial. First four harmonic oscillator normalized wavefunctions,
 <p align="center">
@@ -517,47 +523,47 @@ where <span class="math inline">\(H_n\)</span> is the Hermite polynomial. First 
 </p>
 <p>All energies are proportional to <span class="math inline">\(\hbar \omega\)</span>, with <span class="math inline">\(\omega\)</span> the frequency of the harmonic oscillator. The energies are</p>
 <p align="center">
-<span class="math display">\[E_n = \hbar \omega \left (\frac{1}{2} + n \right) \quad \mbox{with} \quad n = 0, \ 1, \ 2, \ldots \quad (12)\]</span>
+<span class="math display">\[E_n = \hbar \omega \left (\frac{1}{2} + n \right) \quad \mbox{with} \quad n = 0, \ 1, \ 2, \ldots \tag{12}\]</span>
 </p>
 <p>When the <span class="math inline">\(Schr\ddot{o}dinger\)</span> equation for the harmonic oscillator is solved by a series method, the solutions contain this set of polynomials, named the Hermite polynomials.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>n</th>
-<th><span class="math inline">\(H_n (y)\)</span></th>
-<th><span class="math inline">\(E_n\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(H_n (y)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(E_n\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>0</td>
-<td><span class="math inline">\(1\)</span></td>
-<td><span class="math inline">\(\frac{1}{2} \hbar \omega\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2} \hbar \omega\)</span></td>
 </tr>
 <tr class="even">
 <td>1</td>
-<td><span class="math inline">\(2y\)</span></td>
-<td><span class="math inline">\(\frac{3}{2} \hbar \omega\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2y\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{3}{2} \hbar \omega\)</span></td>
 </tr>
 <tr class="odd">
 <td>2</td>
-<td><span class="math inline">\(4y^2 -2\)</span></td>
-<td><span class="math inline">\(\frac{5}{2} \hbar \omega\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(4y^2 -2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{5}{2} \hbar \omega\)</span></td>
 </tr>
 <tr class="even">
 <td>3</td>
-<td><span class="math inline">\(8y^3 - 12y\)</span></td>
-<td><span class="math inline">\(\frac{7}{2} \hbar \omega\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(8y^3 - 12y\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{7}{2} \hbar \omega\)</span></td>
 </tr>
 <tr class="odd">
 <td>4</td>
-<td><span class="math inline">\(16y^4-48y^2 +12\)</span></td>
-<td><span class="math inline">\(\frac{9}{2} \hbar \omega\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(16y^4-48y^2 +12\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{9}{2} \hbar \omega\)</span></td>
 </tr>
 <tr class="even">
 <td>5</td>
-<td>$32y^5 - 160y^3 +120y $</td>
-<td><span class="math inline">\(\frac{11}{2} \hbar \omega\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(32y^5 - 160y^3 +120y\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{11}{2} \hbar \omega\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -661,7 +667,7 @@ Now this can be simplified with
 </p>
 So combining this we get
 <p align="center">
-<span class="math display">\[P (x) = \frac{N}{\sqrt{1-(x/x_0)^2}} \quad (20) \]</span>
+<span class="math display">\[P (x) = \frac{N}{\sqrt{1-(x/x_0)^2}} \tag{20} \]</span>
 </p>
 <p>for <span class="math inline">\(|x| \leq x_0\)</span> and <span class="math inline">\(p(x) = 0\)</span> otherwise. <span class="math inline">\(N\)</span> is normalisation constant.</p>
 where the normalization constant, <span class="math inline">\(N\)</span> (eq.9), must be chosen so that
@@ -670,7 +676,7 @@ where the normalization constant, <span class="math inline">\(N\)</span> (eq.9),
 </p>
 The normalized classical probability density function is therefore
 <p align="center">
-<span class="math display">\[ P (x) = \frac{1}{\pi} \ \frac{1}{\sqrt{A^2 - x^2}} \quad (21)\]</span>
+<span class="math display">\[ P (x) = \frac{1}{\pi} \ \frac{1}{\sqrt{A^2 - x^2}} \tag{21}\]</span>
 </p>
 <p><strong>Solution</strong>:</p>
 <ol type="1">
@@ -924,7 +930,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = false;
+  const darkModeDefault = true;
   let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
@@ -1365,7 +1371,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© CC-By randomspaces, 2026</p>
+<p>© CC-By Dinda Gusti Ayu, 2026</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

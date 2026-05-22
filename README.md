@@ -4,6 +4,12 @@
 This blog is as a knowledge base in understanding  application of computational tools for physics or chemistry problems. I hope you find the content useful, and I hope you enjoy reading along and learning with me!
 >
 
+<div align='center'>
+    
+![](images/logorandomspaces.png)
+    
+</div>
+
 
 ## What is Random Spaces?
 
@@ -15,3 +21,8 @@ All materials are shared openly on my repositories [![Badge](https://img.shields
 ## Contact
 
 Feel free to contact me thorugh email: [dindagustiayuedu@gmail.com](mailto:dindagustiayuedu@gmail.com). If you have inquiries and/ or suggestion. Looking forward to hearing from you!
+
+
+## LICENSE
+
+$\copyright$ CC-By 2026, Dinda Gusti Ayu

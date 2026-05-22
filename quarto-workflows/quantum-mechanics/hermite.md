@@ -8,6 +8,7 @@ __How do we do it?__: Transitions are observed by measuring the amount of infrar
 __Why do we do it?__: A knowledge of the vibrational level spacings gives us the value of the stretching (or bending) force constants which characterise the stiffness of a bond, allows us to estimate the bond dissociation energy, and gives us a means of identifying characteristic functional groups of atoms within large molecules.
 
 ## Preliminaries
+
 - `scipy.optimize`: provides a range of algorithms for minimization of multidimensional functions (with or without constraints).
 - `scipy.optimize.minimize`: minimize routine which implements several different algorithms for minimization.
 - `scipy.optimize.minimize_scalar`: provide a way to minimize a function of a single variable.
@@ -33,7 +34,7 @@ The Harmonic Oscillator's Quantum Mechanical solution involves Hermite Polynomia
 Hermite polynomials, named after the French mathematician [Charles Hermite](https://en.wikipedia.org/wiki/Charles_Hermite), are orthogonal polynomials, in a sense to be described below, of the form
 
 <p align='center'>
-    $$H_n(x) = (-1)^n e^{x^2} \frac{d^n}{dx^n} e^{-x^2} \quad (1)$$
+    $$H_n(x) = (-1)^n e^{x^2} \frac{d^n}{dx^n} e^{-x^2} \tag{1}$$
 </p>
 
 for $n=0, \ 1, \ 2, \ 3, \ldots$
@@ -49,12 +50,12 @@ The first few Hermite polynomials are
 
 For $n \in \mathbb{N}$, we define Hermite polynomials $H_n (x)$ by
 <p align='center'>
-    $$\sum_{n=0}^{\infty} \frac{H_n (x)}{n!} r^n = e^{2xr - r^2}, \quad for |r| < \infty \quad (2) $$
+    $$\sum_{n=0}^{\infty} \frac{H_n (x)}{n!} r^n = e^{2xr - r^2}, \quad for |r| < \infty \tag{2} $$
 </p>
 
 To find $H_n (x)$, expand the right-hand side of eq.(2) as a Maclaurin series in $r$ and equate coefficients. From eq.(2) we drive the closed expression
 <p align='center'>
-    $$H_n (x) = \sum_{k=0}^{[n/2]} \frac{(-1)^k n!}{k! (n-2k)!} (2x)^{n-2k} \quad (3) $$
+    $$H_n (x) = \sum_{k=0}^{[n/2]} \frac{(-1)^k n!}{k! (n-2k)!} (2x)^{n-2k} \tag{3} $$
 </p>
 
 where $[x]$ denotes the largest integer less than or equal to $x$. Checking with $n = 0, \ 1, \ 2, \ldots$ we find that eq.(3) yields the expected Hermite polynomials. To prove that eq.(3) holds in general.
@@ -64,17 +65,17 @@ where $[x]$ denotes the largest integer less than or equal to $x$. Checking with
 In this final part, we will show the connection of Hermite Polynomials with the Quantum Harmonic Oscillator. First of all, the analogue of the classical Harmonic Oscillator in Quantum Mechanics is described by the $Schr\ddot{o}dinger$ equation
 
 <p align='center'>
-    $$ -\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} + \frac{1}{2} m \omega^2 x^2 \psi = E \psi \quad (4)$$
+    $$ -\frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} + \frac{1}{2} m \omega^2 x^2 \psi = E \psi \tag{4}$$
 </p>
 
 There are a bunch of constants sitting in eq.(4) and life is simpler if we can just get rid of them. To this end, define
 <p align='center'>
-    $$ y = \sqrt{\frac{m \omega}{\hbar} x} \quad \mbox{and} \quad \tilde{E} = \frac{2E}{\hbar \omega} \quad (5)$$
+    $$ y = \sqrt{\frac{m \omega}{\hbar} x} \quad \mbox{and} \quad \tilde{E} = \frac{2E}{\hbar \omega} \tag{5}$$
 </p>
 
 Then the $Schr\ddot{o}dinger$ equation takes the cleaner form
 <p align='center'>
-    $$\frac{d^2 \psi}{dy^2} - y^2 \psi = - \tilde{E} \psi \quad (6)$$
+    $$\frac{d^2 \psi}{dy^2} - y^2 \psi = - \tilde{E} \psi \tag{6}$$
 </p>
 
 The derivatives are $\psi' = -y \psi$ and $\psi" = y^2\psi - \psi$, so we see that this obeys the $Schr\ddot{o}inger$ with (rescaled) energy $\tilde{E} = 1$.
@@ -82,7 +83,7 @@ The derivatives are $\psi' = -y \psi$ and $\psi" = y^2\psi - \psi$, so we see th
 Furthermore, it's simple to see that all normalisable solutions should fall off in the same exponential fashion, with $\psi \thicksim e^{-y^2 /2}$ as $y \rightarrow \pm \infty$. This follows from looking at the large $y$ behaviour of (eq.5), where the $\tilde{E} \psi$ term is necessarily neglible compared to the $y^2 \psi$. This motivated the general ansatz
 
 <p align='center'>
-    $$\psi (y) = h(y) e^{-y^2 /2} \quad (7)$$
+    $$\psi (y) = h(y) e^{-y^2 /2} \tag{7}$$
 </p>
 
 In general, the functions $h(y)$ are known as _Hermite Polynomials_ and have a number of nice properties.
@@ -91,25 +92,25 @@ In general, the functions $h(y)$ are known as _Hermite Polynomials_ and have a n
 The wavefunctions for the quantum harmonic oscillator contain the Gaussian form, which allows them to satisfy the necessary boundary conditions at infinity. In the wavefunction associated with a given value of the quantum number $n$, the Gaussian is multiplied by a polynomial of order $n$ called a __Hermite polynomial__. The expressions are simplified by making the substitution,
 
 <p align='center'>
-    $$\psi (y) = e^{-y^2 / 2} \quad (8)$$
+    $$\psi (y) = e^{-y^2 / 2} \tag{8}$$
 </p>
 
 Because of the association of the wavefunction with a probability density, it is necessary for the wavefunction to include a normalization constant, $N_n$.
 
 <p align= 'center'>
-    $$N_n = \frac{1}{(2^n n! \sqrt{\pi})^{1/2}} \quad (9)$$
+    $$N_n = \frac{1}{(2^n n! \sqrt{\pi})^{1/2}} \tag{9}$$
 </p>
 
 The final form of the harmonic oscillator wavefunction is this
 <p align='center'>
-    $$\psi_n (y) = N_n H_n (y) e^{-y^2 /2} \quad (10) $$
+    $$\psi_n (y) = N_n H_n (y) e^{-y^2 /2} \tag{10} $$
 </p>
 
 where $y = \sqrt{\alpha} x$ and $\alpha = \frac{m \omega}{\hbar}$.
 
 The general formula for the normalized wavefunctions is 
 <p align='center'>
-    $$\psi_n (y) = \left(\frac{\alpha}{\pi} \right)^{1/4} \frac{1}{\sqrt{2^n n!}} H_n (y)e^{-y^2 /2} \quad (11)$$
+    $$\psi_n (y) = \left(\frac{\alpha}{\pi} \right)^{1/4} \frac{1}{\sqrt{2^n n!}} H_n (y)e^{-y^2 /2} \tag{11}$$
 </p>
 
 where $H_n$ is the Hermite polynomial. First four harmonic oscillator normalized wavefunctions,
@@ -120,19 +121,19 @@ where $H_n$ is the Hermite polynomial. First four harmonic oscillator normalized
 All energies are proportional to $\hbar \omega$, with $\omega$ the frequency of the harmonic oscillator. The energies are
 
 <p align='center'>
-    $$E_n = \hbar \omega \left (\frac{1}{2} + n \right) \quad \mbox{with} \quad n = 0, \ 1, \ 2, \ldots \quad (12)$$
+    $$E_n = \hbar \omega \left (\frac{1}{2} + n \right) \quad \mbox{with} \quad n = 0, \ 1, \ 2, \ldots \tag{12}$$
 </p>
 
 When the $Schr\ddot{o}dinger$ equation for the harmonic oscillator is solved by a series method, the solutions contain this set of polynomials, named the Hermite polynomials.
 
 |n | $H_n (y)$ | $E_n$ |
-|--|-----------|-----|
+|--|:----------:|:----:|
 |0 | $1$         |$\frac{1}{2} \hbar \omega$ |
 |1 | $2y$        |$\frac{3}{2} \hbar \omega$ |
 |2 | $4y^2 -2$ |$\frac{5}{2} \hbar \omega$ |
 |3| $8y^3 - 12y$ |$\frac{7}{2} \hbar \omega$ |
 |4| $16y^4-48y^2 +12$ | $\frac{9}{2} \hbar \omega$ |
-|5| $32y^5 - 160y^3 +120y $| $\frac{11}{2} \hbar \omega$|
+|5| $32y^5 - 160y^3 +120y$ | $\frac{11}{2} \hbar \omega$|
 
 The wavefunctions for the quantum harmonic oscillator contain the Gaussian form, which allows them to satisfy the necessary boundary conditions at infinity. In the wavefunction associated with a given value of the quantum number $n$, the Gaussian is multiplied by a polynomial of order $n$ (the Hermite polynomials above) and the constants necessary to normalize the wavefunctions. 
 
@@ -249,7 +250,7 @@ Now this can be simplified with
 
 So combining this we get
 <p align='center'>
-    $$P (x) = \frac{N}{\sqrt{1-(x/x_0)^2}} \quad (20) $$
+    $$P (x) = \frac{N}{\sqrt{1-(x/x_0)^2}} \tag{20} $$
 </p>
 
 for $|x| \leq x_0$ and $p(x) = 0$ otherwise. $N$ is normalisation constant.
@@ -261,7 +262,7 @@ where the normalization constant, $N$ (eq.9), must be chosen so that
 
 The normalized classical probability density function is therefore
 <p align='center'>
-    $$ P (x) = \frac{1}{\pi} \ \frac{1}{\sqrt{A^2 - x^2}} \quad (21)$$
+    $$ P (x) = \frac{1}{\pi} \ \frac{1}{\sqrt{A^2 - x^2}} \tag{21}$$
 </p>
 
 __Solution__:

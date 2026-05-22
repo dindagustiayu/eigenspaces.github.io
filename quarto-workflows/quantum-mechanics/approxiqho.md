@@ -299,7 +299,7 @@ The integrals we need are therefore $I_0 = \sqrt{\pi / \alpha}$ given,
 The Rayleigh-Ritz ratio is therefore:
 
 <p align='center'>
-    $$ \begin{align} \langle E' \rangle = \frac{\langle \psi | \hat{H} | \psi \rangle}{\langle \psi|\psi \rangle} &= \frac{1}{2 I_0} \int_{- \infty}^{\infty} (q^4 - \alpha^2 q^2 + \alpha) \psi^2 \ dq \\ &=\frac{1}{2 I_0} [I_2 - \alpha^2 I_1 + \alpha I_0] &= \frac{1}{2 I_0} \left [\frac{3}{4 \alpha^2} I_0 - \alpha^2 \frac{1}{2 \alpha} I_0 + \alpha I_0 \right] \\ &=\frac{3}{8 \alpha^2} + \frac{\alpha}{4} \end{align}$$
+    $$ \begin{align} \langle E' \rangle = \frac{\langle \psi | \hat{H} | \psi \rangle}{\langle \psi|\psi \rangle} &= \frac{1}{2 I_0} \int_{- \infty}^{\infty} (q^4 - \alpha^2 q^2 + \alpha) \psi^2 \ dq \\ &=\frac{1}{2 I_0} [I_2 - \alpha^2 I_1 + \alpha I_0] \\ &= \frac{1}{2 I_0} \left [\frac{3}{4 \alpha^2} I_0 - \alpha^2 \frac{1}{2 \alpha} I_0 + \alpha I_0 \right] \\ &=\frac{3}{8 \alpha^2} + \frac{\alpha}{4} \end{align}$$
 </p>
 
 This function has a minimum at
@@ -335,4 +335,4 @@ plt.savefig('The differentiation 0f E.svg', bbox_inches='tight')
 plt.show()
 ```
 
-![Figure 3. The differentiation of E](/quarto-workflows/images/approxiqho/The differentiation 0f E.svg)
+![Figure 3. The differentiation of <E'> (Rayleigh-Ritz)](/quarto-workflows/images/approxiqho/The differentiation 0f E.svg)

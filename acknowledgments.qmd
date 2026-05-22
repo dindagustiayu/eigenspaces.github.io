@@ -5,7 +5,7 @@ title: Acknowledgments
 
 :::{.callout-tip appearance="minimal}
 
-This interactive notebooks is built by Jupyter Book. Some contents of this blog was inspired by Learning Scientific Programming with Python (2nd edition) book writed by [Christian Hill](https://www.linkedin.com/in/christian-hill-8066b359/). Some materials are available for free from [scipython](https://scipython.com/books/book2/).
+This interactive notebooks is built by Jupyter Book. Some contents of this blog was inspired by Learning Scientific Programming with Python (2nd edition) book writed by [Christian Hill](https://www.linkedin.com/in/christian-hill-8066b359/). Several materials are available for free from [scipython](https://scipython.com/books/book2/).
 
 :::
 

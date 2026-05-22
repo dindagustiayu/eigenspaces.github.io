@@ -23,7 +23,7 @@ The Morse oscillator, named after physicist [Philip M. Morse](https://www.nae.ed
 The Morse oscillator is a model for a particle in a one-dimensional anharmonic potential energy surface with a dissociative limit at infinite displacement. It is commonly used for describing the spectroscopy of diatomic molecules and anharmonic vibrational dynamics, and most of its properties can be expressed through analytically expressions. The Morse potential is
 
 <p align='center'>
-    $$V(x) = D_e[1-e^{-\alpha x}]^2 \quad (1)$$
+    $$V(x) = D_e[1-e^{-\alpha x}]^2 \tag{1}$$
 </p>
 
 where $x = (r - r_0)$, $D_e$ sets the depth of the energy minimu at $r=r_0$ relative to the dissociation limit as $r \rightarrow \infty$, and $\alpha$ sets the curvature of the potential. If we expand $V$ in powers of $x$ about $x=0$, the parameter $\alpha = \sqrt{k_e /2D_e}$ and $k_e = \left(\frac{d^2 V}{dx^2} \right)_e$ is the bond force constant at the bottom of the potential well.
@@ -36,7 +36,7 @@ The Morse oscillator Hamiltonian for a diatomic molecule of reduced mass _mR_ bo
 
 and has the eigenvalues
 <p align='center'>
-    $$E_n = \hbar \omega_0 \left[\left(n + \frac{1}{2} \right) - x_e \left(n + \frac{1}{2} \right)^2 \right] \quad n =0, \ 1, 2, \ 3, \ldots \quad (2)$$
+    $$E_n = \hbar \omega_0 \left[\left(n + \frac{1}{2} \right) - x_e \left(n + \frac{1}{2} \right)^2 \right] \quad n =0, \ 1, 2, \ 3, \ldots \tag{2}$$
 </p>
 
 where
@@ -53,7 +53,7 @@ The harmonic oscillator approximation is convenient to use for diatomic molecule
 The new energy levels of this _anharmonic_ potential can be found using _perturbation theory_. We will just write down the result here that we find higher-order corrections to the energy according to:
 
 <p align ='center'>
-    $$G(v) = \omega_e \left(v + \frac{1}{2} \right) - \omega_e x_e \left( v + \frac{1}{2} \right)^2 + \omega_e y_e \left(v + \frac{1}{2} \right)^3 + \ldots \quad (3)$$
+    $$G(v) = \omega_e \left(v + \frac{1}{2} \right) - \omega_e x_e \left( v + \frac{1}{2} \right)^2 + \omega_e y_e \left(v + \frac{1}{2} \right)^3 + \ldots \tag{3}$$
 </p>
 
 where $\omega_e$ is the anharmonic oscillator frequency, and $x_e$ is the _anharmonic constant_, which is typically much smaller than $\omega_e$.
@@ -93,7 +93,7 @@ We can see from Table 1, that the anharmonic frequencies correspond much better 
 Solving the $Schr\ddot{o}dinger$ with the Morse oscillator is not trivial, but can be done analytically in terms of associated __Laguerre polynomials__.
 
 <p align='center'>
-    $$\psi (n) = N_n z^{\lambda - n - \frac{1}{2}} e^{-z / 2} L_n^{2 \lambda - 2n - 1} (z) \quad [in \ cm^{-1}] \quad (4)$$
+    $$\psi (n) = N_n z^{\lambda - n - \frac{1}{2}} e^{-z / 2} L_n^{2 \lambda - 2n - 1} (z) \quad [in \ cm^{-1}] \tag{4}$$
 </p>
 
 where 

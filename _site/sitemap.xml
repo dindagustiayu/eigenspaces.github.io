@@ -78,7 +78,7 @@
   </url>
   <url>
     <loc>/learning-more.html</loc>
-    <lastmod>2026-05-18T04:45:55.479Z</lastmod>
+    <lastmod>2026-05-22T01:42:39.024Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/chemspy.html</loc>
@@ -94,7 +94,7 @@
   </url>
   <url>
     <loc>/quarto-workflows/data-science/morenumpy.html</loc>
-    <lastmod>2026-05-19T16:11:45.458Z</lastmod>
+    <lastmod>2026-05-19T16:13:18.658Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/ssaproximation.html</loc>
@@ -138,15 +138,15 @@
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/approxiqho.html</loc>
-    <lastmod>2026-05-17T10:40:39.020Z</lastmod>
+    <lastmod>2026-05-22T01:17:39.543Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/hermite.html</loc>
-    <lastmod>2026-05-17T10:45:43.252Z</lastmod>
+    <lastmod>2026-05-22T01:25:32.188Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/anharmonicity.html</loc>
-    <lastmod>2026-05-18T04:35:49.531Z</lastmod>
+    <lastmod>2026-05-22T01:30:11.505Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/orbital.html</loc>
@@ -179,5 +179,13 @@
   <url>
     <loc>/quarto-workflows/quantum-mechanics/particles-2d.html</loc>
     <lastmod>2026-05-16T15:49:27.425Z</lastmod>
+  </url>
+  <url>
+    <loc>/quarto-workflows/thermodynamics/adiabatic-process.html</loc>
+    <lastmod>2026-05-22T01:35:03.630Z</lastmod>
+  </url>
+  <url>
+    <loc>/acknowledgments.html</loc>
+    <lastmod>2026-05-22T01:42:39.024Z</lastmod>
   </url>
 </urlset>
