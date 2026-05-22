@@ -67,7 +67,7 @@ website:
             contents:
               - quarto-workflows/thermodynamics/adiabatic-process.md
               - quarto-workflows/thermodynamics/boltzman.md
-      - learning-more.qmd
+      - acknowledgments.qmd
        
        
 format:
