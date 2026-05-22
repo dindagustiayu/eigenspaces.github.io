@@ -1846,7 +1846,7 @@
     "href": "index.html#what-is-random-spaces",
     "title": "Python for Scientific Computing and Data Visualizations",
     "section": "What is Random Spaces?",
-    "text": "What is Random Spaces?\nRandom Spaces is a free, open learning resource for students and researchers who interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The tutorials here will bridge the gap beetween mathematics, chemistry and computational tools.\nAll materials are shared openly on my repositories",
+    "text": "What is Random Spaces?\nRandom Spaces is a free, open learning resource for students and researchers who interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The tutorials is created by integrating mathematics, chemistry and computational tools.\nAll materials are shared openly on my repositories",
     "crumbs": [
       "Home"
     ]
@@ -1876,7 +1876,7 @@
     "href": "acknowledgments.html",
     "title": "Acknowledgments",
     "section": "",
-    "text": "Tip\n\n\n\nThis interactive notebooks is built by Jupyter Book. Some contents of this blog was inspired by Learning Scientific Programming with Python (2nd edition) book writed by Christian Hill. Several materials are available for free from scipython.",
+    "text": "Tip\n\n\n\nThis interactive notebook is built by Jupyter Book. Some contents of this blog was inspired by Learning Scientific Programming with Python (2nd edition) book writed by Christian Hill. Several materials are available for free from scipython.",
     "crumbs": [
       "Acknowledgments"
     ]
