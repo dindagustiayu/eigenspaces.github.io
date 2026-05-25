@@ -10,7 +10,7 @@ website:
   
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    left: "&copy; CC-By Dinda Gusti Ayu, 2026"
+    left: "&copy; 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0 unless otherwise stated."
     
   sidebar:
     logo: "images/logorandomspaces.png"

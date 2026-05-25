@@ -481,7 +481,7 @@
     "href": "index.html#what-is-random-spaces",
     "title": "Python for Scientific Computing and Data Visualizations",
     "section": "What is Random Spaces?",
-    "text": "What is Random Spaces?\nRandom Spaces is a free, open learning resource for students and researchers who interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The tutorials is created by integrating mathematics, chemistry and computational tools.\nAll materials are shared openly on my repositories",
+    "text": "What is Random Spaces?\nRandom Spaces is a free, open learning resource for students and researchers who interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The goal is to take the most efficient approach for describing the link between Python language to a particular concepts in mathematics, Physics and Chemistry.\nAll materials are shared openly on my repositories",
     "crumbs": [
       "Home"
     ]
@@ -2026,7 +2026,7 @@
     "href": "acknowledgments.html",
     "title": "Acknowledgments",
     "section": "",
-    "text": "Tip\n\n\n\nThis interactive notebook is built by Jupyter Book. Some contents of this blog was inspired by Learning Scientific Programming with Python (2nd edition) book writed by Christian Hill. Several materials are available for free from scipython.",
+    "text": "Tip\n\n\n\nThis interactive notebook is built by Pandoc markdown. Some contents of this blog was inspired by Learning Scientific Programming with Python (2nd edition) book writed by Christian Hill. A certain number of exercises are available for free from scipython.",
     "crumbs": [
       "Acknowledgments"
     ]
@@ -2036,7 +2036,7 @@
     "href": "acknowledgments.html#linked-resources",
     "title": "Acknowledgments",
     "section": "Linked Resources",
-    "text": "Linked Resources\nHere is a list of resources that we are linking to that have been developed by others.\n\nComputational Chemistry by Benjamin Morgan and Andrew McCluskey from University of Bath.\nPython Data Science Handbook by Jake T VanderPlas from Google Research.\nDrug Discovery with Python by Zhaohui Jiang and Alex Aziz from Manchester Metropolitan Unversity.",
+    "text": "Linked Resources\nHere is a list of resources that we are linking to that have been developed by others.\n\nComputational Chemistry by Benjamin Morgan and Andrew McCluskey from University of Bath.\nPython Data Science Handbook by Jake T VanderPlas from Google Research.\nDrug Discovery with Python by Zhaohui Jiang and Alex Aziz from Manchester Metropolitan University.",
     "crumbs": [
       "Acknowledgments"
     ]

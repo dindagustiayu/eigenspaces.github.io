@@ -26,7 +26,9 @@ All materials are shared openly on my repositories [![Badge](https://img.shields
 Feel free to contact me through email: [dindagustiayuedu@gmail.com](mailto:dindagustiayuedu@gmail.com). If you have inquiries and/ or suggestion. Looking forward to hearing from you!
 
 
-## LICENSE
+## License
 
-©️ CC-By 2026, Dinda Gusti Ayu
+©️2026 Dinda Gusti Ayu
+
+The content on this page is licensed under CC-BY 4.0 unless otherwise stated.
 
