@@ -6,7 +6,7 @@ subtitle: "Open-source tutorials for everyone who want to use Python in their wo
 :::{.callout-note appearance="minimal}
 Subject to the existing rights of third parties, **randomspaces.github.io** and/or **host institutions** are the copyright owner in this work, and no portion thereof is to be copied, reproduced, or disseminated, including for AI training, without the prior written consent of **randomspaces.github.io**.
 
-For more information, send email to [dindagustiayuedu@gmail.com](mailto:dindagustiayuedu@gmail)
+For more information, send email to [materials@dindagustiayu.com](mailto:materials@dindagustiayu.com)
 
 :::
 
@@ -25,10 +25,10 @@ All materials are shared openly on my repositories [![Badge](https://img.shields
 
 ## Navigation {#navigation}
 
-We can quickly navigate through the sections using the navigation bar on the left side, and the sub navigation bar on the right side. There is also a search box to help we find any content in this page swiftly.
+We can quickly navigate through the sections using the navigation bar on the left side, and the sub navigation bar on the right side. There is also a search box to help us find any content in this page swiftly.
 
 ## Contact
 
-Feel free to contact me through email: [dindagustiayuedu@gmail.com](mailto:dindagustiayuedu@gmail.com). If you have inquiries and/ or suggestion. Looking forward to hearing from you!
+Feel free to contact me through email: [materials@dindagustiayu.com](mailto:materials@dindagustiayu.com). If you have inquiries and/ or suggestion. Looking forward to hearing from you!
 
 Let's get down with Random Spaces!

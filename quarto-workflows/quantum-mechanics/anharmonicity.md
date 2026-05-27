@@ -40,6 +40,7 @@ and has the eigenvalues
 </p>
 
 where
+
 - $v$ is vibrational quantum number.
 - $\omega_0 = \sqrt{2 D_e \alpha^2 / m_R}$ is the fundamental frequency.
 - $x_e = \frac{\hbar \omega_0}{4 D_e}$ is the harmonic constant.
@@ -97,8 +98,11 @@ Solving the $Schr\ddot{o}dinger$ with the Morse oscillator is not trivial, but c
 </p>
 
 where 
+
 - $N_n = \sqrt{\frac{n!(2\lambda - 2n - 1)a}{\Gamma (2 \lambda - n)}}, \quad \lambda = \frac{\sqrt{2mD_e}}{a\hbar}$ is normalization constant.
+
 - $\mathcal{L}_n^(\alpha) = \frac{z^{- \alpha} e^z}{v !} \ \frac{d^n}{dz^n} (z^{n + \alpha} e^{-z}), \quad z= 2\lambda e^{-x}$ is a _generalized Laguerre Polynomial_.
+
 - $n = 0, \ 1, \ 2, \ 3, \ldots, \left[ \lambda - \frac{1}{2} \right]$
 
 ## Preliminaries
