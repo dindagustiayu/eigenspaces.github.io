@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>/index.html</loc>
-    <lastmod>2026-05-22T09:50:32.561Z</lastmod>
+    <lastmod>2026-05-27T09:14:19.859Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/basicnumpy.html</loc>
@@ -138,7 +138,7 @@
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/approxiqho.html</loc>
-    <lastmod>2026-05-22T01:17:39.543Z</lastmod>
+    <lastmod>2026-05-29T05:30:50.822Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/hermite.html</loc>
@@ -146,7 +146,7 @@
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/anharmonicity.html</loc>
-    <lastmod>2026-05-22T01:30:11.505Z</lastmod>
+    <lastmod>2026-05-27T09:15:26.288Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/orbital.html</loc>
@@ -187,5 +187,9 @@
   <url>
     <loc>/acknowledgments.html</loc>
     <lastmod>2026-05-25T04:04:29.431Z</lastmod>
+  </url>
+  <url>
+    <loc>/quarto-workflows/data-science/oregonator.html</loc>
+    <lastmod>2026-05-29T05:27:43.350Z</lastmod>
   </url>
 </urlset>

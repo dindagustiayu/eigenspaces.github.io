@@ -24,7 +24,7 @@ website:
         href: https://github.com/dindagustiayu/randomspaces.github.io
         text: "Random Spaces"
       - icon: linkedin
-        href: https://linkedin.com/in/dindagustiayu
+        href: https://linkedin.com/in/dinda-gusti-ayu-8049a01b0
         text: "Dinda Gusti Ayu"
 
     style: "docked"
@@ -53,6 +53,7 @@ website:
               - quarto-workflows/data-science/optimization.md
               - quarto-workflows/data-science/differential.md
               - quarto-workflows/data-science/singleorder.md
+              - quarto-workflows/data-science/oregonator.md
           - section: Quantum Mechanics
             contents:
               - quarto-workflows/quantum-mechanics/particles-2d.md

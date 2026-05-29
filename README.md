@@ -23,7 +23,7 @@ All materials are shared openly on my repositories [![Badge](https://img.shields
 
 ## Contact
 
-Feel free to contact me through email: [dindagustiayuedu@gmail.com](mailto:dindagustiayuedu@gmail.com). If you have inquiries and/ or suggestion. Looking forward to hearing from you!
+Feel free to contact me through email: [materials@dindagustiayu.com](mailto:materials@dindagustiayu.com). If you have inquiries and/ or suggestion. Looking forward to hearing from you!
 
 
 ## License

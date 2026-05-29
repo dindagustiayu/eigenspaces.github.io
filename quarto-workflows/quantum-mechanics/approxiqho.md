@@ -5,6 +5,7 @@
 Why humans aren't very good at solving equations?. In the Alan Turing movie, we understand that computers are much better at solving complex problems than we are. In quantum physics, we start with examples like the harmonic oscillator or the hydrogen atom and then proudly demonstrate how clever we all are by solving the $Schr\ddot{o}dinger$ equation exactly. But there are very very few examples where we can write down the solution in closed form. For the vast majority of problems, the answer is something complicated that isn't captured by some simple mathematical formula. For these problems we need to develop different tools. 
 
 There are many complex problems in quantum mechanics. Instead, we hope we can build a collection of tools. Then, whenever we're faced with a new problem, we can root around in our toolbox, hoping to find a method that works. These are some approximation methods to solve quantum mechanics problems:
+
 1. The variational method
 2. Perturbation theory
 3. Hartree-fock approximation

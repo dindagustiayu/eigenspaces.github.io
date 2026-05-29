@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-05-06">
 
-<title>anharmonicity – Random Spaces</title>
+<title>The Oscillatory Chemical Reactions – Random Spaces</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../quarto-workflows/thermodynamics/adiabatic-process.html" rel="next">
-<link href="../../quarto-workflows/quantum-mechanics/hermite.html" rel="prev">
+<link href="../../quarto-workflows/quantum-mechanics/particles-2d.html" rel="next">
+<link href="../../quarto-workflows/data-science/singleorder.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -145,7 +146,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html">Vibrational Anharmonicity</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/oregonator.html">The Oscillatory Chemical Reactions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -165,7 +166,7 @@ window.Quarto = {
       <div class="sidebar-tools-main tools-wide">
     <a href="https://dindagustiayu.github.io/" title="dindagustiayu.github.io" class="quarto-navigation-tool px-1" aria-label="dindagustiayu.github.io"><i class="bi bi-globe"></i></a>
     <a href="https://github.com/dindagustiayu/randomspaces.github.io" title="Random Spaces" class="quarto-navigation-tool px-1" aria-label="Random Spaces"><i class="bi bi-github"></i></a>
-    <a href="https://linkedin.com/in/dindagustiayu" title="Dinda Gusti Ayu" class="quarto-navigation-tool px-1" aria-label="Dinda Gusti Ayu"><i class="bi bi-linkedin"></i></a>
+    <a href="https://linkedin.com/in/dinda-gusti-ayu-8049a01b0" title="Dinda Gusti Ayu" class="quarto-navigation-tool px-1" aria-label="Dinda Gusti Ayu"><i class="bi bi-linkedin"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div>
@@ -199,13 +200,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Data Science</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/Gaussian.html" class="sidebar-item-text sidebar-link">
@@ -296,17 +297,23 @@ window.Quarto = {
  <span class="menu-text">Second Order Differential Equations</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/data-science/oregonator.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">The Oscillatory Chemical Reactions</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Quantum Mechanics</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/particles-2d.html" class="sidebar-item-text sidebar-link">
@@ -351,7 +358,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vibrational Anharmonicity</span></a>
   </div>
 </li>
@@ -398,343 +405,174 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#vibrational-anharmonicity" id="toc-vibrational-anharmonicity" class="nav-link active" data-scroll-target="#vibrational-anharmonicity">Vibrational Anharmonicity</a>
+  <li><a href="#oscillating-reactions" id="toc-oscillating-reactions" class="nav-link active" data-scroll-target="#oscillating-reactions">Oscillating Reactions</a>
   <ul class="collapse">
-  <li><a href="#beyond-the-harmonic-oscillator" id="toc-beyond-the-harmonic-oscillator" class="nav-link" data-scroll-target="#beyond-the-harmonic-oscillator">Beyond The Harmonic Oscillator</a></li>
-  <li><a href="#anharmonicity" id="toc-anharmonicity" class="nav-link" data-scroll-target="#anharmonicity">Anharmonicity</a></li>
-  <li><a href="#limitations-of-the-harmonic-oscillator-model-for-molecular-vibrations" id="toc-limitations-of-the-harmonic-oscillator-model-for-molecular-vibrations" class="nav-link" data-scroll-target="#limitations-of-the-harmonic-oscillator-model-for-molecular-vibrations">Limitations of the Harmonic Oscillator Model for Molecular Vibrations</a></li>
+  <li><a href="#belousov-zhabotinsky-reaction" id="toc-belousov-zhabotinsky-reaction" class="nav-link" data-scroll-target="#belousov-zhabotinsky-reaction">Belousov-Zhabotinsky reaction</a></li>
+  <li><a href="#oregonator" id="toc-oregonator" class="nav-link" data-scroll-target="#oregonator">Oregonator</a>
+  <ul class="collapse">
+  <li><a href="#dynamics-equations" id="toc-dynamics-equations" class="nav-link" data-scroll-target="#dynamics-equations">Dynamics Equations</a></li>
   </ul></li>
-  <li><a href="#morse-oscillator-breakdown" id="toc-morse-oscillator-breakdown" class="nav-link" data-scroll-target="#morse-oscillator-breakdown">Morse Oscillator Breakdown</a>
-  <ul class="collapse">
-  <li><a href="#overtones" id="toc-overtones" class="nav-link" data-scroll-target="#overtones">Overtones</a></li>
-  <li><a href="#the-morse-oscillator-schrddoto-dinger-equation" id="toc-the-morse-oscillator-schrddoto-dinger-equation" class="nav-link" data-scroll-target="#the-morse-oscillator-schrddoto-dinger-equation">The Morse oscillator <span class="math inline">\(Schr\ddot{o} dinger\)</span> equation</a></li>
   <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link" data-scroll-target="#preliminaries">Preliminaries</a></li>
-  <li><a href="#e24.1-inferring-morse-parameters-from-a-vibrational-spectrum" id="toc-e24.1-inferring-morse-parameters-from-a-vibrational-spectrum" class="nav-link" data-scroll-target="#e24.1-inferring-morse-parameters-from-a-vibrational-spectrum">E24.1 Inferring Morse Parameters from a vibrational spectrum</a></li>
-  </ul></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/anharmonicity.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/data-science/oregonator.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html">Vibrational Anharmonicity</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
 
-
-
-
-<p><a href="https://github.com/dindagustiayu/The-Morse-Oscillator/blob/main/Vibrational%20levels.html"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
-<section id="vibrational-anharmonicity" class="level1">
-<h1>Vibrational Anharmonicity</h1>
-<section id="beyond-the-harmonic-oscillator" class="level2">
-<h2 class="anchored" data-anchor-id="beyond-the-harmonic-oscillator">Beyond The Harmonic Oscillator</h2>
-<p>Let’s now consider two ways in which the vibrational structure of “real molecules” is more complicated than what we’ve seen for the harmonic oscillator.</p>
-</section>
-<section id="anharmonicity" class="level2">
-<h2 class="anchored" data-anchor-id="anharmonicity">Anharmonicity</h2>
-<p>First, real vibrational motions involve “anharmonicity”, e.g., Their potential deviates from a perfect harmonic oscillator quadratic potential energy surfaces. We’ve already touched on this by looking at the Morse Potential.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://en.wikipedia.org/wiki/Morse_potential"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Morse-potential.svg/960px-Morse-potential.svg.png" class="img-fluid figure-img" alt="Figure.The Morse Potential (blue) and harmonic oscillator potential (green)"></a></p>
-<figcaption>Figure.The Morse Potential (blue) and harmonic oscillator potential (green)</figcaption>
-</figure>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/oregonator.html">The Oscillatory Chemical Reactions</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">The Oscillatory Chemical Reactions</h1>
 </div>
-<p>The harmonic oscillator is a reasonable approximation of this potential near the equilibrium geometry, but deviates substantially for <span class="math inline">\(x\)</span> far from the center of the well. Correspondingly, the vibrational levels of the Morse potential will deviate from those of the HO model. Note that the Morse potential levels grow closer together as energy increases.</p>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 6, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="pyfile/oregonator.py"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
+<section id="oscillating-reactions" class="level1">
+<h1>Oscillating Reactions</h1>
+<p>It should be clear by now that chemical kinetics is governed by the mathematics of systems of differential equations. Thus far, we have only looked at reaction systems that give rise to purely <em>linear</em> differential equations, however, in many instances the rate equations are nonlinear. When the differential equations are nonlinear, the behaviour is considerably more complex. In particular, nonlinear equations can lead to oscillatory solutions and can also exhibit the phenomenon of <em>chaos</em>.</p>
+<section id="belousov-zhabotinsky-reaction" class="level2">
+<h2 class="anchored" data-anchor-id="belousov-zhabotinsky-reaction">Belousov-Zhabotinsky reaction</h2>
+<p><a href="https://en.wikipedia.org/wiki/Boris_Belousov_(chemist)">Boris Belousov</a> in the 1950’s discovered that a mixture of malonic acid, potassium bromate, and cerium sulfate an acidic aqueous mixture in a batch reactor did not react directly to equilibrium. Instead, the composition and color of the solution oscillated for a significant period. His reports of this work were rejected by peer-reviewed journals becuase reviewers felt than an oscillating chemical reaction violates thermodynamic equilibrium and, thus, was not possible.</p>
+<blockquote class="blockquote">
+<p>The discovery of oscillating reactions revolutionized teh way taht scientist thought about chemical dynamics. Indeed, Ilya Prigogine who received the 1977 Nobel Prize in Chemistry, in part for demonstrating that chemical systems far from equilibrium can exhibit periodic oscillations, regarded the the Balousov-Zhabotinsky (BZ) reaction as the most important scientific discovery of the twentieth century, that the discovery of a “simple” chemical reaction that displays periodic temporal and spatial behaviour had far-reaching consequenches, even leading to a greater understanding of the processes that underlie life itself, such as biological clocks and morphogenesis.</p>
+</blockquote>
+<p>Field, Koros and Noyes at the University of Oregon in the 1970’s developed kinetic models of the reaction that were able to explain much of the experimental behaviour. The original model was the FKN model:</p>
+<p><a href="http://www.scholarpedia.org/article/File:Table1.jpg"><img src="http://www.scholarpedia.org/w/images/thumb/4/48/Table1.jpg/700px-Table1.jpg" class="img-fluid"></a></p>
+<p>The actual Belousov-Zhabotinskii reaction is complex, involving many individual steps, and involves the oscillation between the concentration of <span class="math inline">\(HBrO_2\)</span> and <span class="math inline">\(Br^{-}\)</span>. This kinetic model was “reduced” (simplified while retaining major behavior) to the Oregonator model:</p>
+<p><span class="math display">\[\begin{align} k_1 &amp;: A + Y \quad \rightarrow X + P \\ k_2 &amp;: X + Y \quad \rightarrow 2P \\ k_3 &amp;: A + X \quad \rightarrow 2X + 2Z \\ k_4 &amp;: 2X \quad \quad \rightarrow A + P \\ k_5 &amp;: B + Z \quad \rightarrow \frac{1}{2} fY \end{align}\]</span></p>
+<p>Where, <span class="math inline">\(X = HBrO_2, \ Y = Br^{-}, \ Z = Ce(IV), \ A = BrO_3^{-}, \ B = CH_2(COOH)_2\)</span>, and $ P=HOBr$ or <span class="math inline">\(BrCH(COOH)_2\)</span>. <span class="math inline">\(P\)</span> represents the product species.</p>
 </section>
-<section id="limitations-of-the-harmonic-oscillator-model-for-molecular-vibrations" class="level2">
-<h2 class="anchored" data-anchor-id="limitations-of-the-harmonic-oscillator-model-for-molecular-vibrations">Limitations of the Harmonic Oscillator Model for Molecular Vibrations</h2>
-<p>The harmonic oscillation is a great approximation of a molecular vibration, but has key limitations: - Due to equal spacing of energy, all transitions occur at the <em>same</em> frequency (i.e., single line spectrum). However, experimentally, many lines are often observed (called overtones). - The harmonic oscillator does not predict bond dissociation, you cannot break it, no matter how much energy is introduced.</p>
+<section id="oregonator" class="level2">
+<h2 class="anchored" data-anchor-id="oregonator">Oregonator</h2>
+<p>In addition to color changes, selective electrodes can be used to measure ion concentrations. Note the “induction period” before the oscillations start, due partially to bromination of malonic acid. The oscillations eventually die out as the system approaches equilibrium. Field, Koros and Noyes at the University of Oregon in the 1970’s developed kinetic models of the raction that were able to explain much of the experimental behavior. This kinetic model is known as the <em>Oregonator</em>. The Oregonator Mass-Action dynamics in a well-stirred, homogeneous system is given by Eqs.(1)-(3).</p>
+<section id="dynamics-equations" class="level3">
+<h3 class="anchored" data-anchor-id="dynamics-equations">Dynamics Equations</h3>
+<p>The Oregonator Mass-Action dynamics in a well-stirred, homogenenous systems is given by Eqs. (1)-(3).</p>
+<p><span class="math display">\[\begin{align} \frac{d[X]}{dt} &amp;= k_1 [A][Y] - k_2 [X][Y] + k_3 [A][X] - 2k_4 [X]^2 \tag{1} \\ \frac{d[Y]}{dt} &amp;= -k_1 [A][Y] - k_2 [X][Y] + \frac{1}{2} fk_5 [B][Z] \tag{2} \\ \frac{d[Z]}{dt} &amp;= 2k_3 [A][X] - k_5[B][Z] \tag{3} \end{align}, \]</span></p>
+<p>where the adjustable parameter, <span class="math inline">\(f\)</span>, takes values in the range 0-3. ALtough we could go ahead and integrate these equations numerically, it is helpful to scale them dimensionless and reduce the number of constants:</p>
+<p><span class="math display">\[\begin{align} \alpha \frac{dx}{d \tau} &amp;= \gamma y - xy + x(1-x) \tag{4} \\ \beta \frac{dy}{d \tau} &amp;= - \gamma y - xy + fz \tag{5} \\ \frac{dz}{d \tau} &amp;= x -z \tag{6} \end{align}\]</span></p>
+<p>The scaling relationships and parameters in Eqs. (4)-(6) are</p>
+<p><span class="math display">\[\begin{align} x =\frac{2k_4[X]}{k_3[A]}, \ y =\frac{k_2 [Y]}{k_3 [A]}, \ z = \frac{k_4 k_5 [B][Z]}{(k_3 [A])^2} \end{align}\]</span></p>
+<p><span class="math display">\[\begin{align} \alpha =\frac{k_5 [B]}{k_3 [A]}, \ \beta = \frac{2k_4 k_5 [B]}{k_2 k_3 [A]}, \ \gamma =\frac{2k_1 k_4}{k_2 k_3}\end{align}\]</span></p>
+<p>as derived at the end of this chapter.</p>
 </section>
-</section>
-<section id="morse-oscillator-breakdown" class="level1">
-<h1>Morse Oscillator Breakdown</h1>
-<p>The Morse oscillator, named after physicist <a href="https://www.nae.edu/28848/Dr-Philip-M-Morse">Philip M. Morse</a> is a better approximation for the vibrational structure of the molecule than the harmonic oscillator because it explicitly includes</p>
-<p>The Morse oscillator is a model for a particle in a one-dimensional anharmonic potential energy surface with a dissociative limit at infinite displacement. It is commonly used for describing the spectroscopy of diatomic molecules and anharmonic vibrational dynamics, and most of its properties can be expressed through analytically expressions. The Morse potential is</p>
-<p align="center">
-<span class="math display">\[V(x) = D_e[1-e^{-\alpha x}]^2 \tag{1}\]</span>
-</p>
-<p>where <span class="math inline">\(x = (r - r_0)\)</span>, <span class="math inline">\(D_e\)</span> sets the depth of the energy minimu at <span class="math inline">\(r=r_0\)</span> relative to the dissociation limit as <span class="math inline">\(r \rightarrow \infty\)</span>, and <span class="math inline">\(\alpha\)</span> sets the curvature of the potential. If we expand <span class="math inline">\(V\)</span> in powers of <span class="math inline">\(x\)</span> about <span class="math inline">\(x=0\)</span>, the parameter <span class="math inline">\(\alpha = \sqrt{k_e /2D_e}\)</span> and <span class="math inline">\(k_e = \left(\frac{d^2 V}{dx^2} \right)_e\)</span> is the bond force constant at the bottom of the potential well.</p>
-<p>The Morse oscillator Hamiltonian for a diatomic molecule of reduced mass <em>mR</em> bound by the potential is</p>
-<p align="center">
-<span class="math display">\[H = \frac{p^2}{2m_R} + V(x)\]</span>
-</p>
-and has the eigenvalues
-<p align="center">
-<span class="math display">\[E_n = \hbar \omega_0 \left[\left(n + \frac{1}{2} \right) - x_e \left(n + \frac{1}{2} \right)^2 \right] \quad n =0, \ 1, 2, \ 3, \ldots \tag{2}\]</span>
-</p>
-<p>where</p>
-<ul>
-<li><span class="math inline">\(v\)</span> is vibrational quantum number.</li>
-<li><span class="math inline">\(\omega_0 = \sqrt{2 D_e \alpha^2 / m_R}\)</span> is the fundamental frequency.</li>
-<li><span class="math inline">\(x_e = \frac{\hbar \omega_0}{4 D_e}\)</span> is the harmonic constant.</li>
-<li>The frequency <span class="math inline">\(\omega_0\)</span> is equivalent to equating the harmonic for constant <span class="math inline">\(\mathcal{K} = (\partial^2 V/ \partial x^2)_{x=0}\)</span> with <span class="math inline">\(m_R \omega_0^2\)</span>.</li>
-</ul>
-The harmonic oscillator approximation is convenient to use for diatomic molecules with quantized vibrational energy levels given by the following equation:
-<p align="center">
-<span class="math display">\[E_n=v = \left ( v + \frac{1}{2} \right) \omega_e\]</span>
-</p>
-<p>The new energy levels of this <em>anharmonic</em> potential can be found using <em>perturbation theory</em>. We will just write down the result here that we find higher-order corrections to the energy according to:</p>
-<p align="center">
-<span class="math display">\[G(v) = \omega_e \left(v + \frac{1}{2} \right) - \omega_e x_e \left( v + \frac{1}{2} \right)^2 + \omega_e y_e \left(v + \frac{1}{2} \right)^3 + \ldots \tag{3}\]</span>
-</p>
-<p>where <span class="math inline">\(\omega_e\)</span> is the anharmonic oscillator frequency, and <span class="math inline">\(x_e\)</span> is the <em>anharmonic constant</em>, which is typically much smaller than <span class="math inline">\(\omega_e\)</span>.</p>
-<p>While it may seem that the harmonic oscillator and the anharmonic oscillator are closely related, this is in fact not the case. The difference in the wavefunctions leads to a breakdown of selection rules, specifically, <span class="math inline">\(\Delta n = \pm 1\)</span> selection rule can not be applied, and higher order terms must be accounted in the energy calculations.</p>
-On the other note is that anharmonicity also changes the selection rules for IR transitions. For absorption of IR light, we can now have:
-<p align="center">
-<span class="math display">\[\Delta v = +1, \ +2, \ +3, + \ldots\]</span>
-</p>
-<p>where <span class="math inline">\(\Delta n = +1\)</span> are <em>fundamental transition</em> and <span class="math inline">\(\Delta n = +2, \ +3, + \ldots\)</span> are called <em>overtones</em>, and can occur but are much weaker in intensity than the <em>fundamental</em>. Overtone transitions are not always observed, especially in larger molecules, because the transitions become weaker with increasing <span class="math inline">\(Delta n\)</span>.</p>
-<section id="overtones" class="level2">
-<h2 class="anchored" data-anchor-id="overtones">Overtones</h2>
-<p>Based on the harmonic oscillator approximation, the energy of the overtone transition would be <span class="math inline">\(n\)</span> times larger than the energy of the fundamental transition frequency, but the <em>anharmonic oscillator</em> calculations show that the overtones are less than a multiple of the fundamental frequency. This is demonstrated with the vibration of the diatomic in the gas phase:</p>
-<p align="center">
-<span class="math inline">\(\mbox{Table 1. HCl vibrational spectrum}\)</span>
-</p>
-<div data-align="center">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 7%">
-<col style="width: 22%">
-<col style="width: 26%">
-<col style="width: 29%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Transition</th>
-<th style="text-align: center;">Term</th>
-<th style="text-align: center;"><span class="math inline">\(v_{obs} \ [cm^{-1}]\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(v_{Harmonic} \ [cm^{-1}]\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(v_{Anharmonic} \ [cm^{-1}]\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(0 \rightarrow 1\)</span></td>
-<td style="text-align: center;">fundamental</td>
-<td style="text-align: center;">2,885.9</td>
-<td style="text-align: center;">2,885.9</td>
-<td style="text-align: center;">2,885.3</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(0 \rightarrow 2\)</span></td>
-<td style="text-align: center;">first overtone</td>
-<td style="text-align: center;">5,668.0</td>
-<td style="text-align: center;">5,771.8</td>
-<td style="text-align: center;">5,665.0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(0 \rightarrow 3\)</span></td>
-<td style="text-align: center;">second overtone</td>
-<td style="text-align: center;">8,347.0</td>
-<td style="text-align: center;">8,657.7</td>
-<td style="text-align: center;">8,339.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(0 \rightarrow 4\)</span></td>
-<td style="text-align: center;">third overtone</td>
-<td style="text-align: center;">10,923.1</td>
-<td style="text-align: center;">11,543.6</td>
-<td style="text-align: center;">10,907. 4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(0 \rightarrow 4\)</span></td>
-<td style="text-align: center;">fourth overtone</td>
-<td style="text-align: center;">13,396.5</td>
-<td style="text-align: center;">14,429.5</td>
-<td style="text-align: center;">13,370</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>We can see from Table 1, that the anharmonic frequencies correspond much better with the observed frequencies, especially as the vibrational levels increase.</p>
-</section>
-<section id="the-morse-oscillator-schrddoto-dinger-equation" class="level2">
-<h2 class="anchored" data-anchor-id="the-morse-oscillator-schrddoto-dinger-equation">The Morse oscillator <span class="math inline">\(Schr\ddot{o} dinger\)</span> equation</h2>
-<p>Solving the <span class="math inline">\(Schr\ddot{o}dinger\)</span> with the Morse oscillator is not trivial, but can be done analytically in terms of associated <strong>Laguerre polynomials</strong>.</p>
-<p align="center">
-<span class="math display">\[\psi (n) = N_n z^{\lambda - n - \frac{1}{2}} e^{-z / 2} L_n^{2 \lambda - 2n - 1} (z) \quad [in \ cm^{-1}] \tag{4}\]</span>
-</p>
-<p>where</p>
-<ul>
-<li><p><span class="math inline">\(N_n = \sqrt{\frac{n!(2\lambda - 2n - 1)a}{\Gamma (2 \lambda - n)}}, \quad \lambda = \frac{\sqrt{2mD_e}}{a\hbar}\)</span> is normalization constant.</p></li>
-<li><p><span class="math inline">\(\mathcal{L}_n^(\alpha) = \frac{z^{- \alpha} e^z}{v !} \ \frac{d^n}{dz^n} (z^{n + \alpha} e^{-z}), \quad z= 2\lambda e^{-x}\)</span> is a <em>generalized Laguerre Polynomial</em>.</p></li>
-<li><p><span class="math inline">\(n = 0, \ 1, \ 2, \ 3, \ldots, \left[ \lambda - \frac{1}{2} \right]\)</span></p></li>
-</ul>
 </section>
 <section id="preliminaries" class="level2">
 <h2 class="anchored" data-anchor-id="preliminaries">Preliminaries</h2>
-<p><code>scipy.constants</code>: is the package provides the internationally agreed standard values and uncertainties for physical constants include a large number of algorithms for calculating functions that appear in science.</p>
-<p align="center">
-<span class="math display">\[\mbox{Table 1. Physical constants} \ \mathtt{scipy.constant}\]</span>
-</p>
-<div data-align="center">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Constant string</th>
-<th style="text-align: center;">Variable</th>
-<th>Value</th>
-<th>Units</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Planck constant</td>
-<td style="text-align: center;">h</td>
-<td>6.62606957e-34</td>
-<td>J s</td>
-</tr>
-<tr class="even">
-<td>Speed of light in vacuum</td>
-<td style="text-align: center;">c</td>
-<td>299792458.0</td>
-<td>m s-1</td>
-</tr>
-<tr class="odd">
-<td>Avogadro constant</td>
-<td style="text-align: center;">N_A</td>
-<td>6.02214129E+23</td>
-<td>mol-1</td>
-</tr>
-<tr class="even">
-<td>Atomic mass</td>
-<td style="text-align: center;">u</td>
-<td>1.6605390666e-27</td>
-<td>kg</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>The code below defines the class Morse representing a Morse oscillator, which can be used to generate depictions of the wavefunctions and energy levels as given in the example for <span class="math inline">\(HCl\)</span>.</p>
+<p>Scipy’s <code>solve_ivp</code> function can be used to integrate the differential equations of the Oregonator model, given a set of initial conditions, which here we take to be <span class="math inline">\(x=(0) \ y=(0) \ z =(0) \ = 1\)</span>.</p>
 </section>
-<section id="e24.1-inferring-morse-parameters-from-a-vibrational-spectrum" class="level2">
-<h2 class="anchored" data-anchor-id="e24.1-inferring-morse-parameters-from-a-vibrational-spectrum">E24.1 Inferring Morse Parameters from a vibrational spectrum</h2>
-<p>The vibrational spectrum of the <span class="math inline">\(HCl\)</span> molecule shows a fundamental band at <span class="math inline">\(2,885.9 \ cm^{-1}\)</span> and the first overtone band at <span class="math inline">\(5,668.0\)</span>. This information can be used to estimate the Morse parameters, <span class="math inline">\(D_e\)</span> and <span class="math inline">\(\alpha\)</span>, and hence the good strength and maximum vibrational level.</p>
-<p><strong>Solution</strong>: 1. Observe bands to estimate the parameters <span class="math inline">\(\omega_e\)</span> and <span class="math inline">\(\omega_e x_e\)</span>. The fundamental vibrational band, corresponding to the transition <span class="math inline">\(v = 0 \rightarrow 1\)</span>, occurs at a wavenumber given by</p>
-<p align="center">
-<span class="math display">\[v_{0 \rightarrow 1} = G(1) - G(0) = \omega_e - 2\omega_e x_e\]</span>
-</p>
-<p><em>Overtone bands</em>, for which <span class="math inline">\(\Delta &gt; 1\)</span> are predicted to be observed at wavenumber</p>
-<p align="center">
-<span class="math display">\[v_{0 \rightarrow v} = G(v) - G(0) = \omega_e v - \omega_e x_e v(v+1)\]</span>
-</p>
-<p>The observed bands of HCl,</p>
-<p align="center">
-<span class="math display">\[\begin{align} v_{0 \rightarrow 1} &amp;= \omega_e - 2 \omega_e x_e = 2885 \ cm^{-1}, \\ v_{0 \rightarrow 2} &amp;= 2\omega_e - 6\omega_e x_e = 5668 \ cm^{-1} \end{align}\]</span>
-</p>
-Therefore
-<p align="center">
-<span class="math display">\[\begin{align} \omega_e x_e &amp;= \frac{1}{2} (2 v_{0 \rightarrow 1} - v_{0 \rightarrow 2}), \\ \omega_e &amp;= v_{0 \rightarrow 1} + 2 \omega_e x_e \end{align}\]</span>
-</p>
-<ol start="2" type="1">
-<li>Compute the Morse oscillator model</li>
-</ol>
-<p align="center">
-<span class="math display">\[\begin{align} D_e &amp;=\frac{\omega^2}{4 \omega_e x_e} \ \mbox{and} \\ \alpha &amp;=2 \pi c \omega_e \sqrt{\frac{\mu}{2 D_e}} \end{align}\]</span>
-</p>
-<p>where <span class="math inline">\(\mu\)</span> is the reduced mass of the molecule.</p>
-<ol start="4" type="1">
-<li>Calculate the bond strength from the ground state. From eq.1 the ground state (or zero-point) energy is</li>
-</ol>
-<p align="center">
-<span class="math display">\[ E_0 = \frac{1}{2} \hbar \omega_0 (1 - \frac{1}{2} x_e)\]</span>
-</p>
-So the dissociation energy for the Morse potential is given by <span class="math inline">\(D_0 = D_e - E_0\)</span>. The transition energies are
-<p align="center">
-<span class="math display">\[E_n - E_m = \hbar \omega_0 (n - m) \left[1 - x_e \left(n + m + \frac{1}{2} \right) \right]\]</span>
-</p>
-<p>The proper harmonic expressions are obtained from the above for the Morse oscillator by setting <span class="math inline">\(D_e \rightarrow \infty\)</span> or <span class="math inline">\(x_e \rightarrow 0\)</span>.</p>
-<ol start="5" type="1">
-<li>Calculate the highest energy level (<span class="math inline">\(v_{max}\)</span>)</li>
-</ol>
-The vibrational energy levels converge with increasing quantum number, <span class="math inline">\(v\)</span>, the highest energy level, <span class="math inline">\(v_max\)</span> is given by the condition
-<p align="center">
-<span class="math display">\[\begin{align} \frac{d G(v)}{dv} &amp; = 0 \\ \omega_e - 2 \omega_e x_e(v_{max} + \frac{1}{2}) &amp; =0 \\ v_{max} &amp;=\frac{\omega_e}{2 \omega_e x_e} - \frac{1}{2} \end{align}\]</span>
-</p>
-<ol start="6" type="1">
-<li>Plotting the Morse oscillator potential.</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. The parameter we and wexe</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>nu_0_1, nu_0_2 <span class="op">=</span> <span class="dv">2885</span>, <span class="dv">5668</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>wexe <span class="op">=</span> (<span class="dv">2</span> <span class="op">*</span> nu_0_1 <span class="op">-</span> nu_0_2) <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>we <span class="op">=</span> nu_0_1 <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> wexe</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'we = </span><span class="sc">{</span>we<span class="sc">}</span><span class="ss"> cm-1, wexe = </span><span class="sc">{</span>wexe<span class="sc">}</span><span class="ss"> cm^-1'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>we = 2987.0 cm-1, wexe = 51.0 cm^-1</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Compute the Morse oscillator model</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.constants <span class="im">import</span> h, c, N_A, u</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Dissociation energy measured from the potential minimum, cm-1</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>De <span class="op">=</span> we<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">4</span> <span class="op">/</span> wexe</span>
+<section id="exercise" class="level2">
+<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
+<p>The rate constant, <span class="math inline">\(k_i\)</span>, used in the above model relate to the rates of paticular reaction steps in the full mechanism and depend on the solution pH through:</p>
+<p><span class="math display">\[\begin{align} k_1 &amp;=(2.1 \ M^{-3} \ s^{-1}) [H^{+}]^{2} \\ k_2 &amp;= (3 \times 10^{6} \ M^{-2} \ s^{-1}) [H^{+}] \\ k_3 &amp;= (42 \ M^{-2} \ s^{-1}) [H^{+}] \\ k_4 &amp;= (3000 \ M^{-2} \ s^{-1}) [H^{+}] \end{align}\]</span></p>
+<p>The values of <span class="math inline">\(k_1 - k_4\)</span> are calculated from the values of <span class="math inline">\(k_{R2}, \ k_{R3}, \ K_{R4}\)</span> and <span class="math inline">\(k_{R5}\)</span> in Table 1 with <span class="math inline">\([H^+] = 0.8 \ M\)</span>.</p>
+<p>The reactant concentration (which we assume to be constant over the few cycles of the raction studied here) are taken to be [A] = 0.006 M and [B] = 0.02 M.</p>
+<p>The following code performs numerical integration of Field-Noyex equations (4-6) using <code>scipy.integrate.solve_ivp</code> with initial condition are <span class="math inline">\(x_0 = y_0 \ = z_0 \ = 1\)</span>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set environment</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> solve_ivp</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate oregonator</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> deriv(tau, X, alpha, beta, gamma, f):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" Return the derivatives dx/dtau, dy/dtau, and dz/dtau"""</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    x, y, z <span class="op">=</span> X</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    dxdtau <span class="op">=</span> (gamma<span class="op">*</span>y <span class="op">-</span> x<span class="op">*</span>y <span class="op">+</span> x<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>x)) <span class="op">/</span>alpha</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    dydtau <span class="op">=</span> (<span class="op">-</span>gamma<span class="op">*</span>y <span class="op">-</span> x<span class="op">*</span>y <span class="op">+</span> f<span class="op">*</span>z) <span class="op">/</span>beta</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    dzdtau <span class="op">=</span> x <span class="op">-</span> z</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dxdtau, dydtau, dzdtau</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Substitute reactant concentrations A = 0.06 M, B = 0.02 M</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> solve_oregonator(Hp<span class="op">=</span> <span class="fl">0.8</span>, f<span class="op">=</span><span class="dv">1</span>, A<span class="op">=</span><span class="fl">0.06</span>, B<span class="op">=</span><span class="fl">0.02</span>):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Integrate the Oregonator differential equations.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Hp is the H+ concentration in M, f the stoichiometric parameter and A and B the constant reactant concentrations.</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Reduced mass of (1H) (35.5Cl)</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> <span class="dv">1</span> <span class="op">*</span> <span class="fl">35.5</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> <span class="fl">35.5</span>) <span class="op">*</span> u</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute everything to SI units in calculating a: De / J = hc.De / cm-1</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> (c <span class="op">*</span> <span class="dv">100</span>) <span class="op">*</span> we <span class="op">*</span> np.sqrt(mu <span class="op">/</span> <span class="dv">2</span> <span class="op">/</span> (De <span class="op">*</span> h <span class="op">*</span> (c <span class="op">*</span> <span class="dv">100</span>)))</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert a from m-1 to A-1</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>a <span class="op">*=</span> <span class="fl">1.e-10</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'De = </span><span class="sc">{</span>De<span class="sc">:.0f}</span><span class="ss"> cm-1, a = </span><span class="sc">{</span>a<span class="sc">:.1f}</span><span class="ss"> A-1'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>De = 43736 cm-1, a = 1.7 A-1</code></pre>
-<p>The Morse parameter, <span class="math inline">\(D_e\)</span>, is the dissociation energy measured from the potential minimum. The bond strength is the energy required to dissociate the molecule from its ground state (<span class="math inline">\(v =0\)</span>, with energy <span class="math inline">\(G(0) = \frac{1}{2} \omega_e - \frac{1}{4} \omega_e x_e)\)</span>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>E0 <span class="op">=</span> we <span class="op">/</span> <span class="dv">2</span> <span class="op">-</span> wexe <span class="op">/</span> <span class="dv">4</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>D0 <span class="op">=</span> De <span class="op">-</span> E0</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert dissociation energy, D0, to kj.mol-1</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>bond_strength <span class="op">=</span> D0 <span class="op">*</span> h <span class="op">*</span> (c <span class="op">*</span> <span class="dv">100</span>) <span class="op">*</span> N_A <span class="op">/</span> <span class="dv">1000</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f' CO bond strength = </span><span class="sc">{</span>bond_strength<span class="sc">:.0f}</span><span class="ss"> kj.mol-1'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>CO bond strength = 505 kj.mol-1</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the highest energy level ($v_{max}$)</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>vmax <span class="op">=</span> <span class="bu">int</span>(we <span class="op">/</span> <span class="dv">2</span> <span class="op">/</span> wexe <span class="op">-</span> <span class="fl">0.5</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'vmax = </span><span class="sc">{</span>vmax<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>vmax = 28</code></pre>
-<p>To plot the potential energy curve and energy levels, create an array of bind displacement, <span class="math inline">\(x= r - r_e\)</span> and use the Morse oscillator formula <span class="math inline">\(V(x)\)</span>:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 6.  Plotting the Morse oscillator potential.</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Grid of bond displacement values, x = r - re, in Angstrom.</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">3000</span>)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Morse Oscillator potential</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>V <span class="op">=</span> De <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> np.exp(<span class="op">-</span>a<span class="op">*</span>x))<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the Morse Oscillator</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>plt.plot(x, V)</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="vs">r'$(r - r_e) \ \mathrm{\AA}$'</span>)</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="vs">r'$D_e  \ cm^{-1}$'</span>)</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>, De)</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Morse Oscillator Potential with Vibrational Levels of HCl"</span>)</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Arrays of vibrational quantum number nd corresponding energy.</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> np.arange(<span class="dv">0</span>, vmax<span class="op">+</span><span class="dv">1</span>, <span class="dv">1</span>, dtype<span class="op">=</span><span class="bu">int</span>)</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>Ev <span class="op">=</span> np.array([we <span class="op">*</span> (v<span class="op">+</span><span class="fl">0.5</span>) <span class="op">-</span> wexe <span class="op">*</span> (v <span class="op">+</span> <span class="fl">0.5</span>)<span class="op">**</span><span class="dv">2</span>])</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Classical turning points</span></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>xm <span class="op">=</span> <span class="op">-</span> np.log(<span class="dv">1</span> <span class="op">+</span> np.sqrt(Ev <span class="op">/</span> De)) <span class="op">/</span> a</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>xp <span class="op">=</span> <span class="op">-</span> np.log(<span class="dv">1</span> <span class="op">-</span> np.sqrt(Ev<span class="op">/</span> De)) <span class="op">/</span> a</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the energy level as horizontal lines between xm and xp at Ev</span></span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'Morse Oscillator Potential with Vibrational Levels.svg'</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>plt.hlines(Ev, xm, xp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    kp1, kp2, kp3, kp4 <span class="op">=</span> <span class="fl">2.1</span>, <span class="fl">3e6</span>, <span class="dv">42</span>, <span class="fl">3e3</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    k1, k2, k3, k4 <span class="op">=</span> kp1 <span class="op">*</span> Hp<span class="op">**</span><span class="dv">2</span>, kp2 <span class="op">*</span> Hp, kp3 <span class="op">*</span> Hp, kp4 <span class="op">*</span> Hp</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    k5 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    alpha <span class="op">=</span> k5 <span class="op">*</span> B <span class="op">/</span> k3 <span class="op">/</span> A</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    beta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> k4 <span class="op">*</span> k5 <span class="op">*</span> B <span class="op">/</span>k2 <span class="op">/</span>k3 <span class="op">/</span> A</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    gamma <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> k1 <span class="op">*</span> k4 <span class="op">/</span> k2 <span class="op">/</span> k3</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initial and final (scaled) times for the integration.</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    tau_i, tau_f <span class="op">=</span> <span class="dv">0</span>, <span class="dv">40</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initial conditions, x(0), y(0), z(0).</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    x0 <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Solve the differential equations, using the Radau method and</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># implicit Runge-Kutta algorithm suited to stiff ODEs</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    soln <span class="op">=</span> solve_ivp(deriv, (tau_i, tau_f), x0, dense_output<span class="op">=</span><span class="va">True</span>, </span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>                     args <span class="op">=</span> (alpha, beta, gamma, f), method<span class="op">=</span><span class="st">'Radau'</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Interpolate the solution onto a suitable grid of (scaled) times.</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    tau <span class="op">=</span> np.linspace(tau_i, tau_f, <span class="dv">10000</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    x, y, z <span class="op">=</span> soln.sol(tau)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tau, x, y, z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_oregonator(tau, x, y, z):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" Plot the scaled concentrations, x(tau), y(tau) and z(tau)"""</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    fig, axes <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">3</span>, ncols<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">0</span>].plot(tau, np.log10(x), <span class="st">'k'</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">1</span>].plot(tau, np.log10(y), <span class="st">'b'</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">2</span>].plot(tau, np.log10(z), <span class="st">'r'</span>, ls<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">0</span>].set_xticklabels([])</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">1</span>].set_xticklabels([])</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">0</span>].set_ylabel(<span class="vs">r'$\log_</span><span class="sc">{10}</span><span class="vs"> (x) \ (\mathrm</span><span class="sc">{HBrO_2}</span><span class="vs">)$'</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">1</span>].set_ylabel(<span class="vs">r'$\log_</span><span class="sc">{10}</span><span class="vs"> (y) \ (\mathrm{Br^-})$'</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">2</span>].set_ylabel(<span class="vs">r'$\log_</span><span class="sc">{10}</span><span class="vs"> (z) \ (\mathrm{Ce^{4+</span><span class="sc">}}</span><span class="vs">)$'</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    axes[<span class="dv">2</span>].set_xlabel(<span class="vs">r'scaled time, $\tau$'</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>tau, x, y, z <span class="op">=</span> solve_oregonator(Hp<span class="op">=</span><span class="fl">0.8</span>, f<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"oregonator.svg"</span>, bbox_inches <span class="op">=</span> <span class="st">'tight'</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>plot_oregonator(tau, x, y, z)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../quarto-workflows/images/Morse Oscillator Potential with Vibrational Levels of HCl.svg" class="img-fluid figure-img"></p>
-<figcaption>Figure. Morse Oscillator Potential with Vibrational Levels of HCl</figcaption>
+<p><img src="../../quarto-workflows/images/oregonator.svg" class="img-fluid figure-img"></p>
+<figcaption>Figure. Scaled Concentrations of <span class="math inline">\(HBrO_2\)</span>, <span class="math inline">\(Br^-\)</span>, and <span class="math inline">\(Ce^{4+}\)</span> as a function of the scaled time coordinate, <span class="math inline">\(\tau\)</span>, for stoichiomteric parameter, <span class="math inline">\(f=1\)</span></figcaption>
 </figure>
 </div>
+<p>The figure above shows the three ODEs and integration from specified parameters [A] = 0.06 M and [B] = 0.02 M and initial conditions <span class="math inline">\(x_0 = y_0 \ = z_0 \ = 1\)</span>.</p>
 </section>
-</section>
-<section id="conclusion" class="level1">
-<h1>Conclusion</h1>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <ul>
-<li>The Morse oscillator is a bridge of the gap between idealized theory and real molecular behavior.</li>
-<li>Understanding vibrational spectroscopy, chemical bonding, and molecular dissociation is very important.</li>
+<li>The mechanism for the Oregonator model was obtained as a result of “reducing” the 10-step Field, Koros, Noyes (FKN) mecahnism to a 5-step mechanism. It is essential for undertanding how complex (chaos), non linear systems chemical reactions.</li>
+<li>The reduction was done by methods of chemical kinetics, steady state approximation and partial equilibrium approximation.</li>
 </ul>
+</section>
+<section id="reference" class="level2">
+<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<p>[1] <a href="https://doi.org/10.1021/ja00780a001">R.J.Field, E.Koros, R.M. Noyes, <em>J.AM.Chem.Soc</em>. <strong>94</strong>, 8649 (1972)</a></p>
+<p>[2] <a href="http://www.scholarpedia.org/article/Oregonator">R.J. Field, “Oregonator”, Scholarpedia, <strong>2</strong>(5): 1386 (2007)</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1301,13 +1139,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../quarto-workflows/quantum-mechanics/hermite.html" class="pagination-link" aria-label="Vibrational Spectroscopy">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Vibrational Spectroscopy</span>
+      <a href="../../quarto-workflows/data-science/singleorder.html" class="pagination-link" aria-label="Second Order Differential Equations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Second Order Differential Equations</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../quarto-workflows/thermodynamics/adiabatic-process.html" class="pagination-link" aria-label="Adiabatic process and Carnot Cycle">
-        <span class="nav-page-text">Adiabatic process and Carnot Cycle</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../quarto-workflows/quantum-mechanics/particles-2d.html" class="pagination-link" aria-label="Particles in Multidimensions">
+        <span class="nav-page-text">Particles in Multidimensions</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1319,7 +1157,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/anharmonicity.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/data-science/oregonator.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
