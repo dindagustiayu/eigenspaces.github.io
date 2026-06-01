@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-01-21">
 
 <title>adiabatic-process – Random Spaces</title>
 <style>
@@ -393,25 +394,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/numpy-and-matplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aggregation Indexing Boleean</span></a>
+ <span class="menu-text">Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/basicnumpy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">NumPy and Matplotlib</span></a>
+ <span class="menu-text">NumPy and Matplotlib for Physics Problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/chemspy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Storing and Transmitting Chemical Information</span></a>
+ <span class="menu-text">Storing and Transmitting Chemical Database</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/pandas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data structures and Pandas</span></a>
+ <span class="menu-text">Functions, Data Structures, and File Input or Output Using Pandas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -494,7 +495,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Propagation of Uncertainty</span></a>
+ <span class="menu-text">Uncertainty and The Gravitational Acceleration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -518,13 +519,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/hermite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vibrational Spectroscopy</span></a>
+ <span class="menu-text">Hermite Polynomial in Quantum Harmornic Oscillator</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vibrational Anharmonicity</span></a>
+ <span class="menu-text">Vibrational Anharmonicity in Diatomic Molecule</span></a>
   </div>
 </li>
       </ul>
@@ -570,7 +571,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#adiabatic-process-and-carnot-cycle" id="toc-adiabatic-process-and-carnot-cycle" class="nav-link active" data-scroll-target="#adiabatic-process-and-carnot-cycle">Adiabatic process and Carnot Cycle</a></li>
+  <li><a href="#adiabatic-process-and-carnot-cycle" id="toc-adiabatic-process-and-carnot-cycle" class="nav-link active" data-scroll-target="#adiabatic-process-and-carnot-cycle">Adiabatic process and Carnot Cycle</a>
+  <ul class="collapse">
   <li><a href="#introduction-of-thermodynamics" id="toc-introduction-of-thermodynamics" class="nav-link" data-scroll-target="#introduction-of-thermodynamics">Introduction of Thermodynamics</a></li>
   <li><a href="#thermodynamics-cycles" id="toc-thermodynamics-cycles" class="nav-link" data-scroll-target="#thermodynamics-cycles">Thermodynamics Cycles</a></li>
   <li><a href="#internal-energy" id="toc-internal-energy" class="nav-link" data-scroll-target="#internal-energy">Internal Energy</a></li>
@@ -586,20 +588,41 @@ window.Quarto = {
   <li><a href="#step-7-plot-labels" id="toc-step-7-plot-labels" class="nav-link" data-scroll-target="#step-7-plot-labels">Step 7: Plot Labels</a></li>
   <li><a href="#step-8-running-the-code" id="toc-step-8-running-the-code" class="nav-link" data-scroll-target="#step-8-running-the-code">Step 8: Running the code</a></li>
   </ul></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/thermodynamics/adiabatic-process.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/thermodynamics/adiabatic-process.html">Thermodynamics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/thermodynamics/adiabatic-process.html">Adiabatic process and Carnot Cycle</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/thermodynamics/adiabatic-process.html">Thermodynamics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/thermodynamics/adiabatic-process.html">Adiabatic process and Carnot Cycle</a></li></ol></nav>
+<div class="quarto-title">
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 21, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <p><a href="https://github.com/dindagustiayu/Adiabatic-process/blob/main/Thermodynamics-Cycles.py"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
-<section id="adiabatic-process-and-carnot-cycle" class="level2">
-<h2 class="anchored" data-anchor-id="adiabatic-process-and-carnot-cycle">Adiabatic process and Carnot Cycle</h2>
-</section>
+<section id="adiabatic-process-and-carnot-cycle" class="level1">
+<h1>Adiabatic process and Carnot Cycle</h1>
 <section id="introduction-of-thermodynamics" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-of-thermodynamics">Introduction of Thermodynamics</h2>
 <p>Thermodynamics is the study of the relationship between heat (or energy) and work. In other words, thermodynamics looks at how we can put our energy into a system (whether it is a machine or molecule) and make it do work. Alternatively, we might be able to do some work on system and make it produce energy (like spinning the turbines in a power station to produce electricity).</p>
@@ -814,6 +837,7 @@ which leads to
 </div>
 
 
+</section>
 </section>
 </section>
 
@@ -1233,8 +1257,8 @@ which leads to
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="pagination-link" aria-label="Vibrational Anharmonicity">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Vibrational Anharmonicity</span>
+      <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="pagination-link" aria-label="Vibrational Anharmonicity in Diatomic Molecule">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Vibrational Anharmonicity in Diatomic Molecule</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

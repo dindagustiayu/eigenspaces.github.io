@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-05-06">
 
-<title>The Oscillatory Chemical Reactions – Random Spaces</title>
+<title>oregonator – Random Spaces</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -394,25 +394,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/numpy-and-matplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aggregation Indexing Boleean</span></a>
+ <span class="menu-text">Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/basicnumpy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">NumPy and Matplotlib</span></a>
+ <span class="menu-text">NumPy and Matplotlib for Physics Problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/chemspy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Storing and Transmitting Chemical Information</span></a>
+ <span class="menu-text">Storing and Transmitting Chemical Database</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/pandas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data structures and Pandas</span></a>
+ <span class="menu-text">Functions, Data Structures, and File Input or Output Using Pandas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -495,7 +495,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Propagation of Uncertainty</span></a>
+ <span class="menu-text">Uncertainty and The Gravitational Acceleration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -519,13 +519,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/hermite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vibrational Spectroscopy</span></a>
+ <span class="menu-text">Hermite Polynomial in Quantum Harmornic Oscillator</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vibrational Anharmonicity</span></a>
+ <span class="menu-text">Vibrational Anharmonicity in Diatomic Molecule</span></a>
   </div>
 </li>
       </ul>
@@ -571,7 +571,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#oscillating-reactions" id="toc-oscillating-reactions" class="nav-link active" data-scroll-target="#oscillating-reactions">Oscillating Reactions</a>
+  <li><a href="#the-oscillatory-chemical-reactions" id="toc-the-oscillatory-chemical-reactions" class="nav-link active" data-scroll-target="#the-oscillatory-chemical-reactions">The Oscillatory Chemical Reactions</a>
   <ul class="collapse">
   <li><a href="#belousov-zhabotinsky-reaction" id="toc-belousov-zhabotinsky-reaction" class="nav-link" data-scroll-target="#belousov-zhabotinsky-reaction">Belousov-Zhabotinsky reaction</a></li>
   <li><a href="#oregonator" id="toc-oregonator" class="nav-link" data-scroll-target="#oregonator">Oregonator</a>
@@ -592,7 +592,6 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/oregonator.html">The Oscillatory Chemical Reactions</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">The Oscillatory Chemical Reactions</h1>
 </div>
 
 
@@ -616,8 +615,8 @@ window.Quarto = {
 
 
 <p><a href="pyfile/oregonator.py"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
-<section id="oscillating-reactions" class="level1">
-<h1>Oscillating Reactions</h1>
+<section id="the-oscillatory-chemical-reactions" class="level1">
+<h1>The Oscillatory Chemical Reactions</h1>
 <p>It should be clear by now that chemical kinetics is governed by the mathematics of systems of differential equations. Thus far, we have only looked at reaction systems that give rise to purely <em>linear</em> differential equations, however, in many instances the rate equations are nonlinear. When the differential equations are nonlinear, the behaviour is considerably more complex. In particular, nonlinear equations can lead to oscillatory solutions and can also exhibit the phenomenon of <em>chaos</em>.</p>
 <section id="belousov-zhabotinsky-reaction" class="level2">
 <h2 class="anchored" data-anchor-id="belousov-zhabotinsky-reaction">Belousov-Zhabotinsky reaction</h2>

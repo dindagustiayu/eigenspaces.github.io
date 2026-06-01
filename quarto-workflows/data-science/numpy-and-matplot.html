@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-12-09">
 
 <title>numpy-and-matplot – Random Spaces</title>
 <style>
@@ -310,7 +311,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/numpy-and-matplot.html">Aggregation Indexing Boleean</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/numpy-and-matplot.html">Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -393,25 +394,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/numpy-and-matplot.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Aggregation Indexing Boleean</span></a>
+ <span class="menu-text">Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/basicnumpy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">NumPy and Matplotlib</span></a>
+ <span class="menu-text">NumPy and Matplotlib for Physics Problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/chemspy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Storing and Transmitting Chemical Information</span></a>
+ <span class="menu-text">Storing and Transmitting Chemical Database</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/pandas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data structures and Pandas</span></a>
+ <span class="menu-text">Functions, Data Structures, and File Input or Output Using Pandas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -494,7 +495,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Propagation of Uncertainty</span></a>
+ <span class="menu-text">Uncertainty and The Gravitational Acceleration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -518,13 +519,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/hermite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vibrational Spectroscopy</span></a>
+ <span class="menu-text">Hermite Polynomial in Quantum Harmornic Oscillator</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vibrational Anharmonicity</span></a>
+ <span class="menu-text">Vibrational Anharmonicity in Diatomic Molecule</span></a>
   </div>
 </li>
       </ul>
@@ -570,7 +571,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#aggregation-indexing-boleean" id="toc-aggregation-indexing-boleean" class="nav-link active" data-scroll-target="#aggregation-indexing-boleean">Aggregation Indexing Boleean</a>
+  <li><a href="#aggregation-indexing-and-reading-data-into-a-numpy-array-for-physics-problems" id="toc-aggregation-indexing-and-reading-data-into-a-numpy-array-for-physics-problems" class="nav-link active" data-scroll-target="#aggregation-indexing-and-reading-data-into-a-numpy-array-for-physics-problems">Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems</a>
   <ul class="collapse">
   <li><a href="#p6.1---maxwell-boltzmann-distribution" id="toc-p6.1---maxwell-boltzmann-distribution" class="nav-link" data-scroll-target="#p6.1---maxwell-boltzmann-distribution">P6.1 - Maxwell-Boltzmann Distribution</a></li>
   <li><a href="#p6.2-maxwell-boltzmann-distribution" id="toc-p6.2-maxwell-boltzmann-distribution" class="nav-link" data-scroll-target="#p6.2-maxwell-boltzmann-distribution">P6.2 Maxwell Boltzmann Distribution</a></li>
@@ -582,15 +583,36 @@ window.Quarto = {
 <div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/data-science/numpy-and-matplot.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/numpy-and-matplot.html">Aggregation Indexing Boleean</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/numpy-and-matplot.html">Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems</a></li></ol></nav>
+<div class="quarto-title">
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 9, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <p><a href="https://github.com/dindagustiayu/Aggregation-Indexing-Boleean-and-Reading-Data-into-Numpy-Array-for-Physics-problems./tree/main"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
-<section id="aggregation-indexing-boleean" class="level1">
-<h1>Aggregation Indexing Boleean</h1>
+<section id="aggregation-indexing-and-reading-data-into-a-numpy-array-for-physics-problems" class="level1">
+<h1>Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems</h1>
 <ul>
 <li>This work aims to apply the main function for reading text files and statistically summarizing the values into a Numpy array.</li>
 <li>Important Numpy data, including: <code>genfromtxt</code>, <code>min</code>, <code>max</code>, <code>sign</code>, <code>sum</code>, <code>std</code>, and others in solving physics problems by Python 3 and Jupyter Notebook.</li>
@@ -1479,8 +1501,8 @@ Energy steps (E1-E30) (J): -5.416e-10</code></pre>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../quarto-workflows/data-science/basicnumpy.html" class="pagination-link" aria-label="NumPy and Matplotlib">
-        <span class="nav-page-text">NumPy and Matplotlib</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../quarto-workflows/data-science/basicnumpy.html" class="pagination-link" aria-label="NumPy and Matplotlib for Physics Problems">
+        <span class="nav-page-text">NumPy and Matplotlib for Physics Problems</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

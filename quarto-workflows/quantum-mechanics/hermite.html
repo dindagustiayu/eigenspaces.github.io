@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-04-13">
 
 <title>hermite – Random Spaces</title>
 <style>
@@ -310,7 +311,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/hermite.html">Vibrational Spectroscopy</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/hermite.html">Hermite Polynomial in Quantum Harmornic Oscillator</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -393,25 +394,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/numpy-and-matplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aggregation Indexing Boleean</span></a>
+ <span class="menu-text">Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/basicnumpy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">NumPy and Matplotlib</span></a>
+ <span class="menu-text">NumPy and Matplotlib for Physics Problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/chemspy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Storing and Transmitting Chemical Information</span></a>
+ <span class="menu-text">Storing and Transmitting Chemical Database</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/pandas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data structures and Pandas</span></a>
+ <span class="menu-text">Functions, Data Structures, and File Input or Output Using Pandas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -494,7 +495,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Propagation of Uncertainty</span></a>
+ <span class="menu-text">Uncertainty and The Gravitational Acceleration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -518,13 +519,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/hermite.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Vibrational Spectroscopy</span></a>
+ <span class="menu-text">Hermite Polynomial in Quantum Harmornic Oscillator</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vibrational Anharmonicity</span></a>
+ <span class="menu-text">Vibrational Anharmonicity in Diatomic Molecule</span></a>
   </div>
 </li>
       </ul>
@@ -570,8 +571,9 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#vibrational-spectroscopy" id="toc-vibrational-spectroscopy" class="nav-link active" data-scroll-target="#vibrational-spectroscopy">Vibrational Spectroscopy</a>
+  <li><a href="#hermite-polynomial-in-quantum-harmornic-oscillator" id="toc-hermite-polynomial-in-quantum-harmornic-oscillator" class="nav-link active" data-scroll-target="#hermite-polynomial-in-quantum-harmornic-oscillator">Hermite Polynomial in Quantum Harmornic Oscillator</a>
   <ul class="collapse">
+  <li><a href="#vibrational-spectroscopy" id="toc-vibrational-spectroscopy" class="nav-link" data-scroll-target="#vibrational-spectroscopy">Vibrational Spectroscopy</a></li>
   <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link" data-scroll-target="#preliminaries">Preliminaries</a></li>
   <li><a href="#mathematical-prerequisites" id="toc-mathematical-prerequisites" class="nav-link" data-scroll-target="#mathematical-prerequisites">Mathematical Prerequisites</a></li>
   <li><a href="#quantum-mechanical-prerequisites" id="toc-quantum-mechanical-prerequisites" class="nav-link" data-scroll-target="#quantum-mechanical-prerequisites">Quantum Mechanical Prerequisites</a></li>
@@ -590,18 +592,42 @@ window.Quarto = {
 <div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/hermite.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/hermite.html">Vibrational Spectroscopy</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/hermite.html">Hermite Polynomial in Quantum Harmornic Oscillator</a></li></ol></nav>
+<div class="quarto-title">
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 13, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <p><a href="https://github.com/dindagustiayu/Hermite-Polynomials/blob/main/Hermite%20Polynomials%20in%20QHO.py"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
-<section id="vibrational-spectroscopy" class="level1">
-<h1>Vibrational Spectroscopy</h1>
+<section id="hermite-polynomial-in-quantum-harmornic-oscillator" class="level1">
+<h1>Hermite Polynomial in Quantum Harmornic Oscillator</h1>
+<section id="vibrational-spectroscopy" class="level2">
+<h2 class="anchored" data-anchor-id="vibrational-spectroscopy">Vibrational Spectroscopy</h2>
 <p><strong>What is it?</strong>: Vibrational spectroscopy detects transitions between the quantised vibrational energy levels associated with bond stretching and/or bond angle bending in molecules.</p>
 <p><strong>How do we do it?</strong>: Transitions are observed by measuring the amount of infrared radiation that is absorbed or emitted by vibrating molecules in solid, liquid, or gas phases.</p>
 <p><strong>Why do we do it?</strong>: A knowledge of the vibrational level spacings gives us the value of the stretching (or bending) force constants which characterise the stiffness of a bond, allows us to estimate the bond dissociation energy, and gives us a means of identifying characteristic functional groups of atoms within large molecules.</p>
+</section>
 <section id="preliminaries" class="level2">
 <h2 class="anchored" data-anchor-id="preliminaries">Preliminaries</h2>
 <ul>
@@ -1387,8 +1413,8 @@ The normalized classical probability density function is therefore
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="pagination-link" aria-label="Vibrational Anharmonicity">
-        <span class="nav-page-text">Vibrational Anharmonicity</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="pagination-link" aria-label="Vibrational Anharmonicity in Diatomic Molecule">
+        <span class="nav-page-text">Vibrational Anharmonicity in Diatomic Molecule</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

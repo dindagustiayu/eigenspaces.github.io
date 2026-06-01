@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-04-16">
 
 <title>anharmonicity – Random Spaces</title>
 <style>
@@ -310,7 +311,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html">Vibrational Anharmonicity</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html">Vibrational Anharmonicity in Diatomic Molecule</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -393,25 +394,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/numpy-and-matplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aggregation Indexing Boleean</span></a>
+ <span class="menu-text">Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/basicnumpy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">NumPy and Matplotlib</span></a>
+ <span class="menu-text">NumPy and Matplotlib for Physics Problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/chemspy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Storing and Transmitting Chemical Information</span></a>
+ <span class="menu-text">Storing and Transmitting Chemical Database</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/pandas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data structures and Pandas</span></a>
+ <span class="menu-text">Functions, Data Structures, and File Input or Output Using Pandas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -494,7 +495,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Propagation of Uncertainty</span></a>
+ <span class="menu-text">Uncertainty and The Gravitational Acceleration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -518,13 +519,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/hermite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vibrational Spectroscopy</span></a>
+ <span class="menu-text">Hermite Polynomial in Quantum Harmornic Oscillator</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Vibrational Anharmonicity</span></a>
+ <span class="menu-text">Vibrational Anharmonicity in Diatomic Molecule</span></a>
   </div>
 </li>
       </ul>
@@ -570,7 +571,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#vibrational-anharmonicity" id="toc-vibrational-anharmonicity" class="nav-link active" data-scroll-target="#vibrational-anharmonicity">Vibrational Anharmonicity</a>
+  <li><a href="#vibrational-anharmonicity-in-diatomic-molecule" id="toc-vibrational-anharmonicity-in-diatomic-molecule" class="nav-link active" data-scroll-target="#vibrational-anharmonicity-in-diatomic-molecule">Vibrational Anharmonicity in Diatomic Molecule</a>
   <ul class="collapse">
   <li><a href="#beyond-the-harmonic-oscillator" id="toc-beyond-the-harmonic-oscillator" class="nav-link" data-scroll-target="#beyond-the-harmonic-oscillator">Beyond The Harmonic Oscillator</a></li>
   <li><a href="#anharmonicity" id="toc-anharmonicity" class="nav-link" data-scroll-target="#anharmonicity">Anharmonicity</a></li>
@@ -588,15 +589,36 @@ window.Quarto = {
 <div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/anharmonicity.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html">Vibrational Anharmonicity</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html">Vibrational Anharmonicity in Diatomic Molecule</a></li></ol></nav>
+<div class="quarto-title">
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 16, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <p><a href="https://github.com/dindagustiayu/The-Morse-Oscillator/blob/main/Vibrational%20levels.html"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
-<section id="vibrational-anharmonicity" class="level1">
-<h1>Vibrational Anharmonicity</h1>
+<section id="vibrational-anharmonicity-in-diatomic-molecule" class="level1">
+<h1>Vibrational Anharmonicity in Diatomic Molecule</h1>
 <section id="beyond-the-harmonic-oscillator" class="level2">
 <h2 class="anchored" data-anchor-id="beyond-the-harmonic-oscillator">Beyond The Harmonic Oscillator</h2>
 <p>Let’s now consider two ways in which the vibrational structure of “real molecules” is more complicated than what we’ve seen for the harmonic oscillator.</p>
@@ -1326,8 +1348,8 @@ The vibrational energy levels converge with increasing quantum number, <span cla
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../quarto-workflows/quantum-mechanics/hermite.html" class="pagination-link" aria-label="Vibrational Spectroscopy">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Vibrational Spectroscopy</span>
+      <a href="../../quarto-workflows/quantum-mechanics/hermite.html" class="pagination-link" aria-label="Hermite Polynomial in Quantum Harmornic Oscillator">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Hermite Polynomial in Quantum Harmornic Oscillator</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

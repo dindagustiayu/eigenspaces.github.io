@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-12-06">
 
 <title>basicnumpy – Random Spaces</title>
 <style>
@@ -310,7 +311,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/basicnumpy.html">NumPy and Matplotlib</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/basicnumpy.html">NumPy and Matplotlib for Physics Problems</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -393,25 +394,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/numpy-and-matplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Aggregation Indexing Boleean</span></a>
+ <span class="menu-text">Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/basicnumpy.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">NumPy and Matplotlib</span></a>
+ <span class="menu-text">NumPy and Matplotlib for Physics Problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/chemspy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Storing and Transmitting Chemical Information</span></a>
+ <span class="menu-text">Storing and Transmitting Chemical Database</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/pandas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data structures and Pandas</span></a>
+ <span class="menu-text">Functions, Data Structures, and File Input or Output Using Pandas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -494,7 +495,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Propagation of Uncertainty</span></a>
+ <span class="menu-text">Uncertainty and The Gravitational Acceleration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -518,13 +519,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/hermite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vibrational Spectroscopy</span></a>
+ <span class="menu-text">Hermite Polynomial in Quantum Harmornic Oscillator</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vibrational Anharmonicity</span></a>
+ <span class="menu-text">Vibrational Anharmonicity in Diatomic Molecule</span></a>
   </div>
 </li>
       </ul>
@@ -570,7 +571,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#numpy-and-matplotlib" id="toc-numpy-and-matplotlib" class="nav-link active" data-scroll-target="#numpy-and-matplotlib">NumPy and Matplotlib</a>
+  <li><a href="#numpy-and-matplotlib-for-physics-problems" id="toc-numpy-and-matplotlib-for-physics-problems" class="nav-link active" data-scroll-target="#numpy-and-matplotlib-for-physics-problems">NumPy and Matplotlib for Physics Problems</a>
   <ul class="collapse">
   <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference:</a></li>
   <li><a href="#p5.1---correct-einsteins-mistakes" id="toc-p5.1---correct-einsteins-mistakes" class="nav-link" data-scroll-target="#p5.1---correct-einsteins-mistakes">P5.1 - Correct Einstein’s mistakes</a></li>
@@ -584,15 +585,36 @@ window.Quarto = {
 <div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/data-science/basicnumpy.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/basicnumpy.html">NumPy and Matplotlib</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/basicnumpy.html">NumPy and Matplotlib for Physics Problems</a></li></ol></nav>
+<div class="quarto-title">
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 6, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <p><a href="https://github.com/dindagustiayu/Basic-NumPy-and-Matplotlib-for-solving-physics-problems./tree/main"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
-<section id="numpy-and-matplotlib" class="level1">
-<h1>NumPy and Matplotlib</h1>
+<section id="numpy-and-matplotlib-for-physics-problems" class="level1">
+<h1>NumPy and Matplotlib for Physics Problems</h1>
 <p>This work aims to applying the concept of <strong>NumPy array and Matplotlib</strong> for solving physics problems by Python 3 and Jupyter Notebook. There are some solutions for tasks in this Python code.</p>
 <section id="reference" class="level2">
 <h2 class="anchored" data-anchor-id="reference">Reference:</h2>
@@ -1312,13 +1334,13 @@ In classical physics, we define the momentum <span class="math inline">\(\mathno
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../quarto-workflows/data-science/numpy-and-matplot.html" class="pagination-link" aria-label="Aggregation Indexing Boleean">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Aggregation Indexing Boleean</span>
+      <a href="../../quarto-workflows/data-science/numpy-and-matplot.html" class="pagination-link" aria-label="Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../quarto-workflows/data-science/chemspy.html" class="pagination-link" aria-label="Storing and Transmitting Chemical Information">
-        <span class="nav-page-text">Storing and Transmitting Chemical Information</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../quarto-workflows/data-science/chemspy.html" class="pagination-link" aria-label="Storing and Transmitting Chemical Database">
+        <span class="nav-page-text">Storing and Transmitting Chemical Database</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
