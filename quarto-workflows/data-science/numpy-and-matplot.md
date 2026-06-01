@@ -1,5 +1,4 @@
 ---
-title: "Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems"
 date: "2025-12-09"
 ---
 
@@ -7,7 +6,7 @@ date: "2025-12-09"
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Aggregation-Indexing-Boleean-and-Reading-Data-into-Numpy-Array-for-Physics-problems./tree/main)
 
 
-# Aggregation Indexing Boleean
+# Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems
 - This work aims to apply the main function for reading text files and statistically summarizing the values into a Numpy array.
 - Important Numpy data, including: `genfromtxt`, `min`, `max`, `sign`, `sum`, `std`, and others in solving physics problems by Python 3 and Jupyter Notebook.
 

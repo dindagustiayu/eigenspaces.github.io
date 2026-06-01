@@ -1,5 +1,4 @@
 ---
-title: "The Moment Inertia of a Molecule"
 date: "2026-2-4"
 ---
 

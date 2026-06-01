@@ -1,5 +1,4 @@
 ---
-title: "Linear Algebra in Balancing a Chemical Reaction"
 date: "2026-2-1"
 ---
 

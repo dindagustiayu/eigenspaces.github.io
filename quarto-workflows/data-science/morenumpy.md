@@ -1,5 +1,4 @@
 ---
-title: "Numpy functions in atomic scale"
 date: "2025-12-24"
 ---
 

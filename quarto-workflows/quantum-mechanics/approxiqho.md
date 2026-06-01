@@ -1,5 +1,4 @@
 ---
-title: "Approximation in Quantum Chemistry"
 date: "2026-4-7"
 ---
 

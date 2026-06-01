@@ -1,5 +1,4 @@
- ---
-title: "Hermite Polynomial in Quantum Harmornic Oscillator"
+---
 date: "2026-4-13"
 ---
 
@@ -7,7 +6,9 @@ date: "2026-4-13"
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Hermite-Polynomials/blob/main/Hermite%20Polynomials%20in%20QHO.py)
 
-# Vibrational Spectroscopy
+# Hermite Polynomial in Quantum Harmornic Oscillator
+
+## Vibrational Spectroscopy
 __What is it?__: Vibrational spectroscopy detects transitions between the quantised vibrational energy levels associated with bond stretching and/or bond angle bending in molecules.
 
 __How do we do it?__: Transitions are observed by measuring the amount of infrared radiation that is absorbed or emitted by vibrating molecules in solid, liquid, or gas phases.

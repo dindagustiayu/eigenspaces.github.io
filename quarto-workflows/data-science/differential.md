@@ -1,5 +1,4 @@
 ---
-title: "Ordinary Differential Equation of Chemistry"
 date: "2026-4-26"
 ---
 

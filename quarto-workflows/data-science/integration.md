@@ -1,5 +1,4 @@
- ---
-title: "Basic Integration"
+---
 date: "2026-3-01"
 ---
 

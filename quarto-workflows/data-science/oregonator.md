@@ -1,11 +1,10 @@
 ---
-title: "The Oscillatory Chemical Reactions"
 date: "2026-5-6" 
 ---
 [![](https://colab.research.google.com/assets/colab-badge.svg)](pyfile/oregonator.py)
 
 
-# Oscillating Reactions
+# The Oscillatory Chemical Reactions
 
 It should be clear by now that chemical kinetics is governed by the mathematics of systems of differential equations. Thus far, we have only looked at reaction systems that give rise to purely _linear_ differential equations, however, in many instances the rate equations are nonlinear. When the differential equations are nonlinear, the behaviour is considerably more complex. In particular, nonlinear equations can lead to oscillatory solutions and can also exhibit the phenomenon of _chaos_.
 

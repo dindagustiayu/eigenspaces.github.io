@@ -1,5 +1,4 @@
 ---
-title: "The Steady-State Approximation"
 date: "2025-12-14"
 ---
 

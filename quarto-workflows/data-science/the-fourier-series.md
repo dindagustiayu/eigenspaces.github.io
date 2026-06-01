@@ -1,10 +1,9 @@
 ---
-title: "The Fourier Series"
 date: "2026-1-19"
 ---
 
 
-[![](https://colab.research.google.com/assets/colab-badge.svg)](Fourier-series.py)
+[![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Fourier-Series/blob/main/Fourier-series.py)
 
 # The Fourier Series
 People are generally comfortable thinking about functions of time. For example, a signal might be described as $X(t)$, where $t$ is time. This referred to as the "time domain". However, it is often useful to think of signals and sytems in the "frequency domain", where frequency, instead of time, is the independent variable, e.g., $X(f)$, where $f$ is frequency. 

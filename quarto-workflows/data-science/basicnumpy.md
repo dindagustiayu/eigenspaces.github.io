@@ -1,11 +1,10 @@
 ---
-title: "Numpy and Matplot for Physics Problems"
 date: "2025-12-06"
 ---
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Basic-NumPy-and-Matplotlib-for-solving-physics-problems./tree/main)
 
-# NumPy and Matplotlib
+# NumPy and Matplotlib for Physics Problems
 This work aims to applying the concept of __NumPy array and Matplotlib__ for solving physics problems by Python 3 and Jupyter Notebook. There are some solutions for tasks in this Python code.
 
 ## Reference:

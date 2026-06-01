@@ -1,11 +1,10 @@
 ---
-title: "Storing and Transmitting Chemical Database"
 date: "2025-12-09"
 ---
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/ChemSpiPy-PySMILES-InChI-of-Chemistry-Database/blob/main/Chemistry-Database.html)
 
-# Storing and Transmitting Chemical Information
+# Storing and Transmitting Chemical Database
 
 In research and education, computers and internet have been widely adopted. There is many formats, online service and software packages that can be used for learning of molecules and atoms in dynamics simulation. The basic format consists of:
 

@@ -1,5 +1,4 @@
 ---
-title: "Multiple Integrals"
 date: "2026-3-07"
 ---
 

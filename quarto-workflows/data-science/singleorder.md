@@ -1,5 +1,4 @@
 ---
-title: "Second ODE of Quantum Harmonic Oscillator"
 date: "2026-5-6"
 ---
 

@@ -1,5 +1,4 @@
 ---
-title: "Adiabatic process and Carnot Cycle"
 date: "2026-1-23"
 ---
 

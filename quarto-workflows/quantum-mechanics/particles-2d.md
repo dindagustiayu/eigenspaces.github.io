@@ -1,5 +1,4 @@
 ---
-title: "Particle in 2D box"
 date: "2026-1-20"
 ---
 

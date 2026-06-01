@@ -44,7 +44,7 @@
   {
     "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#introduction-of-thermodynamics",
     "href": "quarto-workflows/thermodynamics/adiabatic-process.html#introduction-of-thermodynamics",
-    "title": "Random Spaces",
+    "title": "Adiabatic process and Carnot Cycle",
     "section": "Introduction of Thermodynamics",
     "text": "Introduction of Thermodynamics\nThermodynamics is the study of the relationship between heat (or energy) and work. In other words, thermodynamics looks at how we can put our energy into a system (whether it is a machine or molecule) and make it do work. Alternatively, we might be able to do some work on system and make it produce energy (like spinning the turbines in a power station to produce electricity).\nIn chemistry, we sometimes speak more broadly about “energetics” of reactions (rather than thermodynamics), because energy given off during a reaction may simply be lost to the surroundings without doing useful work. Nevertheless, the ideas are the same: energy can be added to a set of molecules in order to produce a reaction, or a reaction can occur between a set of molecules in order to release energy.\nThermodynamics, on the other hand, is really concerned with the overall energy change from the beginning of a reaction to the end. It compares the energies of two sets of molecules to each other: the nergies of the reactants and the energies of the products.",
     "crumbs": [
@@ -56,7 +56,7 @@
   {
     "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#thermodynamics-cycles",
     "href": "quarto-workflows/thermodynamics/adiabatic-process.html#thermodynamics-cycles",
-    "title": "Random Spaces",
+    "title": "Adiabatic process and Carnot Cycle",
     "section": "Thermodynamics Cycles",
     "text": "Thermodynamics Cycles\nA thermodynamic cycle consists of a linked sequence of thermodynamic processes that involve transfer of heat and work into and out of the system, while varying pressure, temperature, and other state variables within the system, and eventually return the system to its initial state.\nThermodynamics is concerned with the change in \\(U\\) (and other functions) between states:\n\n\\(\\Delta U= U_{2}-U{1}\\)\n\nsince \\(U\\) is a state function, the path between these states does not affect the value of \\(\\Delta U\\): We can choose the path that is easiest to calculate \\(\\Delta U\\) for, knowing that this quantity is the same for all paths.",
     "crumbs": [
@@ -68,7 +68,7 @@
   {
     "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#internal-energy",
     "href": "quarto-workflows/thermodynamics/adiabatic-process.html#internal-energy",
-    "title": "Random Spaces",
+    "title": "Adiabatic process and Carnot Cycle",
     "section": "Internal Energy",
     "text": "Internal Energy\nThe internal energy, \\(U\\), of a thermodynamic system is the total energy, potential and kinetic, contained within it. For systems in equilibrium, the internal state can be thought of as entirely defined by the temperature, \\(T\\), volume, \\(V\\), pressure, \\(p\\), and composition, \\(N_{i}\\), of the system.",
     "crumbs": [
@@ -80,7 +80,7 @@
   {
     "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#adiabatic-process",
     "href": "quarto-workflows/thermodynamics/adiabatic-process.html#adiabatic-process",
-    "title": "Random Spaces",
+    "title": "Adiabatic process and Carnot Cycle",
     "section": "Adiabatic process",
     "text": "Adiabatic process\nAn adiabatic process is one in which no heat is gained or lost by the system. The first law of thermodynamics with Q=0 shows that all the change in internal energy is in the form of work done.\nAn important alternative way the gas can expand is through an adiabatic process: if the cylinder is insulated so it is thermally isolated from its surroundings, \\(q=0\\) and as it does expansion wirk its internal energy must decrease, \\(\\Delta U = w &lt; 0\\) and its temperature drops. The reverse process, adiabatic compression, is familiar from inflating a bicycle tyre: As the air in the pump is compressed (rapidly enough that there is little time for heat flow to the surroundings) its temperature rises.\n\n\\(\\frac{C_{v}}{nR} \\frac{dT}{T} = -\\frac{dV}{V}\\)\n\nwhich can be integrated for a reversible expansion between the state (\\(V_{1}, T_{1})\\)) and (\\(V_{2}, T_{2})\\)) to give\n\n\\(\\frac{C_V}{nR}ln \\frac{dT}{T} = -ln\\frac{V_{2}}{V_{1}}\\)\n\nThis expression is usually presented in the quivalent form \\(T_{1} V_{1}^{c}=T_{2} V_{2}^{c}\\) where \\(c=\\frac{C_{v}}{nR}\\). The corresponding relation between pressure and volume is found from the fact that, for an ideal gas\n\n\\(\\frac{T_{2}}{V_{2}} = \\frac{p_{2}V_{2}}{p_{1}V_{1}}\\)\n\nwhich leads to\n\n\\(p_{1}V_{1}^{\\gamma}=p_{2}V_{2}^{\\gamma}\\)\n\nfor a (monoatomic) ideal gas. That is, \\(pV^{\\gamma}\\) is constant along an adiabat.",
     "crumbs": [
@@ -92,7 +92,7 @@
   {
     "objectID": "quarto-workflows/thermodynamics/adiabatic-process.html#carnot-cycle",
     "href": "quarto-workflows/thermodynamics/adiabatic-process.html#carnot-cycle",
-    "title": "Random Spaces",
+    "title": "Adiabatic process and Carnot Cycle",
     "section": "Carnot Cycle",
     "text": "Carnot Cycle\nAnother important thermodynamic cycle, the Carnot cycle, is based on a sequence of reversible isothermal and adiabatic processes between four states, A, B, C, and D.\nI. \\(A\\rightarrow B\\): a reversible isothermal has expansion process from a state \\((p_{A}, V_{A})\\) to \\((p_{B}, V_{B})\\) at a high temperature, \\(T_{high}\\). During this step, the system absorbs \\(q_{in}\\), expands and does work surroundings.\n\n\\(B\\rightarrow C\\): a reversible adiabatic gas expansion process from state \\((p_{B}, V_{B})\\) to \\((p_{C}, V_{C})\\) at a lower temperature, \\(T_{low}\\). This time the system is placed in thermal contact with a reservoir which receives heat.\n\\(C\\rightarrow D\\): a reversible isothermal gas compression process from state \\((p_{C}, V_{C})\\) to \\((p_{D}, V_{D})\\) at a contant temperature, \\(T_{low}\\), and causes a loss of heat, \\(q_{out}\\).\n\\(D\\rightarrow A\\): a reversible adiabatic gas compression process from state \\((p_{D}, V_{D})\\) to \\((p_{A}, V_{A})\\). The system is insulated so no heat can flow and its temperature returns to \\(T_{high}\\).\n\nThis Python script to illustrate the Carnot Cycle with labelled plot for states A, B, C, and D with following parameters:\n\n\\(V_{1}=0.2 m^{3}\\)\n\\(T_{high}\\)= 800 K$\nIsothermal compression ratio, \\(r_{i}=V_{B}/V_{A}=2\\)\nAdiabatic compression ratio,\\(r_{a}=V_{C}/V_{B}=2\\)\n\nDemonstrate that the efficiency, defined as \\(\\nu=w/q-hot\\) where \\(w\\) is the work done and \\(q-hot\\) is the heat put into system in step \\(A\\rightarrow B\\), is given by,\n\n\\(\\nu=1-\\frac{T_{cold}}{T_{hot}}\\)\n\n\nStep 1: Set up and use function\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.constants import R\n\n# number of molecule gas\nn = 1\ndef get_p(V, T):\n    \"\"\"\n    Return the pressure of 1 mol of an ideal gas at (V, T).\n    \"\"\"\n    return n * R * T / V\n\ndef plot_isotherm(Vmin, Vmax, T, c='k'):\n    \"\"\"\n    plot a single isoterm for temperature T between Vmin and Vmax.\n    Returns the arrays of V, p values defining the isoterm.\n    \"\"\"\n    V = np.linspace(Vmin, Vmax, 1000)\n    p = get_p(V, T)\n    plt.plot(V, p, c=c, label=f'{T:.1f} K', lw=1)\n    return V, p\n\ndef plot_adiabatic(Vmin, Vmax, p0, V0, c='k', gamma=5/3):\n    \"\"\"\n    plot a single adiabatic for between Vmin and Vmax.\n    p0, V0, is a fixed point on the adiabatic, the function returns the arrays of V, p values defining the adiabatic.\n    \"\"\"\n    V = np.linspace(Vmin, Vmax, 1000)\n    p = p0 * (V/V0)**(-gamma)\n    plt.plot(V, p, c=c, lw=1)\n    return V, p\n\ndef carnot_cycle(V1, T_high, r_i, r_a):\n    \"\"\"\n    Plot a p-V diagram for a Carnot Cycle for an ideal gas starting at a compressed state (V1, T_high) \n    defined by isothermal compression ratio \n    r_i = V2/V1 and adiabatic compression ratio, \n    r_a = V3/V2.\n    \"\"\"\n\n    # Constant-volume heat capacity, \"gamma\" parameter (Cp/Cv)\n    C_V, gamma = 3/2 * R, 5/3\n\n\nStep 2: Volumes at each state\n    # Calculate the state variables at each stage of the cycle.\n    V2 = V1 * r_i\n    V3 = V2 * r_a\n    V4 = V3 * V1/V2\n\n\\(V_{1}\\): initial compressed volume.\n\\(V_{2}\\): after isothermal expansion (ratio, \\(r_{i}\\)).\n\\(V_{3}\\): after adiabatic expansion (ratio \\(r_{a})\\).\n\\(V_{4}\\): after isothermal compression, derived so the cycle closes.\n\n\n\nStep 3: Pressures and Temperature\n    # State Pressure \n    p1, p2 = get_p(V1, T_high), get_p(V2, T_high)\n    T_low = T_high * (V2/V3) ** (gamma - 1)\n    p3, p4 = get_p(V3, T_low), get_p(V4, T_low)\n\nCompute pressures at each state using ideal gas law.\n\\(T_{low}\\) is found from adiabatic relation, \\(TV^{\\gamma-1}\\)\n\n\n\nStep 4: Plot the cycle\n# Plot the isotherms and adiabatic for the cycle.\n    plot_isotherm(V1, V2, T_high, c='r')\n    plot_adiabatic(V2, V3, p2, V2, c='g', gamma=gamma)\n    plot_isotherm(V4, V3, T_low, c='b')\n    plot_adiabatic(V1, V4, p1, V1, c='m', gamma=gamma)\n\nRed = isothermal expansion (high temperature).\nGreen = adiabatic expansion.\nBlue = isothermal compression(low temperature).\nMagenta = adiabatic compression.\n\n\n\nStep 5: Work and Heat calculation\n# Step 1: isothermal expansion, V1 =&gt; v2 AT T_high\n    w1 = - n * R * T_high * np.log(V2 / V1)\n    q1 = -w1\n\n    # Step 2: adiabatic expansion, (V2, T_high) =&gt; (V3, T_low)\n    w2 = n * C_V * (T_low - T_high)\n    q2 = 0\n\n    # Step 3: Isothermal compression, V3 =&gt; V4, at T_low\n    w3 = -n * R * T_low * np.log(V4 / V3)\n    q3 = -w3\n\n    # Step 4: adiabatic compression, (V4, T_low =&gt; V1, T_high).\n    w4 = n * C_V * (T_high - T_low)\n    q4 = 0\n\nWork and heat are calculated for each step.\nisothermal \\(w = -nRT(V_{final}-V_{initial})\\).\nAdiabatic, \\(w = nC_{V}(T_{final}-T_{initial})\\).\nHeat \\(q\\) is zero for adiabatic steps.\n\n\n\nStep 6: Efficiency\n    # Total energy input through heating:\n    q_in = q1\n\n    # Total work done *on* the gas:\n    w_total = w1 + w2 + w3 + w4\n\n    # Efficiency\n    eta = -w_total /q_in\n    print('Efficiency = {:.1f} %'.format(eta * 100))\n    \n\nEfficiency = work output/heat input\nPrints Carnot efficiency.\n\n\n\nStep 7: Plot Labels\n  # Label the states\n    states = [(p1, V1), (p2, V2), (p3, V3), (p4, V4)]\n    for i, (p, V) in enumerate(states):\n        plt.text(V, p, \"ABCD\" [i])\n\n\nStep 8: Running the code\n# Run\n\nplt.figure(figsize=(6, 5))\ncarnot_cycle(V1=0.01, T_high=800, r_i=2, r_a=2)\nplt.savefig('Carnot Cycle p-V Diagram (Ideal Gas).svg', bbox_inches='tight')\nplt.show()\n\nCreates a figure\nRuns the Carnot Cycle with chosen parameters.\nSaves the plot as an SVG.\nDisplays the diagram.\n\nEfficiency = 37.0%\n\n\n\nFigure 1. Carnot Cycle p-V Diagram (Ideal Gas)",
     "crumbs": [
@@ -192,63 +192,63 @@
   {
     "objectID": "quarto-workflows/data-science/string-list.html#key-equation",
     "href": "quarto-workflows/data-science/string-list.html#key-equation",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "title": "Strings, List and Loops, Comparison and Flow Control for Chemistry Exercises",
     "section": "Key Equation",
     "text": "Key Equation\n\nDensity Computations\n\n\\(\\rho=\\frac{m}{v}=\\frac{nA}{V_{C}N_{A}}\\)\n\nAvogadro’s number\n\n6.022 x \\(10^{23}\\), 1 amu/atom (or molecule) = 1 g/mol"
   },
   {
     "objectID": "quarto-workflows/data-science/string-list.html#p3.1",
     "href": "quarto-workflows/data-science/string-list.html#p3.1",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "title": "Strings, List and Loops, Comparison and Flow Control for Chemistry Exercises",
     "section": "P3.1",
     "text": "P3.1\nProduce a nicely formatted list of the values of the physical constants, h, c, \\(k_{B}\\), R, and \\(N_{A}\\), to four significant figures, with their units.\nh, h_units = 6.62607015e-34, 'J.s'\nc, c_units = 299792458, 'm.s-1'\nkB, kB_units = 1.380649e-23, 'J.K-1'\nR, R_units = 8.314462618, 'J.K.mol-1'\nN_A, N_A_units = 6.02214076e+23, 'mol-1'\n\ns1 = (f'h = {h:9.3e} {h_units}\\t'\n     f'c = {c:9.3e} {c_units}\\t' \n      f'kB = {kB:9.3e} {kB_units}\\t'\n       f'R = {R:9.3e} {R_units}\\t'\n        f'N_A = {N_A:9.3e} {N_A_units}\\t')\n\ns2 = (f'h   = {h:9.3e}{h_units}\\n'\n      f'c   = {c:9.3e}{c_units}\\n' \n      f'kB  = {kB:9.3e}{kB_units}\\n'\n      f'R   = {R:9.3e}{R_units}\\n'\n      f'N_A = {N_A:9.3e}{N_A_units}\\n')\nprint(s1)\n\nprint(s2)\nh = 6.626e-34 J.s   c = 2.998e+08 m.s-1 kB = 1.381e-23 J.K-1    R = 8.314e+00 J.K.mol-1 N_A = 6.022e+23 mol-1   \nh   = 6.626e-34J.s\nc   = 2.998e+08m.s-1\nkB  = 1.381e-23J.K-1\nR   = 8.314e+00J.K.mol-1\nN_A = 6.022e+23mol-1"
   },
   {
     "objectID": "quarto-workflows/data-science/string-list.html#p3.2",
     "href": "quarto-workflows/data-science/string-list.html#p3.2",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "title": "Strings, List and Loops, Comparison and Flow Control for Chemistry Exercises",
     "section": "P3.2",
     "text": "P3.2\nThe following variables define some thermodynamic properties of \\(CO_{2}\\) and \\(H_{2}O\\).\n# Triple point of CO2 (K, Pa)\nT3_CO2, p3_CO2 = 216.58, 5.185e5\n# Entalphy of fusion of CO2 (kJ.mol-1).\nDfusH_CO2 = 9.019\n# Entrophy of fusion os CO2 (J.K-1.mol-1).\nDfusS_CO2 = 40\n# Entalphy of vaporization of CO2 (kJ.mol-1).\nDvapH_CO2 = 15.326\n# Entrophy of vaporization of CO2 (J.K-1.mol-1).\nDvapS_CO2 = 70.8\n\n# Triple point of H2O (K, Pa)\nT3_H2O, p3_H2O = 273.16, 611.73\n# Entalphy of fusion of H2O (kJ.mol-1).\nDfusH_H2O = 6.01\n# Entrophy of fusion of H2O (J.K-1.mol-1).\nDfusS_H2O = 22.0\n# Entalphy of vaporization of H2O (kJ.mol-1).\nDvapH_H2O = 40.68\n# Entrophy of vaporization of H2O (J.K-1.mol-1).\nDvapS_H2O = 118.89\n\nprint(' '*22 + 'CO2' + ' '*9 + 'H20')\nprint('_'*40)\nprint('p3     /pa         ', f'{p3_CO2:5.0f}      {p3_H2O:5.2f}')\nprint('T3     /K          ', f'{T3_CO2:5.2f}      {T3_H2O:5.2f}')\nprint('DfusH  /kJ.mol-1   ', f'{DfusH_CO2:5.3f}       {DfusH_H2O:5.3f}')\nprint('DfusS  /J.K-1.mol-1', f'{DfusS_CO2:4.1f}      {DfusS_H2O:6.1f}')\nprint('DvapH  /kJ.mol-1   ', f'{DvapH_CO2:5.3f}    {DvapH_H2O:8.3f}')\nprint('DvapS  /j.k-1.mol-1', f'{DvapS_CO2:5.1f}       {DvapS_H2O:5.1f}')\n                      CO2         H20\n________________________________________\np3     /pa          518500      611.73\nT3     /K           216.58      273.16\nDfusH  /kJ.mol-1    9.019       6.010\nDfusS  /J.K-1.mol-1 40.0        22.0\nDvapH  /kJ.mol-1    15.326      40.680\nDvapS  /j.k-1.mol-1  70.8       118.9"
   },
   {
     "objectID": "quarto-workflows/data-science/string-list.html#p3.3",
     "href": "quarto-workflows/data-science/string-list.html#p3.3",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "title": "Strings, List and Loops, Comparison and Flow Control for Chemistry Exercises",
     "section": "P3.3",
     "text": "P3.3\nNuclear binding energy and the mass defect. A neutron has a slightly larger mass than the proton. These are often given in terms of an atomic mass unit, where one atomic mass unit (u) is defined as 1/12th the mass of a carbon-12 atom.\n# Mass Particle constant, in kg.\natomic_kg = 1.660540 * 10 ** -27\nneutron_kg = 1.674929 * 10 ** -27\nproton_kg = 1.672623 * 10 ** -27 \nelectron_kg = 9.109390 * 10 ** -31\n\n# Mass particle, in u.\natomic_u = 1.000 \nneutron_u = neutron_kg / atomic_kg \nproton_u = proton_kg / atomic_kg\nelectron_u = electron_kg / atomic_kg\n\n# Mass particle, in MeV/c2\natomic_ev = 931.5\nneutron_ev = neutron_u * atomic_ev\nproton_ev = proton_u * atomic_ev\nelectron_ev = electron_u * atomic_ev\n\n\ntitle = '|' + ' '*19 + '{:43}'.format('Binding Nuclear Energy') + '|'\nline = '+' + '-'*16 + '+' + ('-'*14 + '+')*3\nrow = '|{:&lt;15} |' + ' {:12} |'*3\nheader = '| {:^14} |'.format('Particle') + (' {:^12} |'*3). format('Mass (kg)', 'Mass (u)', 'Mass (Mev/c2)')\n\nprint('+' + '-'*(len(title)-2) + '+',\n      title,\n      line,\n      header,\n      line,\n      row.format('atomic mass', atomic_kg, f'{atomic_u:8.3f}', f'{atomic_ev:6}'),\n      row.format('neutron', neutron_kg, f'{neutron_u:8.7f}', f'{neutron_ev:8.2f}'),\n      row.format('proton', proton_kg, f'{proton_u:8.7f}', f'{proton_ev:8.2f}'), \n      row.format('electron', electron_kg, f'{electron_u:8.7f}', f'{electron_ev:8.3f}'),\n      line,\n      sep='\\n')\n                                                                   \n+--------------------------------------------------------------+\n|                   Binding Nuclear Energy                     |\n+----------------+--------------+--------------+--------------+\n|    Particle    |  Mass (kg)   |   Mass (u)   | Mass (Mev/c2) |\n+----------------+--------------+--------------+--------------+\n|atomic mass     |  1.66054e-27 |    1.000     |  931.5       |\n|neutron         | 1.674929e-27 | 1.0086653    |   939.57     |\n|proton          | 1.672623e-27 | 1.0072765    |   938.28     |\n|electron        |  9.10939e-31 | 0.0005486    |    0.511     |\n+----------------+--------------+--------------+--------------+"
   },
   {
     "objectID": "quarto-workflows/data-science/string-list.html#list-and-loops",
     "href": "quarto-workflows/data-science/string-list.html#list-and-loops",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "title": "Strings, List and Loops, Comparison and Flow Control for Chemistry Exercises",
     "section": "2. List and Loops",
     "text": "2. List and Loops"
   },
   {
     "objectID": "quarto-workflows/data-science/string-list.html#p3.4",
     "href": "quarto-workflows/data-science/string-list.html#p3.4",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "title": "Strings, List and Loops, Comparison and Flow Control for Chemistry Exercises",
     "section": "P3.4",
     "text": "P3.4\nStraight-chain alkanes are hydrocarbons with the general stoichiometric formula \\(C_{n}H_{2n+2}\\), in which the carbon atoms form a simple shain: for example, butane, \\(C_{4}H_{10}\\) has the structural formula that may be depicted \\(H_{3}CC_{2}CH_{2}CH_{3}\\). Write a progra, to output the structural formula of such an alkane, given its stoichiometry (assume \\(n\\geq1\\)).\n# Assume n = 5\nstoich = 'C5H12'\nfragments = stoich.split('H')\nnC = int(fragments[0][1:])\nnH = int(fragments[1])\nif nH != 2*nC + 2:\n    print('{} is not alkane!'.format(atoich))\nelse:\n    print('H\\u2083C', end='')\n    for i in range(nC-2):\n        print('-CH\\u2082', end='')\n    print('-CH\\u2083')\nH₃C-CH₂-CH₂-CH₂-CH₃"
   },
   {
     "objectID": "quarto-workflows/data-science/string-list.html#p3.5",
     "href": "quarto-workflows/data-science/string-list.html#p3.5",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "title": "Strings, List and Loops, Comparison and Flow Control for Chemistry Exercises",
     "section": "P3.5",
     "text": "P3.5\nProduce a table if the FCC element symbols abd their corresponding atomic radius (nm) and atomic weight (g/mol).\nsymbols = ['Al', 'Cu', 'Au', 'Pb', 'Ni', 'Pt', 'Ag']\nAtomic_radiuss = [0.1431, 0.1278, 0.1442, 0.1750, 0.1246, 0.1387, 0.1445]\nAtomic_weigth = [26.981, 63.546, 196.966, 206.14, 58.693, 195.084, 107.868]\nline = '-'*52\nprint(line)\nprint('Elements | Atomic Radii (nm) | Atomic weight (g/mol)')\nprint(line)\nfor i in range(len(symbols)):\n    print(' '*2, symbols[i], ' '*5, Atomic_radiuss[i], ' '*13, Atomic_weigth[i])\n    print(line)\n----------------------------------------------------\nElements | Atomic Radii (nm) | Atomic weight (g/mol)\n----------------------------------------------------\n   Al       0.1431               26.981\n----------------------------------------------------\n   Cu       0.1278               63.546\n----------------------------------------------------\n   Au       0.1442               196.966\n----------------------------------------------------\n   Pb       0.175               206.14\n----------------------------------------------------\n   Ni       0.1246               58.693\n----------------------------------------------------\n   Pt       0.1387               195.084\n----------------------------------------------------\n   Ag       0.1445               107.868\n----------------------------------------------------"
   },
   {
     "objectID": "quarto-workflows/data-science/string-list.html#p3.6",
     "href": "quarto-workflows/data-science/string-list.html#p3.6",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "title": "Strings, List and Loops, Comparison and Flow Control for Chemistry Exercises",
     "section": "P3.6",
     "text": "P3.6\nreference: - Atomic radii of the elements\nAlumunium, copper and lead has an atomic radius of 121, 132, and 146 nm, respectively, an FCC crystal structure, and atomic weight of 26.98, 63.55, and 207.20 g/mol. Compute their theoretical density and compare the answer with their measured density.\nin the FCC unit cell illustrated, the atoms touch one another across a face-diagonal, the length of which is 4R. Because the unit cell is a cube, its volume is \\(a^{3}\\), where a is the cell edge length. From the right triangle on the face.\n\n\\[a^{2} + a^{2} = (4R)^{2}\\]\n\nSolving for a,\n\n\\[a=2R\\sqrt{2}\\]\n\nThe FCC unit cell volume \\(V_{C}\\) may be computed from\n\n\\[V_{C}=a^{3}=(2\\sqrt{2})^{3}=16R^{3}\\sqrt{2}\\]\n\nimport numpy as np\n# Avogadro's number , in atoms/mol.\nNA = 6.022 * 10 **23\n\n# The number of atoms per unit cell in FCC\nn = 4\n\n# The atomic weight, and Radii of atoms (use floats/ints instead of strings)\nAtomics = ['Al', 'Cu', 'Pb'] # use string ' '\nA_weight = [26.98, 63.55, 207.20] # atomic weights in g/mol use float\nRadii = [143 * 10 **-10, 128 * 10 **-10, 180 * 10 **-10] # radii in cm (converted from pm) use float/integers\n\n# Computational density\nfor atom, weight, radius in zip(Atomics, A_weight, Radii):\n    V_cell = 16 * (radius**3) * np.sqrt(2)\n    m_cell = 4 * weight\n    rho = m_cell / (V_cell *NA)\n    print(f\" {atom}: V_cell={V_cell:.3e} cm^3, m_cell={m_cell:.3e} g, rho={rho:.3f} g/cm^3\")\n Al: V_cell=6.617e-23 cm^3, m_cell=1.079e+02 g, rho=2.708 g/cm^3\n Cu: V_cell=4.745e-23 cm^3, m_cell=2.542e+02 g, rho=8.895 g/cm^3\n Pb: V_cell=1.320e-22 cm^3, m_cell=8.288e+02 g, rho=10.429 g/cm^3"
   },
   {
     "objectID": "quarto-workflows/data-science/string-list.html#p3.7",
     "href": "quarto-workflows/data-science/string-list.html#p3.7",
-    "title": "Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.",
+    "title": "Strings, List and Loops, Comparison and Flow Control for Chemistry Exercises",
     "section": "P3.7",
     "text": "P3.7\nDetermine whether each of the following electron configurations is an inert gas, a halogen, an alkali metal, an alkaline earth metal, or a transition metal. Justify your choices.\n(a) 1s2.2s2.2p6.3s2.3p5\n(b) 1s2.2s2.2p6.3s2.3p6.3d7.4s2\n(c) 1s2.2s2.2p6.3s2.3p6.3d7.4s2.4P6\n(d) 1s2.2s2.2p6.3s2.3p6.4s1\n(e) 1s2.2s2.2p6.3s2.3p6.3d7.4s2.4p6.4d10.5s2\n(f) 1s2.2s2.2p6.3s2\n# Electron configuration\nconfigs = {\n    '(a)': '1s2.2s2.2p6.3s2.3p5',\n    '(b)': '1s2.2s2.2p6.3s2.3p6.3d7.4s2',\n    '(c)': '1s2.2s2.2p6.3s2.3p6.3d10.4s2.4p6',\n    '(d)': '1s2.2s2.2p6.3s2.3p6.4s1',\n    '(e)': '1s2.2s2.2p6.3s2.3p6.3d7.4s2.4p6.4d5.5s2',\n    '(f)': '1s2.2s2.2p6.3s2'}\n\ndef classify_configuration(cfg: str):\n    subshells = cfg.split(\".\")\n    parsed = []\n\n    # Parse subshells into (n, orbital, electrons)\n    for s in subshells:\n        try:\n            n = int(s[0])          # principal quantum number\n            orbital = s[1]         # orbital type (s, p, d, f)\n            electrons = int(s[2:]) # electron count\n            parsed.append((n, orbital, electrons))\n        except:\n            continue\n\n    if not parsed:\n        return \"Unknown\"\n\n    #Classify configuration electron by the last and the second-last subshells\n    last_orbital, last_e = parsed[-1][1], parsed[-1][2]\n    second_orbital, second_e = parsed[-2][1], parsed[-2][2] if len(parsed) &gt;= 2 else (None, None)\n\n    # Rules\n    if last_orbital == \"p\" and last_e == 6:\n        return \"Inert gas (Noble gas)\"\n    elif last_orbital == \"p\" and last_e == 5:\n        return \"Halogen\"\n    elif last_orbital == \"s\" and last_e == 1:\n        return \"Alkali metal\"\n    elif last_orbital == \"s\" and last_e ==2:\n        if second_orbital == \"p\" and second_e == 6:\n            return \"Akaline Earth metal\"\n        elif second_orbital ==\"d\" and second_e &lt;10:\n            return \"Transition metal\"\n \n# print results\nfor label, cfg in configs.items():\n    print(f\"{label} {cfg} =&gt; {classify_configuration(cfg)}\")\n(a) 1s2.2s2.2p6.3s2.3p5 =&gt; Halogen\n(b) 1s2.2s2.2p6.3s2.3p6.3d7.4s2 =&gt; Transition metal\n(c) 1s2.2s2.2p6.3s2.3p6.3d10.4s2.4p6 =&gt; Inert gas (Noble gas)\n(d) 1s2.2s2.2p6.3s2.3p6.4s1 =&gt; Alkali metal\n(e) 1s2.2s2.2p6.3s2.3p6.3d7.4s2.4p6.4d5.5s2 =&gt; Transition metal\n(f) 1s2.2s2.2p6.3s2 =&gt; Akaline Earth metal"
   },
@@ -593,145 +593,145 @@
   {
     "objectID": "quarto-workflows/data-science/numpy-and-matplot.html#p6.1---maxwell-boltzmann-distribution",
     "href": "quarto-workflows/data-science/numpy-and-matplot.html#p6.1---maxwell-boltzmann-distribution",
-    "title": "Aggregation Indexing Boleean",
+    "title": "Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems",
     "section": "P6.1 - Maxwell-Boltzmann Distribution",
     "text": "P6.1 - Maxwell-Boltzmann Distribution\nWrite a function to the plot the Maxwell-Boltzmann Distribution of molecular speed for a gas of particles of a given mass at a given temperature, indicating the modal speed (\\(v_{*}\\)), mean (\\(\\langle v \\rangle\\)), and root mean square (rms, \\(\\langle v^{2} \\rangle^{1/2}\\)) speeds with vertical lines.\nCall this function for the atomic gasses Helium (m = 4u), and Argon (m = 40u) at 300 K.\nHints: The modal speed is the maximum of the probability distribution and can be found \\(df/dv\\). The mean and rms speeds can be obtained, respectively, from the integrals.\n\n\\[\\langle v \\rangle = \\int_{0}^{\\infty} vf(v)\\] and \\[\\langle v^{2} \\rangle = \\int_{0}^{\\infty} v^{2}f(v) dv\\].\n\nThe following expression for the different types of average speed can be derived:\n\n\\(v_{*} = \\sqrt{\\frac{2k_{B}T}{m}}\\) (mode)\n\\(\\langle v \\rangle = \\sqrt{\\frac{8k_{B}T}{\\pi m}}\\) (mean)\n\\(\\langle v^{2} \\rangle^{1/2} = \\sqrt{\\frac{3k_{B}T}{m}}\\) (rms speed).\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Boltzman constant, J.K-1, atomis mass unit (kg)\nkB, u = 1.381e-23, 1.661e-27\n\n# Gas particle masses, in kg\nm_He, m_Ar = 4 * u, 40 * u\n\n# Temperature in K\nT = 300\n\n# The value of the Maxwell-Boltzmann distribution\ndef fMB(v, T, m): # mass in kg, at temperature in K, at the speed v (in m.s-1)\n    fac = m /2 /kB/T\n    return (fac / np.pi)**1/5 * 4 * np.pi * v**2 * np.exp(-fac * v **2)\n\n# The mode, mean and root-mean-square average speeds for the Maxwell-Boltzmann distribution\ndef MB_averages (T, m):\n    fac = kB * T / m # return the mode, mean, and root-mean-square average speeds for the Maxwell-Boltzmann distribution for a gas particle of mass and T.\n    mode = np.sqrt(2*fac)\n    mean = np.sqrt(8 * fac / np.pi)\n    rms = np.sqrt(3*fac)\n    return mode, mean, rms\n\ndef plot_MB(T, m, label, color='black', ls='-'):\n\n# A grid of speeds between 0 and vmax\n    vmax = 3000\n    v = np.linspace(0, vmax, 3000)\n\n# Calculate and plot the Maxwell-Boltzmann distribution\n    fv = fMB(v, T, m)\n    plt.plot(v, fv, color=color, ls=ls, label=label)\n\n# Calculate the various averages\n    mode, mean, rms = MB_averages(T, m)\n# it will be useful to have the value of the distribution maximum\n    fmax = np.max(fv)\n\n# Plot straight lines from 0 to the corresponding point on the distrubution curve for each of the averages\n    plt.plot([mode, mode], [0, fmax], c ='gray')\n    plt.plot([mean, mean], [0, fMB(mean, T, m)], c ='gray')\n    plt.plot([rms, rms], [0, fMB(rms, T, m)], c='gray')\n\n# Add labels: use a bit of trial and error to get the placement right\n    plt.text(mode, fmax*1.05, 'mode', ha='center')\n    plt.text(mean, fmax, 'mean')\n    plt.text(rms, fmax*0.95, 'rms')\n\n# set the y limit from zero to 10% above the distribution maximum\n    plt.ylim(0, fmax*1.1)\n    plt.legend()\n\n# Plot He and Ar distribution\nplt.plot(figsize=(8,6))\nplot_MB(T, m_He, 'He', color='orange')\nplot_MB(T, m_Ar, 'Ar', color='blue', ls='--')\nplt.xlabel('Speed v /m.s-1', fontsize=14)\nplt.ylabel('Density f(v) /s.m-1', fontsize=14)\nplt.legend()\nplt.legend(framealpha=0.7, fontsize=14, loc='upper right', bbox_to_anchor=(0.98, 1))\nplt.grid(True, color='gray', zorder=0, linestyle='--')\nplt.savefig('Maxwell-Boltzmann Distribution of He and Ar.svg', bbox_inches='tight')\nplt.show()\n\n\n\nFigure 1. Maxwell-Boltzmann Distribution of He and A",
     "crumbs": [
       "Contents",
       "Data Science",
-      "Aggregation Indexing Boleean"
+      "Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems"
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/numpy-and-matplot.html#p6.2-maxwell-boltzmann-distribution",
     "href": "quarto-workflows/data-science/numpy-and-matplot.html#p6.2-maxwell-boltzmann-distribution",
-    "title": "Aggregation Indexing Boleean",
+    "title": "Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems",
     "section": "P6.2 Maxwell Boltzmann Distribution",
     "text": "P6.2 Maxwell Boltzmann Distribution\nThe Maxwell-Boltzmann equation, the basis of the kinetic thoery of gases, defines the distribution of speeds for a gas at a certain temperature. The Maxwell-Boltzmann distribuiton can be used to determine the distribution of the kinetic energy is identical to the distribution of the speeds for a certain gas at any temperature, T:\n\n\\[f(v)=4\\pi V^{2}(\\frac{m}{2\\pi k_{B}T})^{3/2}e^{\\frac{-mv^{2}}{2k_{B}T}}\\]\n\nThe key Functions and Argument:\n\ndef: starts the function\nreturn: sends back the computed value when the function is called\nfor loop: iterate over multiple items\nzip: combines multiple list into tuples\nnp.linspace: generate evenly spaced numbers (start/beginning range, stop/end of range, num/number of points)\nplt.rxParams: control global plot settings(fonts, sizes, styles)\nplt.legend: show labels for each curve\n\nCalculated speed distribution of particles in He, Ne, Ar, and Xe, with temperature at 300 K.\nReference: - The Maxwell-Boltzmann - P.33 Atomic Mass Unit\n# Use a python function to calculate the distribution.\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nkB, u = 1.381e-23, 1.661e-27 #Boltzmann constant (J/K) and atomic mass unit in kg\nT = 300 # Temperature in K\n\n# Value the Maxwell-Boltzmann ditribution (fMB)\ndef fMB(v, m, T): # the speed molecule in gass (m/s), temperature (K), and mass (kg).\n    fac = m / 2 / kB / T\n    return(4 * np.pi * v**2 * (fac /np.pi)**1.5 * np.exp(-fac*v**2))\n\n# A grid of speed between 0 and vmax\nvmax = 3000\nv = np.linspace(0, vmax, 500)\n\n# the molar mass in kg of the He, Ne, Ar, and Xe\natomic_mass = [4, 20.17, 39.94, 131.29]\nelements = ['He', 'Ne', 'Ar', 'Xe']\ntab_colors = ['tab:purple', 'tab:cyan', 'tab:orange', 'tab:gray'] # Tab color list\n\n# Plot distributions of Maxwell-Boltzmann\nplt.figure(figsize=(8,6))\nfor element, mu, color in zip(elements, atomic_mass, tab_colors):\n    m = mu * u # mu is mass in unit in kg\n    fv = fMB(v, m, T)\n    plt.plot(v, fv, label=element, color=color)\n    plt.fill_between(v, fv, color=color, alpha=0.5, zorder=0.8)\n\nplt.rcParams['font.family'] ='sans-serif'\nplt.title('Probability Density of He, Ne, Ar, and Xe at T = 300 K', fontsize=16, zorder=0.8)\nplt.xlabel('v /m.s-1', fontsize=14)\nplt.ylabel('f(v) /s.m-1', fontsize=14)\nplt.legend()\nplt.legend(framealpha=0, fontsize=14, loc='upper right', bbox_to_anchor=(0.98, 1))\nplt.grid(True, color='gray', zorder=0, linestyle='--')\nplt.savefig('Probability Density of He, Ne, Ar, and Xe at T = 300 K.svg', bbox_inches='tight')\nplt.show()\n\n\n\nFigure 2. Probability Density of He, Ne, Ar, and Xe at T = 300 K",
     "crumbs": [
       "Contents",
       "Data Science",
-      "Aggregation Indexing Boleean"
+      "Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems"
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/numpy-and-matplot.html#p6.3---the-lennard-jones-interatomic-potential",
     "href": "quarto-workflows/data-science/numpy-and-matplot.html#p6.3---the-lennard-jones-interatomic-potential",
-    "title": "Aggregation Indexing Boleean",
+    "title": "Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems",
     "section": "P6.3 - The Lennard-Jones Interatomic Potential",
     "text": "P6.3 - The Lennard-Jones Interatomic Potential\nThe Lennard-Jones potential is given by the following equation:\n\n\\[V(r) = 4\\epsilon[(\\frac{\\sigma}{r})^{12}-(\\frac{\\sigma}{r})^{6}]\\]\n\nor sometimes expressed as:\n\n\\[V(r)=\\frac{A}{r^{12}}-\\frac{B}{r^{6}}\\]\n\nreference: Lennard-Jones Potential\nThe key argument:\n\nplt and pyplot: matplotlib’s functionality\nplt.xlim and plt.ylim: set the plot limits manually\nlinestyle, linewidth, color, marker: matplotlib properties\nzorder: controls the drawing order\ndef: introduces a function definition\nreturn: specifies the output of the function; without return, a function gives back None by default.\n\n\nThe \\(\\epsilon\\) and \\(\\sigma\\) for Xenon are found to be 1.77 kJ/mol and 4.10 Angstroms, respectively is the separation distance at which the potential is zero: \\(V(\\sigma)=0\\). Determine the van der Waals radius for the Xenon atom. Simply plotting V(r) on a grid _r_values will not yield a very satisfying graph.\nCalculate the intermolecular potential between two Argon (Ar) atoms separated by a distance of 4.0 \\(\\mathring{\\text{A}}\\) (use \\(\\epsilon=0.997\\) kJ/mol and \\(\\sigma=3.40 \\mathring{\\text{A}}\\)).\n\n# (a) Determine the van der Waals radius for the Xenon atom\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nrmax = 10\nr = np.linspace(0.1, rmax, 1000)\n# Lennard-Jones Parameters for Xe: well depth (kJ/mol) and distance at which\n# the interaction potential between the two atoms is zero (Angstrom)\nE, sigma = 1, 3.54\n\ndef LJ(r, E, sigma): # LJ mean Lennard-Jones\n    fac = (sigma / r)**6\n    return 4 * E * (fac**2 - fac)\n\nVr = LJ(r, E, sigma)\n\n# Here, the dominance of the repulsive term in the potential (r-12) leads to extremely large values of V(r) at small r, so that the attractive well region (V(r)&lt;0) is not visible. The solution is to set the plot limits appropiately.\n# start the distance axis at 2 Angstroms.\nx = r\ny = Vr\nxmin, xmax = 2, rmax\nymin, ymax = -E, 0.5*E\n\nplt.xlim(2, rmax)\n# Limit the y-range to between the bottom of the well and a half the magnitude\n# of the well depth.\nplt.ylim(-E, 0.5*E)\nplt.axhline(y=0, color='red', linestyle='-', lw=1.5)\n                 \nplt.xlabel('r / A', fontsize=14)\nplt.ylabel('V(r) / kJ.mol-1)', fontsize=14)\nplt.title('Lennard-Jones Potential for Xenon', fontsize=18)\nplt.scatter(x, y, lw=0.5, s=None, c='navy', marker=None, zorder=6, label='Intermolecular Potential between Atoms')\nplt.legend()\nplt.legend(framealpha=0.5, fontsize=10)\nplt.grid(True, color='gray', zorder=0)\nplt.savefig('Lennard-Jones.svg', bbox_inches='tight')\nplt.show()\n\nplt.figure(figsize=(6,5)) # the fisrt graph, extremely large values\nplt.plot(r, Vr, color='navy')\nplt.xlabel('r / A')\nplt.ylabel('V(r) / kJ.mol-1)')\nplt.title('Lennard-Jones Potential for Xenon')\nplt.savefig('Lennard-Jones Potential for Xenon.svg', bbox_inches='tight')\nplt.show()\n\n\n\nFigure 3. Lennard-Jones Potential for Xenon\n\n\n#Calculate the intermolecular potential between the two Argon atoms\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nrmax = 4\nr = np.linspace(0.05, rmax, 100)\n# Lennard-Jones Parameters for Xe: well depth (kJ/mol) and distance at which\n# the interaction potential between the two atoms is zero (Angstrom)\nE, sigma = 1, 3.40\n\ndef LJ(r, E, sigma): # LJ mean Lennard-Jones\n    fac = (sigma / r)**6\n    return 4 * E * (fac**2 - fac)\n\nVr = LJ(r, E, sigma)\n# Here, the dominance of the repulsive term in the potential (r-12) leads to extremely large values of V(r) at small r, so that the attractive well region (V(r)&lt;0) is not visible. The solution is to set the plot limits appropiately.\n# start the distance axis at 2 Angstroms.\nx = r\ny = Vr\nxmin, xmax = 3, rmax\nymin, ymax = -E, 1*E\n\nplt.xlim(3, rmax)\n# Limit the y-range to between the bottom of the well and a half the magnitude\n# of the well depth.\nplt.ylim(-E, 1*E)\nplt.axhline(y=0, color='red', linestyle='-', lw=1.5)                \nplt.xlabel('r / A', fontsize=14)\nplt.ylabel('V(r) / kJ.mol-1)', fontsize=14)\nplt.title('Lennard-Jones Potential for Xenon', fontsize=18)\nplt.scatter(x, y, lw=0.5, s=None, c='navy', marker=None, zorder=4, label='Intermolecular Potential between atoms')\nplt.legend()\nplt.legend(framealpha=0.5, fontsize=10)\nplt.grid(True, color='gray', zorder=0)\nplt.savefig('LJ for Xenon.svg', bbox_inches='tight')\nplt.show()\n\n\n\nFigure 4. Lennard-jones for Xenon",
     "crumbs": [
       "Contents",
       "Data Science",
-      "Aggregation Indexing Boleean"
+      "Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems"
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/numpy-and-matplot.html#p6.4---radioactive-list",
     "href": "quarto-workflows/data-science/numpy-and-matplot.html#p6.4---radioactive-list",
-    "title": "Aggregation Indexing Boleean",
+    "title": "Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems",
     "section": "P6.4 - Radioactive list",
     "text": "P6.4 - Radioactive list\nA radioactive material with an original mass, \\(N_{0}\\), after a time t.\n\n\\[N(t)=N_{0}e^{\\frac{-t}{\\tau}}\\]\n\n\nMake a while loop which fills two lists: One with spaced time-points t, and with values of N(t) at these time-points. The loop should run until the remaining amount of materials is below 50% of the original. Start in t = 0 s, and use time-steps of 60s, a mass \\(N_{0}=4.5\\) kg of carbon-11, which has a time constant \\(\\tau=1760 s\\).\n\nThe key argument:\n\nappend: add something to the end of the list\nzip(): combine two (or more) sequences element by element\nwhile x() &gt;= () * x0: ensure the loop runst until the x is below the original x\npyplot: used to create and annonate figures using simple\n\n\nYou might have notices that by aborting the loop when half of the material is gone, the last element in our time-list should be the half-life of the carbon-11, \\(t_{1/2}\\). The half life of a material to decay. test that this is true by printing and comparing the last element in your time-list to the half-life of carbon-11, defined as\n\n\n\\[t_{1/2}=\\tau ln2\\]\n\nRemember that because your program uses time-steps of one minute, your measured half-life can have an error up to 60 seconds.\n\nCombine the list into a nested list Nt, such that every element in the list Nt is a pair of matching t and N(t) values. For example, the first element Nt[0] of this listshould be [0, 4.5]. Use the new nested list to write nicely a nicely formatted table of corresponding t and N(t) values to the terminal.\n\n# Parameters\nN0 = 4.5 # Initial mass in kg\ntau = 1760 # Time constant in s\ndt = 60 # time steps ( 0 -60 s)\n\n# Initialize\nt = 0\nN = N0\n\n# List result, start with an empty list\ntime_points = []\nmass_values = []\n\nwhile N &gt;= 0.5 * N0: # The loop should run until the remaining amount of materials is below 50%\n    time_points.append(t)\n    mass_values.append(N)\n\n    import math\n    t += dt # update time and mass\n    N = N0 * math.exp(-t / tau)\n    half_life = tau * math.log(2)\n\n# Make a while loop which two lists\ncw = 21 # column width\nprint(f'{\"Time points/t (s)\":^{cw}} | {\"Mass values/N(t) (kg)\":^{cw}} | {\"Half-life (s)\":^{cw}}')\nprint('-' * cw * 3)\nfor t, N in zip(time_points, mass_values):\n    print(f'{t:^{cw}} | {N:^{cw}.3f} | {half_life:^{cw}.2f}')\n\n# Set plot the time points vs mass values\nimport matplotlib.pyplot as plt\nplt.figure(figsize=(6,5))\nplt.plot(time_points, mass_values, marker='o', markerfacecolor='navy', markeredgecolor='gray', markersize=8, color='navy', label='Decay Curve')\nplt.title('Radioactive active decay of Carbon-11', fontsize=16, fontname='Sans serif')\nplt.xlabel('Time (s)', fontsize=14, fontname='Sans serif')\nplt.ylabel('Mass (kg)', fontsize=14, fontname='Sans serif')\nplt.legend()\nplt.legend(framealpha=0, fontsize=16)\nplt.grid(True, color='gray')\nplt.savefig('Radioactive decay of carbon-11.svg', bbox_inches='tight')\nplt.show()\n\nprint('Conclusion:')\nprint('at t = 0, mass is 4.5 kg')\nprint('every 60 s, the mass recalculated')\nprint('the loop stops once the mass drops below 2.76 kg')\nprint('the half-life is related to the time constant by t1/2 = tau ln(2) and stop around 1200 s or 20 min')\n Time points/t (s)   | Mass values/N(t) (kg) |     Half-life (s)    \n---------------------------------------------------------------\n          0           |         4.500         |        1219.94       \n         60           |         4.349         |        1219.94       \n         120          |         4.203         |        1219.94       \n         180          |         4.063         |        1219.94       \n         240          |         3.926         |        1219.94       \n         300          |         3.795         |        1219.94       \n         360          |         3.668         |        1219.94       \n         420          |         3.545         |        1219.94       \n         480          |         3.426         |        1219.94       \n         540          |         3.311         |        1219.94       \n         600          |         3.200         |        1219.94       \n         660          |         3.093         |        1219.94       \n         720          |         2.989         |        1219.94       \n         780          |         2.889         |        1219.94       \n         840          |         2.792         |        1219.94       \n         900          |         2.699         |        1219.94       \n         960          |         2.608         |        1219.94       \n        1020          |         2.521         |        1219.94       \n        1080          |         2.436         |        1219.94       \n        1140          |         2.355         |        1219.94       \n        1200          |         2.276         |        1219.94\n\nConclusion:\nat t = 0, mass is 4.5 kg\nevery 60 s, the mass recalculated\nthe loop stops once the mass drops below 2.76 kg\nthe half-life is related to the time constant by t1/2 = tau ln(2) and stop around 1200 s or 20 min\n\n\n\nFigure 5. Radioactive decay of carbon-11",
     "crumbs": [
       "Contents",
       "Data Science",
-      "Aggregation Indexing Boleean"
+      "Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems"
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/numpy-and-matplot.html#p6.5---trapped-quantum-particle",
     "href": "quarto-workflows/data-science/numpy-and-matplot.html#p6.5---trapped-quantum-particle",
-    "title": "Aggregation Indexing Boleean",
+    "title": "Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems",
     "section": "P6.5 - Trapped Quantum Particle",
     "text": "P6.5 - Trapped Quantum Particle\nOne of the rules in quantum mechanics is that, sometimes, particles are only allowed to have specific energies, and can never have an energy in between these allowed levels. The particle must therefor must jump straight from one energy level to another.\nThe key functions and arguments:\n\nsum(): adds up all elements in an iterable (like a list)\nnp.array(): creates a NumPy array from a list or other sequence\nnp.concatenates(): joins (concatenates) multiple arrays along specified axis\nplt.subplota: create a new figure and one or more subplots. Return (fog, ax objects.\nset_array: set the value that control colormap coloring (line collection)\nax.scatter: creates a scatter plot on a specific axis(ax)\nax.autoscal” automatically adjust the axis limits to fit the data.\n\nWhen a particle is trapped in a tiny box of size L, quantum mechanics say that it is only allowed to have energies.\n\n\\[E_{n}=\\frac{n^{1}h^{2}}{8mL^{2}}, n =1,2,3...\\]\n\nwhere m is the particle’s mass and h is Planck’s constant, \\(h=6.626 \\times 10^{-34} Js\\).\nConsider an electron with mass \\(9.11 \\times 10^{-31}\\) kg, trapped in a box size \\(10^{-11}\\) m. I ts starts at the lowest energy-level, \\(E_{1}\\) (not \\(E_{0}\\)), and jumps upwards, one step at a time, ending up at a much higher energy level, \\(E_{30}\\). Each step from a level \\(E_{i}\\) to a level \\(E_{i+1}\\) will have required an energy.\n\n\\[E_{i+1}-E_{i}=\\frac{(i+1)^{2}-i^{2}h^{2}}{8mL^{2}}\\]\n\nWrite a for loop which calculates teh energy required for each step along the way,and saves them in alist. Sum also up the total energy the particle has used on its way upwards.\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.collections import LineCollection\n\n# Parameters\nh = 6.626e-34 # Planck's constant (J.s)\nm = 9.11e-34 # electron mass (kg)\nL = 1e-11 # box size\n\n# Quantum energy steps\ni = np.linspace(1, 30, 30, dtype=int)\ndelta_E=(((i+1)**2 - i**2) * h**2) / (8 * m * L**2)\n\nE1 = (1**2 * h**2) / (8 * m * L**2)\nE30 = (30**2 * h**2) / (8 * m * L**2)\ntotal_energy = sum(delta_E)\nprint('Total energy used (J):', f'{total_energy:.3e}')\nprint('Energy steps (E1-E30) (J):', f'{E1 - E30:.3e}')\n\n\n# Create segments for line\npoints = np.array([i, delta_E]).T.reshape(-1, 1, 2)\nsegments = np.concatenate([points[:-1], points[1:]], axis =1)\n\n# colormap\nfig, ax = plt.subplots(figsize=(6,5))\nLc=LineCollection(segments, cmap='plasma', linewidth=2, norm=plt.Normalize(i.min(), i.max()))\nLc.set_array(i) # color by time\nax.add_collection(Lc)\nsc = ax.scatter(i, delta_E, c=i, cmap='plasma', marker='o')\nax.autoscale()\n\n# Adding colorbar\ncbar = plt.colorbar(Lc, ax=ax, pad=0.03)\ncbar.set_label('Energy Steps electron (E1 -E30) (J)')\n\nax.set_xlabel('Step i (Ei to Ei+1)')\nax.set_ylabel('Energy difference (J)')\nax.set_title('Energy steps for electrons in box', fontsize=14)\nax.grid(True)\nax.set_axisbelow(True)\nplt.savefig('Trapped Quantum Particle.svg', bbox_inches='tight')\nplt.show()\nTotal energy used (J): 5.783e-10\nEnergy steps (E1-E30) (J): -5.416e-10\n\n\n\nFigure 6. Trapped Quantum Particle",
     "crumbs": [
       "Contents",
       "Data Science",
-      "Aggregation Indexing Boleean"
+      "Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems"
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/basicnumpy.html#reference",
     "href": "quarto-workflows/data-science/basicnumpy.html#reference",
-    "title": "NumPy and Matplotlib",
+    "title": "Numpy and Matplot for Physics Problems",
     "section": "Reference:",
     "text": "Reference:\n\nKinematic Equations and Free Fall",
     "crumbs": [
       "Contents",
       "Data Science",
-      "NumPy and Matplotlib"
+      "Numpy and Matplot for Physics Problems"
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.1---correct-einsteins-mistakes",
     "href": "quarto-workflows/data-science/basicnumpy.html#p5.1---correct-einsteins-mistakes",
-    "title": "NumPy and Matplotlib",
+    "title": "Numpy and Matplot for Physics Problems",
     "section": "P5.1 - Correct Einstein’s mistakes",
     "text": "P5.1 - Correct Einstein’s mistakes\nSpecial relativity is the area of physics deling with incredibly large velocities. In special relitivity, the momentum p of an object with velocity v(in m/s), and mass m (in kg) is given as.\n\n\\[p=m.v.\\gamma, \\gamma=\\frac{1}{\\sqrt{1-\\frac{v^{2}}{c^{2}}}}\\]\n\nwhere c\\(\\approx\\) 300.000.000 m/s is the speed of light. The program below attempts to calculate the momentum of an object with speed equal to 1/3 the speed of light, and mass m = 0.14 kg. The program has many errors, and doesn’t work. Copy and run the program. Correct the errors, and make it work like intended.\n# Relativity Einstein\nc = 3e8 # the speed of light in m/s\nv = c / 3 # the velocity 1/3 the speed of light\nm = 0.14 # mass in kg\n\n# Calculate the relativity momentum\nimport numpy as np\ngamma = 1 / (np.sqrt(1-(v/c)**2))\np_momentum = m * v * gamma\n\nprint(f'gamma = {gamma:.6f}')\nprint(f'p_momentum = {p_momentum:.6f}') # the momentum in kg m/s\ngamma = 1.060660\np_momentum = 14849242.404917",
     "crumbs": [
       "Contents",
       "Data Science",
-      "NumPy and Matplotlib"
+      "Numpy and Matplot for Physics Problems"
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.2---rydbergs-constant",
     "href": "quarto-workflows/data-science/basicnumpy.html#p5.2---rydbergs-constant",
-    "title": "NumPy and Matplotlib",
+    "title": "Numpy and Matplot for Physics Problems",
     "section": "P5.2 - Rydberg’s constant",
     "text": "P5.2 - Rydberg’s constant\nRydberg’s constant \\(R_{\\infty}\\) for a heavy atom is used in physics to calculate the wavelength to spectral lines. The constant has been found to have the following value:\n\n\\[R_{\\infty}=\\frac{m_{e}e_{4}}{8\\varepsilon_{0}{2}h^{3}c}\\]\n\nwhere: - \\(m_{e}=9.109 \\times 10^{-31}\\) m is the mass of an electron - \\(e=1.602 \\times 10^{-19}\\) C is the charge of a proton (also called the elementary charge) - \\(\\varepsilon_{0}=8.854 \\times 10^{-12}C V^{-1} m^{-1}\\) is the electrical constant - h = 6.626 \\(\\times\\) \\(10^{-34}\\) J s is Planck’s constant - c = 3 \\(\\times\\) \\(10^{8}\\) m/s is the speed of light.\nwrite the program that assigns the values of the physical constants to variables, and use the variables to calculate the value of Rydberg’s constant.\n# Calculate Rydberg's constant\nme = 9.109e-31 # mass of an electron\ne = 1.602e-19 # the charge of a proton\nvarepsilon0 = 8.854e-12 # the electrical constant\nh = 6.626e-34 # Planck's constant\nc = 3e8 # speed of the light\n\nR_infinity = (me * e**4)/(8 * varepsilon0**2 * h**3 * c)\nprint(f'R infinity = {R_infinity:.6e}') # the Rydberg's constant\nR infinity = 1.096166e+07",
     "crumbs": [
       "Contents",
       "Data Science",
-      "NumPy and Matplotlib"
+      "Numpy and Matplot for Physics Problems"
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.3---measure-time",
     "href": "quarto-workflows/data-science/basicnumpy.html#p5.3---measure-time",
-    "title": "NumPy and Matplotlib",
+    "title": "Numpy and Matplot for Physics Problems",
     "section": "P5.3 - Measure time",
     "text": "P5.3 - Measure time\nA ball is dropped straight down from a cliff with height \\(\\mathnormal{h}\\). The position of the ball after a time \\(\\mathnormal{t}\\) can be expressed as:\n\n\\[y(t)=v_{0}t - \\frac{1}{2}at^{2} + h\\]\n\nwhere a is the acceleration (in \\(m/s^{2})\\) and \\(v_{0}\\) is the initial velocity of the ball (Measured in m/s). We wish to find for how long time \\(t_{1}\\) such that \\(y(t_{1})=h_{1}\\). The position of the ball is measured per \\(\\Delta{t}\\) seconds.\nWrite a program which finds out how long time \\(t_{1}\\) it takes before the ball reaches height \\(h_{1}\\) by using a while loop. \\(h=10 m, y_{1}=5 m, \\Delta{t}=0.01, v_{0}=0 m/s\\) and \\(a = 9.81 m/s^{s}\\).\nh = 10 # height in m\ny1 = 5 # position of function of time t1 in m\nv0 = 0 # velocity at t = 0 in m/s\na = 9.81 # acceleration due to gravity in m/s^2\ndt = 0.01 # time step in s\n\n# Calculate how long time t1, if y(t1) = h1.\ny = h # initial positon\nt = 0\nt_values = [t]\ny_values = [y]\n\n\n# The position of the ball is measured per dt seconds\nwhile y &gt; y1:\n    t = t + dt\n    y = v0 * t - 0.5 * a * t**2 + h\n    t_values.append(t)\n    y_values.append(y)\n    \n# at this point, y &lt;= y1\nt1 = t\nprint(f'The ball reaches {y1} m after {t1:.2f} s.')\n\n# The manual instruction\nimport numpy as np\nty1 = np.sqrt(2* (h - y1)/a)\nprint(f'The ball reaches {y1} after {ty1:.3f} s')\n\n# Scatter plot with color map\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.collections import LineCollection\nt = np.linspace(0, 2, 200)\ny = 10 -0.5 * 9.81 * t**2\n\n# Create segments for line\npoints = np.array([t,y]).T.reshape(-1, 1, 2)\nsegments = np.concatenate([points[:-1], points[1:]], axis =1)\n\n# colormap\nLc=LineCollection(segments, cmap='viridis', linewidth=2, norm=plt.Normalize(t.min(), t.max()))\nLc.set_array(t) # color by time\n\nfig, ax = plt.subplots(figsize=(5,4))\nax.scatter(t, y, c=t, cmap='viridis', marker='D')\nax.add_collection(Lc)\nax.autoscale()\n\n# Adding colorbar\ncbar = plt.colorbar(Lc, ax=ax, pad=0.03)\ncbar.set_label('Time (s)')\n\nax.set_xlabel('Time (s)')\nax.set_ylabel('Height (m)')\nax.set_title('Ball Fall Motion with Colormap Line')\nax.grid(True)\nax.set_axisbelow(True)\nplt.savefig('Ballmotion_colormap.svg', bbox_inches='tight')\nplt.show('Ball Fall Motion')\nThe ball reaches 5 m after 1.01 s.\nThe ball reaches 5 after 1.010 s\n\n\n\nFigure 1. Ballmotion_colormap",
     "crumbs": [
       "Contents",
       "Data Science",
-      "NumPy and Matplotlib"
+      "Numpy and Matplot for Physics Problems"
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.4---free-fall-motion",
     "href": "quarto-workflows/data-science/basicnumpy.html#p5.4---free-fall-motion",
-    "title": "NumPy and Matplotlib",
+    "title": "Numpy and Matplot for Physics Problems",
     "section": "P5.4 - Free Fall Motion",
     "text": "P5.4 - Free Fall Motion\nA ball is dropped from rest at a height of h = 100 m. The time intervals is 0.1 s up to 5 s. The constant gravitational acceleration g = 9.81 \\(m/s^{2}\\).(a) What time does the ball hit the ground, (b) what is the velocity of the ball and (c) plot the position of the ball vs time as it falls. Free Fall Motion:\n\nImpact time (when y(t)=0)\n\n\\[t_{ground}=\\sqrt{\\frac{2h_{0}}{g}}\\]\n\nInitial Velocity at the ground\n\n\\[v_{ground}=gt_{ground}\\]\n\nPosition\n\n\\[y(t)=h_{0}-\\frac{g}{t^{2}}\\]\n\n\n\n\n\nFigure 2. Fallmotion_colormap",
     "crumbs": [
       "Contents",
       "Data Science",
-      "NumPy and Matplotlib"
+      "Numpy and Matplot for Physics Problems"
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.5--relativistic-momentum",
     "href": "quarto-workflows/data-science/basicnumpy.html#p5.5--relativistic-momentum",
-    "title": "NumPy and Matplotlib",
+    "title": "Numpy and Matplot for Physics Problems",
     "section": "P5.5 -Relativistic Momentum",
     "text": "P5.5 -Relativistic Momentum\nIn classical physics, we define the momentum \\(\\mathnormal{p}\\) of an object with mass \\(\\mathnormal{m}\\) and velocity \\(\\mathnormal{v}\\) as\n\n\\[p=m\\times v\\]\n\nA satellite with mass m = 1200 kg is trapped in the gravity of a black hole. It accelerates quickly from velocity \\(v=0\\) to \\(v=0.9c\\), where \\(\\mathnormal{c}\\) is the speed of light, \\(c\\approx3x10^{8}\\) m/s.\n\nwrite a program which prints a nicely formatted table to the terminal, containing the speed of the satellite in one column, and the momentum of the satellite in the other. Use time-intervals of \\(0.1c\\) between \\(0c\\) and \\(0.9c\\).\n\nHint: Use scientific notation ‘%e’ when printing the values, to avoid incredibly large floats. Alternatively, ‘%g’, which picks the best notation for you. Try to limit the number of decimals to a reasonable number.\n# Parameters \nm = 1200 # mass of satellite in kg\nc = 3e8 # the speed of light on m/s\n \nprint(f'{'Velocity (m/s)':&gt;20} | {'Momentum (kg.m/s)':&gt;25}')\nprint('-' * 45)\n\n# Calculate momentum with the interval velocity 0 to 0.9c\n# Use time-intervals 0f 0.1c between 0c and 0.9c\nfor i in range(10): # time interval from 0c to 0.9c\n    v = i * 0.1 * c # velocity 0 - 0.9c, where c is the the speed of  light.\n    p = m * v\n    print('%20.3g | %25.3g' % (v, p)) # use scientific notation '%g' to limit the number of decimals.\n     Velocity (m/s) |         Momentum (kg.m/s)\n------------------------------------------------\n                   0 |                         0\n               3e+07 |                   3.6e+10\n               6e+07 |                   7.2e+10\n               9e+07 |                  1.08e+11\n             1.2e+08 |                  1.44e+11\n             1.5e+08 |                   1.8e+11\n             1.8e+08 |                  2.16e+11\n             2.1e+08 |                  2.52e+11\n             2.4e+08 |                  2.88e+11\n             2.7e+08 |                  3.24e+11\nAdding figure with MatPlotLib\n# Scatter plot with color map\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.collections import LineCollection\nv = np.linspace(0.0, 0.9, 10) * c\np = m * v #Classical Momentum\n\n# Create segments for line\npoints = np.array([v,p]).T.reshape(-1, 1, 2)\nsegments = np.concatenate([points[:-1], points[1:]], axis =1)\n\n# colormap\nLc=LineCollection(segments, cmap='magma', linewidth=3, norm=plt.Normalize(p.min(), p.max()))\nLc.set_array(p) # color by momentum\n\nfig, ax = plt.subplots(figsize=(10,6))\nax.scatter(v,p, c=p, cmap='magma', marker='o')\nax.add_collection(Lc)\nax.autoscale()\n\n# Adding colorbar\nimport matplotlib.ticker as ticker\nfrom matplotlib.ticker import FormatStrFormatter\ncbar = plt.colorbar(Lc, ax=ax, pad =0.02)\ncbar.set_label('Momentum (kg.m/s)')\ncbar.formatter = ticker.FormatStrFormatter('%.2e')\ncbar.update_ticks()\n\n# Axis labels and formatting\nimport matplotlib.ticker as ticker\nfrom matplotlib.ticker import FormatStrFormatter\nax.set_xlabel('Velocity (m/s)')\nax.set_ylabel('Momentum (kg.m/s)')\nax.set_title('Relativistic Momentum', fontsize=14)\nax.xaxis.set_major_formatter(ticker.FormatStrFormatter('%.2e'))\nax.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.2e'))\nplt.grid(True)\nax.set_axisbelow(True)\n\n# Add momentum values\n\nfor vx, px in zip(v, p):\n    ax.text(vx, px, f'{px:.2e}', fontsize=7.5, ha='right', va='bottom')\nplt.savefig('Relativistic_colormap.svg', bbox_inches='tight')\nplt.show('Relativistic Momentum')\n\n\n\nFigure 3. Relativistic_colormap",
     "crumbs": [
       "Contents",
       "Data Science",
-      "NumPy and Matplotlib"
+      "Numpy and Matplot for Physics Problems"
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/basicnumpy.html#p5.6--relativistic-momentum",
     "href": "quarto-workflows/data-science/basicnumpy.html#p5.6--relativistic-momentum",
-    "title": "NumPy and Matplotlib",
+    "title": "Numpy and Matplot for Physics Problems",
     "section": "P5.6 -Relativistic Momentum",
     "text": "P5.6 -Relativistic Momentum\n\nIn exercise about - Correct Einstein’s mistakes, we saw the momentum of an object is defined in special relative;y, which dealswith physics at very large velocities. We defines the momentum as\n\n\\[p=m.v.\\gamma, \\gamma=\\frac{1}{\\sqrt{1-\\frac{v^{2}}{c^{2}}}}\\]\n\n\nThis is actual momentum of any object, but the classical version in exercise a) is a good approximation at “small’velocities. Expand your program such that it prints a table with three columns, the third one containing the momentum ad defined in special relativity.\n# Parameters \nm = 1200 # mass of satellite in kg\nc = 3e8 # the speed of light on m/s\n\ncw = 23 # column width\nprint(f'{\"Special velocity (m/s)\":^{cw}} | {\"Momentum (kg.m/s)\":^{cw}} | {\"gamma\":^{cw}} |')\nprint('-' * (cw * 3 + 10))\n\n# (b) Calculate special momentum with the interval velocity 0 to 0.9c\n# Use time-intervals 0f 0.1c between 0c and 0.9c\nimport numpy as np\nfor i in range(10): # time interval from 0c to 0.9c\n    v = i * 0.1 * c # velocity 0 - 0.9c, where c is the the speed of  light.\n    gamma = 1 / (np.sqrt(1-(v/c)**2))\n    p_rel = m * v * gamma\n    print(f'{v:^{cw}.2e} | {p_rel:^{cw}.3e} | {gamma:^{cw}.3f}|') # use scientific notation 'e and f' to limit the number of decimals.\nSpecial velocity (m/s)  |    Momentum (kg.m/s)    |          gamma          |\n-------------------------------------------------------------------------------\n       0.00e+00         |        0.000e+00        |          1.000         |\n       3.00e+07         |        3.618e+10        |          1.005         |\n       6.00e+07         |        7.348e+10        |          1.021         |\n       9.00e+07         |        1.132e+11        |          1.048         |\n       1.20e+08         |        1.571e+11        |          1.091         |\n       1.50e+08         |        2.078e+11        |          1.155         |\n       1.80e+08         |        2.700e+11        |          1.250         |\n       2.10e+08         |        3.529e+11        |          1.400         |\n       2.40e+08         |        4.800e+11        |          1.667         |\n       2.70e+08         |        7.433e+11        |          2.294         |\nAdding a barchart for relativistic visualizations.\n# Create histogram from the data\nimport numpy as np\nimport matplotlib.pyplot as plt\nv= np.linspace(0.0, 0.9*c, 10)\ngamma = 1 / (np.sqrt(1-(v/c)**2))\np_rel = m * v * gamma\n\nimport matplotlib.pyplot as plt\nplt.hist(p_rel, label='Momentum (kg.m/s)', bins=10, facecolor='c', edgecolor='black', hatch='//', rwidth=8)\nplt.xlabel('Special Velocity (m/s)', fontsize=12)\nplt.ylabel('Momentum (kg.m/s)', fontsize=12)\nplt.title('Einsten Momentum', fontsize=16)\nplt.legend(fontsize=23)\nplt.legend(framealpha=0, handleheight=2.0, handlelength=3)\nplt.savefig('Einstein_momentum.svg', bbox_inches='tight')\nplt.show()\n\n\n\nFigure 4. Einstein Momentum",
     "crumbs": [
       "Contents",
       "Data Science",
-      "NumPy and Matplotlib"
+      "Numpy and Matplot for Physics Problems"
     ]
   },
   {
@@ -872,49 +872,49 @@
   {
     "objectID": "quarto-workflows/data-science/chemspy.html#p8.1---chemspipy-and-the-chemspider-api-application-programming-interface",
     "href": "quarto-workflows/data-science/chemspy.html#p8.1---chemspipy-and-the-chemspider-api-application-programming-interface",
-    "title": "Storing and Transmitting Chemical Information",
+    "title": "Storing and Transmitting Chemical Database",
     "section": "P8.1 - ChemSpiPy and the ChemSpider API (Application Programming Interface)",
     "text": "P8.1 - ChemSpiPy and the ChemSpider API (Application Programming Interface)\nChemSpiPy is a Python library that interact with the ChemSpider API. It allow chemical searches, chemical file download by querying the ChemSpider service over the internet automatically import data without having to visit the ChemSpider website.\nDeduces the srtucture of the following molecules from their InChi strings:\n\n\n\nStandard InChI\n\n\n\nInChI=1S/C6H60/c7-6-4-2-1-3-5-6/h1-5,7H\nInChI=1S/C5H12O/c1-3-5(2)4-6/h5-6H,3-4H2,1-2H3\nInChI=1S/C6H10/c1-6-4-2-3-5-6/h4H,2-3, 5H2,1H3\nInChI=1S/C5H9NO2/c7-5(8)4-2-1-3-6-4/h4,6H,1-3H2,(H,7,8)\n\nHint: the notation (H,7,8) means that a single hydrogen atom is shared by atoms 7 and 8.\nfrom chemspipy import ChemSpider\ncs = ChemSpider('YOUR_API-KEY')\n\n# Search by InChI string\nc = cs.get_compound(971)\n\n# Print basic info\nprint('1 Common Name:', c.common_name)\nprint('ChemSpider ID:', c.csid)\nprint('Molecular Formula:', c.molecular_formula)\nprint('Molecular Weight:', c.molecular_weight)\nprint('InChI:', c.inchi)\nprint('InChI Key:', c.inchikey)\nprint('SMILES:', c.smiles)\n1 Common Name: Phenol\nChemSpider ID: 971\nMolecular Formula: C_{6}H_{6}O\nMolecular Weight: 94.113\nInChI: InChI=1S/C6H6O/c7-6-4-2-1-3-5-6/h1-5,7H\nInChI Key: ISWSIDIOOBJBQZ-UHFFFAOYSA-N\nSMILES: Oc1ccccc1\nfrom chemspipy import ChemSpider\ncs = ChemSpider('YOUR_API-KEY')\n\n# Search by InChI string\nc = cs.get_compound(8398)\n\n# Print basic info\nprint('2 Common Name:', c.common_name)\nprint('ChemSpider ID:', c.csid)\nprint('Molecular Formula:', c.molecular_formula)\nprint('Molecular Weight:', c.molecular_weight)\nprint('InChI:', c.inchi)\nprint('InChI Key:', c.inchikey)\nprint('SMILES:', c.smiles)\n2 Common Name: 2-Methylbutan-1-ol\nChemSpider ID: 8398\nMolecular Formula: C_{5}H_{12}O\nMolecular Weight: 88.15\nInChI: InChI=1S/C5H12O/c1-3-5(2)4-6/h5-6H,3-4H2,1-2H3\nInChI Key: QPRQEDXDYOZYLA-UHFFFAOYSA-N\nSMILES: CCC(C)CO\nfrom chemspipy import ChemSpider\ncs = ChemSpider('YOUR_API-KEY')\n\n# Search by InChI string\nc = cs.get_compound(12222)\n\n# Print basic info\nprint('3 Common Name:', c.common_name)\nprint('ChemSpider ID:', c.csid)\nprint('Molecular Formula:', c.molecular_formula)\nprint('Molecular Weight:', c.molecular_weight)\nprint('InChI:', c.inchi)\nprint('InChI Key:', c.inchikey)\nprint('SMILES:', c.smiles)\n3 Common Name: Methylcyclopentene\nChemSpider ID: 12222\nMolecular Formula: C_{6}H_{10}\nMolecular Weight: 82.146\nInChI: InChI=1S/C6H10/c1-6-4-2-3-5-6/h4H,2-3,5H2,1H3\nInChI Key: ATQUFXWBVZUTKO-UHFFFAOYSA-N\nSMILES: CC1=CCCC1\nfrom chemspipy import ChemSpider\ncs = ChemSpider('YOUR_API-KEY')\n\n# Search by InChI string\nc = cs.get_compound(128566)\n\n# Print basic info\nprint('4 Common Name:', c.common_name)\nprint('ChemSpider ID:', c.csid)\nprint('Molecular Formula:', c.molecular_formula)\nprint('Molecular Weight:', c.molecular_weight)\nprint('InChI:', c.inchi)\nprint('InChI Key:', c.inchikey)\nprint('SMILES:', c.smiles)\n4 Common Name: L-Proline\nChemSpider ID: 128566\nMolecular Formula: C_{5}H_{9}NO_{2}\nMolecular Weight: 115.132\nInChI: InChI=1S/C5H9NO2/c7-5(8)4-2-1-3-6-4/h4,6H,1-3H2,(H,7,8)/t4-/m0/s1\nInChI Key: ONIBWKKTOPOVIA-BYPYZUCNSA-N\nSMILES: O=C(O)[C@@H]1CCCN1",
     "crumbs": [
       "Contents",
       "Data Science",
-      "Storing and Transmitting Chemical Information"
+      "date: \"2025-12-09\""
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/pandas.html#function",
     "href": "quarto-workflows/data-science/pandas.html#function",
-    "title": "Data structures and Pandas",
+    "title": "Functions, Data Structures, and File Input or Output Using Pandas",
     "section": "1. Function",
     "text": "1. Function\n\nP4.1 - The solar mass\nCalculate the solar mass. The solar mass can be calculated by using the relation:\n\n\\[M_{Sun}=\\frac{4\\pi^{2}(1 AU)^{3}}{G (1 yr)^{2}}\\]\n\nIn this task, we will use approximate values for AU and G. The unit AU is an astronomical unit of length. Its value is defined to be the average distance between the Sun and Earth:\n1 AU = 1.496 x \\(10^{11}\\) m\nwhere 1 lightyear = 9.5 x \\(10^{12}\\) km. The constant G is called the gravitational constant and has the following value:\nG = 6.674 X \\(10^{-11}m^{3}kg^{-1}s^{-1}\\)\n# The Astronomical unit of length, in meters\nAU = 1.496e11\n\n# The orbital period o Earth in seconds, for one year\nyr = 365.256 * 24 * 3600\n\n# The Gravitational constant, in m3.kg-1,s-2\nG = 6.674e-11\n\n# Calculate the solar mass, in kg\nimport math\ndef Solar_mass():\n    M_Sun = (4 * math.pi ** 2 * AU**3) / (G * yr**2)\n    return M_Sun\nprint(Solar_mass())\n1.9885939441528014e+30\n\n\nP4.2 - The velocity of an atom\nThe atoms within a material are structured such that they create a lattice. We will look at an atom which moves along the surface of a material. Since the atoms are aligned as a lattice, we could use a periodic model to find the velocity of the atom moving across the surface:\n\n\\[v(x)=\\sqrt{v_{0}^{2}+\\frac{2F_{0}}{m}(cos\\frac{x}{n}-1)}\\]\n\nwhere m is the mass of the atom, x is the position, v0 is its initial velocity, and n is a scaled distance between the atoms within the material. We set the force F0 = 1N. Find the velocity of the atom when x = 1, v0 = 2, n = 4 and m = 3.\n\nRepeat the calculation for Zn, Cu, and Ni for F0 = 1 x \\(10^{-25}\\) N\n\nv0 = 2 # the velocity of atom\nx =1 # the position of atom\nm = 3 # the mass of atom\nn = 4 # scaled distanced between atom within the material\nF0 = 1 # The force in N\n\n# Calculate the velocity of atom\nimport numpy as np\ndef velocity_atom():\n    v_a = np.sqrt(v0**2 + (2 *F0 / m) * (np.cos(x/n)-1))\n    return v_a\nprint(velocity_atom())\n1.9948120081368812\nv0 = 2 # the velocity of atom\nx =1 # the position of atom\nn = 4 # scaled distanced between atom within the material\nF0 = 1e-25 # The force in N\n\n# Calculate for atom Zn, Cu, and Ni\nA_units = 1.6605e-27 # Atomic per units in kg\n\n# Calculate mass of Zn, Cu, and Ni\nmasses = {\n    \"Zn\": 65.38 * 1.6605e-27,\n    \"Cu\": 63.55 * 1.6605e-27,\n    \"Ni\": 58.69 * 1.6605e-27\n}\n\nimport numpy as np\ndef velocity_atom(atom):\n    m = masses[atom]\n    velocity = v0 **2 + (2 *F0 / m) * (np.cos(x/n)-1)\n    return np.sqrt(velocity) if velocity &gt;= 0 else None\n\nfor atom in masses:\n    print(f\"{atom}: {velocity_atom(atom)}\")\nZn: 1.9856306859195652\nCu: 1.985215363307596\nNi: 1.9839861380776256",
     "crumbs": [
       "Contents",
       "Data Science",
-      "Data structures and Pandas"
+      "Functions, Data Structures, and File Input or Output Using Pandas"
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/pandas.html#data-structures",
     "href": "quarto-workflows/data-science/pandas.html#data-structures",
-    "title": "Data structures and Pandas",
+    "title": "Functions, Data Structures, and File Input or Output Using Pandas",
     "section": "2. Data Structures",
     "text": "2. Data Structures\n\nP4.3 - The crystall lattice structures\nThe crystal lattice structures of the first row transition metal elements are given below. Some elements have different crystal structures under different conditions of temperatures and pressure. Use python sets to group them and determine which metal,\n\nonly exist face-centered cubic (fcc), body-centered cubic (bcc), hexagonal-centered cubic (hcp)\nexist in two of these structures\ndo not form an hcp structure.\n\n\n\n\nLattice\nElements\n\n\n\n\nFCC\nCu, Co, Fe, Mn, Ni, Sc\n\n\nBCC\nCr, Fe, Mn, Ti, V\n\n\nHCP\nCo, Ni, Sc, Ti, Zn\n\n\n\n# set the elements in fcc, bcc, and hcp by lattice type\nfcc = set(['Cu', 'Co', 'Fe', 'Mn', 'Ni', 'Sc'])\nbcc = set(['Cr', 'Fe', 'Mn', 'Ti', 'V'])\nhcp = set(['Co', 'Ni', 'Sc', 'Ti', 'Zn'])\n\n# (a) print only exist fcc, bcc, and hcp\nprint('(a) only_fcc:', fcc - bcc - hcp)\nprint('(a) only_bcc:', bcc - fcc - hcp)\nprint('(a) only_hcp:', hcp - fcc - bcc)\n\n# (b) exist in two structures\nprint('(b) fcc and bcc:', fcc & bcc - hcp)\nprint('(b) fcc and hcp:', fcc & hcp - bcc)\nprint('(b) bcc and hcp:', bcc & hcp - fcc)\n\n# (c) print do not form hcp\nall_metals = fcc | bcc | hcp\n\nprint('(c) no_hcp:', all_metals - hcp)\n\n# (d) print the metals exist in fcc, bcc, and hcp\nprint('(d) fcc and bcc and hcp:', fcc & bcc & hcp)\n(a) only_fcc: {'Cu'}\n(a) only_bcc: {'V', 'Cr'}\n(a) only_hcp: {'Zn'}\n(b) fcc and bcc: {'Mn', 'Fe'}\n(b) fcc and hcp: {'Co', 'Ni', 'Sc'}\n(b) bcc and hcp: {'Ti'}\n(c) no_hcp: {'V', 'Cu', 'Cr', 'Fe', 'Mn'}\n(d) fcc and bcc and hcp: set()\n\n\nP4.4 - Magnetic classification\nThe magnetic properties are related to metals. Some elements have different properties under different conditions of temperatures and pressure. Use python sets to group them and determine which category, - (a) only exist as diamagnetic, paramagnetic, and non-magnetic. - (b) exist in two of these magnetic. - (c) exist in three of these magnetic.\n\n\n\ncategory\nElements\n\n\n\n\nDiamagnetic\nZn, Cu, Sc, Ti\n\n\nParamagnetic\nCr, Mn, V, Fe, Cu, Ti\n\n\nNon-magnetic\nAl, Zn, Sc\n\n\n\n\n\nP4.5 - Magnetic classification\nThe magnetic properties are related to metals. Some elements have different properties under different conditions of temperatures and pressure. Use python sets to group them and determine which category, - (a) only exist as diamagnetic, paramagnetic, and non-magnetic. - (b) exist in two of these magnetic. - (c) exist in three of these magnetic.\n\n\n\ncategory\nElements\n\n\n\n\nDiamagnetic\nZn, Cu, Sc, Ti\n\n\nParamagnetic\nCr, Mn, V, Fe, Cu, Ti\n\n\nNon-magnetic\nAl, Zn, Sc\n\n\n\n# set the elements in diamagnetic, paramagnetic and non-magnetic\nDiamagnetic = set(['Zn', 'Cu', 'Sc', 'Ti'])\nParamagnetic = set(['Cr', 'Mn', 'V', 'Fe', 'Cu', 'Ti'])\nNon_magnetic = set(['Al', 'Zn', 'Sc'])\n\n# print only exist diamagnetic, paramagnetic or non-magnetic\nprint('(a) only_Diamagnetic:', Diamagnetic - Paramagnetic - Non_magnetic)\nprint('(a) only_Paramagnetic:', Paramagnetic - Diamagnetic - Non_magnetic)\nprint('(a) only_Nonmagnetoc:', Non_magnetic - Diamagnetic - Paramagnetic)\n\n# Exist in two properties\nprint('(b) Diamagnetic and Paramagnetic:', Diamagnetic & Paramagnetic - Non_magnetic)\nprint('(b) Diamagnetic and Non_magnetic:', Diamagnetic & Non_magnetic - Paramagnetic)\nprint('(b) Paramagnetic and Non_magnetic:', Paramagnetic & Non_magnetic - Diamagnetic)\n\n# Exist in three properties\nall_category = Diamagnetic | Paramagnetic | Non_magnetic\n\nprint('(c) Diamagnetic and Paramagnetic and Non_magnetic:', Diamagnetic & Paramagnetic & Non_magnetic)\n(a) only_Diamagnetic: set()\n(a) only_Paramagnetic: {'V', 'Cr', 'Mn', 'Fe'}\n(a) only_Nonmagnetoc: {'Al'}\n(b) Diamagnetic and Paramagnetic: {'Ti', 'Cu'}\n(b) Diamagnetic and Non_magnetic: {'Zn', 'Sc'}\n(b) Paramagnetic and Non_magnetic: set()\n(c) Diamagnetic and Paramagnetic and Non_magnetic: set()",
     "crumbs": [
       "Contents",
       "Data Science",
-      "Data structures and Pandas"
+      "Functions, Data Structures, and File Input or Output Using Pandas"
     ]
   },
   {
     "objectID": "quarto-workflows/data-science/pandas.html#file-inputoutput",
     "href": "quarto-workflows/data-science/pandas.html#file-inputoutput",
-    "title": "Data structures and Pandas",
+    "title": "Functions, Data Structures, and File Input or Output Using Pandas",
     "section": "3. File Input/Output",
     "text": "3. File Input/Output\n\nTable. Python file open modes\n\n\n\n\n\n\n\n\n\nCharacter\nDescription\n\n\n\n\n‘r’\nopen for reading (the default)\n\n\n‘w’\nopen for writing, over writing the file if it exist\n\n\n‘x’\nopen for writing, failing if the file exist already\n\n\n‘a’\nopen for writing, appending if the file exist\n\n\n‘t’\nread/write text data (the dafault)\n\n\n‘b’\nread/write binary data\n\n\n‘+’\nopen for updating (reading and writing)\n\n\n\n\n\nP4.5 - The computational density\nThe text file atomic-data.txt, which can download directly, contains data for the elements, molar cell, and volume cell for Al, Cu, Pb. Read in data and calculate computational density for each subtances.\nimport pandas as pd\n\n# Read the txt file (comma-separated)\ndf = pd.read_csv(\"atomic-data.txt\")\n\nprint(df.head())   # show first 5 rows\n\nfor row in data:\n    element, molar_cell, volume_cell = row\n    molar_cell = float(molar_cell)\n    volume_cell = float(volume_cell)\n    density = molar_cell / volume_cell\n    print(f\"{element}: Density = {density:.2f} g/cm³\")\n  elements      \\tm-cell  \\tvolume-cell (cm^3)\n0       Al  1.792000e-22          6.620000e-23\n1       Cu  4.221000e-22          6.750000e-23\n2       Pb  1.376000e-21          1.320000e-22\nAl: Density = 2.71 g/cm³\nCu: Density = 6.25 g/cm³\nPb: Density = 10.42 g/cm³",
     "crumbs": [
       "Contents",
       "Data Science",
-      "Data structures and Pandas"
+      "Functions, Data Structures, and File Input or Output Using Pandas"
     ]
   },
   {
@@ -1160,61 +1160,61 @@
   {
     "objectID": "quarto-workflows/quantum-mechanics/uncertainty.html#why-we-need-to-calculate-error-propagation",
     "href": "quarto-workflows/quantum-mechanics/uncertainty.html#why-we-need-to-calculate-error-propagation",
-    "title": "Propagation of Uncertainty",
+    "title": "Uncertainty and The Gravitational Acceleration”",
     "section": "Why we need to calculate error propagation",
     "text": "Why we need to calculate error propagation\nIt’s common for errors when combining many uncertain values or using calculations that amplify small differences (like multipication, division, or exponentation). Consequently, the final result can be much less precise than the original measurement error values suggest.\nUnderstanding error propagation helps us avoid overconfidence in results and recognize when further precision in measurement is necessary.",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Propagation of Uncertainty"
+      "Uncertainty and The Gravitational Acceleration\""
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/uncertainty.html#formula-for-error-propagation",
     "href": "quarto-workflows/quantum-mechanics/uncertainty.html#formula-for-error-propagation",
-    "title": "Propagation of Uncertainty",
+    "title": "Uncertainty and The Gravitational Acceleration”",
     "section": "Formula for error propagation",
     "text": "Formula for error propagation\nIf the uncertainties (random errors) in the measured quantities, \\(p,\\;q,\\;r,...\\) can be assumed to be uncorrelated, a common approach is to propagate their uncertainties into an uncertainty in the function \\(y=y(p,\\;q,\\;r,...)\\) with the formula:\n\n\\[\\sigma_y=\\sqrt{\\left (\\frac{\\partial y}{\\partial p} \\right)^2 \\; \\sigma_p^2 \\;+\\; \\left (\\frac{\\partial y}{\\partial q} \\right)^2 \\; \\sigma_q^2 \\;+\\; \\left (\\frac{\\partial y}{\\partial r} \\right)^2 \\; \\sigma_r^2 \\;+\\;...}\\]\n\nThis is effectively the first non-zero term in a multivariate Taylor series expansion of the variances, \\(\\sigma_{i}^2\\), and is therefore only approximate: For highly non-linear functions \\(y\\) it might be expected to give flawed results.\nThis approach assumes that: - The input variables are independent of each other. - The errors are random and normally distributed. - The function \\(y\\) is differentiable with respect to each quantities \\((p,\\; q,\\; r,...)\\)",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Propagation of Uncertainty"
+      "Uncertainty and The Gravitational Acceleration\""
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/uncertainty.html#error-propagation-worked-example",
     "href": "quarto-workflows/quantum-mechanics/uncertainty.html#error-propagation-worked-example",
-    "title": "Propagation of Uncertainty",
+    "title": "Uncertainty and The Gravitational Acceleration”",
     "section": "Error propagation worked example",
     "text": "Error propagation worked example",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Propagation of Uncertainty"
+      "Uncertainty and The Gravitational Acceleration\""
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/uncertainty.html#p20.1-case-study-random-uncertainties",
     "href": "quarto-workflows/quantum-mechanics/uncertainty.html#p20.1-case-study-random-uncertainties",
-    "title": "Propagation of Uncertainty",
+    "title": "Uncertainty and The Gravitational Acceleration”",
     "section": "P20.1 Case study: Random uncertainties",
     "text": "P20.1 Case study: Random uncertainties\nUse the equation above to show that the uncorrelated random uncertainties, \\(\\sigma p\\), \\(\\sigma q\\) and \\(\\sigma x\\) in the paramters \\(p,\\; q\\) and \\(x\\) propagate into an uncertainty in the following functions of \\(y\\) as follows (the quantities \\(a,\\; b\\) and \\(c\\) may be assumed to be precisely known):\n\nIf you measure,\n\n\\[y=ap\\pm bq  \\Rightarrow  \\sigma y = \\sqrt{a^2 \\sigma_p^2 + b^2 \\sigma_q^2}\\]\n\n\n\n\\[\\begin{align} y& = ap \\pm bq \\\\ \\frac{\\partial y}{\\partial p} &= a \\; \\; \\; \\frac{\\partial y}{\\partial q}= \\pm b \\\\ \\sigma_y &=\\sqrt{\\left (\\frac{\\partial y}{\\partial p} \\right)^2 \\; \\sigma_p^2 \\; + \\; \\left(\\frac{\\partial y}{\\partial q} \\right)^2 \\; \\sigma_q^2} \\\\ &= \\sqrt{a^2 \\sigma_p^2 + b^2 \\sigma_q^2} \\end{align} \\]\n\n\nIf you measure,\n\n\\[y = cpq \\; \\Rightarrow \\; \\sigma_y = |y| \\sqrt{\\left (\\frac{\\sigma_p}{p} \\right)^2 \\; + \\; \\left (\\frac{\\sigma q}{q} \\right)^2}\\]\n\n\n\n\\[\\begin{align} y& = cpq \\\\ \\frac{\\partial y}{\\partial p} &=cq \\;\\;\\; \\frac{\\partial y}{\\partial q} = cp \\\\ \\sigma_y &= \\sqrt{\\left (\\frac{\\partial y}{\\partial p} \\right)^2 \\; \\sigma_p^2 \\; + \\; \\left (\\frac{\\partial y}{\\partial q} \\right)^2 \\; \\sigma_q^2} \\\\&= \\sqrt{(cq)^2\\; \\sigma_p^2 \\;+\\; (cp)^2\\; \\sigma_q^2} \\\\ &=\\sqrt{c^2 q^2 \\sigma_p^2\\;+\\; c^2 q^2 \\sigma_q^2} \\\\ &=c\\sqrt{p^2 q^2 \\left (\\frac{\\sigma_p}{p} \\right)^2\\;+\\; p^2 q^2 \\left(\\frac{\\sigma_q}{q} \\right)^2} \\\\ &=|cpq| \\sqrt{\\left(\\frac{\\sigma_p}{p} \\right)^2\\; +\\; \\left(\\frac{\\sigma_q}{q} \\right)^2} \\\\ &=|y| \\sqrt{\\left(\\frac{\\sigma_p}{p} \\right)^2\\; +\\; \\left(\\frac{\\sigma_q}{q} \\right)^2}\\end{align}\\]\n\n\nIf you measure,\n\n\\[y=ln(bx) \\; \\Rightarrow \\; \\sigma_y=\\left |\\frac{a}{x} \\right|\\sigma_x\\]\n\n\n\\[\\begin{align} y&=ln(bx)\\\\ &=\\frac{\\partial_y}{\\partial_x}= \\frac{a}{x} \\\\ &=\\sqrt{\\left (\\frac{\\partial y}{\\partial x} \\right)^2 \\; \\sigma_x^2} \\\\ &= \\sqrt{\\left (\\frac{a}{x} \\right)^2} \\\\ &=\\left |\\frac{a}{x} \\right| \\; \\sigma_x \\end{align}\\]\n\n\nIf you measure,\n\n\\[y=ae^{bx} \\; \\Rightarrow \\; \\sigma_y= |by| \\sigma_x\\]\n\n\n\n\\[\\begin{align} y&=ae^{bx} \\\\ y&=abx^{bx} \\\\ &=\\frac{\\partial y}{\\partial x}=by \\\\ \\sigma_y&=\\sqrt{\\left (\\frac{\\partial y}{\\partial x} \\right)^2 \\sigma_x^2} \\\\&=\\sqrt{(by)^2 \\sigma_x^2} \\\\&=|by|\\sigma_x \\end{align}\\]",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Propagation of Uncertainty"
+      "Uncertainty and The Gravitational Acceleration\""
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/uncertainty.html#p20.2-case-study-the-gravitational-acceleration",
     "href": "quarto-workflows/quantum-mechanics/uncertainty.html#p20.2-case-study-the-gravitational-acceleration",
-    "title": "Propagation of Uncertainty",
+    "title": "Uncertainty and The Gravitational Acceleration”",
     "section": "P20.2 Case study: The gravitational acceleration",
     "text": "P20.2 Case study: The gravitational acceleration\nA novel way to measure the gravitational acceleration, \\(g\\), involves an indirect measurement of the pressure inside a submerged, inverted test tube containing a small amount of water. The experimental set-up proposed by Quiroga et. al.\nLet the ambient pressure be \\(p_0\\), and the length and cross-sectional area of the test tube be \\(l_0\\) and A, respectively, so that it has a volume \\(V_0=Al_0\\). Treating the \\(n\\) moles of air inside it as an ideal gas at temperature \\(T\\), we have \\(p_0 V_0=nRT\\).\nWhen the tube is submerged to a distance \\(h\\), water rises inside it, and the air it contains is compressed to a pressure \\(p_1\\) and volume \\(V_1\\), where \\(p_1 V_1=p_0 V_0\\) if the temperature is constant. The new pressure is \\(p_1=p_0 + \\rho g l_1\\), where \\(\\rho = 1 g\\;cm^-1\\) is the water density, \\(g\\) is the gravitational acceleration (to be determined) and \\(l_1\\) is the measured distance from the bulk water surface to the top of the water level in the test tube.\nThe \\(V_1=A[l_0 - (h-l_1)]\\), and so\n\n\\[p_1=\\frac{l_0}{l_0 - (h - l_1)} p_0\\]\n\ntherefore,\n\n\\[\\left [\\frac{l_0}{l_0 - (h-l_1)} - 1 \\right] \\; p_0 = \\rho g l_1 \\]\n\nThat is, if measurements of \\(l_1\\) are made for different submersion depths, \\(h\\), a plot of the left-hand side of this equation against \\(l_1\\) should yield a straight line with gradient \\(\\rho g\\), from which \\(g\\) can be deduced.\nAssuming that \\(\\sigma_h\\) and \\(\\sigma l_1\\) (the uncertainties in the measurements of \\(h\\) and \\(l_1\\), respectively) dominate and that they are connected, show that the uncertainty in the quantity,\n\n\\[y=p_1 - p_0 = \\left [\\frac{l_0}{l_0 - (h-l_1)} -1 \\right] \\; p_0=\\rho g l_1\\]\n\nis\n\n\\[\\sigma_y=\\frac{l_0 p_0}{[l_0 - (h - l_1]^2} \\sqrt{\\sigma_h^2 + \\sigma_{l_1}^2}\\]\n\nUse the following data to estimate \\(g\\) from a linear least squares fit and the uncertainty in this estimate. Take an average value for \\(\\sigma_y\\), calculated using the above formula.\nThese data were collected on a day with an ambient air pressure of \\(p_0=1037\\) mbar and using a test tube of length 20 cm. Take \\(\\sigma_h = \\sigma_{l_0} = 1 mm\\). These data are given in the file h and L1.txt\n    # Measured distance, h and L1, in cm\n    h        L1\n    29.9     29.3\n    35       34.3\n    39.9     39.2\n    45.1     44.5\n    50       49.1\n    55       54\n    59.9     58.7\n    65       64\n    70.1     68.9\n    74.9     73.5\n    80.1     78.6\n    85.1     83.7\n    90.1     88.6\n    95       93.4\n    \n\nStep 1: Calculate the uncertainties in the measurements of h and l1\n\n\\[\\begin{align} y &= p_1 - p_0 = \\left [\\frac{l_0}{l_0 - (h -l_1)} \\right] \\; p_0 = \\rho g l_1 \\\\ \\frac{\\partial y}{\\partial h} &=\\frac{l_0 p_0}{[l_0 - (h -l_1)]^2} \\\\ \\frac{\\partial y}{\\partial l_1} &= - \\frac{l_0 p_0}{[l_0 - (h-l_1)]^2} \\\\ \\sigma_y&=\\sqrt{\\left (\\frac{\\partial y}{\\partial h} \\right)^2 \\sigma_h^2\\;+\\; \\left (\\frac{\\partial y}{\\partial l_1} \\right)^2 \\sigma_{l_1^2}} \\\\ &= \\sqrt{\\frac{l_0^2 p_0^2}{[l_0 - (h-l_1)]^4} (\\sigma_h^2 + \\sigma_{l_1}^2) } \\\\ &=\\frac{l_0 p_0}{[l_0 - (h-l_1)]^2} \\sqrt{\\sigma_h^2 + \\sigma_{l_1}^2 } \\end{align}\\]\n\n\n\nStep 2: Measured distance h and l1 in cm\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Open file data\nh, l1 = np.genfromtxt('h and L1.txt', unpack=True, skip_header=2)\n\nn = len(h)\n\n# convert from cm to m\nh = h /100\nl1 = l1 / 100\n\n# Parameters\np0 = 1037 * 100 # mbar to pa\nrho = 1 * 1000 # g. cm-1 to kg. m-3\nl0 = 20 / 100 # length the test tube (cm to m)\nsig_h = sig_l1 = 1 /1000 # uncertainties (mm to m)\n\n# Calculate the uncertainties\nx = l1\nz = l0 -(h-l1)\ny = p1_minus_p0 = (l0 /z - 1) * p0\nsigma_y= l0 * p0 / (z)**2 * np.sqrt(sig_h**2 + sig_l1**2)\n\n#Plotting error bar\ndef plot_data():\n    plt.figure(figsize=(6, 4))\n    plt.errorbar(l1, p1_minus_p0, yerr=sigma_y, xerr=sig_l1, marker='o', c='k', ls='', capsize=4)\n    plt.xlabel(r'$l_1 \\; /\\; \\mathrm{m}$')\n    plt.ylabel(r'$p_1 - p_0 \\; /\\;\\mathrm{Pa}$')\n    plt.savefig('Uncertainty in The gravitational acceleration.svg', bbox_inches='tight')\nplot_data()\n\n\n\nFigure 1. Uncertainty in The gravitational acceleration\n\n\n\n\nStep 3: Measure a straight line fit, \\(y = a \\pm bx\\)\nA straight line fit, \\(y = a \\pm bx\\) through these data provides an estimated value for g:\n\n\\[\\hat{\\beta}=\\begin{pmatrix} a\\\\b\\end{pmatrix}\\;where\\;a=\\frac{S_y S_{xx} - S_{xy} S_x}{nS_{xx} - S^2_x}\\;and\\;b=\\frac{nS_{xy} S_y S_x}{nS_{xx} - S^2_x},\\]\n\nwhere\n\n\\[S_x=\\overset{n}{\\underset{i=1}{\\sum x_i}},\\;S_y=\\overset{n}{\\underset{i=1}{\\sum Y_i}},\\;S_{xx}=\\overset{n}{\\underset{i=1}{\\sum x_i^2}},\\;S_{xy}=\\overset{n}{\\underset{i=1}{\\sum x_iy_i}}.\\]\n\nThe uncertainty in the fitted parameter b is,\n\n\\[\\sigma_b = \\sigma_y \\sqrt{\\frac{n}{nS_{xx} - S_x^2}}\\]\n\nand we can estimate the uncertainty in g:\n# Fit data\nSx, Sy, Sxx, Sxy = np.sum(x), np.sum(y), np.sum(x*x), np.sum(x*y)\nDelta = n * Sxx - Sx**2\na = (Sy*Sxx - Sxy * Sx) / Delta\nb = (n * Sxy - Sy * Sx) / Delta\nprint('a, b =', a, b)\ng_est = b /rho\nprint('g-estimated =', g_est)\n\n# Estimate uncertainty in the fitted parameter b\nsigma_b = np.mean(sigma_y) * np.sqrt(n / Delta) /rho\nprint('sigma-b=',sigma_b)\na, b = 113.64118138687233 9633.702167054678\ng-estimated = 9.633702167054679\nsigma-b= 1.1051296914381148\nThe result of this experiment is therefore \\(g = 9.6 \\pm 1.1 m.s^{-2}\\).",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Propagation of Uncertainty"
+      "Uncertainty and The Gravitational Acceleration\""
     ]
   },
   {
@@ -1664,133 +1664,133 @@
   {
     "objectID": "quarto-workflows/quantum-mechanics/hermite.html#preliminaries",
     "href": "quarto-workflows/quantum-mechanics/hermite.html#preliminaries",
-    "title": "Vibrational Spectroscopy",
+    "title": "Hermite Polynomial in Quantum Harmornic Oscillator",
     "section": "Preliminaries",
     "text": "Preliminaries\n\nscipy.optimize: provides a range of algorithms for minimization of multidimensional functions (with or without constraints).\nscipy.optimize.minimize: minimize routine which implements several different algorithms for minimization.\nscipy.optimize.minimize_scalar: provide a way to minimize a function of a single variable.\nscipy.optimize.special: is the function for the evaluation of different sirts of orthogonal polynomials, including the Legendre, Jacobi, Laguerre, Hermite and different flavors of Chebshev polynomials.\nscipy.optimize.special import hermite: (Physicists’) Hermite polynomial, \\(H_n (x)\\).",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Vibrational Spectroscopy"
+      "Hermite Polynomial in Quantum Harmornic Oscillator"
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/hermite.html#mathematical-prerequisites",
     "href": "quarto-workflows/quantum-mechanics/hermite.html#mathematical-prerequisites",
-    "title": "Vibrational Spectroscopy",
+    "title": "Hermite Polynomial in Quantum Harmornic Oscillator",
     "section": "Mathematical Prerequisites",
     "text": "Mathematical Prerequisites\n\nDifferential equations, specifically the power series method.\nOrthogonal polynomials\nGaussian functions",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Vibrational Spectroscopy"
+      "Hermite Polynomial in Quantum Harmornic Oscillator"
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/hermite.html#quantum-mechanical-prerequisites",
     "href": "quarto-workflows/quantum-mechanics/hermite.html#quantum-mechanical-prerequisites",
-    "title": "Vibrational Spectroscopy",
+    "title": "Hermite Polynomial in Quantum Harmornic Oscillator",
     "section": "Quantum Mechanical Prerequisites",
     "text": "Quantum Mechanical Prerequisites\n\nTime-Independent \\(Schr\\ddot{o}dinger\\)\nNormalization of wavefunctions (\\(|\\psi (x)|^2\\))\nQuantum number (\\(n \\in {0, \\ 1, \\ 2, \\ldots}\\) ) and energy level (\\(E_n\\)).",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Vibrational Spectroscopy"
+      "Hermite Polynomial in Quantum Harmornic Oscillator"
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/hermite.html#the-wavefunctions",
     "href": "quarto-workflows/quantum-mechanics/hermite.html#the-wavefunctions",
-    "title": "Vibrational Spectroscopy",
+    "title": "Hermite Polynomial in Quantum Harmornic Oscillator",
     "section": "The Wavefunctions",
     "text": "The Wavefunctions\nThe wavefunctions for the quantum harmonic oscillator contain the Gaussian form, which allows them to satisfy the necessary boundary conditions at infinity. In the wavefunction associated with a given value of the quantum number \\(n\\), the Gaussian is multiplied by a polynomial of order \\(n\\) called a Hermite polynomial. The expressions are simplified by making the substitution,\n\n\\[\\psi (y) = e^{-y^2 / 2} \\tag{8}\\]\n\nBecause of the association of the wavefunction with a probability density, it is necessary for the wavefunction to include a normalization constant, \\(N_n\\).\n\n\\[N_n = \\frac{1}{(2^n n! \\sqrt{\\pi})^{1/2}} \\tag{9}\\]\n\nThe final form of the harmonic oscillator wavefunction is this\n\n\\[\\psi_n (y) = N_n H_n (y) e^{-y^2 /2} \\tag{10} \\]\n\nwhere \\(y = \\sqrt{\\alpha} x\\) and \\(\\alpha = \\frac{m \\omega}{\\hbar}\\).\nThe general formula for the normalized wavefunctions is\n\n\\[\\psi_n (y) = \\left(\\frac{\\alpha}{\\pi} \\right)^{1/4} \\frac{1}{\\sqrt{2^n n!}} H_n (y)e^{-y^2 /2} \\tag{11}\\]\n\nwhere \\(H_n\\) is the Hermite polynomial. First four harmonic oscillator normalized wavefunctions,\n\n\\[\\begin{align} \\psi_0 &= \\left(\\frac{\\alpha}{\\pi} \\right)^{1/4} e^{-y^2 /2} \\\\ \\psi_1 &= \\left(\\frac{\\alpha}{\\pi} \\right)^{1/4} \\sqrt{2} y e^{-y^2 /2} \\\\ \\psi_2 &= \\left(\\frac{\\alpha}{\\pi} \\right)^{1/4} \\frac{1}{\\sqrt{2}} (2y^2 -1) e^{-y^2 /2} \\\\ \\psi_3 &= \\left(\\frac{\\alpha}{\\pi} \\right)^{1/4} \\frac{1}{\\sqrt{3}} (2y^3 - 3y) e^{-y^2 /2} \\end{align}\\]\n\nAll energies are proportional to \\(\\hbar \\omega\\), with \\(\\omega\\) the frequency of the harmonic oscillator. The energies are\n\n\\[E_n = \\hbar \\omega \\left (\\frac{1}{2} + n \\right) \\quad \\mbox{with} \\quad n = 0, \\ 1, \\ 2, \\ldots \\tag{12}\\]\n\nWhen the \\(Schr\\ddot{o}dinger\\) equation for the harmonic oscillator is solved by a series method, the solutions contain this set of polynomials, named the Hermite polynomials.\n\n\n\nn\n\\(H_n (y)\\)\n\\(E_n\\)\n\n\n\n\n0\n\\(1\\)\n\\(\\frac{1}{2} \\hbar \\omega\\)\n\n\n1\n\\(2y\\)\n\\(\\frac{3}{2} \\hbar \\omega\\)\n\n\n2\n\\(4y^2 -2\\)\n\\(\\frac{5}{2} \\hbar \\omega\\)\n\n\n3\n\\(8y^3 - 12y\\)\n\\(\\frac{7}{2} \\hbar \\omega\\)\n\n\n4\n\\(16y^4-48y^2 +12\\)\n\\(\\frac{9}{2} \\hbar \\omega\\)\n\n\n5\n\\(32y^5 - 160y^3 +120y\\)\n\\(\\frac{11}{2} \\hbar \\omega\\)\n\n\n\nThe wavefunctions for the quantum harmonic oscillator contain the Gaussian form, which allows them to satisfy the necessary boundary conditions at infinity. In the wavefunction associated with a given value of the quantum number \\(n\\), the Gaussian is multiplied by a polynomial of order \\(n\\) (the Hermite polynomials above) and the constants necessary to normalize the wavefunctions.",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Vibrational Spectroscopy"
+      "Hermite Polynomial in Quantum Harmornic Oscillator"
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/anharmonicity.html#beyond-the-harmonic-oscillator",
     "href": "quarto-workflows/quantum-mechanics/anharmonicity.html#beyond-the-harmonic-oscillator",
-    "title": "Vibrational Anharmonicity",
+    "title": "Vibrational Anharmonicity in Diatomic Molecule",
     "section": "Beyond The Harmonic Oscillator",
     "text": "Beyond The Harmonic Oscillator\nLet’s now consider two ways in which the vibrational structure of “real molecules” is more complicated than what we’ve seen for the harmonic oscillator.",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Vibrational Anharmonicity"
+      "Vibrational Anharmonicity in Diatomic Molecule"
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/anharmonicity.html#anharmonicity",
     "href": "quarto-workflows/quantum-mechanics/anharmonicity.html#anharmonicity",
-    "title": "Vibrational Anharmonicity",
+    "title": "Vibrational Anharmonicity in Diatomic Molecule",
     "section": "Anharmonicity",
     "text": "Anharmonicity\nFirst, real vibrational motions involve “anharmonicity”, e.g., Their potential deviates from a perfect harmonic oscillator quadratic potential energy surfaces. We’ve already touched on this by looking at the Morse Potential.\n\n\n\nFigure.The Morse Potential (blue) and harmonic oscillator potential (green)\n\n\nThe harmonic oscillator is a reasonable approximation of this potential near the equilibrium geometry, but deviates substantially for \\(x\\) far from the center of the well. Correspondingly, the vibrational levels of the Morse potential will deviate from those of the HO model. Note that the Morse potential levels grow closer together as energy increases.",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Vibrational Anharmonicity"
+      "Vibrational Anharmonicity in Diatomic Molecule"
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/anharmonicity.html#limitations-of-the-harmonic-oscillator-model-for-molecular-vibrations",
     "href": "quarto-workflows/quantum-mechanics/anharmonicity.html#limitations-of-the-harmonic-oscillator-model-for-molecular-vibrations",
-    "title": "Vibrational Anharmonicity",
+    "title": "Vibrational Anharmonicity in Diatomic Molecule",
     "section": "Limitations of the Harmonic Oscillator Model for Molecular Vibrations",
     "text": "Limitations of the Harmonic Oscillator Model for Molecular Vibrations\nThe harmonic oscillation is a great approximation of a molecular vibration, but has key limitations: - Due to equal spacing of energy, all transitions occur at the same frequency (i.e., single line spectrum). However, experimentally, many lines are often observed (called overtones). - The harmonic oscillator does not predict bond dissociation, you cannot break it, no matter how much energy is introduced.",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Vibrational Anharmonicity"
+      "Vibrational Anharmonicity in Diatomic Molecule"
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/anharmonicity.html#overtones",
     "href": "quarto-workflows/quantum-mechanics/anharmonicity.html#overtones",
-    "title": "Vibrational Anharmonicity",
+    "title": "Vibrational Anharmonicity in Diatomic Molecule",
     "section": "Overtones",
     "text": "Overtones\nBased on the harmonic oscillator approximation, the energy of the overtone transition would be \\(n\\) times larger than the energy of the fundamental transition frequency, but the anharmonic oscillator calculations show that the overtones are less than a multiple of the fundamental frequency. This is demonstrated with the vibration of the diatomic in the gas phase:\n\n\\(\\mbox{Table 1. HCl vibrational spectrum}\\)\n\n\n\n\n\n\n\n\n\n\n\n\nTransition\nTerm\n\\(v_{obs} \\ [cm^{-1}]\\)\n\\(v_{Harmonic} \\ [cm^{-1}]\\)\n\\(v_{Anharmonic} \\ [cm^{-1}]\\)\n\n\n\n\n\\(0 \\rightarrow 1\\)\nfundamental\n2,885.9\n2,885.9\n2,885.3\n\n\n\\(0 \\rightarrow 2\\)\nfirst overtone\n5,668.0\n5,771.8\n5,665.0\n\n\n\\(0 \\rightarrow 3\\)\nsecond overtone\n8,347.0\n8,657.7\n8,339.0\n\n\n\\(0 \\rightarrow 4\\)\nthird overtone\n10,923.1\n11,543.6\n10,907. 4\n\n\n\\(0 \\rightarrow 4\\)\nfourth overtone\n13,396.5\n14,429.5\n13,370\n\n\n\n\nWe can see from Table 1, that the anharmonic frequencies correspond much better with the observed frequencies, especially as the vibrational levels increase.",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Vibrational Anharmonicity"
+      "Vibrational Anharmonicity in Diatomic Molecule"
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/anharmonicity.html#the-morse-oscillator-schrddoto-dinger-equation",
     "href": "quarto-workflows/quantum-mechanics/anharmonicity.html#the-morse-oscillator-schrddoto-dinger-equation",
-    "title": "Vibrational Anharmonicity",
+    "title": "Vibrational Anharmonicity in Diatomic Molecule",
     "section": "The Morse oscillator \\(Schr\\ddot{o} dinger\\) equation",
     "text": "The Morse oscillator \\(Schr\\ddot{o} dinger\\) equation\nSolving the \\(Schr\\ddot{o}dinger\\) with the Morse oscillator is not trivial, but can be done analytically in terms of associated Laguerre polynomials.\n\n\\[\\psi (n) = N_n z^{\\lambda - n - \\frac{1}{2}} e^{-z / 2} L_n^{2 \\lambda - 2n - 1} (z) \\quad [in \\ cm^{-1}] \\tag{4}\\]\n\nwhere\n\n\\(N_n = \\sqrt{\\frac{n!(2\\lambda - 2n - 1)a}{\\Gamma (2 \\lambda - n)}}, \\quad \\lambda = \\frac{\\sqrt{2mD_e}}{a\\hbar}\\) is normalization constant.\n\\(\\mathcal{L}_n^(\\alpha) = \\frac{z^{- \\alpha} e^z}{v !} \\ \\frac{d^n}{dz^n} (z^{n + \\alpha} e^{-z}), \\quad z= 2\\lambda e^{-x}\\) is a generalized Laguerre Polynomial.\n\\(n = 0, \\ 1, \\ 2, \\ 3, \\ldots, \\left[ \\lambda - \\frac{1}{2} \\right]\\)",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Vibrational Anharmonicity"
+      "Vibrational Anharmonicity in Diatomic Molecule"
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/anharmonicity.html#preliminaries",
     "href": "quarto-workflows/quantum-mechanics/anharmonicity.html#preliminaries",
-    "title": "Vibrational Anharmonicity",
+    "title": "Vibrational Anharmonicity in Diatomic Molecule",
     "section": "Preliminaries",
     "text": "Preliminaries\nscipy.constants: is the package provides the internationally agreed standard values and uncertainties for physical constants include a large number of algorithms for calculating functions that appear in science.\n\n\\[\\mbox{Table 1. Physical constants} \\ \\mathtt{scipy.constant}\\]\n\n\n\n\n\nConstant string\nVariable\nValue\nUnits\n\n\n\n\nPlanck constant\nh\n6.62606957e-34\nJ s\n\n\nSpeed of light in vacuum\nc\n299792458.0\nm s-1\n\n\nAvogadro constant\nN_A\n6.02214129E+23\nmol-1\n\n\nAtomic mass\nu\n1.6605390666e-27\nkg\n\n\n\n\nThe code below defines the class Morse representing a Morse oscillator, which can be used to generate depictions of the wavefunctions and energy levels as given in the example for \\(HCl\\).",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Vibrational Anharmonicity"
+      "Vibrational Anharmonicity in Diatomic Molecule"
     ]
   },
   {
     "objectID": "quarto-workflows/quantum-mechanics/anharmonicity.html#e24.1-inferring-morse-parameters-from-a-vibrational-spectrum",
     "href": "quarto-workflows/quantum-mechanics/anharmonicity.html#e24.1-inferring-morse-parameters-from-a-vibrational-spectrum",
-    "title": "Vibrational Anharmonicity",
+    "title": "Vibrational Anharmonicity in Diatomic Molecule",
     "section": "E24.1 Inferring Morse Parameters from a vibrational spectrum",
     "text": "E24.1 Inferring Morse Parameters from a vibrational spectrum\nThe vibrational spectrum of the \\(HCl\\) molecule shows a fundamental band at \\(2,885.9 \\ cm^{-1}\\) and the first overtone band at \\(5,668.0\\). This information can be used to estimate the Morse parameters, \\(D_e\\) and \\(\\alpha\\), and hence the good strength and maximum vibrational level.\nSolution: 1. Observe bands to estimate the parameters \\(\\omega_e\\) and \\(\\omega_e x_e\\). The fundamental vibrational band, corresponding to the transition \\(v = 0 \\rightarrow 1\\), occurs at a wavenumber given by\n\n\\[v_{0 \\rightarrow 1} = G(1) - G(0) = \\omega_e - 2\\omega_e x_e\\]\n\nOvertone bands, for which \\(\\Delta &gt; 1\\) are predicted to be observed at wavenumber\n\n\\[v_{0 \\rightarrow v} = G(v) - G(0) = \\omega_e v - \\omega_e x_e v(v+1)\\]\n\nThe observed bands of HCl,\n\n\\[\\begin{align} v_{0 \\rightarrow 1} &= \\omega_e - 2 \\omega_e x_e = 2885 \\ cm^{-1}, \\\\ v_{0 \\rightarrow 2} &= 2\\omega_e - 6\\omega_e x_e = 5668 \\ cm^{-1} \\end{align}\\]\n\nTherefore\n\n\\[\\begin{align} \\omega_e x_e &= \\frac{1}{2} (2 v_{0 \\rightarrow 1} - v_{0 \\rightarrow 2}), \\\\ \\omega_e &= v_{0 \\rightarrow 1} + 2 \\omega_e x_e \\end{align}\\]\n\n\nCompute the Morse oscillator model\n\n\n\\[\\begin{align} D_e &=\\frac{\\omega^2}{4 \\omega_e x_e} \\ \\mbox{and} \\\\ \\alpha &=2 \\pi c \\omega_e \\sqrt{\\frac{\\mu}{2 D_e}} \\end{align}\\]\n\nwhere \\(\\mu\\) is the reduced mass of the molecule.\n\nCalculate the bond strength from the ground state. From eq.1 the ground state (or zero-point) energy is\n\n\n\\[ E_0 = \\frac{1}{2} \\hbar \\omega_0 (1 - \\frac{1}{2} x_e)\\]\n\nSo the dissociation energy for the Morse potential is given by \\(D_0 = D_e - E_0\\). The transition energies are\n\n\\[E_n - E_m = \\hbar \\omega_0 (n - m) \\left[1 - x_e \\left(n + m + \\frac{1}{2} \\right) \\right]\\]\n\nThe proper harmonic expressions are obtained from the above for the Morse oscillator by setting \\(D_e \\rightarrow \\infty\\) or \\(x_e \\rightarrow 0\\).\n\nCalculate the highest energy level (\\(v_{max}\\))\n\nThe vibrational energy levels converge with increasing quantum number, \\(v\\), the highest energy level, \\(v_max\\) is given by the condition\n\n\\[\\begin{align} \\frac{d G(v)}{dv} & = 0 \\\\ \\omega_e - 2 \\omega_e x_e(v_{max} + \\frac{1}{2}) & =0 \\\\ v_{max} &=\\frac{\\omega_e}{2 \\omega_e x_e} - \\frac{1}{2} \\end{align}\\]\n\n\nPlotting the Morse oscillator potential.\n\n# 1. The parameter we and wexe\nnu_0_1, nu_0_2 = 2885, 5668\nwexe = (2 * nu_0_1 - nu_0_2) / 2\nwe = nu_0_1 + 2 * wexe\n\nprint(f'we = {we} cm-1, wexe = {wexe} cm^-1')\nwe = 2987.0 cm-1, wexe = 51.0 cm^-1\n# 2. Compute the Morse oscillator model\nimport numpy as np\nfrom scipy.constants import h, c, N_A, u\nimport matplotlib.pyplot as plt\n\n# Dissociation energy measured from the potential minimum, cm-1\nDe = we**2 / 4 / wexe\n\n# Reduced mass of (1H) (35.5Cl)\nmu = 1 * 35.5 / (1 + 35.5) * u\n\n# Compute everything to SI units in calculating a: De / J = hc.De / cm-1\na = 2 * np.pi * (c * 100) * we * np.sqrt(mu / 2 / (De * h * (c * 100)))\n\n# Convert a from m-1 to A-1\na *= 1.e-10\n\nprint(f'De = {De:.0f} cm-1, a = {a:.1f} A-1')\nDe = 43736 cm-1, a = 1.7 A-1\nThe Morse parameter, \\(D_e\\), is the dissociation energy measured from the potential minimum. The bond strength is the energy required to dissociate the molecule from its ground state (\\(v =0\\), with energy \\(G(0) = \\frac{1}{2} \\omega_e - \\frac{1}{4} \\omega_e x_e)\\).\nE0 = we / 2 - wexe / 4\nD0 = De - E0\n\n# Convert dissociation energy, D0, to kj.mol-1\nbond_strength = D0 * h * (c * 100) * N_A / 1000\nprint(f' CO bond strength = {bond_strength:.0f} kj.mol-1')\nCO bond strength = 505 kj.mol-1\n# Calculate the highest energy level ($v_{max}$)\n\nvmax = int(we / 2 / wexe - 0.5)\nprint(f'vmax = {vmax}')\nvmax = 28\nTo plot the potential energy curve and energy levels, create an array of bind displacement, \\(x= r - r_e\\) and use the Morse oscillator formula \\(V(x)\\):\n# 6.  Plotting the Morse oscillator potential.\n\n# Grid of bond displacement values, x = r - re, in Angstrom.\nx = np.linspace(-2, 6, 3000)\n\n# Morse Oscillator potential\nV = De * (1 - np.exp(-a*x))**2\n\n# Plot the Morse Oscillator\nplt.plot(x, V)\nplt.xlabel(r'$(r - r_e) \\ \\mathrm{\\AA}$')\nplt.ylabel(r'$D_e  \\ cm^{-1}$')\nplt.ylim(0, De)\nplt.title(\"Morse Oscillator Potential with Vibrational Levels of HCl\")\n\n# Arrays of vibrational quantum number nd corresponding energy.\nv = np.arange(0, vmax+1, 1, dtype=int)\nEv = np.array([we * (v+0.5) - wexe * (v + 0.5)**2])\n\n# Classical turning points\nxm = - np.log(1 + np.sqrt(Ev / De)) / a\nxp = - np.log(1 - np.sqrt(Ev/ De)) / a\n\n# Plot the energy level as horizontal lines between xm and xp at Ev\nplt.savefig('Morse Oscillator Potential with Vibrational Levels.svg', bbox_inches='tight')\nplt.hlines(Ev, xm, xp)\n\n\n\nFigure. Morse Oscillator Potential with Vibrational Levels of HCl",
     "crumbs": [
       "Contents",
       "Quantum Mechanics",
-      "Vibrational Anharmonicity"
+      "Vibrational Anharmonicity in Diatomic Molecule"
     ]
   },
   {
@@ -2123,6 +2123,30 @@
       "Contents",
       "Data Science",
       "The Oscillatory Chemical Reactions"
+    ]
+  },
+  {
+    "objectID": "quarto-workflows/data-science/chemspy.html#date-2025-12-09",
+    "href": "quarto-workflows/data-science/chemspy.html#date-2025-12-09",
+    "title": "Storing and Transmitting Chemical Database",
+    "section": "date: “2025-12-09”",
+    "text": "date: “2025-12-09”",
+    "crumbs": [
+      "Contents",
+      "Data Science",
+      "date: \"2025-12-09\""
+    ]
+  },
+  {
+    "objectID": "quarto-workflows/quantum-mechanics/hermite.html#vibrational-spectroscopy",
+    "href": "quarto-workflows/quantum-mechanics/hermite.html#vibrational-spectroscopy",
+    "title": "Hermite Polynomial in Quantum Harmornic Oscillator",
+    "section": "Vibrational Spectroscopy",
+    "text": "Vibrational Spectroscopy\nWhat is it?: Vibrational spectroscopy detects transitions between the quantised vibrational energy levels associated with bond stretching and/or bond angle bending in molecules.\nHow do we do it?: Transitions are observed by measuring the amount of infrared radiation that is absorbed or emitted by vibrating molecules in solid, liquid, or gas phases.\nWhy do we do it?: A knowledge of the vibrational level spacings gives us the value of the stretching (or bending) force constants which characterise the stiffness of a bond, allows us to estimate the bond dissociation energy, and gives us a means of identifying characteristic functional groups of atoms within large molecules.",
+    "crumbs": [
+      "Contents",
+      "Quantum Mechanics",
+      "Hermite Polynomial in Quantum Harmornic Oscillator"
     ]
   }
 ]

@@ -1,5 +1,4 @@
- ---
-title: "Michael-Menten model and Linear-Burk Plot"
+---
 date: "2026-2-12"
 ---
 

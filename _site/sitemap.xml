@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>/quarto-workflows/data-science/basicnumpy.html</loc>
-    <lastmod>2026-05-17T02:51:48.453Z</lastmod>
+    <lastmod>2026-06-01T03:38:48.817Z</lastmod>
   </url>
   <url>
     <loc>/explore.html</loc>
@@ -82,35 +82,35 @@
   </url>
   <url>
     <loc>/quarto-workflows/data-science/chemspy.html</loc>
-    <lastmod>2026-05-17T04:15:50.199Z</lastmod>
+    <lastmod>2026-06-01T03:39:43.786Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/pandas.html</loc>
-    <lastmod>2026-05-19T16:10:06.694Z</lastmod>
+    <lastmod>2026-06-01T03:43:43.315Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/thermodynamics/boltzman.html</loc>
-    <lastmod>2026-05-17T04:35:21.992Z</lastmod>
+    <lastmod>2026-06-01T03:50:21.169Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/morenumpy.html</loc>
-    <lastmod>2026-05-19T16:13:18.658Z</lastmod>
+    <lastmod>2026-06-01T03:41:32.941Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/ssaproximation.html</loc>
-    <lastmod>2026-05-17T04:54:04.382Z</lastmod>
+    <lastmod>2026-06-01T03:48:46.263Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/errorbar.html</loc>
-    <lastmod>2026-05-17T05:05:34.707Z</lastmod>
+    <lastmod>2026-06-01T03:40:17.267Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/menten.html</loc>
-    <lastmod>2026-05-19T16:20:44.602Z</lastmod>
+    <lastmod>2026-06-01T03:41:19.568Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/uncertainty.html</loc>
-    <lastmod>2026-05-17T09:00:54.535Z</lastmod>
+    <lastmod>2026-06-01T03:49:28.976Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/index.html</loc>
@@ -118,35 +118,35 @@
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/inertia.html</loc>
-    <lastmod>2026-05-17T09:07:19.505Z</lastmod>
+    <lastmod>2026-06-01T03:47:53.533Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/integration.html</loc>
-    <lastmod>2026-05-19T16:48:29.562Z</lastmod>
+    <lastmod>2026-06-01T03:40:34.649Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/multiintegral.html</loc>
-    <lastmod>2026-05-17T10:26:15.428Z</lastmod>
+    <lastmod>2026-06-01T03:41:50.215Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/QHO.html</loc>
-    <lastmod>2026-05-17T10:28:19.745Z</lastmod>
+    <lastmod>2026-06-01T03:48:24.030Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/optimization.html</loc>
-    <lastmod>2026-05-17T10:30:36.022Z</lastmod>
+    <lastmod>2026-06-01T03:42:37.473Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/approxiqho.html</loc>
-    <lastmod>2026-05-29T05:30:50.822Z</lastmod>
+    <lastmod>2026-06-01T03:46:32.483Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/hermite.html</loc>
-    <lastmod>2026-05-22T01:25:32.188Z</lastmod>
+    <lastmod>2026-06-01T03:47:26.267Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/anharmonicity.html</loc>
-    <lastmod>2026-05-27T09:15:26.288Z</lastmod>
+    <lastmod>2026-06-01T03:46:19.714Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/orbital.html</loc>
@@ -154,42 +154,46 @@
   </url>
   <url>
     <loc>/quarto-workflows/data-science/differential.html</loc>
-    <lastmod>2026-05-17T12:14:19.846Z</lastmod>
+    <lastmod>2026-06-01T03:40:02.196Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/singleorder.html</loc>
-    <lastmod>2026-05-19T16:55:06.118Z</lastmod>
+    <lastmod>2026-06-01T03:44:14.942Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/Gaussian.html</loc>
-    <lastmod>2026-05-19T01:55:28.055Z</lastmod>
+    <lastmod>2026-06-01T03:37:13.925Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/the-fourier-series.html</loc>
-    <lastmod>2026-05-16T15:41:36.900Z</lastmod>
+    <lastmod>2026-06-01T03:36:23.802Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/linear-algebra.html</loc>
-    <lastmod>2026-05-16T16:10:40.867Z</lastmod>
+    <lastmod>2026-06-01T03:40:53.651Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/numpy-and-matplot.html</loc>
-    <lastmod>2026-05-16T16:59:22.150Z</lastmod>
+    <lastmod>2026-06-01T03:42:19.902Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/quantum-mechanics/particles-2d.html</loc>
-    <lastmod>2026-05-16T15:49:27.425Z</lastmod>
+    <lastmod>2026-06-01T03:48:06.926Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/thermodynamics/adiabatic-process.html</loc>
-    <lastmod>2026-05-22T01:35:03.630Z</lastmod>
+    <lastmod>2026-06-01T03:50:03.764Z</lastmod>
   </url>
   <url>
     <loc>/acknowledgments.html</loc>
-    <lastmod>2026-05-25T04:04:29.431Z</lastmod>
+    <lastmod>2026-06-01T03:59:57.233Z</lastmod>
   </url>
   <url>
     <loc>/quarto-workflows/data-science/oregonator.html</loc>
-    <lastmod>2026-05-29T05:27:43.350Z</lastmod>
+    <lastmod>2026-06-01T03:43:02.620Z</lastmod>
+  </url>
+  <url>
+    <loc>/quarto-workflows/data-science/string-list.html</loc>
+    <lastmod>2026-06-01T03:45:52.770Z</lastmod>
   </url>
 </urlset>

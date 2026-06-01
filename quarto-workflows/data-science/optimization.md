@@ -1,5 +1,4 @@
 ---
-title: "Mathematical Optimization"
 date: "2026-4-3"
 ---
 

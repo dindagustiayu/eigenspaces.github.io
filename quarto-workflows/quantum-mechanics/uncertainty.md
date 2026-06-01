@@ -1,11 +1,12 @@
 ---
-title: "Uncertainty and The Gravitational Acceleration"
 date: "2026-2-23"
 ---
 
 
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Uncertainty-and-The-Gravitational-Acceleration/blob/main/Uncertainties.py)
+
+# Uncertainty and The Gravitational Acceleration
 
 # Propagation of Uncertainty
 Propagation of Error (or Propagation of Uncertainty) is defined as the effect on a function by a variable's uncertainty. It is a calculus derived statistical calculation designed to combine uncertainties from multiple variables to provide an accurate measurement of uncertainty.

@@ -1,5 +1,4 @@
 ---
-title: "Error Bars in Atomic Scale"
 date: "2025-12-25"
 ---
 

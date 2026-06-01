@@ -1,5 +1,4 @@
 ---
-title: "The Morse Oscillator"
 date: "2026-4-16"
 ---
 

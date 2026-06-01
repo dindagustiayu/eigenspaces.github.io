@@ -1,6 +1,5 @@
 ---
-title: "Quantum Harmonic Oscillator"
-date: "2026-3-2
+date: "2026-3-2"
 ---
 
 
