@@ -1,3 +1,10 @@
+---
+title: "Particle in 2D box"
+date: "2026-1-20"
+---
+
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Particle-in-2D-Box/tree/main)
 
 # Particles in Multidimensions

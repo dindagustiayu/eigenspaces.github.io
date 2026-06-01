@@ -1,3 +1,9 @@
+---
+title: "The Fourier Series"
+date: "2026-1-19"
+---
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](Fourier-series.py)
 
 # The Fourier Series

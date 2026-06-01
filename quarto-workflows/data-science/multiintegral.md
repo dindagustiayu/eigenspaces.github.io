@@ -1,3 +1,9 @@
+---
+title: "Multiple Integrals"
+date: "2026-3-07"
+---
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Multiple-Integrals/blob/main/Doble%20and%20Triple%20Integrals.html)
 
 # Multiple Integrals

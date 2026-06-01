@@ -1,3 +1,8 @@
+---
+title: "Numpy and Matplot for Physics Problems"
+date: "2025-12-06"
+---
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Basic-NumPy-and-Matplotlib-for-solving-physics-problems./tree/main)
 
 # NumPy and Matplotlib

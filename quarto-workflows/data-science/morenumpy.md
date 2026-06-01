@@ -1,3 +1,9 @@
+---
+title: "Numpy functions in atomic scale"
+date: "2025-12-24"
+---
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Numpy-Polynomial-and-Physical-Constants/blob/main/index.html)
 
 

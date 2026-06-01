@@ -1,3 +1,10 @@
+---
+title: "The Moment Inertia of a Molecule"
+date: "2026-2-4"
+---
+
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/The-moment-of-Inertia-of-H2O/blob/main/Moment%20inertia%20of%20molecule.cpp)
 
 

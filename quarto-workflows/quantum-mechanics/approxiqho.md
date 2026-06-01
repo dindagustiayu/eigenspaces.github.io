@@ -1,3 +1,10 @@
+---
+title: "Approximation in Quantum Chemistry"
+date: "2026-4-7"
+---
+
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Approximation-in-Quantum-Chemistry/blob/main/Variational%20Principle.py)
 
 # Approximation in Quantum Chemistry

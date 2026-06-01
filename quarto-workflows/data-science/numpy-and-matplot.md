@@ -1,3 +1,9 @@
+---
+title: "Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems"
+date: "2025-12-09"
+---
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Aggregation-Indexing-Boleean-and-Reading-Data-into-Numpy-Array-for-Physics-problems./tree/main)
 
 

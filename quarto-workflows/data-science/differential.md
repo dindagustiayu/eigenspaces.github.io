@@ -1,3 +1,8 @@
+---
+title: "Ordinary Differential Equation of Chemistry"
+date: "2026-4-26"
+---
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/First-Order-Differential-Equations-in-Chemistry/blob/main/First%20ODE%20in%20Chemistry.py)
 
 

@@ -1,3 +1,10 @@
+---
+title: "Uncertainty and The Gravitational Acceleration"
+date: "2026-2-23"
+---
+
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Uncertainty-and-The-Gravitational-Acceleration/blob/main/Uncertainties.py)
 
 # Propagation of Uncertainty

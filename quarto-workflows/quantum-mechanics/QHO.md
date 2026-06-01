@@ -1,3 +1,9 @@
+---
+title: "Quantum Harmonic Oscillator"
+date: "2026-3-2
+---
+
+
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Quantum-Harmonic-Oscillator/blob/main/Integral%20QHO.py)
 
 # Quantum Harmonic Oscillator (QHO)

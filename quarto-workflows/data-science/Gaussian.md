@@ -1,3 +1,8 @@
+---
+title: "Gaussian Distribution Functions"
+date: "2026-1-11"
+---
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Gaussian-Distribution-Function/blob/main/Gaussian-function.py)
 
 # Gaussian Distribution Functions

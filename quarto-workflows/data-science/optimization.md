@@ -1,3 +1,9 @@
+---
+title: "Mathematical Optimization"
+date: "2026-4-3"
+---
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Mathematical-Optimization/blob/main/Mathematical%20Optimization%20use%20SciPy.html)
 
 # Mathematical Optimization

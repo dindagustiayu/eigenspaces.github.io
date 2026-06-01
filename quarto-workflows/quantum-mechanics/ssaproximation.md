@@ -1,3 +1,10 @@
+---
+title: "The Steady-State Approximation"
+date: "2025-12-14"
+---
+
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/The-Steady-State-Approximation-for-Solve-Physics-Problems-/blob/main/Steady-State%20Approximation.py)
 
 

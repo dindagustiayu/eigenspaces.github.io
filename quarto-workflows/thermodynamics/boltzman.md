@@ -1,3 +1,10 @@
+---
+title: "Adiabatic process and Carnot Cycle"
+date: "2026-1-23"
+---
+
+
+
 # Maxwell-Boltzmann Distribution
 
 Write a function to the plot the Maxwell-Boltzmann Distribution of molecular speed for a gas of particles of a given mass at a given temperature, indicating the modal speed ($v_{*}$), mean ($\langle v \rangle$), and root mean square (rms, $\langle v^{2} \rangle^{1/2}$) speeds with vertical lines.

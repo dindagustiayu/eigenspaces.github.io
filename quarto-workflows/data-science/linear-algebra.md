@@ -1,3 +1,8 @@
+---
+title: "Linear Algebra in Balancing a Chemical Reaction"
+date: "2026-2-1"
+---
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/-Linear-Algebra-in-Balancing-a-Chemical-Reaction-/tree/main)
 
 # Balancing a Chemical Reaction and Permutation Group

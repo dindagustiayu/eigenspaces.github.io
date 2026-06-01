@@ -1,6 +1,12 @@
+---
+title: "Applying the concept of String, List and Loops, Comparison and Flow Control for Chemistry exercises"
+date: "2025-01-19"
+---
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/-String-list-and-loops-and-Flow-Control-in-Python-for-Chemistry-Exercises/tree/main)
 
-# Strings, List and Loops, and Comparison and Flow Control in Python for Chemistry Exercises.
+# Strings, List and Loops, Comparison and Flow Control in Python for Chemistry Exercises.
 
 ## Key Equation
 - Density Computations

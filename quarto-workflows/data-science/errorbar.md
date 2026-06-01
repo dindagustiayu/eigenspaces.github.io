@@ -1,3 +1,8 @@
+---
+title: "Error Bars in Atomic Scale"
+date: "2025-12-25"
+---
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Error-Bars-and-Scikit-Learn-Visualizations/blob/main/Errorbars.cpp)
 
 # Error Bars in Atomic Scale

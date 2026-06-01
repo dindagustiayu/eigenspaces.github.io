@@ -1,7 +1,13 @@
+---
+title: "Adiabatic process and Carnot Cycle"
+date: "2026-1-21"
+---
+
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Adiabatic-process/blob/main/Thermodynamics-Cycles.py)
 
 
-## Adiabatic process and Carnot Cycle
 
 ## Introduction of Thermodynamics
 

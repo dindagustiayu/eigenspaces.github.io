@@ -1,3 +1,9 @@
+---
+title: "Second ODE of Quantum Harmonic Oscillator"
+date: "2026-5-6"
+---
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Equations-of-Motion-of-Harmonic-Oscillator/blob/main/Second%20ODE%20in%20Quantum%20Oscillator.html)
 
 

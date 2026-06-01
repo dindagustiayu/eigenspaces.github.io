@@ -1,3 +1,10 @@
+ ---
+title: "Hermite Polynomial in Quantum Harmornic Oscillator"
+date: "2026-4-13"
+---
+
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Hermite-Polynomials/blob/main/Hermite%20Polynomials%20in%20QHO.py)
 
 # Vibrational Spectroscopy

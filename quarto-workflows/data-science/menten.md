@@ -1,3 +1,9 @@
+ ---
+title: "Michael-Menten model and Linear-Burk Plot"
+date: "2026-2-12"
+---
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/The-Matrix-of-Enzymatic-Kinetics/blob/main/Michaelis-Menten%20model.cpp)
 
 # The Michael-Menten model and Linear-Burk Plot

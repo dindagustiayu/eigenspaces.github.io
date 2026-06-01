@@ -1,3 +1,8 @@
+ ---
+title: "Basic Integration"
+date: "2026-3-01"
+---
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Integration-by-substitution/blob/main/Basic%20Integration.html)
 
 # Integration

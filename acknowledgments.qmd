@@ -5,7 +5,7 @@ title: Acknowledgments
 
 :::{.callout-tip appearance="minimal}
 
-This interactive notebook is built by Pandoc markdown. Some contents of this blog was inspired by Learning Scientific Programming with Python (2nd edition) book writed by [Christian Hill](https://www.linkedin.com/in/christian-hill-8066b359/). A certain number of exercises are available for free from [scipython](https://scipython.com/books/book2/).
+This interactive notebook is built by Pandoc markdown. Some contents of this blog was inspired by Learning Scientific Programming with Python (2nd edition) book writed by [Christian Hill](https://at.linkedin.com/in/christian-hill-8066b359). A certain number of exercises are available for free from [scipython](https://scipython.com/books/book2/).
 
 :::
 

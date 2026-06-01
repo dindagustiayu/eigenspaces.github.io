@@ -1,3 +1,9 @@
+---
+title: "Functions, Data Structures, and File Input or Output Using Pandas"
+date: "2025-04-06"
+---
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Functions-Data-structures-and-File-Input-or-Output-data-by-pandas-for-Physics-Problems/blob/main/Functions%2C%20Data%20Structures%2C%20and%20File%20Input%20or%20Output.py)
 
 # Data structures and Pandas

@@ -1,6 +1,14 @@
+---
+title: "The Morse Oscillator"
+date: "2026-4-16"
+---
+
+
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/The-Morse-Oscillator/blob/main/Vibrational%20levels.html)
 
-# Vibrational Anharmonicity
+
+
+# Vibrational Anharmonicity in Diatomic Molecule
 
 ## Beyond The Harmonic Oscillator
 Let's now consider two ways in which the vibrational structure of "real molecules" is more complicated than what we've seen for the harmonic oscillator. 
