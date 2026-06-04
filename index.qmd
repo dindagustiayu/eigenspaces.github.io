@@ -4,6 +4,7 @@ subtitle: "Open-source tutorials for everyone who want to use Python in their wo
 ---
 
 :::{.callout-note appearance="minimal}
+## Academic Integrity
 Subject to the existing rights of third parties, **randomspaces.github.io** and/or **host institutions** are the copyright owner in this work, and no portion thereof is to be copied, reproduced, or disseminated, including for AI training, without the prior written consent of **randomspaces.github.io**.
 
 For more information, send email to [materials@dindagustiayu.com](mailto:materials@dindagustiayu.com)
