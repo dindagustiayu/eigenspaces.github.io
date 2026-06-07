@@ -14,7 +14,7 @@ This blog is as a knowledge base in understanding application of computational t
 </div>
 
 
-## What is Random Spaces?
+## What is Eigen Spaces?
 
 __Eigen Spaces__ is a free, open learning resource for students and researchers who interested in applying Python to solve complex problems, to manage and transform data, and to produce publication-quality figures. The tutorials are created by integrating mathematics, chemistry and computational tools.
 
