@@ -1,6 +1,6 @@
 # Welcome 
 
-> Welcome to 🌐[Random Spaces](https://dindagustiayu.github.io/randomspaces.github.io/) \
+> Welcome to 🌐[Eigen Spaces](https://dindagustiayu.github.io/eigenspaces.github.io/) \
 This blog is as a knowledge base in understanding application of computational tools for physics or chemistry problems. I hope you find the contents useful, and I hope you enjoy reading along and learning with me!
 >
 
@@ -9,14 +9,14 @@ This blog is as a knowledge base in understanding application of computational t
 
 <div align='center'>
 
-<img src="images/logorandomspaces.png" width="600">
+<img src="images/eigenspaces.png" width="600">
     
 </div>
 
 
 ## What is Random Spaces?
 
-__Random Spaces__ is a free, open learning resource for students and researchers who interested in applying Python to solve complex problems, to manage and transform data, and to produce publication-quality figures. The tutorials are created by integrating mathematics, chemistry and computational tools.
+__Eigen Spaces__ is a free, open learning resource for students and researchers who interested in applying Python to solve complex problems, to manage and transform data, and to produce publication-quality figures. The tutorials are created by integrating mathematics, chemistry and computational tools.
 
 All materials are shared openly on my repositories [![Badge](https://img.shields.io/badge/github-repositories-black?style=for-the-badge&logo=github&logoColor=black&logoSize=auto&label=github&labelColor=hex&color=black)](https://github.com/dindagustiayu?tab=repositories)
 

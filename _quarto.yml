@@ -3,9 +3,9 @@ project:
   
 website: 
   page-navigation: true
-  title: "Random Spaces" 
+  title: "Eigen Spaces" 
   site-url: "" 
-  repo-url: https://github.com/dindagustiayu/randomspaces.github.io 
+  repo-url: https://github.com/dindagustiayu/eigenspaces.github.io 
   repo-actions: [edit, issue]
   
   page-footer:
@@ -13,7 +13,7 @@ website:
     left: "&copy; 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0 unless otherwise stated."
     
   sidebar:
-    logo: "images/logorandomspaces.png"
+    logo: "images/eigenspaces.png"
     pinned: true
     align: center
     tools: 
@@ -21,8 +21,8 @@ website:
         href: https://dindagustiayu.github.io/
         text: "dindagustiayu.github.io"
       - icon: github
-        href: https://github.com/dindagustiayu/randomspaces.github.io
-        text: "Random Spaces"
+        href: https://github.com/dindagustiayu/eigenspaces.github.io
+        text: "Eigen Spaces"
       - icon: linkedin
         href: https://linkedin.com/in/dinda-gusti-ayu-8049a01b0
         text: "Dinda Gusti Ayu"

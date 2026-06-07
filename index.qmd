@@ -3,9 +3,9 @@ title: "Python for Scientific Computing and Data Visualizations"
 subtitle: "Open-source tutorials for everyone who want to use Python in their works"
 ---
 
-:::{.callout-note appearance="minimal}
+:::{.callout-important appearance="minimal}
 ## Academic Integrity
-Subject to the existing rights of third parties, **randomspaces.github.io** and/or **host institutions** are the copyright owner in this work, and no portion thereof is to be copied, reproduced, or disseminated, including for AI training, without the prior written consent of **randomspaces.github.io**.
+Subject to the existing rights of third parties, **eigenspaces.github.io** and/or **host institutions** are the copyright owner in this work, and no portion thereof is to be copied, reproduced, or disseminated, including for AI training, without the prior written consent of **eigenspaces.github.io**.
 
 For more information, send email to [materials@dindagustiayu.com](mailto:materials@dindagustiayu.com)
 
@@ -13,13 +13,13 @@ For more information, send email to [materials@dindagustiayu.com](mailto:materia
 
 ## Welcome {#welcome}
 
-Welcome to __Random Spaces!__ This blog is as a knowledge base in understanding  application of computational tools for physics or chemistry problems. I hope you find the content useful, and I hope you enjoy reading along and learning with me!
+Welcome to __Eigen Spaces!__ This blog is as a knowledge base in understanding  application of computational tools for physics or chemistry problems. I hope you find the content useful, and I hope you enjoy reading along and learning with me!
 
 And me? Well, I'm __Dinda Gusti Ayu__ [![GitHub](https://img.shields.io/badge/--%23181717?logo=github&logoColor=white&style=for-the-badge)](https://github.com/dindagustiayu). I'm interested in using Machine Learning to learn the rules of Quantum Mechanics and Simulate Crystalline and Amorphous Solid Systems. I earned an MS in chemistry physics at Universitas Sumatera Utara, Indonesia where I studied the fundamental optical properties and defects modelling in direct band-gap semiconductors for materials research.
 
-## What is Random Spaces?
+## What is Eigen Spaces?
 
-__Random Spaces__ is a free, open learning resource for students and researchers who interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The goal is to take the most efficient approach for describing the link between Python language to a particular concepts in mathematics, Physics and Chemistry.
+__Eigen Spaces__ is a free, open learning resource for students and researchers who interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The goal is to take the most efficient approach for describing the link between Python language to a particular concepts in mathematics, Physics and Chemistry.
  
 
 All materials are shared openly on my repositories [![Badge](https://img.shields.io/badge/github-repositories-black?style=for-the-badge&logo=github&logoColor=black&logoSize=auto&label=github&labelColor=hex&color=black)](https://github.com/dindagustiayu?tab=repositories)
@@ -32,4 +32,4 @@ We can quickly navigate through the sections using the navigation bar on the lef
 
 Feel free to contact me through email: [materials@dindagustiayu.com](mailto:materials@dindagustiayu.com). If you have inquiries and/ or suggestion. Looking forward to hearing from you!
 
-Let's get down with Random Spaces!
+Let's get down with Eigen Spaces!
