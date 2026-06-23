@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-03-02">
+<meta name="dcterms.date" content="2026-06-20">
 
-<title>qho – Eigen Spaces</title>
+<title>Brusselator – Eigen Spaces</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,8 +68,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../quarto-workflows/quantum-mechanics/approxiqho.html" rel="next">
-<link href="../../quarto-workflows/quantum-mechanics/inertia.html" rel="prev">
+<link href="../../acknowledgments.html" rel="next">
+<link href="../../quarto-workflows/thermodynamics/boltzman.html" rel="prev">
 <link href="../../images/orbitalquarto.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -312,7 +312,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/QHO.html">Quantum Harmonic Oscillator (QHO)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/thermodynamics/adiabatic-process.html">Thermodynamics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/thermodynamics/brusselator.html">Brusselator</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -474,13 +474,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Quantum Mechanics</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/particles-2d.html" class="sidebar-item-text sidebar-link">
@@ -507,7 +507,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quarto-workflows/quantum-mechanics/QHO.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../quarto-workflows/quantum-mechanics/QHO.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quantum Harmonic Oscillator (QHO)</span></a>
   </div>
 </li>
@@ -533,13 +533,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Thermodynamics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/thermodynamics/adiabatic-process.html" class="sidebar-item-text sidebar-link">
@@ -554,7 +554,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quarto-workflows/thermodynamics/brusselator.html" class="sidebar-item-text sidebar-link">
+  <a href="../../quarto-workflows/thermodynamics/brusselator.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Brusselator</span></a>
   </div>
 </li>
@@ -578,29 +578,25 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#quantum-harmonic-oscillator-qho" id="toc-quantum-harmonic-oscillator-qho" class="nav-link active" data-scroll-target="#quantum-harmonic-oscillator-qho">Quantum Harmonic Oscillator (QHO)</a></li>
-  <li><a href="#prior-knowledge" id="toc-prior-knowledge" class="nav-link" data-scroll-target="#prior-knowledge">Prior knowledge</a></li>
-  <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link" data-scroll-target="#preliminaries">Preliminaries</a>
+  <li><a href="#mathematical-modelling-of-the-brusselator" id="toc-mathematical-modelling-of-the-brusselator" class="nav-link active" data-scroll-target="#mathematical-modelling-of-the-brusselator">Mathematical Modelling of the Brusselator</a>
   <ul class="collapse">
-  <li><a href="#classical-harmonic-oscillator" id="toc-classical-harmonic-oscillator" class="nav-link" data-scroll-target="#classical-harmonic-oscillator">Classical harmonic oscillator</a></li>
-  <li><a href="#schrddotodinger-equation-of-the-quantum-harmonic-oscillator" id="toc-schrddotodinger-equation-of-the-quantum-harmonic-oscillator" class="nav-link" data-scroll-target="#schrddotodinger-equation-of-the-quantum-harmonic-oscillator"><span class="math inline">\(Schr\ddot{o}dinger\)</span> equation of the quantum harmonic oscillator</a></li>
-  <li><a href="#ground-state-and-first-excited-state" id="toc-ground-state-and-first-excited-state" class="nav-link" data-scroll-target="#ground-state-and-first-excited-state">Ground state and first excited state</a></li>
-  <li><a href="#normalisation-of-the-ground-state-wavefunction" id="toc-normalisation-of-the-ground-state-wavefunction" class="nav-link" data-scroll-target="#normalisation-of-the-ground-state-wavefunction">Normalisation of the ground state wavefunction</a></li>
-  <li><a href="#the-particle-in-a-box" id="toc-the-particle-in-a-box" class="nav-link" data-scroll-target="#the-particle-in-a-box">The Particle in a Box</a></li>
-  <li><a href="#example-probability" id="toc-example-probability" class="nav-link" data-scroll-target="#example-probability">Example: Probability</a></li>
+  <li><a href="#why-brusselator-is-important" id="toc-why-brusselator-is-important" class="nav-link" data-scroll-target="#why-brusselator-is-important">Why Brusselator is important?</a></li>
+  <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link" data-scroll-target="#preliminaries">Preliminaries</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
   <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
-  <li><a href="#case-study-integral-in-van-der-waals-equation" id="toc-case-study-integral-in-van-der-waals-equation" class="nav-link" data-scroll-target="#case-study-integral-in-van-der-waals-equation">Case study: Integral in van der Waals equation</a></li>
-  <li><a href="#solution-1" id="toc-solution-1" class="nav-link" data-scroll-target="#solution-1">Solution</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/QHO.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/thermodynamics/brusselator.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/particles-2d.html">Quantum Mechanics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/quantum-mechanics/QHO.html">Quantum Harmonic Oscillator (QHO)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/thermodynamics/adiabatic-process.html">Thermodynamics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/thermodynamics/brusselator.html">Brusselator</a></li></ol></nav>
 <div class="quarto-title">
+<h1 class="title">Brusselator</h1>
 </div>
 
 
@@ -611,7 +607,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 2, 2026</p>
+      <p class="date">June 20, 2026</p>
     </div>
   </div>
   
@@ -623,262 +619,157 @@ window.Quarto = {
 </header>
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://github.com/dindagustiayu/Quantum-Harmonic-Oscillator/blob/main/Integral%20QHO.py"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
-<figcaption>Open in Colab</figcaption>
-</figure>
-</div>
-<section id="quantum-harmonic-oscillator-qho" class="level1">
-<h1>Quantum Harmonic Oscillator (QHO)</h1>
-<p>In Quantum Mechanics, the harmonic oscillator is an important pradigm because it provides a model for a variety of systems, such as the modes of the <strong>electrodynamic field (photons)</strong> and <strong>the vibrations of molecules and solids (phonons)</strong>.</p>
-<p>The Quantum Harmonic Oscillator (QHO) is a fundamental model in quantum mechanics, describing systems where a particle is subjected to a potential proportional to the square of its displacement from equilibrium. Examples include molecular vibrations and oscillations of atoms in a solid.</p>
-</section>
-<section id="prior-knowledge" class="level1">
-<h1>Prior knowledge</h1>
+<p><a href="../../pyfile/brusselator.py/"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
+<section id="mathematical-modelling-of-the-brusselator" class="level1">
+<h1>Mathematical Modelling of the Brusselator</h1>
+<p>The Brusselator is a model for predicting oscillations in chemcial reations under some conditions. As we progress, various models have been used to represent natural phenomenon. In classical thermodynamics, we model phenomena through simple linear equations. However, in the recent past, it is common to represent nature by non-linear equations. There are four laws that dominate traditional tehrmodynamics, which still hold true today [1]:</p>
 <ul>
-<li>Classical Mechanics</li>
-<li>Quantum Fundamentals</li>
-<li>Mathematical Integration</li>
+<li><p>Zeroth Law: If two thermodynamics systems are each in thermal equilibrium with a third, then they are in thermal equlibrium with each other.</p></li>
+<li><p>First Law: When a system undergoes a transformation of state, the algrebraic sum of the different energy changes, heat exchanged, work done, is independent of the manner of the transformation. It depends only on the initial and final states of the transformation.</p></li>
+<li><p>Second Law: The total entropy of any isolated thermodynamics system tends to increase over time, approaching a maxium value.</p></li>
+<li><p>Third Law: As temperature approaches absolute zero, the entropy of a system approaches a constant minimum.</p></li>
 </ul>
+<p>With a basic grounding in these four laws, one can begin to delve deeper into thermodynamics. The fundamentals of thermodynamics came about in very unique methods, trials, thought, experiments, and physical experiments. However, now there is another method to describe natural phenomenon - Brusselator.</p>
+<section id="why-brusselator-is-important" class="level2">
+<h2 class="anchored" data-anchor-id="why-brusselator-is-important">Why Brusselator is important?</h2>
+<p>It is well known that reaction and diffusion of chemical or biochemical species can produce a variety of spatial patterns. This class of reaction diffusion systems includes some significant pattern formation equations arising from the modelling of kinetics of chemical or biochemical reactions and from the biological pattern formation theory. For this reason, the Brusselator is typicaly important and serves as mathematical model in physical chemistry and in biology. Nonlinear reaction-diffusion equations and systems play an important role in the modelling and study of many phenomena [2].</p>
+<p>Brusselator model is a famous model of chemical reactions with oscillations and a theoritical model for a type of auto-catalytic reaction. In particular the Brusselator model consists of four reactions involving six-components A, B, D, E, X, Y where the chemical reactions follow the scheme</p>
+<p>Table 1. Mechanism of Brusselator</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Brusselator Model</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>$ A X (1)$</td>
+<td>Species A makes species X</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(B + X \rightarrow Y + D \quad (2)\)</span></td>
+<td>Species X makes species Y. (Actication)</td>
+</tr>
+<tr class="odd">
+<td>$2X + Y 3X (3) $</td>
+<td>Species Y makes species X. (Activation)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(X \rightarrow E \quad (4)\)</span></td>
+<td>Species X makes species E. (Inactivatio)</td>
+</tr>
+</tbody>
+</table>
+<p>Adding these reactions one obtains <span class="math display">\[ A +B + 4X + Y \rightarrow 4X + Y + D + E \tag{5}\]</span></p>
+<p>and hence <span class="math inline">\(A +B \rightarrow D +E\)</span>, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are catalysis (in particular, X is auto-catalytic and provides the nonlinearity).</p>
+<p>The concentrations <span class="math inline">\([X]\)</span> and <span class="math inline">\([Y]\)</span> come from an infinite supply in this reaction scheme. The variable <span class="math inline">\(k_i\)</span> is reresented in units of <span class="math inline">\(\left(\frac{mole}{l \ s} \right)^{-1}\)</span>. The equations for the evolution of <span class="math inline">\([X]\)</span> and [Y]$ are as follows:</p>
+<p><span class="math display">\[\begin{align} \frac{d[X]}{dt} &amp;= k_1[A] - k_2[B][X] + k_3[X]^{2}[Y] -k_4[X] \tag{6} \\ \frac{d[Y]}{dt} &amp;= k_2[B][X] -k_3[X]^2[Y] \tag{7} \\ [X](0) &amp;= 0 \tag{8} \\ [Y](0) &amp;=0 \end{align}\]</span></p>
+<p>There are severl known examples of auto-catalysis which can be modeled by the Brusselator equations, such as ferrocyanide-iodate-sulphite reaction, chlorite-iodite-malonic acid reaction, arsenite-iodate reaction, some enzyme catalytic reactions and fungal mycelia growth.</p>
 </section>
-<section id="preliminaries" class="level1">
-<h1>Preliminaries</h1>
-<ul>
-<li><code>scipy.integrate</code>: definite integrals.</li>
-<li><code>dblquad</code>: double integrals.</li>
-<li><code>tplquad</code>: triple integrals.</li>
-<li><code>numpy.polynomial</code>: representing the cubic equation in n.</li>
-</ul>
-<section id="classical-harmonic-oscillator" class="level2">
-<h2 class="anchored" data-anchor-id="classical-harmonic-oscillator">Classical harmonic oscillator</h2>
-<p>The classical harmonic oscillator describes a particle subject to a restoring force <span class="math inline">\(F=-m \omega^2 x\)</span> proportional to the distance from an equilibrium position <span class="math inline">\(x=0\)</span>. Newton’s equation <span class="math inline">\(m\ddot{x} = F\)</span> results in an oscillatory motion <span class="math inline">\(x(t)=x_0 \ cos \omega t + (v_0/ \omega) \ sin \omega t\)</span>, where <span class="math inline">\(\omega = \frac{2 \pi}{T}\)</span> and <span class="math inline">\(T\)</span> is the oscillation period. In this solution, <span class="math inline">\(x_0 = x(0)\)</span> is the initial position and <span class="math inline">\(v_0 = \dot{x} (0)\)</span> is the initial velocity of the particle. According to <span class="math inline">\(F = -V^{'}\)</span>, the force <span class="math inline">\(F = -m \omega^2 x\)</span> corresponds to a parabolic potential energy.</p>
-The simple quantum harmonic oscillator is:
-<p align="center">
-<span class="math display">\[ V(x) = \frac{1}{2} \times m \times \omega \times x^{2}\]</span>
-</p>
-<p>where, - <em>m</em> is the mass of the particle - <span class="math inline">\(\omega\)</span> is the angular frequency of the oscillator - <em>x</em> is the displacement from equilibrium</p>
+<section id="preliminaries" class="level2">
+<h2 class="anchored" data-anchor-id="preliminaries">Preliminaries</h2>
+<p>Scipy’s <code>solve_ivp</code> function can be used to integrate the differential equations of the Oregonator model, given a set of initial conditions, which here we take to be <span class="math inline">\(x=(0) \ y=(0) \ z =(0) \ = 1\)</span>.</p>
 </section>
-<section id="schrddotodinger-equation-of-the-quantum-harmonic-oscillator" class="level2">
-<h2 class="anchored" data-anchor-id="schrddotodinger-equation-of-the-quantum-harmonic-oscillator"><span class="math inline">\(Schr\ddot{o}dinger\)</span> equation of the quantum harmonic oscillator</h2>
-<p>In order to solve this problem quantum mechanically, we follow our standard steps. The <span class="math inline">\(schr\ddot{o}dinger\)</span> equation of the harmonic oscillator is given by</p>
-<p align="center">
-<span class="math display">\[E \psi (x) = - \frac{\hbar}{2m} \psi^{"}(x) + \frac{1}{2} m \omega^2 x^2 \psi(x)\]</span>
-</p>
-<p>where, - <span class="math inline">\(\hbar\)</span> is the reduced Planck’s constant - <span class="math inline">\(\psi\)</span> is the wavefunction - <span class="math inline">\(E\)</span> is the energy of the state</p>
-<p>This equation is again a linear differential equation of second order, but now one coefficient is position dependent. From our general considerations we already can anticipate the following:</p>
-<ul>
-<li>The solution <span class="math inline">\(\psi(x)\)</span> are continous.</li>
-<li>The deribatives <span class="math inline">\(\psi'(x)\)</span> of the solutions are also continious.</li>
-<li>As <span class="math inline">\(V(x) \rightarrow \infty\)</span> for <span class="math inline">\(|x| \rightarrow \infty\)</span>, the particle cannot excape to infinity at finite energy <span class="math inline">\(E\)</span>. This only permits bound states, which decay <span class="math inline">\(\psi(x) \rightarrow 0\)</span> as <span class="math inline">\(|x| \rightarrow \infty\)</span>.</li>
-<li>The energies of the bound states are discrete (i.e., only at certain energies we can find valid solutions of the <span class="math inline">\(schr\ddot{o}inger\)</span> equation).</li>
-<li>The ground state energy <span class="math inline">\(E_{0}\)</span> will be larger than the classical minimal energy: <span class="math inline">\(E_0 &gt; 0\)</span>.</li>
-</ul>
-</section>
-<section id="ground-state-and-first-excited-state" class="level2">
-<h2 class="anchored" data-anchor-id="ground-state-and-first-excited-state">Ground state and first excited state</h2>
-<p>The first two solutions correspond to the ground state and the first excited state of the harmonic oscillator:</p>
-<p><strong>Ground state</strong>: <span class="math inline">\(n=0, \ f=1\)</span>, which gives to <span class="math inline">\(f' = f^{"} = 0\)</span>. This is a solution when <span class="math inline">\(\varepsilon \neq 2n + 1\)</span> if $ $, which corresponds to an energy <span class="math inline">\(E_{0} = \frac{1}{2} \hbar \omega\)</span>. The wavefunction is given by:</p>
-<p align="center">
-<span class="math display">\[\psi_{0} (x)= c_{0} exp \left (-x^{2} \frac{m \omega}{2 \hbar} \right)\]</span>
-</p>
-<p>where <span class="math inline">\(c_{0}\)</span> can be determined from the normalisation condition,</p>
-<p align="center">
-<span class="math display">\[\int_{- \infty}^{\infty} |\psi (x)^{2}| \ dx = 1 \]</span>
-</p>
-<p>This gives <span class="math inline">\(c_{0} = \left (\frac{m \omega}{\pi \hbar} \right)^{1/4}\)</span>.</p>
-</section>
-<section id="normalisation-of-the-ground-state-wavefunction" class="level2">
-<h2 class="anchored" data-anchor-id="normalisation-of-the-ground-state-wavefunction">Normalisation of the ground state wavefunction</h2>
-<p>The ground state wave function of the harmonic oscillator provides us with a good occasion to practice once more the normalisation of the wavefunction. Since we want to interpret <span class="math inline">\(| \psi_{0} (x)^{2} | = P (x)\)</span> as the probability density for position, we require,</p>
-<p align="center">
-<span class="math display">\[\int_{- \infty}^{\infty} |\psi_{0} (x)^{2} | \ dx = 1\]</span>
-</p>
-<p>With <span class="math inline">\(\psi_{0} (x) = c_{0} exp \left (-x^{2} \frac{m \omega}{2 \hbar} \right)\)</span> this integral reads,</p>
-<p align="center">
-<span class="math display">\[ \int_{- \infty}^{\infty} c_{0}^{2} exp \left (-x^{2} \frac{m \omega}{\hbar} \right) \ dx\]</span>
-</p>
-<p>We use the standard integral <span class="math inline">\(\int_{- \infty}^{\infty} exp(-ax^{2}) \ dx = \sqrt{\pi / a}\)</span>, where we set <span class="math inline">\(a = \frac{m \omega}{\hbar}\)</span>:</p>
-<p align="center">
-<span class="math display">\[ \int_{- \infty}^{\infty} c_0^{2} exp \left(-x^{2} \frac{m \omega}{\hbar} \right) \ dx = c_0^{2} \sqrt{\frac{\pi \hbar}{m \omega}} = 1\]</span>
-</p>
-<p>The equations to 1 if <span class="math inline">\(c_0 = \left(\frac{m \omega}{\pi \hbar} \right)^{1/4}\)</span>, in agreement with the value given in the previous section.</p>
-<p>This Python script illustrates the one-dimensional harmonic oscillator ground state wavefunction with the following parameters:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> quad, dblquad, tplquad</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x):</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.exp(<span class="op">-</span>x<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>I, err <span class="op">=</span> quad(func, <span class="op">-</span>np.inf, np.inf)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>c0 <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> np.sqrt(I)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I:'</span>, I)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'c0:'</span>, c0)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>I: 1.7724538509055159
-c0: 0.7511255444649425</code></pre>
-<p>The probability density of the oscillator’s position is given by <span class="math inline">\(P_{0} (x) = | \psi_{0} (x)|^{2}\)</span> and is non zero outside the classical turning points, <span class="math inline">\(\neq \alpha^{- 1/2}\)</span>, a phenomenon known as tunneling. We will calculate the probability f tunneling for an oscillator in the state <span class="math inline">\(\psi_{0}\)</span>.</p>
-<p>The wavefunction is symmetric about <span class="math inline">\(x=0\)</span>, so the probability of tunneling is</p>
-<p align="center">
-<span class="math display">\[ \begin{align} P(x &lt; -\alpha) + P(x &gt; \alpha) &amp;= 2P(x &gt; \alpha) = 2 \sqrt{\frac{\alpha}{\pi}} \int_{\alpha^{-1/2}}^{\infty} exp(-\alpha x^{2}) \ dx \\ &amp;= \frac{2}{\sqrt{\pi}} \int_{1}^{\infty} e^{-y^{2}} \ dy \end{align}\]</span>
-</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>I, err <span class="op">=</span> quad(func, <span class="dv">1</span>, np.inf)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ptun <span class="op">=</span> <span class="dv">2</span> <span class="op">/</span> np.sqrt(np.pi) <span class="op">*</span> I</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I:'</span>, I)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Ptunneling:'</span>, ptun)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>I: 0.13940279264033098
-Ptunneling: 0.1572992070502851</code></pre>
-</section>
-<section id="the-particle-in-a-box" class="level2">
-<h2 class="anchored" data-anchor-id="the-particle-in-a-box">The Particle in a Box</h2>
-<p>The particle in a box is the simplest problem in element quantum mechanics, and as such is useful in more places than one can easily enumerate. For instance, the molecular orbital theory is explained easily in terms os particle in a box wavefunctions, easier tha using standard atomic orbitals.</p>
-Extending the (time-independent) <span class="math inline">\(Schr\ddot{o}inger\)</span> equation for a one-dimensional system,
-<p align="center">
-<span class="math display">\[- \frac{\hbar^2}{2m} \ \frac{d^2 \psi (x)}{dx^2} + V(x)\psi (x) = E \psi (x)\]</span>
-</p>
-to a two dimensional system is:
-<p align="center">
-<span class="math display">\[-\frac{\hbar^2}{2m} \left(\frac{\partial^2 \psi(x,\ y)}{\partial x^2} + \frac{\partial^2 \psi (x, \ y)}{\partial y^2} \right) + V(x, \ y) \psi(x, \ y) = E \psi(x, \ y)\]</span>
-</p>
-<p>It can be simplified for the particle in a 2D box since we jnow that <span class="math inline">\(V(x, \ y)=0\)</span> within the box and <span class="math inline">\(V(x, \ y)=\infty\)</span> outside the box,</p>
-<p align="center">
-<span class="math display">\[  V(x, \ y) = \left \{ \begin{array} \\ 0  &amp;  0 \leq x \leq a \ and \ 0 \leq y \leq b \\ \infty &amp;  x &lt; 0 \ and \ x &gt; a \\ \infty &amp; y&lt;0 \ and \ y&gt;b   \end{array} \right \}\]</span>
-</p>
-So the wavefunctions becomes:
-<p align="center">
-<span class="math display">\[ -\frac{\hbar^2}{2m} \left(\frac{\partial^2 \psi (x, \ y)}{\partial x^2} + \frac{\partial^2 \psi (x, \ y)}{\partial y^2} \right) = E\psi (x, \ y)\]</span>
-</p>
-<p>When we talk about rectangular and square boxes in two dimensional particle in a box problems, we are getting set up to discuss degeneracy. The wave equation itself offers no hint of the complexity that is coming, but the boundary conditions, which are inestricably bound to the solutions of the <span class="math inline">\(schr\ddot{o}inger\)</span> Equation, are the key here.</p>
-Assuming we are working in the x-y space (2 dimensions), so <span class="math inline">\(\psi(x, \ y)\)</span> is what is being sought, we have,
-<p align="center">
-<span class="math display">\[\frac{\hbar^2}{2\mu} \left(\frac{\partial^2 \psi}{\partial x^2} + \frac{\partial^2 \psi}{\partial y^2} \right) = E \psi\]</span>
-</p>
-where x and y are the standard Cartesian coordinates. The solution to this variable separable differential equation is discussed in all texts, and has the form,
-<p align="center">
-<span class="math display">\[X(x)Y(y) = N_{\ell_x, \ell_y} sin \frac{n_x \pi x}{\ell_x} sin \frac{n_y \pi y}{\ell_y}\]</span>
-</p>
-<p>where <span class="math inline">\(n_x\)</span> and <span class="math inline">\(n_y\)</span> are integer quantum numbers, ranging from 1 to <span class="math inline">\(\infty\)</span>. The box is rectangular if <span class="math inline">\(\ell_x \neq \ell_y\)</span>. <span class="math inline">\(N_{\ell_x, \ell_y}\)</span> is the normalization factor, which has the form</p>
-<p align="center">
-<span class="math display">\[N_{\ell_x, \ell_y} = \sqrt{\frac{2}{\ell_x}} \sqrt{\frac{2}{\ell_y}}\]</span>
-</p>
-The two-dimensional particle in a rectangular box of has wavefuntions become:
-<p align="center">
-<span class="math display">\[\psi_{n_x, n_y}(x, \ y) = N \ sin \left(\frac{n_x \pi x}{L_x} \right) \ sin \ \left(\frac{n_y \pi y}{L_y} \right)\]</span>
-</p>
-The constant <span class="math inline">\(N\)</span> is now determined by the normalization condition
-<p align="center">
-<span class="math display">\[\begin{align} \int_0^{L_y} \int_0^{L_x} |\psi_{n_x, n_y}(x, \ y)|^2 \ dx \ dy \ &amp;= 1 \\ N^2 \int_0^{L_x} sin^2 \left (\frac{n_x \pi x}{L_x} \right) \ dx \ \int_0^{L_y} sin^2 \left(\frac{n_y \pi y}{L_y} \right) \ dy \ &amp;=1 \\ N^2 \frac{L_x}{2} . \frac{L_y}{2} &amp;= 1 \\ N &amp;= \frac{2}{\sqrt{L_{(x, \ y)}}} \end{align}\]</span>
-</p>
-so that the complete normalized 2D wavefunction is
-<p align="center">
-<span class="math display">\[\psi_{n_x, n_y}(x, \ y) = \frac{2}{\sqrt{L_{(x, \ y)}}} sin \left(\frac{n_x \pi x}{L_x} \right) sin \left(\frac{n_y \pi y}{L_y} \right)\]</span>
-</p>
-<p>Reference: <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Quantum_Mechanics/05.5%3A_Particle_in_Boxes/Particle_in_a_2-Dimensional_Box#:~:text=Let%20us%20now%20consider%20the,BY-NC;%20%C3%9Cmit%20Kaya">Particle in 2D Box</a></p>
-</section>
-<section id="example-probability" class="level2">
-<h2 class="anchored" data-anchor-id="example-probability">Example: Probability</h2>
-<p>For a particle in a two-dimensional rectangular box, if the particle is in the <span class="math inline">\(\psi_{2, \ 1}(x, \ y)\)</span> state, what is the probability that a esurement of the particle’s position will yield <span class="math inline">\(x \in [0, \ 1.5]\)</span> and <span class="math inline">\(y \in [0, \ 2.5]\)</span> ?.</p>
-<p>This Python script to illustrate the two-dimensional particle in a rectangular box with following parameters: Box dimensions (length units) and quantum numbers. - <span class="math inline">\(L_x, \ L_y =\)</span> 1.5, 2.5 - $n_x, &nbsp;n_y = $ 2, 1</p>
+<section id="exercise" class="level2">
+<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
+<p>Obtain expression for the constants <span class="math inline">\(p, \ q \ \mbox{and} \ r\)</span> that scale the time variable and intermediate concentrations into the non-dimensional form: <span class="math inline">\(x=p[X], \ y=q[Y]\)</span> and <span class="math inline">\(\tau = r t\)</span>. By solving the pair of differential equations, plot <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> as a function of <span class="math inline">\(\tau\)</span> using the initial conditions <span class="math inline">\((x_0, \ y_0) = (0, \ 0)\)</span> for reactant concentrations(a) <span class="math inline">\((a, \ b) = (1, \ 0.7)\)</span>, (b) <span class="math inline">\((a, \ b) = (1, \ 1.8)\)</span>, and (c) <span class="math inline">\((a, \ b) = (1, \ 2.05)\)</span>. For each solution, also plot the phase space plot (the curve of <span class="math inline">\(y\)</span> againts <span class="math inline">\(x\)</span>).</p>
 </section>
 <section id="solution" class="level2">
 <h2 class="anchored" data-anchor-id="solution">Solution</h2>
-Substituting the limits of integration into formula, we have
-<p align="center">
-<span class="math display">\[\begin{align} P(x \in [0, \ 1.5] \mbox{~and~} \ y \in [0, \ 2.5] &amp;= \left [\int_0^{1.5} \psi_2^2(x) \ dx \right] \left[\int_0^{2.5} \psi_1^2(y) \ dy \right] \\ &amp;= \left [\frac{2}{L_x} \int_0^{1.5} sin^2 \left(\frac{ 2 \pi x}{L_x} \right) \ dx \right] \left[\frac{2}{L_y} \int_0^{2.5} sin^2 \left(\frac{\pi y}{L_y} \right) \ dy \right] \\ &amp;= \left[\frac{2}{1.5} \left( 0.75 \frac{1.5}{8 \pi} sin \left(\frac{6 \pi}{1.5} \right) \right) \right] \  \left[\frac{2}{2.5} \left( 1.25 \frac{2.5}{4 \pi} sin \left(\frac{5 \pi}{2.5} \right) \right) \right]\end{align}\]</span>
-</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> quad, dblquad, tplquad</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Example parameters</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Lx, Ly <span class="op">=</span> <span class="fl">1.5</span>, <span class="fl">2.5</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>nx, ny <span class="op">=</span> <span class="dv">2</span>, <span class="dv">1</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x, y, nx, ny, Lx, Ly):</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>(np.sin(nx <span class="op">*</span> np.pi <span class="op">*</span> x <span class="op">/</span> Lx)<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.sin(ny <span class="op">*</span> np.pi <span class="op">*</span> y <span class="op">/</span> Ly)<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Evaluate the integral of the square of the unormalized wavefunction</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>I, err <span class="op">=</span> dblquad(func, <span class="dv">0</span>, Ly, <span class="kw">lambda</span> y: <span class="dv">0</span>, <span class="kw">lambda</span> y: Lx, args<span class="op">=</span>(nx, ny, Lx, Ly)) <span class="co"># Lambda y:0, lambda y:Lx, these are the limits for the inner integral (over x)</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the Normalization</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> np.sqrt(I)</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I:'</span>, I)</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'N:'</span>, N)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>I: 0.9375000000000001
-N: 1.0327955589886444</code></pre>
-<p>We can also use <span class="math inline">\(N=\frac{2}{\sqrt{L_{(x, \ y}}}\)</span></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">2</span> <span class="op">/</span> np.sqrt(Lx <span class="op">*</span> Ly)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'N:'</span>, N)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>N: 1.0327955589886444</code></pre>
+<ol type="1">
+<li>We must solve for <span class="math inline">\([X]\)</span> and <span class="math inline">\([Y]\)</span> in the equation (5-6). Replacing the <span class="math inline">\(x =p[X]\)</span>, <span class="math inline">\(y=q[Y]\)</span>, and <span class="math inline">\(\tau = r t\)</span>.</li>
+</ol>
+<p><span class="math display">\[\begin{align} \frac{r}{p} \frac{dx}{d\tau} &amp;= k_1 [A] + \frac{k_2}{p^2 q} x^2 y - \frac{k_3 [B]}{p} x - \frac{k_4}{p} x \tag{9} \\ \frac{r}{q} \frac{dy}{d \tau} &amp;= -\frac{k_2}{p^2 q} x^2 y + \frac{k_3 [B]}{p} x \tag{10} \end{align}\]</span></p>
+<p>Rearranging,</p>
+<p><span class="math display">\[\begin{align} \frac{dx}{d \tau} &amp;= \frac{pk_1 [A]}{r} + \frac{k_2}{pqr} x^2 y - \frac{1}{r} (k_3[B] + k_4) x \tag{11} \\ \frac{dy}{d \tau} &amp;= - \frac{k_2}{p^2 r} x^2 y + \frac{k_3 [B]q}{pr} x \tag{12} \end{align}\]</span></p>
+<ol start="2" type="1">
+<li>Choosing <span class="math inline">\(k_4/r = 1\)</span> and <span class="math inline">\(pk_1[A]/r=1\)</span> fixes <span class="math inline">\(r=k_4\)</span> and <span class="math inline">\(p=k_4/(k_1[A])\)</span>. It would be nice if the factors involving <span class="math inline">\([B]\)</span> were the same. We can define</li>
+</ol>
+<p><span class="math display">\[b=\frac{k_3 [B]}{r} = \frac{k_3[B]q}{pr} \Rightarrow \ q =p=\frac{k_4}{k_1[A]} \tag{13}\]</span></p>
+<p>which leaves</p>
+<p><span class="math display">\[a =\frac{k_2}{p^2 r} = \frac{k_2}{pqr} = \frac{k_1^{2} k_2[A]^{2}}{k_4^3} \tag{14}\]</span></p>
+<p>Therefore, <span class="math display">\[\begin{align} \frac{dx}{d \tau} &amp;= 1 + ax^2 y - (b+1)x \tag{15} \\ \frac{dy}{d \tau} &amp;= -ax^2y + bx \tag{16} \end{align}\]</span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parameters</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> solve_ivp</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> deriv(t, X, a, b):</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""return the derivatives dx/dtau and dy/dtau"""</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    x, y <span class="op">=</span> X</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    dxdtau <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> a<span class="op">*</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">*</span>y <span class="op">-</span> (b<span class="op">+</span><span class="dv">1</span>)<span class="op">*</span>x</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    dydtau <span class="op">=</span> <span class="op">-</span>a <span class="op">*</span>x<span class="op">**</span><span class="dv">2</span> <span class="op">*</span>y <span class="op">+</span> b<span class="op">*</span>x</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dxdtau, dydtau</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="3" type="1">
+<li>The system has a single <em>fixed point</em>: the pair of values (<span class="math inline">\(x_{*}, \ y_{*}\)</span>) that remain unchanged in time under these differential equations, show that <span class="math inline">\(x_{*} = 1\)</span> and <span class="math inline">\(y_{*}=b/a\)</span>. Then it must be the case that:</li>
+</ol>
+<p><span class="math display">\[\begin{align} \frac{dx}{d \tau} &amp;= 0 = 1 + a_*^{2} y_{*} - (b +1)x_* \\ \frac{dy}{d \tau} &amp;= 0 = -ax_*^{2} y_* + bx_{*} \end{align}\]</span></p>
+<p>This pair of equations are readily solved to yield <span class="math inline">\(x_*=1\)</span>, <span class="math inline">\(y_*=b/a\)</span>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_brusselator(a, b, irow, axes): <span class="co">#set functions a, b are reactant concentrations, irow is the 2D array of matplotlib</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Integrate the Brusselator equations for reactant concentrations a, b</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">    and plot on the row indexed at irow of the figure axes.</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Initial and final (scaled) time points</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    taui, tauf <span class="op">=</span> <span class="dv">0</span>, <span class="dv">100</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">#intitial (scaled) concentrations of the intermediates.</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    x0, y0 <span class="op">=</span> <span class="dv">0</span>, <span class="dv">0</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Solving the Oder Differential Equation</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    soln <span class="op">=</span> solve_ivp(deriv, (taui, tauf), (x0, y0), dense_output <span class="op">=</span><span class="va">True</span>, args<span class="op">=</span>(a, b))</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    tau <span class="op">=</span> np.linspace(taui, tauf, <span class="dv">1000</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    x, y <span class="op">=</span> soln.sol(tau)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># time series -left plot</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">0</span>].plot(tau, x, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">0</span>].plot(tau, y, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">0</span>].legend((<span class="vs">r'</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">'</span>, <span class="vs">r'</span><span class="dv">$</span><span class="vs">y</span><span class="dv">$</span><span class="vs">'</span>), loc<span class="op">=</span><span class="st">'upper right'</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">0</span>].set_xlabel(<span class="vs">r'</span><span class="dv">$</span><span class="ch">\t</span><span class="vs">au</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    text_hpos <span class="op">=</span> (tauf <span class="op">-</span>taui) <span class="op">/</span><span class="dv">2</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">0</span>].text(text_hpos, <span class="fl">0.1</span>, <span class="ss">f'$a=</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">, b=</span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">$'</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># phase portrait shape spiral, limit or cycle (right plot)</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">1</span>].plot(x, y, lw <span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">1</span>].set_xlabel(<span class="vs">r'</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">1</span>].set_ylabel(<span class="vs">r'</span><span class="dv">$</span><span class="vs">y</span><span class="dv">$</span><span class="vs">'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For each solution, also plot the phase space plot (the curve of <span class="math inline">\(y\)</span> againts <span class="math inline">\(x\)</span>).</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(nrows <span class="op">=</span><span class="dv">3</span>, ncols <span class="op">=</span> <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">8</span>))</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the Brusselator solutions for different reactant concentrations, a and b.</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plot_brusselator(<span class="dv">1</span>, <span class="fl">0.7</span>, <span class="dv">0</span>, axes)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plot_brusselator(<span class="dv">1</span>, <span class="fl">1.8</span>, <span class="dv">1</span>, axes)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plot_brusselator(<span class="dv">1</span>, <span class="fl">2.05</span>, <span class="dv">2</span>, axes)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"brusselator.svg"</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../quarto-workflows/images/brusselator.svg" class="img-fluid figure-img"></p>
+<figcaption>Figure. The Brusselator model for different reactant concentrations (a, b). Left column: time evolutiion of the scaled intermediate consentration <span class="math inline">\(x(\tau)\)</span> and <span class="math inline">\(y(\tau)\)</span>. Right column: phase potraits (<span class="math inline">\(y \ vs \ x\)</span>)</figcaption>
+</figure>
+</div>
+<ul>
+<li>When b is small, the system settles down to a stable steady state (no oscillation).</li>
+<li>when b is large, the system oscillates forever in a repeating cycle (limit cycle).</li>
+<li>The phase portrait show whether the system spirals inward (stable) or goes in a closed loop (oscillating).</li>
+</ul>
 </section>
-<section id="case-study-integral-in-van-der-waals-equation" class="level2">
-<h2 class="anchored" data-anchor-id="case-study-integral-in-van-der-waals-equation">Case study: Integral in van der Waals equation</h2>
-<p>P21.1 Calculate the work required, per kg, to compress <span class="math inline">\(H_2\)</span> at 298 K to 200 bar. What proportion of the combustion enthalpy does this correspond to? Take <span class="math inline">\(m(H_2)\)</span>= 2 <span class="math inline">\(g \ mol^-1\)</span> and treat hydrogen as an van der Walls gas with parameters <span class="math inline">\(a = 0.2476 \ L^2 \ bar \ mol^{-2}\)</span> and <span class="math inline">\(b = 0.02661 \ L \ mol^{-1}\)</span>. The molar entalphy of combustion is <span class="math inline">\(\Delta_c H_m^{\ominus} (H_2) = -286 \ kJ \ mol^{-1}\)</span>.</p>
-<p>Repeat the exercise for methane, using the values <span class="math inline">\(m(CH_4) = 16 g \ mol^{-1}\)</span>, $a=2.300 &nbsp;L^2 bar &nbsp;mol^{-2}, $b = 0.04301 &nbsp;L &nbsp;mol^{-1}, <span class="math inline">\(\Delta_c H_m^{\ominus} (CH_4) = -891 \ kJ \ mol^{-1}\)</span>. Comment on the difference between the two gases.</p>
-<p>To compare value for <span class="math inline">\(w\)</span> obtained by analytical integration and by with numerical integration using <code>scipy.integrate.quad</code>.</p>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>As it turns out, for (<span class="math inline">\(a,\ b) = (1, \ 0.7\)</span>) and (<span class="math inline">\(1, \ 1.8\)</span>), the Brusselator is stable and the intermediate concentrations converge on the fixed point (<span class="math inline">\(x_*, \ y_*) = (1, \ b/a\)</span>). For (<span class="math inline">\(a, \ b) = (1, \ 2.05\)</span>), the intermediate concentrations enter a <em>limit cycle</em>.</p>
 </section>
-<section id="solution-1" class="level2">
-<h2 class="anchored" data-anchor-id="solution-1">Solution</h2>
-<p>If the process is isothermal then the temperature, <span class="math inline">\(T = 298 \ K\)</span> is constant. Let the initial pressure be <span class="math inline">\(p_1= 101325\)</span> and the <span class="math inline">\(V_1\)</span> (to be determined). The final pressure and volume are <span class="math inline">\(p_2= 2 \times 10^7 \ Pa\)</span>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Parameters in the van der Waals</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy.polynomial <span class="im">import</span> Polynomial</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> quad</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Define some quantities</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">8.314</span> <span class="co"># Gas constant in J.K-1.mol-1.</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>M_H2 , M_CH4 <span class="op">=</span> <span class="dv">2</span>, <span class="dv">16</span> <span class="co"># Molar masses of H2 and CH4, g.mol-1</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>n_H2, n_CH4 <span class="op">=</span> <span class="dv">1000</span> <span class="op">/</span>M_H2, <span class="dv">1000</span><span class="op">/</span> M_CH4 <span class="co"># Number of moles of H2 and CH4 in kg of each gas.</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>DcHm_H2, DcHm_CH4 <span class="op">=</span> <span class="op">-</span><span class="fl">286e3</span>, <span class="op">-</span><span class="fl">891e3</span> <span class="co"># Molar combustion entalpies in J.mol-1.</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>DcHs_H2, DcHs_CH4 <span class="op">=</span> DcHm_H2 <span class="op">*</span> n_H2, DcHm_CH4 <span class="op">*</span> n_CH4 <span class="co"># Specific combustion enthalpies in J.kg-1.</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> <span class="dv">298</span>  <span class="co"># Temperature in K</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>p1, p2 <span class="op">=</span> <span class="fl">1e5</span> , <span class="fl">2e7</span> <span class="co"># Initial and final pressure in Pa.</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co"># In SI units, the van der Waals parameters in m6.Pa.mol-2 and m3.mol-1.</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>a_H2, b_H2 <span class="op">=</span> <span class="fl">2.476e-2</span>, <span class="fl">2.661e-5</span></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>a_CH4, b_CH4 <span class="op">=</span> <span class="fl">0.2300</span>, <span class="fl">4.301e-5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-We need to know <span class="math inline">\(V\)</span>, the number of moles of gas compressed, and the van der Waals equation can be arranged into the following cubic equation in <span class="math inline">\(V\)</span>, which can be solve for its real root if <span class="math inline">\(p_2, \ n,\)</span> and <span class="math inline">\(T\)</span> are known. Rearranging the van der Waals equation gives:
-<p align="center">
-<span class="math display">\[ \begin{align} PV^2(V-nb)=nRTV^2 - n^2 a (V-nb) \\ \Rightarrow pV^3 - n(Pb + RT) V^2 + n^2 aV - n^3 ab = 0 \end{align}\]</span>
-</p>
-<p>The work integral can be evaluated analytically for a van der Waals gas,</p>
-<p align="center">
-<span class="math display">\[ \begin{align} -\int_{V_1}^{V_2} p \ dV &amp;= -\int_{V_1}^{V_2} \frac{nRT}{V-nb} - \frac{n^2 a}{V^2} dV \\ &amp;=-nRT \ ln(\frac{V_2 - nb}{V_1 - nb}) - n^2 a (\frac{1}{V_2} - \frac{1}{V_1}) \end{align}\]</span>
-</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Invert the van der Waals equation to return V from n, p, T</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_V(n, p, T, a, b):</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    poly<span class="op">=</span> Polynomial([<span class="op">-</span>n<span class="op">**</span><span class="dv">3</span> <span class="op">*</span> a <span class="op">*</span> b, n<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> a, <span class="op">-</span>n<span class="op">*</span>(p <span class="op">*</span> b <span class="op">+</span> R <span class="op">*</span> T), p])</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    roots <span class="op">=</span> poly.roots()</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> roots[np.isreal(roots)][<span class="dv">0</span>].real</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Return the work required to compress the gas to p2</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_w_per_kg(n, p2, T, a, b):</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    V1 <span class="op">=</span> n <span class="op">*</span> R <span class="op">*</span> T <span class="op">/</span> p1 <span class="co"># Ideal gas for the initial volume</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    V2 <span class="op">=</span> get_V(n, p2, T, a, b) <span class="co"># The final, compressed, volume from the van der Waals</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Van der Waals equation of state</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> p(V, n, R, T, a, b):</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> n <span class="op">*</span> R <span class="op">*</span> T <span class="op">/</span> (V<span class="op">-</span>n <span class="op">*</span> b) <span class="op">-</span> n<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> a <span class="op">/</span> V<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Numerical integration of p with respect to V </span></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    wp, err <span class="op">=</span> quad(p, V1, V2, args<span class="op">=</span>(n, R, T, a, b))</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span>wp</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate workrequired for H2 and CH4</span></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>wH2 <span class="op">=</span> get_w_per_kg(n_H2, p2, T, a_H2, b_H2)</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'1. Work required for compression of H2 to 200 bar:</span><span class="sc">{</span>wH2 <span class="op">/</span> <span class="fl">1e6</span><span class="sc">:.1f}</span><span class="ss"> MJ/Kg'</span>)</span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'(</span><span class="sc">{</span>wH2 <span class="op">/</span> <span class="op">-</span>DcHs_H2 <span class="op">*</span> <span class="dv">100</span><span class="sc">:.1f}</span><span class="ss"> of entalpy released on combustion)'</span>)</span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>wCH4 <span class="op">=</span> get_w_per_kg(n_CH4, p2, T, a_CH4, b_CH4)</span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'2. Work required for compression of CH4 to 200 bar:</span><span class="sc">{</span>wCH4 <span class="op">/</span> <span class="fl">1e6</span><span class="sc">:.1f}</span><span class="ss"> MJ/Kg'</span>)</span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'(</span><span class="sc">{</span>wCH4 <span class="op">/-</span>DcHs_CH4 <span class="op">*</span> <span class="dv">100</span><span class="sc">:.1f}</span><span class="ss"> of entalpy released on combustion)'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>1. Work required for compression of H2 to 200 bar:6.5 MJ/Kg
-(4.6 of entalpy released on combustion)
-2. Work required for compression of CH4 to 200 bar:0.8 MJ/Kg
-(1.4 of entalpy released on combustion)</code></pre>
+<section id="reference" class="level2">
+<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<p><a href="https://academicweb.nd.edu/~powers/mcdowell.pdf">[1] Mathematical Modelling of the Brusselator by Matthew P.McDowell 2008</a></p>
+<p><a href="https://ems.press/content/serial-article-files/39950">[2] Influence of Diffusion on the Stability of a Full Brusselator model 2018</a></p>
 
 
 </section>
@@ -1300,13 +1191,13 @@ We need to know <span class="math inline">\(V\)</span>, the number of moles of g
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../quarto-workflows/quantum-mechanics/inertia.html" class="pagination-link" aria-label="The moment inertia of a molecule">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The moment inertia of a molecule</span>
+      <a href="../../quarto-workflows/thermodynamics/boltzman.html" class="pagination-link" aria-label="Maxwell-Boltzmann Distribution">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Maxwell-Boltzmann Distribution</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../quarto-workflows/quantum-mechanics/approxiqho.html" class="pagination-link" aria-label="Approximation in Quantum Chemistry">
-        <span class="nav-page-text">Approximation in Quantum Chemistry</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../acknowledgments.html" class="pagination-link" aria-label="Acknowledgments">
+        <span class="nav-page-text">Acknowledgments</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1318,7 +1209,7 @@ We need to know <span class="math inline">\(V\)</span>, the number of moles of g
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/QHO.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/thermodynamics/brusselator.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
