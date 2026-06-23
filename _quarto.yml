@@ -4,6 +4,7 @@ project:
 website: 
   page-navigation: true
   title: "Eigen Spaces" 
+  favicon: "images/orbitalquarto.svg"
   site-url: "" 
   repo-url: https://github.com/dindagustiayu/eigenspaces.github.io 
   repo-actions: [edit, issue]
@@ -68,6 +69,7 @@ website:
             contents:
               - quarto-workflows/thermodynamics/adiabatic-process.md
               - quarto-workflows/thermodynamics/boltzman.md
+              - quarto-workflows/thermodynamics/brusselator.md
       - acknowledgments.qmd
        
        
