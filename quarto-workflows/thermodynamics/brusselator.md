@@ -24,13 +24,13 @@ With a basic grounding in these four laws, one can begin to delve deeper into th
 
 It is well known that reaction and diffusion of chemical or biochemical species can produce a variety of spatial patterns. This class of reaction diffusion systems includes some significant pattern formation equations arising from the modelling of kinetics of chemical or biochemical reactions and from the biological pattern formation theory. For this reason, the Brusselator is typicaly important and serves as mathematical model in physical chemistry and in biology. Nonlinear reaction-diffusion equations and systems play an important role in the modelling and study of many phenomena [2].
 
-Brusselator model is a famous model of chemical reactions with oscillations and a theoritical model for a type of auto-catalytic reaction. In particular the Brusselator model consists of four reactions involving six-components A, B, D, E, X, Y where the chemical reactions follow the scheme
+Brusselator model is a famous model of chemical reactions with oscillations and a theoritical model for a type of auto-catalytic reaction. In particular the Brusselator model consists of four reactions involving six-components A, B, D, E, X, Y where the chemical reactions follow the scheme (Table 1.)
 
 Table 1. Mechanism of Brusselator
 
 | Brusselator Model | Description|
 | --- | --- |
-| $ A \rightarrow X \quad (1)$ | Species A makes species X |
+| $A \rightarrow X \quad (1)$ | Species A makes species X |
 | $B + X \rightarrow Y + D \quad (2)$ | Species X makes species Y. (Actication)|
 | $2X + Y \rightarrow 3X \quad (3) $| Species Y makes species X. (Activation) |
 | $X \rightarrow E \quad (4)$| Species X makes species E. (Inactivatio)|
