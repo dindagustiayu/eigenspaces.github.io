@@ -1,6 +1,6 @@
 # Welcome 
 
-> Welcome to 🌐[Eigen Spaces](https://dindagustiayu.github.io/eigenspaces.github.io/) \
+> Welcome to 🌐[Eigen Spaces](https://github.com/dindagustiayu/eigenspaces.github.io.git) \
 This blog is as a knowledge base in understanding application of computational tools for physics or chemistry problems. I hope you find the contents useful, and I hope you enjoy reading along and learning with me!
 >
 
