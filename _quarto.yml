@@ -14,6 +14,8 @@ website:
     right: "This page is built with [Quarto](https://quarto.org/)."
     left: "&copy; 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0 unless otherwise stated."
     
+  sitemap: true
+
   sidebar:
     logo: "images/eigenspaces.png"
     pinned: true
