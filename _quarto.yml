@@ -1,5 +1,6 @@
 project: 
   type: website
+  resources: "robot.txt"
   
 website: 
   page-navigation: true
@@ -10,7 +11,7 @@ website:
   repo-actions: [edit, issue]
   
   page-footer:
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    right: "This page is built with [Quarto](https://quarto.org/)."
     left: "&copy; 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0 unless otherwise stated."
     
   sidebar:
