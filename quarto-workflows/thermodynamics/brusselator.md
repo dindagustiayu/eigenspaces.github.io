@@ -3,7 +3,7 @@ title: "Brusselator"
 date: "2026-6-20" 
 ---
 
-[![](https://colab.research.google.com/assets/colab-badge.svg)](/pyfile/brusselator.py/)
+[![](https://colab.research.google.com/assets/colab-badge.svg)](pyfile/brusselator.py/)
 
 
 # Mathematical Modelling of the Brusselator

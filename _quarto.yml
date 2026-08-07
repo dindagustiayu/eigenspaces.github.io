@@ -12,9 +12,8 @@ website:
   
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
-    left: "&copy; 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0 unless otherwise stated."
+    left: "&copy; 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0"
     
-  sitemap: true
 
   sidebar:
     logo: "images/eigenspaces.png"
@@ -73,6 +72,7 @@ website:
               - quarto-workflows/thermodynamics/adiabatic-process.md
               - quarto-workflows/thermodynamics/boltzman.md
               - quarto-workflows/thermodynamics/brusselator.md
+      - data.qmd
       - acknowledgments.qmd
        
        

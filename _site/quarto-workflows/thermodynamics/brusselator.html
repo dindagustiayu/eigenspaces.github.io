@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-01-11">
+<meta name="dcterms.date" content="2026-06-20">
 
-<title>gaussian – Eigen Spaces</title>
+<title>Brusselator – Eigen Spaces</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../quarto-workflows/data-science/the-fourier-series.html" rel="next">
-<link href="../../quarto-workflows/index.html" rel="prev">
+<link href="../../acknowledgments.html" rel="next">
+<link href="../../quarto-workflows/thermodynamics/boltzman.html" rel="prev">
 <link href="../../images/orbitalquarto.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -147,7 +147,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Gaussian Distribution Functions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/thermodynamics/adiabatic-process.html">Thermodynamics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/thermodynamics/brusselator.html">Brusselator</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -201,16 +201,16 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Data Science</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quarto-workflows/data-science/Gaussian.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../quarto-workflows/data-science/Gaussian.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gaussian Distribution Functions</span></a>
   </div>
 </li>
@@ -367,13 +367,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Thermodynamics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/thermodynamics/adiabatic-process.html" class="sidebar-item-text sidebar-link">
@@ -388,7 +388,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quarto-workflows/thermodynamics/brusselator.html" class="sidebar-item-text sidebar-link">
+  <a href="../../quarto-workflows/thermodynamics/brusselator.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Brusselator</span></a>
   </div>
 </li>
@@ -402,12 +402,6 @@ window.Quarto = {
  <span class="menu-text">Acknowledgments</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -418,21 +412,24 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#gaussian-distribution-functions" id="toc-gaussian-distribution-functions" class="nav-link active" data-scroll-target="#gaussian-distribution-functions">Gaussian Distribution Functions</a>
+  <li><a href="#mathematical-modelling-of-the-brusselator" id="toc-mathematical-modelling-of-the-brusselator" class="nav-link active" data-scroll-target="#mathematical-modelling-of-the-brusselator">Mathematical Modelling of the Brusselator</a>
   <ul class="collapse">
-  <li><a href="#standard-normal-probability-density-function-pdf" id="toc-standard-normal-probability-density-function-pdf" class="nav-link" data-scroll-target="#standard-normal-probability-density-function-pdf">Standard Normal Probability Density Function (PDF)</a></li>
-  <li><a href="#function-arguments" id="toc-function-arguments" class="nav-link" data-scroll-target="#function-arguments">Function arguments</a></li>
-  <li><a href="#two-dimensional-gaussian-function" id="toc-two-dimensional-gaussian-function" class="nav-link" data-scroll-target="#two-dimensional-gaussian-function">Two-dimensional Gaussian Function</a></li>
-  <li><a href="#function-arguments-1" id="toc-function-arguments-1" class="nav-link" data-scroll-target="#function-arguments-1">Function arguments</a></li>
+  <li><a href="#why-brusselator-is-important" id="toc-why-brusselator-is-important" class="nav-link" data-scroll-target="#why-brusselator-is-important">Why Brusselator is important?</a></li>
+  <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link" data-scroll-target="#preliminaries">Preliminaries</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/data-science/Gaussian.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/thermodynamics/brusselator.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Data Science</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/data-science/Gaussian.html">Gaussian Distribution Functions</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../quarto-workflows/index.html">Contents</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/thermodynamics/adiabatic-process.html">Thermodynamics</a></li><li class="breadcrumb-item"><a href="../../quarto-workflows/thermodynamics/brusselator.html">Brusselator</a></li></ol></nav>
 <div class="quarto-title">
+<h1 class="title">Brusselator</h1>
 </div>
 
 
@@ -443,7 +440,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 11, 2026</p>
+      <p class="date">June 20, 2026</p>
     </div>
   </div>
   
@@ -455,127 +452,157 @@ window.Quarto = {
 </header>
 
 
-<p><a href="https://github.com/dindagustiayu/Gaussian-Distribution-Function/blob/main/Gaussian-function.py"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
-<section id="gaussian-distribution-functions" class="level1">
-<h1>Gaussian Distribution Functions</h1>
-<p>The Gaussian distribution is defined by two parameters: the mean (<span class="math inline">\(\mu\)</span>) and the standard deviation (<span class="math inline">\(\sigma\)</span>). These determine the centre and spread of the distribution, respectively. The probability density function (PDF) of the Gaussian distribution describes the likelihood of observing a value x given the distribution’s parameters.</p>
-<section id="standard-normal-probability-density-function-pdf" class="level2">
-<h2 class="anchored" data-anchor-id="standard-normal-probability-density-function-pdf">Standard Normal Probability Density Function (PDF)</h2>
-<p>In one dimension, the standard normal probability density function <span class="math inline">\(f(x)\)</span> describes the probability density of observing a value <span class="math inline">\(x\)</span> from a standard normal distribution. It is defined as:</p>
-<p align="center">
-<span class="math inline">\(f(x\;|\;\mu,\;\sigma)=\frac{1}{\sigma\sqrt{2\pi}}exp[-\frac{x-\mu^{2}}{2\sigma^{2}}]\)</span>
-</p>
-<p>where: - x is the value at which to evaluate the probability density function. - <span class="math inline">\(\mu\)</span> is the mean of the distribution. - <span class="math inline">\(\sigma\)</span> is the standard deviation of the distribution.</p>
-</section>
-<section id="function-arguments" class="level2">
-<h2 class="anchored" data-anchor-id="function-arguments">Function arguments</h2>
-<p>This script requires the following function arguments:</p>
+<p><a href="pyfile/brusselator.py/"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
+<section id="mathematical-modelling-of-the-brusselator" class="level1">
+<h1>Mathematical Modelling of the Brusselator</h1>
+<p>The Brusselator is a model for predicting oscillations in chemcial reations under some conditions. As we progress, various models have been used to represent natural phenomenon. In classical thermodynamics, we model phenomena through simple linear equations. However, in the recent past, it is common to represent nature by non-linear equations. There are four laws that dominate traditional tehrmodynamics, which still hold true today [1]:</p>
 <ul>
-<li><code>make_gauss</code>: Plot multiple Gaussian curves by defining a Gaussian function factory.</li>
-<li><code>N</code> (amplitudo): Controls the overall height of the Gaussian.<br>
-</li>
-<li><code>sig</code> (standard deviation, <span class="math inline">\(\sigma\)</span>): Determines the spread of the Gaussian.</li>
-<li><code>mu</code> (mean, <span class="math inline">\(\mu\)</span>): Sets the center of the Gaussian.</li>
-<li><code>return lambda</code>: creates a function of <code>x</code> that computes the Gaussian formula.</li>
+<li><p>Zeroth Law: If two thermodynamics systems are each in thermal equilibrium with a third, then they are in thermal equlibrium with each other.</p></li>
+<li><p>First Law: When a system undergoes a transformation of state, the algrebraic sum of the different energy changes, heat exchanged, work done, is independent of the manner of the transformation. It depends only on the initial and final states of the transformation.</p></li>
+<li><p>Second Law: The total entropy of any isolated thermodynamics system tends to increase over time, approaching a maxium value.</p></li>
+<li><p>Third Law: As temperature approaches absolute zero, the entropy of a system approaches a constant minimum.</p></li>
 </ul>
-<p>This Python script demonstrates the Gaussian distribution function, also known as the normal distribution.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_gauss(N, sig, mu):</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">lambda</span> x: N<span class="op">/</span>(sig <span class="op">*</span> np.sqrt(<span class="dv">2</span><span class="op">*</span>np.pi)) <span class="op">*</span> np.exp(<span class="op">-</span>(x<span class="op">-</span>mu)<span class="op">**</span><span class="dv">2</span><span class="op">/</span>(<span class="dv">2</span> <span class="op">*</span> sig<span class="op">**</span><span class="dv">2</span>))</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.arange (<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="fl">0.01</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    variances <span class="op">=</span> [<span class="fl">0.2</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="fl">0.5</span>]</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    sigmas <span class="op">=</span> np.sqrt(variances)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    mus <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>]</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    colors <span class="op">=</span> [<span class="st">'b'</span>, <span class="st">'r'</span>, <span class="st">'y'</span>, <span class="st">'g'</span>]</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> var, sig, mu, color <span class="kw">in</span> <span class="bu">zip</span>(variances, sigmas, mus, colors):</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        gauss <span class="op">=</span> make_gauss(<span class="dv">1</span>, sig, mu)(x)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        ax.plot(x, gauss, color, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="ss">f'$</span><span class="ch">\\</span><span class="ss">sigma^</span><span class="sc">{</span><span class="dv">2</span><span class="sc">}</span><span class="ss">=</span><span class="sc">{</span>var<span class="sc">}</span><span class="ss">, </span><span class="ch">\\</span><span class="ss">mu=</span><span class="sc">{</span>mu<span class="sc">}</span><span class="ss">$'</span>) </span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    ax.set_xlim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    ax.set_ylim(<span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="vs">r'$\phi_{\mu,\sigma^</span><span class="sc">{2}</span><span class="vs">}(x)$'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="vs">r'$x$'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    ax.legend()</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    ax.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="st">"Gaussian Functions with Different Variable"</span>)</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    plt.savefig(<span class="st">'Gaussian Functions with Different Variable.svg'</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>main()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../quarto-workflows/images/Gaussian/Gaussian Functions with Different Variable.svg" class="img-fluid figure-img"></p>
-<figcaption>Figure 1. Gaussian function with different variables</figcaption>
-</figure>
-</div>
+<p>With a basic grounding in these four laws, one can begin to delve deeper into thermodynamics. The fundamentals of thermodynamics came about in very unique methods, trials, thought, experiments, and physical experiments. However, now there is another method to describe natural phenomenon - Brusselator.</p>
+<section id="why-brusselator-is-important" class="level2">
+<h2 class="anchored" data-anchor-id="why-brusselator-is-important">Why Brusselator is important?</h2>
+<p>It is well known that reaction and diffusion of chemical or biochemical species can produce a variety of spatial patterns. This class of reaction diffusion systems includes some significant pattern formation equations arising from the modelling of kinetics of chemical or biochemical reactions and from the biological pattern formation theory. For this reason, the Brusselator is typicaly important and serves as mathematical model in physical chemistry and in biology. Nonlinear reaction-diffusion equations and systems play an important role in the modelling and study of many phenomena [2].</p>
+<p>Brusselator model is a famous model of chemical reactions with oscillations and a theoritical model for a type of auto-catalytic reaction. In particular the Brusselator model consists of four reactions involving six-components A, B, D, E, X, Y where the chemical reactions follow the scheme (Table 1.)</p>
+<p>Table 1. Mechanism of Brusselator</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Brusselator Model</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(A \rightarrow X \quad (1)\)</span></td>
+<td>Species A makes species X</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(B + X \rightarrow Y + D \quad (2)\)</span></td>
+<td>Species X makes species Y. (Actication)</td>
+</tr>
+<tr class="odd">
+<td>$2X + Y 3X (3) $</td>
+<td>Species Y makes species X. (Activation)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(X \rightarrow E \quad (4)\)</span></td>
+<td>Species X makes species E. (Inactivatio)</td>
+</tr>
+</tbody>
+</table>
+<p>Adding these reactions one obtains <span class="math display">\[ A +B + 4X + Y \rightarrow 4X + Y + D + E \tag{5}\]</span></p>
+<p>and hence <span class="math inline">\(A +B \rightarrow D +E\)</span>, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are catalysis (in particular, X is auto-catalytic and provides the nonlinearity).</p>
+<p>The concentrations <span class="math inline">\([X]\)</span> and <span class="math inline">\([Y]\)</span> come from an infinite supply in this reaction scheme. The variable <span class="math inline">\(k_i\)</span> is reresented in units of <span class="math inline">\(\left(\frac{mole}{l \ s} \right)^{-1}\)</span>. The equations for the evolution of <span class="math inline">\([X]\)</span> and [Y]$ are as follows:</p>
+<p><span class="math display">\[\begin{align} \frac{d[X]}{dt} &amp;= k_1[A] - k_2[B][X] + k_3[X]^{2}[Y] -k_4[X] \tag{6} \\ \frac{d[Y]}{dt} &amp;= k_2[B][X] -k_3[X]^2[Y] \tag{7} \\ [X](0) &amp;= 0 \tag{8} \\ [Y](0) &amp;=0 \end{align}\]</span></p>
+<p>There are severl known examples of auto-catalysis which can be modeled by the Brusselator equations, such as ferrocyanide-iodate-sulphite reaction, chlorite-iodite-malonic acid reaction, arsenite-iodate reaction, some enzyme catalytic reactions and fungal mycelia growth.</p>
 </section>
-<section id="two-dimensional-gaussian-function" class="level2">
-<h2 class="anchored" data-anchor-id="two-dimensional-gaussian-function">Two-dimensional Gaussian Function</h2>
-<p>In two dimensions, the circular Gaussian is the distribution function for uncorrelated variates <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> having a bivariate normal distribution and equal standard deviation <span class="math inline">\(\sigma=\sigma_{x}=\sigma_{y}\)</span>.</p>
-<p align="center">
-<span class="math inline">\((x,\;y)=exp(-x^{2}-y^{2})\)</span>
-</p>
-<p align="center">
-<span class="math inline">\(f(x,\;y)=A\;exp(-(\frac{(x-x_{0})^{2}}{2\sigma_{X}^{2}}\;+\;\frac{(y-y_{0})^{2}}{2\sigma_{Y}^{2}}))\)</span>
-</p>
-<p>where: - A is Amplitude - <span class="math inline">\(x_{0}\)</span> and <span class="math inline">\(y_{0}\)</span> are the centre - <span class="math inline">\(\sigma_{x}\)</span> and <span class="math inline">\(\sigma_{y}\)</span> are the X and Y spreads of the blob.</p>
+<section id="preliminaries" class="level2">
+<h2 class="anchored" data-anchor-id="preliminaries">Preliminaries</h2>
+<p>Scipy’s <code>solve_ivp</code> function can be used to integrate the differential equations of the Oregonator model, given a set of initial conditions, which here we take to be <span class="math inline">\(x=(0) \ y=(0) \ z =(0) \ = 1\)</span>.</p>
 </section>
-<section id="function-arguments-1" class="level2">
-<h2 class="anchored" data-anchor-id="function-arguments-1">Function arguments</h2>
-<p>This script requires the following function arguments:</p>
-<ul>
-<li><code>X, Y</code>: are the meshgrid coordinates.</li>
-<li><code>Z</code>: is the function value at <code>X, Y</code>.</li>
-<li><code>fig.add_subplot(111)</code>: is to set up a 3D subplot with 1 row, 1 column, and the first subplot.</li>
-<li><code>projection='3d'</code>: is matplotlib to make a 3D axis.</li>
-</ul>
-<p>This Python script demonstrates the Gaussian distribution function, also known as the normal distribution.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define grid</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> y <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">40</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
+<section id="exercise" class="level2">
+<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
+<p>Obtain expression for the constants <span class="math inline">\(p, \ q \ \mbox{and} \ r\)</span> that scale the time variable and intermediate concentrations into the non-dimensional form: <span class="math inline">\(x=p[X], \ y=q[Y]\)</span> and <span class="math inline">\(\tau = r t\)</span>. By solving the pair of differential equations, plot <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> as a function of <span class="math inline">\(\tau\)</span> using the initial conditions <span class="math inline">\((x_0, \ y_0) = (0, \ 0)\)</span> for reactant concentrations(a) <span class="math inline">\((a, \ b) = (1, \ 0.7)\)</span>, (b) <span class="math inline">\((a, \ b) = (1, \ 1.8)\)</span>, and (c) <span class="math inline">\((a, \ b) = (1, \ 2.05)\)</span>. For each solution, also plot the phase space plot (the curve of <span class="math inline">\(y\)</span> againts <span class="math inline">\(x\)</span>).</p>
+</section>
+<section id="solution" class="level2">
+<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<ol type="1">
+<li>We must solve for <span class="math inline">\([X]\)</span> and <span class="math inline">\([Y]\)</span> in the equation (5-6). Replacing the <span class="math inline">\(x =p[X]\)</span>, <span class="math inline">\(y=q[Y]\)</span>, and <span class="math inline">\(\tau = r t\)</span>.</li>
+</ol>
+<p><span class="math display">\[\begin{align} \frac{r}{p} \frac{dx}{d\tau} &amp;= k_1 [A] + \frac{k_2}{p^2 q} x^2 y - \frac{k_3 [B]}{p} x - \frac{k_4}{p} x \tag{9} \\ \frac{r}{q} \frac{dy}{d \tau} &amp;= -\frac{k_2}{p^2 q} x^2 y + \frac{k_3 [B]}{p} x \tag{10} \end{align}\]</span></p>
+<p>Rearranging,</p>
+<p><span class="math display">\[\begin{align} \frac{dx}{d \tau} &amp;= \frac{pk_1 [A]}{r} + \frac{k_2}{pqr} x^2 y - \frac{1}{r} (k_3[B] + k_4) x \tag{11} \\ \frac{dy}{d \tau} &amp;= - \frac{k_2}{p^2 r} x^2 y + \frac{k_3 [B]q}{pr} x \tag{12} \end{align}\]</span></p>
+<ol start="2" type="1">
+<li>Choosing <span class="math inline">\(k_4/r = 1\)</span> and <span class="math inline">\(pk_1[A]/r=1\)</span> fixes <span class="math inline">\(r=k_4\)</span> and <span class="math inline">\(p=k_4/(k_1[A])\)</span>. It would be nice if the factors involving <span class="math inline">\([B]\)</span> were the same. We can define</li>
+</ol>
+<p><span class="math display">\[b=\frac{k_3 [B]}{r} = \frac{k_3[B]q}{pr} \Rightarrow \ q =p=\frac{k_4}{k_1[A]} \tag{13}\]</span></p>
+<p>which leaves</p>
+<p><span class="math display">\[a =\frac{k_2}{p^2 r} = \frac{k_2}{pqr} = \frac{k_1^{2} k_2[A]^{2}}{k_4^3} \tag{14}\]</span></p>
+<p>Therefore, <span class="math display">\[\begin{align} \frac{dx}{d \tau} &amp;= 1 + ax^2 y - (b+1)x \tag{15} \\ \frac{dy}{d \tau} &amp;= -ax^2y + bx \tag{16} \end{align}\]</span></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parameters</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> solve_ivp</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> deriv(t, X, a, b):</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""return the derivatives dx/dtau and dy/dtau"""</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    x, y <span class="op">=</span> X</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    dxdtau <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> a<span class="op">*</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">*</span>y <span class="op">-</span> (b<span class="op">+</span><span class="dv">1</span>)<span class="op">*</span>x</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    dydtau <span class="op">=</span> <span class="op">-</span>a <span class="op">*</span>x<span class="op">**</span><span class="dv">2</span> <span class="op">*</span>y <span class="op">+</span> b<span class="op">*</span>x</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dxdtau, dydtau</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>The system has a single <em>fixed point</em>: the pair of values (<span class="math inline">\(x_{*}, \ y_{*}\)</span>) that remain unchanged in time under these differential equations, show that <span class="math inline">\(x_{*} = 1\)</span> and <span class="math inline">\(y_{*}=b/a\)</span>. Then it must be the case that:</li>
+</ol>
+<p><span class="math display">\[\begin{align} \frac{dx}{d \tau} &amp;= 0 = 1 + a_*^{2} y_{*} - (b +1)x_* \\ \frac{dy}{d \tau} &amp;= 0 = -ax_*^{2} y_* + bx_{*} \end{align}\]</span></p>
+<p>This pair of equations are readily solved to yield <span class="math inline">\(x_*=1\)</span>, <span class="math inline">\(y_*=b/a\)</span>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_brusselator(a, b, irow, axes): <span class="co">#set functions a, b are reactant concentrations, irow is the 2D array of matplotlib</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Integrate the Brusselator equations for reactant concentrations a, b</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">    and plot on the row indexed at irow of the figure axes.</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Initial and final (scaled) time points</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    taui, tauf <span class="op">=</span> <span class="dv">0</span>, <span class="dv">100</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Gaussian parameters</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> y0 <span class="op">=</span> <span class="fl">0.5</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>sig_X, sig_Y <span class="op">=</span> <span class="fl">0.2</span>, <span class="fl">0.4</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Gaussian function</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> np.exp(<span class="op">-</span>(X<span class="op">-</span>x0)<span class="op">**</span><span class="dv">2</span><span class="op">/</span>sig_X<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> (Y<span class="op">-</span>y0)<span class="op">**</span><span class="dv">2</span><span class="op">/</span>sig_Y<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create 3D plot</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="dv">5</span>))</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">'3d'</span>)</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot surface </span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>surf <span class="op">=</span> ax.plot_surface(X, Y, f, cmap<span class="op">=</span>cm.twilight, edgecolor <span class="op">=</span> <span class="st">'none'</span>)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Add label</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'X position [a.u.]'</span>)</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Y position [a.u.]'</span>)</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'2D Gaussian Surface'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Add color bar</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>cbar<span class="op">=</span> fig.colorbar(surf, shrink<span class="op">=</span><span class="fl">0.5</span>, aspect<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">'Amplitudo [a.u.]'</span>)</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'2D Gaussian surface.svg'</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">#intitial (scaled) concentrations of the intermediates.</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    x0, y0 <span class="op">=</span> <span class="dv">0</span>, <span class="dv">0</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Solving the Oder Differential Equation</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    soln <span class="op">=</span> solve_ivp(deriv, (taui, tauf), (x0, y0), dense_output <span class="op">=</span><span class="va">True</span>, args<span class="op">=</span>(a, b))</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    tau <span class="op">=</span> np.linspace(taui, tauf, <span class="dv">1000</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    x, y <span class="op">=</span> soln.sol(tau)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># time series -left plot</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">0</span>].plot(tau, x, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">0</span>].plot(tau, y, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">0</span>].legend((<span class="vs">r'$x$'</span>, <span class="vs">r'$y$'</span>), loc<span class="op">=</span><span class="st">'upper right'</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">0</span>].set_xlabel(<span class="vs">r'$\tau$'</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    text_hpos <span class="op">=</span> (tauf <span class="op">-</span>taui) <span class="op">/</span><span class="dv">2</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">0</span>].text(text_hpos, <span class="fl">0.1</span>, <span class="ss">f'$a=</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">, b=</span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">$'</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># phase portrait shape spiral, limit or cycle (right plot)</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">1</span>].plot(x, y, lw <span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">1</span>].set_xlabel(<span class="vs">r'$x$'</span>)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    axes[irow][<span class="dv">1</span>].set_ylabel(<span class="vs">r'$y$'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For each solution, also plot the phase space plot (the curve of <span class="math inline">\(y\)</span> againts <span class="math inline">\(x\)</span>).</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(nrows <span class="op">=</span><span class="dv">3</span>, ncols <span class="op">=</span> <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">8</span>))</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the Brusselator solutions for different reactant concentrations, a and b.</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plot_brusselator(<span class="dv">1</span>, <span class="fl">0.7</span>, <span class="dv">0</span>, axes)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plot_brusselator(<span class="dv">1</span>, <span class="fl">1.8</span>, <span class="dv">1</span>, axes)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plot_brusselator(<span class="dv">1</span>, <span class="fl">2.05</span>, <span class="dv">2</span>, axes)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>fig.tight_layout()</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"brusselator.svg"</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../quarto-workflows/images/Gaussian/2D Gaussian surface.svg" class="img-fluid figure-img"></p>
-<figcaption>Figure 2. Two-dimensional Gaussian Surface</figcaption>
+<p><img src="../../quarto-workflows/images/brusselator.svg" class="img-fluid figure-img"></p>
+<figcaption>Figure. The Brusselator model for different reactant concentrations (a, b). Left column: time evolutiion of the scaled intermediate consentration <span class="math inline">\(x(\tau)\)</span> and <span class="math inline">\(y(\tau)\)</span>. Right column: phase potraits (<span class="math inline">\(y \ vs \ x\)</span>)</figcaption>
 </figure>
 </div>
+<ul>
+<li>When b is small, the system settles down to a stable steady state (no oscillation).</li>
+<li>when b is large, the system oscillates forever in a repeating cycle (limit cycle).</li>
+<li>The phase portrait show whether the system spirals inward (stable) or goes in a closed loop (oscillating).</li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>As it turns out, for (<span class="math inline">\(a,\ b) = (1, \ 0.7\)</span>) and (<span class="math inline">\(1, \ 1.8\)</span>), the Brusselator is stable and the intermediate concentrations converge on the fixed point (<span class="math inline">\(x_*, \ y_*) = (1, \ b/a\)</span>). For (<span class="math inline">\(a, \ b) = (1, \ 2.05\)</span>), the intermediate concentrations enter a <em>limit cycle</em>.</p>
+</section>
+<section id="reference" class="level2">
+<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<p><a href="https://academicweb.nd.edu/~powers/mcdowell.pdf">[1] Mathematical Modelling of the Brusselator by Matthew P.McDowell 2008</a></p>
+<p><a href="https://ems.press/content/serial-article-files/39950">[2] Influence of Diffusion on the Stability of a Full Brusselator model 2018</a></p>
 
 
 </section>
@@ -1145,13 +1172,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../quarto-workflows/index.html" class="pagination-link" aria-label="Contents">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Contents</span>
+      <a href="../../quarto-workflows/thermodynamics/boltzman.html" class="pagination-link" aria-label="Maxwell-Boltzmann Distribution">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Maxwell-Boltzmann Distribution</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../quarto-workflows/data-science/the-fourier-series.html" class="pagination-link" aria-label="The Fourier Series">
-        <span class="nav-page-text">The Fourier Series</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../acknowledgments.html" class="pagination-link" aria-label="Acknowledgments">
+        <span class="nav-page-text">Acknowledgments</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1159,11 +1186,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0</p>
+<p>© 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0 unless otherwise stated.</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/data-science/Gaussian.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/thermodynamics/brusselator.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
