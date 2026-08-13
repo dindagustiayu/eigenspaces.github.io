@@ -633,7 +633,13 @@ window.Quarto = {
 <section id="the-fourier-series" class="level1">
 <h1>The Fourier Series</h1>
 <p>People are generally comfortable thinking about functions of time. For example, a signal might be described as <span class="math inline">\(X(t)\)</span>, where <span class="math inline">\(t\)</span> is time. This referred to as the “time domain”. However, it is often useful to think of signals and sytems in the “frequency domain”, where frequency, instead of time, is the independent variable, e.g., <span class="math inline">\(X(f)\)</span>, where <span class="math inline">\(f\)</span> is frequency.</p>
-<p>We are going to study several basic waves. All of these can be thought of as combinations of various sines waves. - Sawtooth Wave - Triangle Wave - Square Wave - Pulse/Rectangle Wave</p>
+<p>We are going to study several basic waves. All of these can be thought of as combinations of various sines waves.</p>
+<ul>
+<li>Sawtooth Wave</li>
+<li>Triangle Wave</li>
+<li>Square Wave</li>
+<li>Pulse/Rectangle Wave</li>
+</ul>
 <section id="sawtooth-wave" class="level2">
 <h2 class="anchored" data-anchor-id="sawtooth-wave">1. Sawtooth Wave</h2>
 <ul>
@@ -646,7 +652,13 @@ Shifting the phase of the even harmonics by 180 degrees will make a sawtooth wav
 <p align="center">
 <span class="math inline">\(f_{saw}(t) =\;\frac{1}{2}-\frac{1}{\pi}\sum_{k=1}^{\infty}{\frac{(-1)^{k}}{k}}\;sin(2\pi kvt)\)</span>
 </p>
-<p>where: - <span class="math inline">\(f_{saw}(t)\)</span> is a sawtooth wave as a function of <span class="math inline">\(t\)</span> (time) in seconds. - <span class="math inline">\(v\)</span> is a fundamental frequency. - <span class="math inline">\(A\)</span> is a fundamental amplitude. - <span class="math inline">\(n\)</span> represents the harmonic number where <span class="math inline">\(n=1\)</span> is the fundamental.</p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(f_{saw}(t)\)</span> is a sawtooth wave as a function of <span class="math inline">\(t\)</span> (time) in seconds.</li>
+<li><span class="math inline">\(v\)</span> is a fundamental frequency.</li>
+<li><span class="math inline">\(A\)</span> is a fundamental amplitude.</li>
+<li><span class="math inline">\(n\)</span> represents the harmonic number where <span class="math inline">\(n=1\)</span> is the fundamental.</li>
+</ul>
 <section id="key-arguments" class="level3">
 <h3 class="anchored" data-anchor-id="key-arguments">Key arguments</h3>
 <ul>
@@ -713,13 +725,30 @@ Shifting the phase of the even harmonics by 180 degrees will make a sawtooth wav
 </section>
 <section id="triangle-wave" class="level2">
 <h2 class="anchored" data-anchor-id="triangle-wave">2. Triangle wave</h2>
-<p>A triangular wave or triangle wave is a non-sinusoidal waveform named for its triangular shape. Like a square wave, the triangle wave contains only odd harmonics. - Harmonics: only odd-numbered harmonics - Amplitude: 1/(Harmonic Number)^2 - Phase: Every other harmonic is 180 degrees out of phase.</p>
+<p>A triangular wave or triangle wave is a non-sinusoidal waveform named for its triangular shape. Like a square wave, the triangle wave contains only odd harmonics.</p>
+<ul>
+<li>Harmonics: only odd-numbered harmonics</li>
+<li>Amplitude: 1/(Harmonic Number)^2</li>
+<li>Phase: Every other harmonic is 180 degrees out of phase.</li>
+</ul>
 <p align="center">
 <span class="math inline">\(f_{tria}(t)=-\frac{8}{\pi^2}\sum_{k=1}^{\infty}\frac{(-1)^k}{(2k-1)^2}sin(2\pi(2k-1)t)\)</span>
 </p>
-<p>where: - Odd harmonics: <span class="math inline">\(2k-1\)</span> - Amplitudo scalling: <span class="math inline">\(-\frac{8}{\pi^{2}}\)</span> - Alternating sign: <span class="math inline">\((-1)^{k}\)</span> - Decay: <span class="math inline">\(\frac{1}{2k-1}^{2}\)</span></p>
+<p>where:</p>
+<ul>
+<li>Odd harmonics: <span class="math inline">\(2k-1\)</span></li>
+<li>Amplitudo scalling: <span class="math inline">\(-\frac{8}{\pi^{2}}\)</span></li>
+<li>Alternating sign: <span class="math inline">\((-1)^{k}\)</span></li>
+<li>Decay: <span class="math inline">\(\frac{1}{2k-1}^{2}\)</span></li>
+</ul>
 <p>This summation makes use of the fact that <span class="math inline">\(-sin(x)=sin(x+\pi)\)</span> to handle alternating odd harmonics 180 degrees our of phase.</p>
-<p>This Python script demonstrates the Triangle wave with multiple axes. In the simple case, they can be arranged in a grid of rows and columns as follows. Parameters: - <code>nterms</code>: number of terms in the expansion. - <code>t</code>: time array. - <code>nu</code>: fundamental frequency (default 1 Hz).</p>
+<p>This Python script demonstrates the Triangle wave with multiple axes. In the simple case, they can be arranged in a grid of rows and columns as follows.</p>
+<p>Parameters:</p>
+<ul>
+<li><code>nterms</code>: number of terms in the expansion.</li>
+<li><code>t</code>: time array.</li>
+<li><code>nu</code>: fundamental frequency (default 1 Hz).</li>
+</ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -772,7 +801,12 @@ Shifting the phase of the even harmonics by 180 degrees will make a sawtooth wav
 </section>
 <section id="square-wave" class="level2">
 <h2 class="anchored" data-anchor-id="square-wave">3. Square Wave</h2>
-A square wave is a non-sinusoidal periodic waveform in which the amplitude alternates at a steady frequency between fixed minimum and maximum values, with the same duration at minimum and maximum. - Harmonics: Odd-numbered harmonics. - Amplitudes: 1/Harmonic Number. - Phase: All harmonics in phase.
+<p>A square wave is a non-sinusoidal periodic waveform in which the amplitude alternates at a steady frequency between fixed minimum and maximum values, with the same duration at minimum and maximum.</p>
+<ul>
+<li>Harmonics: Odd-numbered harmonics.</li>
+<li>Amplitudes: 1/Harmonic Number.</li>
+<li>Phase: All harmonics in phase.</li>
+</ul>
 <p align="center">
 <span class="math inline">\(f_{sq}(t)=\frac{4}{\pi}\sum^{\infty}_{k=1}sin[2\pi(2k-1)vt]\)</span>
 </p>
@@ -828,8 +862,12 @@ A square wave is a non-sinusoidal periodic waveform in which the amplitude alter
 </section>
 <section id="pulserectangle-wave" class="level2">
 <h2 class="anchored" data-anchor-id="pulserectangle-wave">4. Pulse/Rectangle wave</h2>
-<p>A pulse wave, pulse train, or rectangular wave is a sequence of discrete pulses occurring in a signal over time. - Pulse waves is rectangular waves are generalizations of the square waves. - A square wave’s period has an equal portion at high and low amplitudes. In a rectangular wave, those proportions need be equal. Therefore, all square waves are rectanglular waves but not vice versa.</p>
-The equation for a Pulse wave is more complicated, but it still relies upon summing sinusoids (in this case cosine waves). Note that the sine in this equation is simply a scaling factor for amplitude, as it is not a function of time.
+<p>A pulse wave, pulse train, or rectangular wave is a sequence of discrete pulses occurring in a signal over time.</p>
+<ul>
+<li>Pulse waves is rectangular waves are generalizations of the square waves.</li>
+<li>A square wave’s period has an equal portion at high and low amplitudes. In a rectangular wave, those proportions need be equal. Therefore, all square waves are rectanglular waves but not vice versa.</li>
+</ul>
+<p>The equation for a Pulse wave is more complicated, but it still relies upon summing sinusoids (in this case cosine waves). Note that the sine in this equation is simply a scaling factor for amplitude, as it is not a function of time.</p>
 <p align="center">
 <span class="math inline">\(f_{pulse}(t)=dA + \sum_{n=1}^{\infty} \frac{2A}{\pi n}sin(\pi dn)cos(2\pi fnt)\)</span>
 </p>

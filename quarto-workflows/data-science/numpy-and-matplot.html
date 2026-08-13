@@ -633,7 +633,7 @@ window.Quarto = {
 <li>This work aims to apply the main function for reading text files and statistically summarizing the values into a Numpy array.</li>
 <li>Important Numpy data, including: <code>genfromtxt</code>, <code>min</code>, <code>max</code>, <code>sign</code>, <code>sum</code>, <code>std</code>, and others in solving physics problems by Python 3 and Jupyter Notebook.</li>
 </ul>
-<p>This work is programming exercises with applications in Physics. In theory, no prior knowledge of physics is required, and the main focus of the exercise is to learn pyhton. The contents of these exercises are:</p>
+<p>This work is programming exercises with applications in Physics. In theory, no prior knowledge of physics is required, and the main focus of the exercise is to learn Python. The contents of these exercises are:</p>
 <ol type="1">
 <li>Maxwell-Boltzmann Distribution</li>
 <li>Lennard-Jones Interatomic distribution</li>
@@ -646,7 +646,7 @@ window.Quarto = {
 <p>Call this function for the atomic gasses Helium (m = 4u), and Argon (m = 40u) at 300 K.</p>
 <p><strong>Hints</strong>: The modal speed is the maximum of the probability distribution and can be found <span class="math inline">\(df/dv\)</span>. The mean and rms speeds can be obtained, respectively, from the integrals.</p>
 <p align="center">
-<span class="math display">\[\langle v \rangle = \int_{0}^{\infty} vf(v)\]</span> and <span class="math display">\[\langle v^{2} \rangle = \int_{0}^{\infty} v^{2}f(v) dv\]</span>.
+<span class="math display">\[\langle v \rangle = \int_{0}^{\infty} vf(v)\]</span> and <span class="math display">\[\langle v^{2} \rangle = \int_{0}^{\infty} v^{2}f(v) dv\]</span>
 </p>
 <p>The following expression for the different types of average speed can be derived:</p>
 <ul>
@@ -743,7 +743,11 @@ The Maxwell-Boltzmann equation, the basis of the kinetic thoery of gases, define
 <li><code>plt.legend</code>: show labels for each curve</li>
 </ul>
 <p>Calculated speed distribution of particles in He, Ne, Ar, and Xe, with temperature at 300 K.</p>
-<p>Reference: - <a href="https://bingweb.binghamton.edu/~suzuki/ModernPhysics/29_Boltzmann_theory_of_gas.pdf">The Maxwell-Boltzmann</a> - <a href="http://localhost:8888/lab/tree/Quantum-Code/posts/String_Flow_Control.ipynb">P.33 Atomic Mass Unit</a></p>
+<p>Reference:</p>
+<ul>
+<li><a href="https://bingweb.binghamton.edu/~suzuki/ModernPhysics/29_Boltzmann_theory_of_gas.pdf">The Maxwell-Boltzmann</a></li>
+<li><a href="http://localhost:8888/lab/tree/Quantum-Code/posts/String_Flow_Control.ipynb">P.33 Atomic Mass Unit</a></li>
+</ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use a python function to calculate the distribution.</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -795,7 +799,7 @@ The Lennard-Jones potential is given by the following equation:
 <p align="center">
 <span class="math display">\[V(r) = 4\epsilon[(\frac{\sigma}{r})^{12}-(\frac{\sigma}{r})^{6}]\]</span>
 </p>
-or sometimes expressed as:
+<p>or sometimes expressed as:</p>
 <p align="center">
 <span class="math display">\[V(r)=\frac{A}{r^{12}}-\frac{B}{r^{6}}\]</span>
 </p>
@@ -1030,12 +1034,12 @@ the half-life is related to the time constant by t1/2 = tau ln(2) and stop aroun
 <li><code>ax.scatter</code>: creates a scatter plot on a specific axis(<code>ax</code>)</li>
 <li><code>ax.autoscal</code>” automatically adjust the axis limits to fit the data.</li>
 </ul>
-When a particle is trapped in a tiny box of size <em>L</em>, quantum mechanics say that it is only allowed to have energies.
+<p>When a particle is trapped in a tiny box of size <em>L</em>, quantum mechanics say that it is only allowed to have energies.</p>
 <p align="center">
 <span class="math display">\[E_{n}=\frac{n^{1}h^{2}}{8mL^{2}}, n =1,2,3...\]</span>
 </p>
 <p>where <em>m</em> is the particle’s mass and <em>h</em> is Planck’s constant, <span class="math inline">\(h=6.626 \times 10^{-34} Js\)</span>.</p>
-Consider an electron with mass <span class="math inline">\(9.11 \times 10^{-31}\)</span> kg, trapped in a box size <span class="math inline">\(10^{-11}\)</span> m. I ts starts at the lowest energy-level, <span class="math inline">\(E_{1}\)</span> (not <span class="math inline">\(E_{0}\)</span>), and jumps upwards, one step at a time, ending up at a much higher energy level, <span class="math inline">\(E_{30}\)</span>. Each step from a level <span class="math inline">\(E_{i}\)</span> to a level <span class="math inline">\(E_{i+1}\)</span> will have required an energy.
+<p>Consider an electron with mass <span class="math inline">\(9.11 \times 10^{-31}\)</span> kg, trapped in a box size <span class="math inline">\(10^{-11}\)</span> m. I ts starts at the lowest energy-level, <span class="math inline">\(E_{1}\)</span> (not <span class="math inline">\(E_{0}\)</span>), and jumps upwards, one step at a time, ending up at a much higher energy level, <span class="math inline">\(E_{30}\)</span>. Each step from a level <span class="math inline">\(E_{i}\)</span> to a level <span class="math inline">\(E_{i+1}\)</span> will have required an energy.</p>
 <p align="center">
 <span class="math display">\[E_{i+1}-E_{i}=\frac{(i+1)^{2}-i^{2}h^{2}}{8mL^{2}}\]</span>
 </p>
