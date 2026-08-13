@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2025-12-09">
 
-<title>numpy-and-matplot – Random Spaces</title>
+<title>numpy-and-matplot – Eigen Spaces</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <link href="../../quarto-workflows/data-science/basicnumpy.html" rel="next">
 <link href="../../quarto-workflows/data-science/linear-algebra.html" rel="prev">
+<link href="../../images/orbitalquarto.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -161,11 +162,11 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../images/logorandomspaces.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../images/eigenspaces.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://dindagustiayu.github.io/" title="dindagustiayu.github.io" class="quarto-navigation-tool px-1" aria-label="dindagustiayu.github.io"><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/dindagustiayu/randomspaces.github.io" title="Random Spaces" class="quarto-navigation-tool px-1" aria-label="Random Spaces"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/dindagustiayu/eigenspaces.github.io" title="Eigen Spaces" class="quarto-navigation-tool px-1" aria-label="Eigen Spaces"><i class="bi bi-github"></i></a>
     <a href="https://linkedin.com/in/dinda-gusti-ayu-8049a01b0" title="Dinda Gusti Ayu" class="quarto-navigation-tool px-1" aria-label="Dinda Gusti Ayu"><i class="bi bi-linkedin"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -234,7 +235,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/basicnumpy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Numpy and Matplot for Physics Problems</span></a>
+ <span class="menu-text">NumPy and Matplotlib for Physics Problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -294,7 +295,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/singleorder.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second ODE of Quantum Harmonic Oscillator</span></a>
+ <span class="menu-text">Second Order Differential Equations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -317,13 +318,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/particles-2d.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Particle in 2D box</span></a>
+ <span class="menu-text">Particles in Multidimensions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/ssaproximation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Steady-State Approximation</span></a>
+ <span class="menu-text">Steady State Approximation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -335,13 +336,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/inertia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Moment Inertia of a Molecule</span></a>
+ <span class="menu-text">The moment inertia of a molecule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/QHO.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quantum Harmonic Oscillator</span></a>
+ <span class="menu-text">Quantum Harmonic Oscillator (QHO)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -359,7 +360,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Morse Oscillator</span></a>
+ <span class="menu-text">Vibrational Anharmonicity in Diatomic Molecule</span></a>
   </div>
 </li>
       </ul>
@@ -382,13 +383,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/thermodynamics/boltzman.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Adiabatic process and Carnot Cycle</span></a>
+ <span class="menu-text">Maxwell-Boltzmann Distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/thermodynamics/brusselator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Brusselator</span></a>
   </div>
 </li>
       </ul>
   </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../acknowledgments.html" class="sidebar-item-text sidebar-link">
@@ -414,7 +427,7 @@ window.Quarto = {
   <li><a href="#p6.5---trapped-quantum-particle" id="toc-p6.5---trapped-quantum-particle" class="nav-link" data-scroll-target="#p6.5---trapped-quantum-particle">P6.5 - Trapped Quantum Particle</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/data-science/numpy-and-matplot.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/data-science/numpy-and-matplot.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -450,7 +463,7 @@ window.Quarto = {
 <li>This work aims to apply the main function for reading text files and statistically summarizing the values into a Numpy array.</li>
 <li>Important Numpy data, including: <code>genfromtxt</code>, <code>min</code>, <code>max</code>, <code>sign</code>, <code>sum</code>, <code>std</code>, and others in solving physics problems by Python 3 and Jupyter Notebook.</li>
 </ul>
-<p>This work is programming exercises with applications in Physics. In theory, no prior knowledge of physics is required, and the main focus of the exercise is to learn pyhton. The contents of these exercises are:</p>
+<p>This work is programming exercises with applications in Physics. In theory, no prior knowledge of physics is required, and the main focus of the exercise is to learn Python. The contents of these exercises are:</p>
 <ol type="1">
 <li>Maxwell-Boltzmann Distribution</li>
 <li>Lennard-Jones Interatomic distribution</li>
@@ -463,7 +476,7 @@ window.Quarto = {
 <p>Call this function for the atomic gasses Helium (m = 4u), and Argon (m = 40u) at 300 K.</p>
 <p><strong>Hints</strong>: The modal speed is the maximum of the probability distribution and can be found <span class="math inline">\(df/dv\)</span>. The mean and rms speeds can be obtained, respectively, from the integrals.</p>
 <p align="center">
-<span class="math display">\[\langle v \rangle = \int_{0}^{\infty} vf(v)\]</span> and <span class="math display">\[\langle v^{2} \rangle = \int_{0}^{\infty} v^{2}f(v) dv\]</span>.
+<span class="math display">\[\langle v \rangle = \int_{0}^{\infty} vf(v)\]</span> and <span class="math display">\[\langle v^{2} \rangle = \int_{0}^{\infty} v^{2}f(v) dv\]</span>
 </p>
 <p>The following expression for the different types of average speed can be derived:</p>
 <ul>
@@ -560,7 +573,11 @@ The Maxwell-Boltzmann equation, the basis of the kinetic thoery of gases, define
 <li><code>plt.legend</code>: show labels for each curve</li>
 </ul>
 <p>Calculated speed distribution of particles in He, Ne, Ar, and Xe, with temperature at 300 K.</p>
-<p>Reference: - <a href="https://bingweb.binghamton.edu/~suzuki/ModernPhysics/29_Boltzmann_theory_of_gas.pdf">The Maxwell-Boltzmann</a> - <a href="http://localhost:8888/lab/tree/Quantum-Code/posts/String_Flow_Control.ipynb">P.33 Atomic Mass Unit</a></p>
+<p>Reference:</p>
+<ul>
+<li><a href="https://bingweb.binghamton.edu/~suzuki/ModernPhysics/29_Boltzmann_theory_of_gas.pdf">The Maxwell-Boltzmann</a></li>
+<li><a href="http://localhost:8888/lab/tree/Quantum-Code/posts/String_Flow_Control.ipynb">P.33 Atomic Mass Unit</a></li>
+</ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use a python function to calculate the distribution.</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -612,7 +629,7 @@ The Lennard-Jones potential is given by the following equation:
 <p align="center">
 <span class="math display">\[V(r) = 4\epsilon[(\frac{\sigma}{r})^{12}-(\frac{\sigma}{r})^{6}]\]</span>
 </p>
-or sometimes expressed as:
+<p>or sometimes expressed as:</p>
 <p align="center">
 <span class="math display">\[V(r)=\frac{A}{r^{12}}-\frac{B}{r^{6}}\]</span>
 </p>
@@ -847,12 +864,12 @@ the half-life is related to the time constant by t1/2 = tau ln(2) and stop aroun
 <li><code>ax.scatter</code>: creates a scatter plot on a specific axis(<code>ax</code>)</li>
 <li><code>ax.autoscal</code>” automatically adjust the axis limits to fit the data.</li>
 </ul>
-When a particle is trapped in a tiny box of size <em>L</em>, quantum mechanics say that it is only allowed to have energies.
+<p>When a particle is trapped in a tiny box of size <em>L</em>, quantum mechanics say that it is only allowed to have energies.</p>
 <p align="center">
 <span class="math display">\[E_{n}=\frac{n^{1}h^{2}}{8mL^{2}}, n =1,2,3...\]</span>
 </p>
 <p>where <em>m</em> is the particle’s mass and <em>h</em> is Planck’s constant, <span class="math inline">\(h=6.626 \times 10^{-34} Js\)</span>.</p>
-Consider an electron with mass <span class="math inline">\(9.11 \times 10^{-31}\)</span> kg, trapped in a box size <span class="math inline">\(10^{-11}\)</span> m. I ts starts at the lowest energy-level, <span class="math inline">\(E_{1}\)</span> (not <span class="math inline">\(E_{0}\)</span>), and jumps upwards, one step at a time, ending up at a much higher energy level, <span class="math inline">\(E_{30}\)</span>. Each step from a level <span class="math inline">\(E_{i}\)</span> to a level <span class="math inline">\(E_{i+1}\)</span> will have required an energy.
+<p>Consider an electron with mass <span class="math inline">\(9.11 \times 10^{-31}\)</span> kg, trapped in a box size <span class="math inline">\(10^{-11}\)</span> m. I ts starts at the lowest energy-level, <span class="math inline">\(E_{1}\)</span> (not <span class="math inline">\(E_{0}\)</span>), and jumps upwards, one step at a time, ending up at a much higher energy level, <span class="math inline">\(E_{30}\)</span>. Each step from a level <span class="math inline">\(E_{i}\)</span> to a level <span class="math inline">\(E_{i+1}\)</span> will have required an energy.</p>
 <p align="center">
 <span class="math display">\[E_{i+1}-E_{i}=\frac{(i+1)^{2}-i^{2}h^{2}}{8mL^{2}}\]</span>
 </p>
@@ -1482,8 +1499,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../quarto-workflows/data-science/basicnumpy.html" class="pagination-link" aria-label="Numpy and Matplot for Physics Problems">
-        <span class="nav-page-text">Numpy and Matplot for Physics Problems</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../quarto-workflows/data-science/basicnumpy.html" class="pagination-link" aria-label="NumPy and Matplotlib for Physics Problems">
+        <span class="nav-page-text">NumPy and Matplotlib for Physics Problems</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1491,13 +1508,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0 unless otherwise stated.</p>
+<p>© 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/data-science/numpy-and-matplot.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/data-science/numpy-and-matplot.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
-<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>

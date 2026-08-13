@@ -5,16 +5,21 @@ date: "2026-1-19"
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Fourier-Series/blob/main/Fourier-series.py)
 
+
 # The Fourier Series
+
 People are generally comfortable thinking about functions of time. For example, a signal might be described as $X(t)$, where $t$ is time. This referred to as the "time domain". However, it is often useful to think of signals and sytems in the "frequency domain", where frequency, instead of time, is the independent variable, e.g., $X(f)$, where $f$ is frequency. 
 
 We are going to study several basic waves. All of these can be thought of as combinations of various sines waves.
+
 - Sawtooth Wave
 - Triangle Wave
 - Square Wave
 - Pulse/Rectangle Wave
 
+
 ## 1. Sawtooth Wave
+
 - The sawtooth wave is derived from the frequencies of the harmonic series.
 - Harmonics = all harmonics.
 - Amplitude = 1 / (harmonic number).
@@ -26,10 +31,12 @@ Shifting the phase of the even harmonics by 180 degrees will make a sawtooth wav
 </p>
 
 where:
+
 - $f_{saw}(t)$ is a sawtooth wave as a function of $t$ (time) in seconds.
 - $v$ is a fundamental frequency.
 - $A$ is a fundamental amplitude.
 - $n$ represents the harmonic number where $n=1$ is the fundamental.
+
 
 ### Key arguments
 - `n`: sets the number of sample, higher `n` smoother curves.
@@ -42,6 +49,7 @@ where:
 - `nterms = (icol + 1) * 3`: each iteration increases the number of Fourier terms.
 - `axes[icol].plot(t, fourier_expansion_sawtooth(nterms),...)`: Plots the Fourier approximation on the same subplot.
 - `plt.tight_layout()`: ensures the labels and titles don't overlap.
+
 
 This Python script demonstrates the Sawtooth wave with multiple axes. In the simple case, they can be arranged in a grid of rows and columns as follows.
 
@@ -90,8 +98,11 @@ plt.show()
 ```
 ![Figure 1. Sawtooth vs Fourier](/quarto-workflows/images/Fourier series/Sawtooth vs Fourier.svg)
 
+
 ## 2. Triangle wave
+
 A triangular wave or triangle wave is a non-sinusoidal waveform named for its triangular shape. Like a square wave, the triangle wave contains only odd harmonics. 
+
 - Harmonics: only odd-numbered harmonics
 - Amplitude: 1/(Harmonic Number)^2
 - Phase: Every other harmonic is 180 degrees out of phase.
@@ -101,6 +112,7 @@ A triangular wave or triangle wave is a non-sinusoidal waveform named for its tr
 </p>
 
 where:
+
 - Odd harmonics: $2k-1$
 - Amplitudo scalling: $-\frac{8}{\pi^{2}}$
 - Alternating sign: $(-1)^{k}$
@@ -109,7 +121,9 @@ where:
 This summation makes use of the fact that $-sin(x)=sin(x+\pi)$ to handle alternating odd harmonics 180 degrees our of phase.
 
 This Python script demonstrates the Triangle wave with multiple axes. In the simple case, they can be arranged in a grid of rows and columns as follows.
+
 Parameters:
+
 - `nterms`: number of terms in the expansion.
 - `t`: time array.
 - `nu`: fundamental frequency (default 1 Hz).
@@ -161,11 +175,15 @@ plt.show()
 ```
 ![Figure 2. Triangle vs Fourier](/quarto-workflows/images/Fourier series/Triangle vs Fourier.svg)
 
+
 ## 3. Square Wave
+
 A square wave is a non-sinusoidal periodic waveform in which the amplitude alternates at a steady frequency between fixed minimum and maximum values, with the same duration at minimum and maximum. 
+
 - Harmonics: Odd-numbered harmonics.
 - Amplitudes: 1/Harmonic Number.
 - Phase: All harmonics in phase.
+
 <p align="center">
     $f_{sq}(t)=\frac{4}{\pi}\sum^{\infty}_{k=1}sin[2\pi(2k-1)vt]$
 </p>
@@ -218,12 +236,16 @@ plt.show()
 ```
 ![Figure 3. Square vs Fourier](/quarto-workflows/images/Fourier series/Square vs Fourier.svg)
 
+
 ## 4. Pulse/Rectangle wave
+
 A pulse wave, pulse train, or rectangular wave is a sequence of discrete pulses occurring in a signal over time. 
+
 - Pulse waves is rectangular waves are generalizations of the square waves.
 - A square wave's period has an equal portion at high and low amplitudes. In a rectangular wave, those proportions need be equal. Therefore, all square waves are rectanglular waves but not vice versa.
 
 The equation for a Pulse wave is more complicated, but it still relies upon summing sinusoids (in this case cosine waves). Note that the sine in this equation is simply a scaling factor for amplitude, as it is not a function of time. 
+
 <p align="center">
     $f_{pulse}(t)=dA + \sum_{n=1}^{\infty} \frac{2A}{\pi n}sin(\pi dn)cos(2\pi fnt)$
 </p>
@@ -278,7 +300,9 @@ plt.show()
 ```
 ![Figure 4. Pulse vs Fourier.svg](/quarto-workflows/images/Fourier series/Pulse vs Fourier.svg)
 
+
 ## In summary
+
 - Any periodic signal can be constructed from a sum of sine waves.
   - The process of creating complex sounds from sine waves or other constituent parts is called additive synthesis.
 - The sine wave, sawtooth wave, triangle wave, and pulse waves are classic waveforms since the advent of electronic music.

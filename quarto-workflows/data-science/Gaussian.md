@@ -15,9 +15,11 @@ In one dimension, the standard normal probability density function $f(x)$ descri
 </p>
 
 where:
+
 - x is the value at which to evaluate the probability density function.
 - $\mu$ is the mean of the distribution.
 - $\sigma$ is the standard deviation of the distribution.
+
 
 ## Function arguments
 

@@ -7,10 +7,11 @@ date: "2025-12-09"
 
 
 # Aggregation, Indexing, and Reading Data into a Numpy Array for Physics problems
+
 - This work aims to apply the main function for reading text files and statistically summarizing the values into a Numpy array.
 - Important Numpy data, including: `genfromtxt`, `min`, `max`, `sign`, `sum`, `std`, and others in solving physics problems by Python 3 and Jupyter Notebook.
 
-This work is programming exercises with applications in Physics. In theory, no prior knowledge of physics is required, and the main focus of the exercise is to learn pyhton. The contents of these exercises are:
+This work is programming exercises with applications in Physics. In theory, no prior knowledge of physics is required, and the main focus of the exercise is to learn Python. The contents of these exercises are:
 
 1. Maxwell-Boltzmann Distribution
 2. Lennard-Jones Interatomic distribution
@@ -18,6 +19,7 @@ This work is programming exercises with applications in Physics. In theory, no p
 4. Trapped quantum particle
 
 ## P6.1 - Maxwell-Boltzmann Distribution
+
 Write a function to the plot the Maxwell-Boltzmann Distribution of molecular speed for a gas of particles of a given mass at a given temperature, indicating the modal speed ($v_{*}$), mean ($\langle v \rangle$), and root mean square (rms, $\langle v^{2} \rangle^{1/2}$) speeds with vertical lines.
 
 Call this function for the atomic gasses Helium (m = 4u), and Argon (m = 40u) at 300 K.
@@ -25,7 +27,7 @@ Call this function for the atomic gasses Helium (m = 4u), and Argon (m = 40u) at
 __Hints__: The modal speed is the maximum of the probability distribution and can be found $df/dv$. The mean and rms speeds can be obtained, respectively, from the integrals.
 
 <p align='center'>
-  $$\langle v \rangle = \int_{0}^{\infty} vf(v)$$ and $$\langle v^{2} \rangle = \int_{0}^{\infty} v^{2}f(v) dv$$.
+  $$\langle v \rangle = \int_{0}^{\infty} vf(v)$$ and $$\langle v^{2} \rangle = \int_{0}^{\infty} v^{2}f(v) dv$$
 </p>
 
 The following expression for the different types of average speed can be derived:
@@ -101,10 +103,12 @@ plt.grid(True, color='gray', zorder=0, linestyle='--')
 plt.savefig('Maxwell-Boltzmann Distribution of He and Ar.svg', bbox_inches='tight')
 plt.show()
 ```
+
 ![Figure 1. Maxwell-Boltzmann Distribution of He and A](/quarto-workflows/images/numpymatplot/Maxwell-Boltzmann Distribution of He and Ar.svg)
 
 
 ## P6.2 Maxwell Boltzmann Distribution
+
 The Maxwell-Boltzmann equation, the basis of the kinetic thoery of gases, defines the distribution of speeds for a gas at a certain temperature. The Maxwell-Boltzmann distribuiton can be used to determine the distribution of the kinetic energy is identical to the distribution of the speeds for a certain gas at any temperature, _T_:
 <p align='center'>
   $$f(v)=4\pi V^{2}(\frac{m}{2\pi k_{B}T})^{3/2}e^{\frac{-mv^{2}}{2k_{B}T}}$$
@@ -123,6 +127,7 @@ __The key Functions and Argument__:
 Calculated speed distribution of particles in He, Ne, Ar, and Xe, with temperature at 300 K.
 
 Reference:
+
 - [The Maxwell-Boltzmann](https://bingweb.binghamton.edu/~suzuki/ModernPhysics/29_Boltzmann_theory_of_gas.pdf)
 - [P.33 Atomic Mass Unit](http://localhost:8888/lab/tree/Quantum-Code/posts/String_Flow_Control.ipynb)
 
@@ -166,15 +171,19 @@ plt.grid(True, color='gray', zorder=0, linestyle='--')
 plt.savefig('Probability Density of He, Ne, Ar, and Xe at T = 300 K.svg', bbox_inches='tight')
 plt.show()
 ```
+
 ![Figure 2. Probability Density of He, Ne, Ar, and Xe at T = 300 K](/quarto-workflows/images/numpymatplot/Probability Density of He, Ne, Ar, and Xe at T = 300 K.svg)
 
 
 ## P6.3 - The Lennard-Jones Interatomic Potential
+
 The Lennard-Jones potential is given by the following equation:
 <p align='center'>
   $$V(r) = 4\epsilon[(\frac{\sigma}{r})^{12}-(\frac{\sigma}{r})^{6}]$$
 </p>
+
 or sometimes expressed as:
+
 <p align='center'>
   $$V(r)=\frac{A}{r^{12}}-\frac{B}{r^{6}}$$
 </p>
@@ -243,7 +252,9 @@ plt.title('Lennard-Jones Potential for Xenon')
 plt.savefig('Lennard-Jones Potential for Xenon.svg', bbox_inches='tight')
 plt.show()
 ```
+
 ![Figure 3. Lennard-Jones Potential for Xenon](/quarto-workflows/images/numpymatplot/Lennard-Jones Potential for Xenon.svg)
+
 
 ```python
 #Calculate the intermolecular potential between the two Argon atoms
@@ -283,6 +294,7 @@ plt.grid(True, color='gray', zorder=0)
 plt.savefig('LJ for Xenon.svg', bbox_inches='tight')
 plt.show()
 ```
+
 ![Figure 4. Lennard-jones for Xenon](/quarto-workflows/images/numpymatplot/LJ for Xenon.svg)
 
 
@@ -312,6 +324,7 @@ test that this is true by printing and comparing the last element in your time-l
 Remember that because your program uses time-steps of one minute, your measured _half-life_ can have an error up to 60 seconds.
 
 (c) Combine the list into a nested list Nt, such that every element in the list Nt is a pair of matching t and _N(t)_ values. For example, the first element Nt[0] of this listshould be [0, 4.5]. Use the new nested list to write nicely a nicely formatted table of corresponding _t_ and _N(t)_ values to the terminal.
+
 
 ```python
 # Parameters
@@ -362,6 +375,7 @@ print('every 60 s, the mass recalculated')
 print('the loop stops once the mass drops below 2.76 kg')
 print('the half-life is related to the time constant by t1/2 = tau ln(2) and stop around 1200 s or 20 min')
 ```
+
 ```
  Time points/t (s)   | Mass values/N(t) (kg) |     Half-life (s)    
 ---------------------------------------------------------------
@@ -393,10 +407,12 @@ every 60 s, the mass recalculated
 the loop stops once the mass drops below 2.76 kg
 the half-life is related to the time constant by t1/2 = tau ln(2) and stop around 1200 s or 20 min
 ```
+
 ![Figure 5. Radioactive decay of carbon-11](/quarto-workflows/images/numpymatplot/Radioactive decay of carbon-11.svg)
 
 
 ## P6.5 - Trapped Quantum Particle
+
 One of the rules in quantum mechanics is that, sometimes, particles are only allowed to have specific energies, and can never have an energy in between these allowed levels. The particle must therefor must jump straight from one energy level to another.
 
 __The key functions and arguments:__
@@ -410,6 +426,7 @@ __The key functions and arguments:__
 - `ax.autoscal`" automatically adjust the axis limits to fit the data.
 
 When a particle is trapped in a tiny box of size _L_, quantum mechanics say that it is only allowed to have energies.
+
 <p align='center'>
   $$E_{n}=\frac{n^{1}h^{2}}{8mL^{2}}, n =1,2,3...$$
 </p>
@@ -417,6 +434,7 @@ When a particle is trapped in a tiny box of size _L_, quantum mechanics say that
 where _m_ is the particle's mass and _h_ is Planck's constant, $h=6.626 \times 10^{-34} Js$.
 
 Consider an electron with mass $9.11 \times 10^{-31}$ kg, trapped in a box size $10^{-11}$ m. I ts starts at the lowest energy-level, $E_{1}$ (not $E_{0}$), and jumps upwards, one step at a time, ending up at a much higher energy level, $E_{30}$. Each step from a level $E_{i}$ to a level $E_{i+1}$ will have required an energy.
+
 <p align='center'>
   $$E_{i+1}-E_{i}=\frac{(i+1)^{2}-i^{2}h^{2}}{8mL^{2}}$$
 </p>
@@ -468,6 +486,7 @@ ax.set_axisbelow(True)
 plt.savefig('Trapped Quantum Particle.svg', bbox_inches='tight')
 plt.show()
 ```
+
 ```
 Total energy used (J): 5.783e-10
 Energy steps (E1-E30) (J): -5.416e-10
