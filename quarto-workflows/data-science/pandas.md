@@ -5,7 +5,9 @@ date: "2025-04-06"
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Functions-Data-structures-and-File-Input-or-Output-data-by-pandas-for-Physics-Problems/blob/main/Functions%2C%20Data%20Structures%2C%20and%20File%20Input%20or%20Output.py)
 
+
 # Functions, Data Structures, and File Input or Output Using Pandas
+
 This work aims to applying the concept of _Functions, Data Structures, and File Input/Output_ for solving physics problems by Python 3 and Jupyter Notebook. There are some solutions for tasks in this Python code.
 
 
@@ -17,8 +19,11 @@ This work aims to applying the concept of _Functions, Data Structures, and File 
   
 
 ## 1. Function
+
 ### P4.1 - The solar mass
+
 Calculate the solar mass. The solar mass can be calculated by using the relation:
+
 <p align='center'>
   $$M_{Sun}=\frac{4\pi^{2}(1 AU)^{3}}{G (1 yr)^{2}}$$
 </p>
@@ -48,12 +53,16 @@ def Solar_mass():
     return M_Sun
 print(Solar_mass())
 ```
+
 ```
 1.9885939441528014e+30
 ```
 
+
 ### P4.2 - The velocity of an atom
+
 The atoms within a material are structured such that they create a lattice. We will look at an atom which moves along the surface of a material. Since the atoms are aligned as a lattice, we could use a periodic model to find the velocity of the atom moving across the surface:
+
 <p align='center'>
   $$v(x)=\sqrt{v_{0}^{2}+\frac{2F_{0}}{m}(cos\frac{x}{n}-1)}$$
 </p>
@@ -79,6 +88,7 @@ print(velocity_atom())
 ```
 1.9948120081368812
 ```
+
 ```python
 v0 = 2 # the velocity of atom
 x =1 # the position of atom
@@ -104,6 +114,7 @@ def velocity_atom(atom):
 for atom in masses:
     print(f"{atom}: {velocity_atom(atom)}")
 ```
+
 ```
 Zn: 1.9856306859195652
 Cu: 1.985215363307596
@@ -167,7 +178,9 @@ print('(d) fcc and bcc and hcp:', fcc & bcc & hcp)
 
 
 ### P4.4 - Magnetic classification
+
 The magnetic properties are related to metals. Some elements have different properties under different conditions of temperatures and pressure. Use python sets to group them and determine which category, 
+
 - (a) only exist as diamagnetic, paramagnetic, and non-magnetic.
 - (b) exist  in two of these magnetic.
 - (c) exist  in three of these magnetic.
@@ -180,7 +193,9 @@ The magnetic properties are related to metals. Some elements have different prop
 
 
 ### P4.5 - Magnetic classification
+
 The magnetic properties are related to metals. Some elements have different properties under different conditions of temperatures and pressure. Use python sets to group them and determine which category, 
+
 - (a) only exist as diamagnetic, paramagnetic, and non-magnetic.
 - (b) exist  in two of these magnetic.
 - (c) exist  in three of these magnetic.
@@ -230,7 +245,7 @@ Table. Python file open modes
 
 <div style="width:60%; margin:auto;">
     
-| **Character**  |         **Description**                                  | 
+| **Character**  |         **Description**                           | 
 |:----------:|:-----------------------------------------------------:|
 | 'r'        | open for reading (the default)                       |
 | 'w'        | open for writing, over writing the file if it exist  |
@@ -241,10 +256,12 @@ Table. Python file open modes
 | '+'        | open for updating (reading and writing)              |
 </div>
 
-### P4.5 - The computational density
-The text file [atomic-data.txt](http://localhost:8888/lab/tree/atomic-data.txt), which can download directly, contains data for the elements, molar cell, and volume cell for Al, Cu, Pb. Read in data and calculate computational density for each subtances.
 
-```python
+### P4.5 - The computational density
+
+The text file [Atomic data.txt](Data_files/Atomic_data.txt), which can download directly, contains data for the elements, molar cell, and volume cell for Al, Cu, Pb. Read in data and calculate computational density for each subtances.
+
+```Python
 import pandas as pd
 
 # Read the txt file (comma-separated)
@@ -259,6 +276,7 @@ for row in data:
     density = molar_cell / volume_cell
     print(f"{element}: Density = {density:.2f} g/cm³")
 ```
+
 ```
   elements      \tm-cell  \tvolume-cell (cm^3)
 0       Al  1.792000e-22          6.620000e-23

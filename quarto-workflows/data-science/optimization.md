@@ -5,7 +5,9 @@ date: "2026-4-3"
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Mathematical-Optimization/blob/main/Mathematical%20Optimization%20use%20SciPy.html)
 
+
 # Mathematical Optimization
+
 Optimization comes from the same root as optimal, which means _best_. When you optimize something, you are __making it best__. But _best_ can vary. 
 
 _People optimize_. If you are a football player, you might want to maximiza your running yards, and also minimize your fumbles. Both maximizing and minimizing are types of optimization problems. 
@@ -13,14 +15,22 @@ _People optimize_. If you are a football player, you might want to maximiza your
 _Nature optimize_. Physical systems tend to a state of minimum energy. The molecules in an isolated chemical system react with each other until the total potential energy of their electrons is minimized. Rays of light follow paths that minimize their travel time.
 
 Optimization is an important tool in decision science and in the analysis of physical systems. The process is:
+
 1. We must first identify some _objective_, a quantitative measure of the performance of the system under study (time, potential energy, or any values).
+
 2. The objective depends on certain characteristics of the systems, called _variables_ or _unknowns_.
+
 3. Often the variables are restricted, or _constrained_, in some way. For instance, such as electron density in a molecule and the interest rate on a loan, cannot be negative.
+
 4. The process of identifying objective, variables and constraints for a given problem is known as _modelling_.
+
 5. Once the model has been formulated, an optimization algorithm can be used to find its solution.
+
 6. After optimization, we must be able to recognize whether it has succeeded in its task of finding a solution. In many cases, there are ellegant mathematical expression known as _optimally conditions_ for checking that the current set of variables is indeed the solution of the problem.
 
+
 ## Prerequisites
+
 - Linear Algebra
 - Calculus I (Derivatives)
 - Computer programming skills
@@ -31,17 +41,26 @@ Optimization is an important tool in decision science and in the analysis of phy
 - `scipy.optimize.minimize`: minimize routine which implements several different algorithms for minimization.
 - `scipy.optimize.minimize_scalar`: provide a way to minimize a function of a single variable.
 
+
+
 ## Constrained and Unconstrained Optimization
+
 Problems can be classified according to the nature of the objective function and constraints (linear, nonlinear, convex). 
+
 - _Unconstrained optimization_ problems arise directly in many practical applications. If there are natural constraints on the variables, it is sometimes safe to disregard them and to assume that they have no effect on the optimal solution.
+
 - _Constrained optimization_ problems arise from models that include explicit constraints on the variables. These constraints may be simple bounds such as $0 \leq x_1 \leq 100$, more general linear constraints such as $\sum_i x_i \leq 1$, or nonlinear inequalities that represent complex relationships among the variables.
 
 When both the objective function and all the constraints are linear functions of $x$, the problem is a _linear programming_ problem. Management sciences and operations research make extensive use of linear models.
 
+
 ## Optimization Algorithms
+
 Optimization algorithms are iterative. They begin with an initial guess of the optimal values of the variables and generate a sequence of improved estimates until they reach a solution. The strategy used the values of the objective function $f$, the constraints $c$, and possibly the first and second derivatives of these functions.
 
+
 ## Mathematical Formula
+
 In mathematics, optimization is the minimization or maximization of a function subject to constraints on its variables. We use the following notation:
 
 - $x$ is the vector of _variables_, also called _unknowns_ or _parameters_.
@@ -56,14 +75,19 @@ In mathematics, optimization is the minimization or maximization of a function s
 
 
 The optimization problem can then be written as 
+
 <p align='center'>
     $$ \begin{align} \min_{x \ \in \ R^n} \ f(x) \quad \mbox{subject \ to} \ \left \{\begin{array} \\ c_i (x) = 0, \quad i \ \in \ \varepsilon \\ c_i(x) \geq 0, \quad i \ \in \ \imath \end{array} \right \} \end{align}$$
 </p>
 
+
 ## Derivatives
+
 Most algorithms for nonlinear optimization and nonlinear equations require kbowledge of derivatives. Sometimes the derivatives are easy to calculate by hand, and it is reasonable to expect the user to prive code to comoute them. In other cases, the functions are too complicated, so we look for ways to calculate or approximate the derivatives automatically. 
 
+
 ### The Jacobian matrix
+
 The first derivative in minimization known as the _Jacobian_. Let $f: \mathbb{R}^n \rightarrow \mathbb{R}^m$ be a function such that each of its first-order partial derivatives exists on $\mathbb{R}^n$. This function takes a vector $x = (x_1, \ldots, \ x_n) \in \mathbb{R}^n$ as input and produces the vector $f(x) = (f_1(x), \ldots, \ f_m(x)) \in \mathbb{R}^m$ as output. Then the Jacobian matrix of $f$, denoted $J_f$, is the $m \times n$ matrix whose (i, j) entry is $\frac{\partial f_i}{\partial x_j}$; explixity;
 
 <p align='center'>
@@ -74,7 +98,9 @@ where $\bigtriangledown^T f_i$ is the transpose (row vector) of the gradient of 
 
 Furthermore, some sophisticated optimization algorithms require information about the second derivatives of the function, a symmetric matrix of values called the _Hessian_. 
 
+
 ### The Hessian matrix
+
 In mathematics, the Hessian matrix is a square matrix of second-order partial derivatives of a scalar-valued function, or scalar-field. Suppose $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is a function taking as input a vector $x \in \mathbb{R}^n$ and outputting a scalar $f(x) \in \mathbb{R}$. If all second-order partial derivatives of $f$ exist, then the Hessian matrix $\mathbf{H}$ of $f$ is a square $n \times n$ matrix, usually defined and arranged as,
 
 <p align='center'>
@@ -82,40 +108,50 @@ In mathematics, the Hessian matrix is a square matrix of second-order partial de
 </p>
 
 That is, the entry of the $i$-th row and the $j$-th column is
+
 <p align='center'>
     $$(\mathbf{H_f})_{i, \ j} = \frac{\partial^2 f}{\partial x_i \ \partial x_j}$$
 </p>
 
 Reference:
+
 - [Jacobian Matrix](https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant#:~:text=The%20Jacobian%20matrix%20represents%20the,differential%20of%20f%20at%20x.)
+
 - [Hessian Matrix](https://en.wikipedia.org/wiki/Hessian_matrix)
 
+
 ## Example Multivariate scalar functions
+
 The general algorithm for the mInimization of a multivariate scalar function is `scipy.optimize.minimize`, which takes two mandatory arguments:
 
-```
+```Python
 minimize(func, x0, ...)
 ```
+
 - `fun`: a function object, this function should take an array of values, `x`, defining the point at which it is to be evaluated $(x_1, \ x_2, \ldots, \ x_n)$
 
 - `x0`: is an array of values representing the initial guess for the minimization algorithms to start at.
 
+
 ### Example 1
+
 Here $f$ and each $c_i$ are scalar-valued functions of the variables $x$, and $\mathcal{I}, \ \mathcal{I}$ are sets of indices. As a simple example, consider the problem
+
 <p align='center'>
     $$\begin{align} \mbox{min} \ (x_1 - 2)^2 + (x_2 - 1)^2 \quad \mbox{subject \ to} \ \left \{\begin{array} \\ x_1^2 - x_2 \quad \leq \ 0 \\ x_1 + x_2 \quad \leq \ 2 \end{array} \right \} \end{align}$$ 
 </p>
 
+
 ### Solution
+
 - The objective function $f(x)$
 <p align='center'>
     $$f(x_1, \ x_2) = (x_1 -2)^2 + (x_2 -1)^2$$
 </p>
-    Often, it is more natural or convenient to label the unknowns with two or three subscripts, or to use different variables by completely different names, so that relabeling is necessary to achieve the standard form.
-    
-- Calculate the constraints $c(x)$ with $\mathcal{E} = 0$ and $\mathcal{I} = [1, \ 2]$, these consraints are __inequality__ so $c_i (x) \geq 0$. We can write this problem by defining the constraints,
 
-    Another common difference is that we are required to _maximize_ rather than _minimize_ $f$, but we can accommodate this change easily by _minimizing_ $-f$ in this formulation.
+Often, it is more natural or convenient to label the unknowns with two or three subscripts, or to use different variables by completely different names, so that relabeling is necessary to achieve the standard form.
+    
+- Calculate the constraints $c(x)$ with $\mathcal{E} = 0$ and $\mathcal{I} = [1, \ 2]$, these consraints are __inequality__ so $c_i (x) \geq 0$. We can write this problem by defining the constraints. Another common difference is that we are required to _maximize_ rather than _minimize_ $f$, but we can accommodate this change easily by _minimizing_ $-f$ in this formulation.
 
     - constraint 1: $-x_1^2 + x_2 \geq 0$
     - constraint 2: $-x_1 - x_2 + 2 \geq 0$
@@ -126,9 +162,11 @@ Here $f$ and each $c_i$ are scalar-valued functions of the variables $x$, and $\
 </p>
 
 This Python script to illustrate the multivariate optimization with initial variables:
+
 <p align='center'>
     $$x= \left[\begin{array} \ 1 \\ 1  \end{array} \right]$$
 </p>
+
 
 ```Python
 from scipy.optimize import minimize
@@ -140,6 +178,7 @@ def f(vars):
 x0 = [1, 1] # Initial guesses for x1, and x2
 minimize(f, x0)
 ```
+
 ```
  message: Optimization terminated successfully.
   success: True
@@ -155,7 +194,9 @@ minimize(f, x0)
 ```
 
 ### Example 2
+
 This Python script to demonstrate the use of `minimize` with _Himmelblau's function_. _Himmelblau's function_ is
+
 <p align='center'>
     $$f(x, \ y) = (x^2 + y - 11)^2 + (x + y -7)^2$$
 </p>
@@ -188,6 +229,7 @@ message: Optimization terminated successfully.
 
 ### Example 3
 This Python script to demonstrate the use of `minimize` with the two-dimensional function,
+
 <p align='center'>
     $$f(x, \ y) = x^2 - ax -xy + by + 4y^2 $$
 </p>
@@ -204,6 +246,7 @@ def f(X, a, b):
 x0 = [0, 0] # Initial guesses for x, and y
 minimize(f, x0, args=(4, 10)) # use constants a=4 and b=10
 ```
+
 ```
  message: Optimization terminated successfully.
   success: True
@@ -218,12 +261,15 @@ minimize(f, x0, args=(4, 10)) # use constants a=4 and b=10
      njev: 7
 ```
 
+
 ## Example Univariate scalar functions
+
 If the function to be minimized is _univariate_ (i.e., takes only one variable, a scalar), a faster algorithm is provided by `scipy.optimize.minimize_scalar`. To simply return a minimum, this function can be called with `method = brent`, which implements Brent's method for locating a minimum.
 
 However, if it is possible to _bracket_ the required minimum by providing values for $x, \ (a, \ b, \ c)$ such that $f(a) > f(b)$ and $f(c) > f(b)$. 
 
 For example, the function,
+
 <p align='center'>
     $$f(x)=\left (\frac{x}{10} \right)^2 + sin \ x$$
 </p>
@@ -239,6 +285,7 @@ def f(x):
 
 minimize_scalar(f, bracket=(-4, 0, 1))
 ```
+
 ```
 message: 
           Optimization terminated successfully.
@@ -250,6 +297,7 @@ message:
      nit: 9
     nfev: 12
 ```
+
 
 ## Summary
 

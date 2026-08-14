@@ -15,6 +15,7 @@ In this unit, we move from first-order differential equations to __second-order 
 </p>
 
 Second-order differential equations play a central role in the physical sciences. They are found, for example, in laws describing,
+
 - mechanical system
 - wave motion
 - electric currents
@@ -28,7 +29,7 @@ To take a simple case, consider a particle of mass $m$ that moves in one dimensi
 
 which implies that
 <p align='center'>
-    $$m \frac{d^2x}{dt^2} = F \quad (1)$$
+    $$m \frac{d^2x}{dt^2} = F \tag{1}$$
 </p>
 
 where $F$ is the force acting on the particle. The force need not be constant, and may vary with the position $x$ or the velocity $dx/dt$ of the particle. So, depending on the precise details, we get a second-order differential equation for $x$ as a function of $t$, and the solution of this equation tells us how the particle can move.
@@ -40,18 +41,20 @@ The system known as a _simple harmonic oscillator_ provides a good example. We c
 </p>
 
 where $k$ is a positive constant. The negative sign in this equation ensures that the force always acts in a direction that tends to restore the particle to its equilibrium position. We get the differential equation
+
 <p align='center'>
-    $$m \frac{d^2 x}{dt^2} = -k x \quad (2)$$
+    $$m \frac{d^2 x}{dt^2} = -k x \tag{2}$$
 </p>
 
 Recalling that $k>0$ and $m<0$, we can also express this as 
 <p align='center'>
-    $$\frac{d^2 x}{dt^2} = -\omega^2 x \quad (3)$$
+    $$\frac{d^2 x}{dt^2} = -\omega^2 x \tag{3}$$
 </p>
 
 where $\omega = \sqrt{k/m}$ is a positive constant. Equation (3) is called the _equation of motion_ of a simple harmonic oscillator. It is a second-order differential equation whose solution tells us how the particle can move.
 
 This equation may be decomposed into two first-order equations as follows:
+
 <p align='center'>
     $$\begin{align} \frac{dx_1}{dt}= x_2, \\ \frac{dx_2}{dt}= \omega^2 x_1 \end{align}$$
 </p>
@@ -64,6 +67,7 @@ This units develops systematic techniques to solve equations like this. For the 
 </p>
 
 In other words, taking the second derivative of a sine or cosine function gives the same function back again.
+
 
 ## Preliminaries
 `solve_ivp` function is a simplified interface to the more advanced `scipy.integrate` method which provides a range of different numerical integrators, including Runge-Kutta algorithms and support for complex-valued variables.
@@ -124,5 +128,6 @@ The solver successfully reached the end of the integration interval.
 
 ## Conclusion
 - Harmonic oscillators play a central role in physics and its applications. If a system performs small oscillations about an equilibrium point, then it is generally a good approximation to model it as a harmonic oscillator.
+
 - It should come as no surprise that to-and-fro motion of a pendulum clock can be modelled by a harmonic oscillator. On a smaller scale, vibrating molecules and vibrating crystals are also modelled as harmonic oscillators.
 

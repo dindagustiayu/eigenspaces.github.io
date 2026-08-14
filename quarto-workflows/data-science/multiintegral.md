@@ -5,42 +5,56 @@ date: "2026-3-07"
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Multiple-Integrals/blob/main/Doble%20and%20Triple%20Integrals.html)
 
+
 # Multiple Integrals
+
 Most of the derivatives topics extended somewhat naturally from their __Calculus I__ counturparts and that will be the same here. However, because we are now involving functions of two or three variables there will be some differences as well. There will be new notation and some new issues that simply don't arise when dealing with function of a single variable. In mathematics (specifically multivariable calculus), a multiple integral is a definite integral of a function of several real variables, for instance, 
 $f(x, y)$ or $f(x, y, z)$.
 
 Integrals of a function of two variables over a region in $$\mathbb{R^2}$$ (the real-number plane) are called __double integrals__ or two dimensional planar regions and surfaces, and integrals of a function of three variables over region in $\mathbb{R^2}$ (real-number 3D space (volumes) are called __triple integrals__. When integrating over curves and surfaces, one can integral vector fields, where the one integrates either the tangential (for curves) or the normal (for surfaces) component of the vector field.
 
-## Double integrals
-A double integral is defined as the limit of sums. Why bother with sums and limits in the first place?. Two reasons. There has to be a definition and a computation to fall back on, when the single intagrals are difficult or impossible. And also, this we emphasize multiple integrals represent more than _area and volume_. The true applications are mostly to other things, but the central idea is always the same: _Add up small pieces and take limits_. We begin with the area of $R$ and the volume of $V$, by double integrals. 
 
-__Question__: What is the volume above $R$ and below the graph of $z=f(x,y)$?. 
+## Double integrals
+
+A double integral is defined as the limit of sums. Why bother with sums and limits in the first place?. Two reasons. There has to be a definition and a computation to fall back on, when the single intagrals are difficult or impossible. And also, this we emphasize multiple integrals represent more than _area and volume_. The true applications are mostly to other things, but the central idea is always the same:
+
+_Add up small pieces and take limits_. We begin with the area of $R$ and the volume of $V$, by double integrals. 
+
+__Question__: What is the volume above $R$ and below the graph of $z=f(x,y)$? 
 
 __Answer__: It is a double integral, __the integral of__ $f(x, y)$ over $R$.
 
-For single integrals, the interval $[a,\; b]$ is divided into short pieces of length $\Delta x$. For double integrals, $R$ is divided into small rectangles of area $$\Delta A = (\Delta x)(\Delta y)$$. 
+For single integrals, the interval $[a,\; b]$ is divided into short pieces of length $\Delta x$. For double integrals, $R$ is divided into small rectangles of area 
+
+$$\Delta A = (\Delta x)(\Delta y)$$
 
 The simplest examples of such quantities are the __volumes__ that have the surface $f(x, y)$ as height. Suppose that $R =[a, b] \times [c, d]$ is a rectangle in the $xy$-plane, where $x$ runs from $a$ to $b$ and $y$ runs from $c$ to $d$. Let's figure out the volume of the solid over the rectangle $R$, between the $xy$-plane and the surface $z=f(x, y)$. We can divide the rectangle into a grid, $m$ subdivisions in one direction and $n$ in the other. 
 
 With functions of one variable, we take the limit of the approximations of area under a curve $f$ and get an integral:
+
 <p align='center'>
     $$A=\int_a^b f(x) dx = \lim_{m \rightarrow \infty} \sum_{i=1}^n f(x_i) \Delta x$$
 </p>
 
 Similarly, given our double sum approximation the volume, the limit of this sum is the defenition of a (double) integral. The double integral of $f$ over $R$ is:
+
 <p align='center'>
     $$\lim_{m \rightarrow \infty} \lim_{n \rightarrow \infty} \sum_{i=1}^m \sum_{j=1}^n f(x_{ij},\; y_{ij}) \Delta A = \int \int_{R} f(x,\; y) dx \; dy = \int \int_{R} f(x, \; y) dA$$
 </p>
 
 (When we take the limit, it doesn't matter which sample point we take, so we take the upper-right corner of the rectangle $R_{ij}$). The __double integral__ of $f$ over the region $R$. The notation $dA$ indicates a small bit of area, without specifying any particular order for the variables $x$ and $y$. It is shorter and more 'generic' than writing $dx \; dy$.
 
+
 ## Triple Integrals
+
 We can guess what triple integrals are like. Instead of a small interval or a small rectangle, there is a small box. Instead of length $dx$ or area $dx \; dy$, the box has volume $dV=dx dy dz$. The main problem will be to discover the correct limits on $x, y, z$. Then we add them all up and take the limit, to get an integral:
+
 <p align='center'>
     $$\int_{x_0}^{x_1} \int_{y_0}^{y_1} \int_{z_0}^{z_1} dz \; dy \; dx$$
 </p>
 
 If the limits are constant, we are simply computing the volume of a rectangular box.
+
 
 ## Prior Knowledge
 - Integration
@@ -49,6 +63,7 @@ If the limits are constant, we are simply computing the volume of a rectangular 
 - Geometry
 - Linear Algebra
 
+
 ## Preliminaries
 - `scipy.integrate`: definite integrals.
 - `dblquad`: double integrals.
@@ -56,6 +71,7 @@ If the limits are constant, we are simply computing the volume of a rectangular 
 
 
 ## Examples: Double Integrals
+
 Shows the function $\int \int_R 1 + (x-1)^2 + 4y^2 \ dA$, where $R = [0, 3] \times [0, 2]$ in two ways.
 
   First,
@@ -70,6 +86,7 @@ Shows the function $\int \int_R 1 + (x-1)^2 + 4y^2 \ dA$, where $R = [0, 3] \tim
 </p>
 
 To calculate the integral, we can simply use `dlbquad`, the function must be defined with the innermost variable $(y)$ given as the first argument, and its limits themselves defined as functions the outermost variable $(x)$.
+
 <p align='center'>
     $$\int_a^b \int_{c(x)}^{d(x)} f(x,\;y) \; dy\; dx$$
 </p>
@@ -89,8 +106,11 @@ print('result:', result)
 ```
 ```
 result: (44.0, 4.884981308350689e-13)
+
 ```
+
 ## Exercises: Double Integrals
+
 1. Compute $\int_0^1 \int_0^{x^2} x+2y^2 \ dy \ dx \Rightarrow$
 
    
@@ -110,9 +130,11 @@ a, b = 0, 1 #Limits of the x integral
 result = dblquad(func, a, b, lambda x: 0, lambda x: x**2)
 print('result:', result)
 ```
+
 ```
 result_1: (0.3452380952380953, 1.8335642853877514e-14)
 ```
+
 
 2. Compute $\int_0^1 \int_{y^2 / 2}^{\sqrt{y}} \ dx \ dy \Rightarrow$
 
@@ -133,6 +155,7 @@ a, b = 0, 1 #Limits of the x integral
 result = dblquad(func, a, b, lambda y: y**2 / 2, lambda y:np.sqrt(y))
 print('result:', result)
 ```
+
 ```
 result: (0.5000000000000001, 6.6077499564637e-15)
 ```
@@ -155,6 +178,7 @@ a, b = 1, 2 #Limits of the x integral
 result = dblquad(func, a, b, lambda x: 1, lambda x: x)
 print('result:', result)
 ```
+
 ```
 result: (0.8333333333333335, 2.213219007615129e-14)
 ```
@@ -171,11 +195,13 @@ Use integration by substitution $(u)$:
 </p>
 
 Change the limits:
+
 <p align='center'>
     $$\begin{align} x &= 0 \Rightarrow u = 0^2 = 0 \\ x &= \sqrt{\pi / 2} \Rightarrow u = (\sqrt{\pi / 2})^2 = \pi / 2 \end{align}$$
 </p>
 
 Substitute the limits to integral:
+
 <p align='center'>
     $$\begin{align} \int_0^{\pi / 2} \frac{1}{2} \; sin \; u \; du &= \frac{1}{2} \left [-cos \; u \right]_0^{\pi / 2} \\ &= \frac{1}{2} \;(-cos(\pi / 2) - (-cos(0)) \\ &= \frac{1}{2} \end{align}$$
 </p>
@@ -197,6 +223,7 @@ print('result:', result)
 ```
 result: (0.4999999999999998, 1.3884045385060703e-14)
 ```
+
 5. Compute $\int_0^{\sqrt{2} / 2} \int_{- \sqrt{1-2x^2}}^{\sqrt{1-2x^2}} x \ dy\ dx \Rightarrow$
 
 <p align='center'>
@@ -204,16 +231,19 @@ result: (0.4999999999999998, 1.3884045385060703e-14)
 </p>
 
 Use integration by substitution $(u)$:
+
 <p align='center'>
     $$\begin{align} u &= 1-2x^2 \; dx \\ du &=  -4x \; dx \\ x \; dx &= -\frac{1}{4} \; du \end{align}$$
 </p>
 
 Change the limits:
+
 <p align='center'>
     $$\begin{align} x &= 0 \Rightarrow u = 1 -2(0)^2 = 1 \\ x &= \frac{\sqrt{2}}{2} \Rightarrow u = 1 - 2 \left(\frac{\sqrt{2}}{2} \right)^2 = 0 \end{align}$$
 </p>
 
 Substitute the limits to integral:
+
 <p align='center'>
     $$\begin{align} \int_1^0 2 \; -\frac{1}{4} \; \sqrt{u} \; du &= -\frac{1}{2} \int_1^0 u^{1/2} \; du \\ &= -\frac{1}{2} \left[\frac{2}{3}\; x^{3/2} \right]_1^0 \\& = \frac{1}{3} \end{align}$$
 </p>
@@ -290,6 +320,7 @@ Result: (10.383333333333335, 6.501243052210528e-13)
 </p>
 
 Change the limits:
+
 <p align='center'>
     $$\begin{align} x &= 0 \Rightarrow u = sin \;(0) = 0 \\ x &= \pi / 2 \Rightarrow u = sin (\pi / 2) = 1 \end{align}$$
 </p>
@@ -318,7 +349,7 @@ print('Result:', result)
 Result: (0.19645573720394408, 9.392880388361082e-15)
 ```
 
-4. Evaluate $\int_0^{2 \pi} \int_0^{\pi} \int_0^1 r^2 \ sin\ \theta \ dr \ d\theta \ d\phi $
+4. Evaluate $\int_0^{2 \pi} \int_0^{\pi} \int_0^1 r^2 \ \sin \ \theta \ dr \ d\theta \ d\phi $
 
 <p align='center'>
     $$\begin{align} \int_0^{2 \pi} \int_0^{\pi} \int_0^1 r^2 \; sin\; \theta \; dr\; d\theta \; d\phi &=\int_0^{2 \pi} \int_0^{\pi} \left[\frac{1}{3} r^3 -cos\theta\right]_0^1 \; d\theta \; d\phi \\ &= \int_0^{2 \pi} \int_0^{\pi} \left[\frac{1}{3}-cos\theta + cos\theta \right] \; d\theta \; d\phi \\ &= \int_0^{2 \pi} \left [\frac{1}{3} sin \; \theta \right]_0^{\pi} \; d\theta \\ &= \int_0^{2 \pi} \frac{2}{3} \; d\phi \\ & = \left[\frac{2}{3} \; \phi \right]_0^{2 \pi} \\ &= \frac{4 \pi}{3} \end{align}$$
