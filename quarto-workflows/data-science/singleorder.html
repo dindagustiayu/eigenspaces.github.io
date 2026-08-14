@@ -84,8 +84,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6ce37ee77bca2d3b47bc236b18647366.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-73130fe0d5b431fdc2da012628fbc394.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-11cc899231d20d43dc2253877daf14d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ee9a89ec392f23ae65306dbae8ac1c75.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -628,30 +628,36 @@ window.Quarto = {
 <p align="center">
 <span class="math display">\[\frac{d^y}{dx^2} - 3\frac{dy}{dx} + 2y = 4e^x \ \mbox{and} \ 3\frac{d^2y}{dx^2} + y = x \ sin \ x\]</span>
 </p>
-<p>Second-order differential equations play a central role in the physical sciences. They are found, for example, in laws describing, - mechanical system - wave motion - electric currents - quantum phenomena.</p>
+<p>Second-order differential equations play a central role in the physical sciences. They are found, for example, in laws describing,</p>
+<ul>
+<li>mechanical system</li>
+<li>wave motion</li>
+<li>electric currents</li>
+<li>quantum phenomena.</li>
+</ul>
 <p>To take a simple case, consider a particle of mass <span class="math inline">\(m\)</span> that moves in one dimension along the <span class="math inline">\(x\)</span>-axis. At any given time <span class="math inline">\(t\)</span>, the particle’s position is <span class="math inline">\(x(t)\)</span>, and its velocity and acceleration are given by the derivatives <span class="math inline">\(dx/dt\)</span> and <span class="math inline">\(d^2x/dt\)</span>. There are no general laws for the positions or velocity of the particle, but there is a very important law for its acceleration: <span class="math inline">\(\mbox{Newton's second law}\)</span> tells us that</p>
 <p align="center">
 <span class="math display">\[ \mbox{mass} \times \mbox{acceleration} = \mbox{force}\]</span>
 </p>
 which implies that
 <p align="center">
-<span class="math display">\[m \frac{d^2x}{dt^2} = F \quad (1)\]</span>
+<span class="math display">\[m \frac{d^2x}{dt^2} = F \tag{1}\]</span>
 </p>
 <p>where <span class="math inline">\(F\)</span> is the force acting on the particle. The force need not be constant, and may vary with the position <span class="math inline">\(x\)</span> or the velocity <span class="math inline">\(dx/dt\)</span> of the particle. So, depending on the precise details, we get a second-order differential equation for <span class="math inline">\(x\)</span> as a function of <span class="math inline">\(t\)</span>, and the solution of this equation tells us how the particle can move.</p>
 <p>The system known as a <em>simple harmonic oscillator</em> provides a good example. We consider the case where the force is proportional to the displacement from equilibrium, and take</p>
 <p align="center">
 <span class="math display">\[F = -kx\]</span>
 </p>
-where <span class="math inline">\(k\)</span> is a positive constant. The negative sign in this equation ensures that the force always acts in a direction that tends to restore the particle to its equilibrium position. We get the differential equation
+<p>where <span class="math inline">\(k\)</span> is a positive constant. The negative sign in this equation ensures that the force always acts in a direction that tends to restore the particle to its equilibrium position. We get the differential equation</p>
 <p align="center">
-<span class="math display">\[m \frac{d^2 x}{dt^2} = -k x \quad (2)\]</span>
+<span class="math display">\[m \frac{d^2 x}{dt^2} = -k x \tag{2}\]</span>
 </p>
 Recalling that <span class="math inline">\(k&gt;0\)</span> and <span class="math inline">\(m&lt;0\)</span>, we can also express this as
 <p align="center">
-<span class="math display">\[\frac{d^2 x}{dt^2} = -\omega^2 x \quad (3)\]</span>
+<span class="math display">\[\frac{d^2 x}{dt^2} = -\omega^2 x \tag{3}\]</span>
 </p>
 <p>where <span class="math inline">\(\omega = \sqrt{k/m}\)</span> is a positive constant. Equation (3) is called the <em>equation of motion</em> of a simple harmonic oscillator. It is a second-order differential equation whose solution tells us how the particle can move.</p>
-This equation may be decomposed into two first-order equations as follows:
+<p>This equation may be decomposed into two first-order equations as follows:</p>
 <p align="center">
 <span class="math display">\[\begin{align} \frac{dx_1}{dt}= x_2, \\ \frac{dx_2}{dt}= \omega^2 x_1 \end{align}\]</span>
 </p>
@@ -720,8 +726,8 @@ This equation may be decomposed into two first-order equations as follows:
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <ul>
-<li>Harmonic oscillators play a central role in physics and its applications. If a system performs small oscillations about an equilibrium point, then it is generally a good approximation to model it as a harmonic oscillator.</li>
-<li>It should come as no surprise that to-and-fro motion of a pendulum clock can be modelled by a harmonic oscillator. On a smaller scale, vibrating molecules and vibrating crystals are also modelled as harmonic oscillators.</li>
+<li><p>Harmonic oscillators play a central role in physics and its applications. If a system performs small oscillations about an equilibrium point, then it is generally a good approximation to model it as a harmonic oscillator.</p></li>
+<li><p>It should come as no surprise that to-and-fro motion of a pendulum clock can be modelled by a harmonic oscillator. On a smaller scale, vibrating molecules and vibrating crystals are also modelled as harmonic oscillators.</p></li>
 </ul>
 
 

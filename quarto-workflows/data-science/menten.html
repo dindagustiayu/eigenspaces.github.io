@@ -84,8 +84,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6ce37ee77bca2d3b47bc236b18647366.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-73130fe0d5b431fdc2da012628fbc394.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-11cc899231d20d43dc2253877daf14d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ee9a89ec392f23ae65306dbae8ac1c75.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -635,7 +635,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="michael-menten-kinetics">Michael-Menten Kinetics</h2>
 <p>Michaelis-Menten kinetics describes the rate of enzymatic reactions, providing a model to understand how enzymes interact with substrates. The general reaction scheme of an enzyme-catalyzed reaction is as follows:</p>
 <p align="center">
-<span class="math display">\[E + S\; \overset{k_1}{\underset{k_{-1}}{\longrightleftharpoons}} \;ES\; \overset{k_2}{\longrightarrow}\;P + E\]</span>
+<span class="math display">\[E + S\; \overset{k_1}{\underset{k_{-1}}{\rightleftharpoons}} \;ES\; \overset{k_2}{\longrightarrow}\;P + E\]</span>
 </p>
 <p>The enzyme interacts with the substrate by binding to its active site to form the enzyme-substrate complex, ES. That reastion is followed by the decomposition of ES to generate the free enzyme, E, and the new product, P.</p>
 <div style="width60%;, margin:auto;">
@@ -665,7 +665,7 @@ window.Quarto = {
 </section>
 <section id="lineweaver-burk-plot" class="level2">
 <h2 class="anchored" data-anchor-id="lineweaver-burk-plot">Lineweaver-Burk Plot</h2>
-For many such catalyzed reactions, it is found that:
+<p>For many such catalyzed reactions, it is found that:</p>
 <p align="center">
 <span class="math display">\[v_{0}=\frac{(V_{max}[S])}{(K_{M}+[S])}\]</span> <span class="math display">\[\frac{1}{v}=\frac{(K_M + [S])}{v_{max}[S]}\]</span> <span class="math display">\[\frac{1}{v}=\left(\frac{K_M}{v_{max}} \right)\;\left(\frac{1}{[S]} \right) + \frac{1}{v_{max}}\]</span>
 </p>
@@ -683,7 +683,7 @@ When we plot <span class="math inline">\(y=\frac{1}{v}\)</span> versus <span cla
 </section>
 <section id="p19.5-exercise" class="level2">
 <h2 class="anchored" data-anchor-id="p19.5-exercise">P19.5 Exercise</h2>
-<p>Pepsin is one of the main enzymes in the digestive systems of mammals, where it helps to break down proteins into smallers peptides which can be absorbed by the small intestine. In a study of the enzymatic kinetics of pepsin with the protein bovine serum albumin (S), the rate of reaction, <span class="math inline">\(v\)</span>, was measured as a function of substrate concentration, [S]; these data are given in the file <a href="../../quarto-workflows">pepsin.txt</a></p>
+<p>Pepsin is one of the main enzymes in the digestive systems of mammals, where it helps to break down proteins into smallers peptides which can be absorbed by the small intestine. In a study of the enzymatic kinetics of pepsin with the protein bovine serum albumin (S), the rate of reaction, <span class="math inline">\(v\)</span>, was measured as a function of substrate concentration, [S]; these data are given in the file <a href="Data_files/pepsin.txt">pepsin.txt</a></p>
 <pre><code>    # Reaction rates, v (in mM.s-1), for the enzymatic kinetics of pepsin with
     # bovine serum albumin (S, in mM)
 
@@ -695,11 +695,11 @@ When we plot <span class="math inline">\(y=\frac{1}{v}\)</span> versus <span cla
     5.0     0.01358
     10.0    0.01401
     20.0    0.01423</code></pre>
-In the case of a straight-line regression (“simple linear regression”) on n points using the model function <span class="math inline">\(y=a+b_x\)</span> as follow:
+<p>In the case of a straight-line regression (“simple linear regression”) on n points using the model function <span class="math inline">\(y=a+b_x\)</span> as follow:</p>
 <p align="left">
-<span class="math display">\[\hat{\beta}=\begin{pmatrix} a\\b\end{pmatrix}\;where\;a=\frac{S_y S_{xx} - S_{xy} S_x}{nS_{xx} - S^2_x}\;and\;b=\frac{nS_{xy} S_y S_x}{nS_{xx} - S^2_x},\]</span>
-</p>
-and the summary statistics are defined as:
+</p><p><span class="math display">\[\hat{\beta}=\begin{pmatrix} a\\b\end{pmatrix}\;where\;a=\frac{S_y S_{xx} - S_{xy} S_x}{nS_{xx} - S^2_x}\;and\;b=\frac{nS_{xy} S_y S_x}{nS_{xx} - S^2_x},\]</span></p>
+<p></p>
+<p>and the summary statistics are defined as:</p>
 <p align="center">
 <span class="math display">\[S_x=\overset{n}{\underset{i=1}{\sum x_i}},\;S_y=\overset{n}{\underset{i=1}{\sum Y_i}},\;S_{xx}=\overset{n}{\underset{i=1}{\sum x_i^2}},\;S_{xy}=\overset{n}{\underset{i=1}{\sum x_iy_i}}.\]</span>
 </p>
@@ -729,24 +729,23 @@ and the summary statistics are defined as:
 <section id="step-2.-fitting-a-line-of-best-fit" class="level3">
 <h3 class="anchored" data-anchor-id="step-2.-fitting-a-line-of-best-fit">Step 2. Fitting a Line of Best fit</h3>
 <p>The experiment was carried out at <span class="math display">\[35^{0}C\]</span> and a pH of 2 with a total concentration of pepsin of <span class="math display">\[E_0 = 0.028 mM\]</span>. Use <code>np.linalg.lstsq</code> to fit the data and obtain values for <span class="math display">\[K_M, v_{max} , and K_2\]</span>.</p>
-For simple linear regression on <span class="math inline">\(n\)</span> points a straight line model, <span class="math inline">\(y=a+bx\)</span>,<br>
-
+<p>For simple linear regression on <span class="math inline">\(n\)</span> points a straight line model, <span class="math inline">\(y=a+bx\)</span>,</p>
 <p align="center">
 <span class="math display">\[\hat{\beta}=\begin{pmatrix} a\\ b \end{pmatrix}=(X^T X)^{-1} X^Ty\]</span>
 </p>
-defines the best fit coefficients <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> where the matrices <span class="math inline">\(y\)</span> and <span class="math inline">\(X\)</span>
+<p>defines the best fit coefficients <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> where the matrices <span class="math inline">\(y\)</span> and <span class="math inline">\(X\)</span></p>
 <p align="center">
-<span class="math display">\[y=\begin{pmatrix} y_1\\y_2\\ \vdots \\y_n\end{pmatrix},\; and\; X=\begin{pmatrix}1 &amp; x_1\\1 &amp; x_2\\ \vdots \\1 &amp; x_n\end{pmatrix}\]</span>
+<span class="math display">\[y=\begin{pmatrix} y_1\\y_2\\ \vdots \\y_n\end{pmatrix},\; and \; X=\begin{pmatrix}1 &amp; x_1\\1 &amp; x_2\\ \vdots \\1 &amp; x_n\end{pmatrix}\]</span>
 </p>
-We have
+<p>We have</p>
 <p align="center">
 <span class="math display">\[X^T X=\begin{pmatrix} 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1\\ x_1 &amp; x_2 &amp; x_3 \cdots &amp; x_n\end{pmatrix} \; \begin{pmatrix} 1 &amp; x_1\\1 &amp; x_2\\1 &amp; x_3\\ \vdots &amp; \vdots\\ 1 &amp; x_n\end{pmatrix} = \begin{pmatrix} n &amp; \sum{x_i}\\ \sum{x_i} &amp; \sum{x_i^2}\end{pmatrix}\]</span>
 </p>
-Taking the inverse,
+<p>Taking the inverse,</p>
 <p align="center">
-<span class="math display">\[(X^TX X)^{-1}= \frac{1}{\Delta} \;\begin{pmatrix} \sum{x_i^2} &amp; -\sum{x_i}\\ -\sum{x_i} &amp; n\end{pmatrix}\]</span>
+<span class="math display">\[(X^TX X)^{-1}= \frac{1}{\Delta} \; \begin{pmatrix} \sum{x_i^2} &amp; -\sum{x_i}\\ -\sum{x_i} &amp; n\end{pmatrix}\]</span>
 </p>
-where the determinant,
+<p>where the determinant,</p>
 <p align="center">
 <span class="math display">\[\Delta=n\sum{x_i^2}-(\sum{x_i})^2 = nS_{xx} - S_{x}^2\]</span>
 </p>
@@ -754,19 +753,19 @@ where the determinant,
 <p align="center">
 <span class="math display">\[\begin{align*}(X^TX)^{-1}X^T&amp;=\frac{1}{\Delta} \begin{pmatrix} \sum{x_i^2} &amp; -\sum{x_i}\\ -\sum{x_i} &amp; n\end{pmatrix} \begin{pmatrix} 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1\\ x_1 &amp; x_2 &amp; x_3 &amp; \cdots &amp; x_n\end{pmatrix} \\&amp;=\frac{1}{\Delta} \begin{pmatrix} \sum{x_i^2}-x_1 \sum{x_1} &amp; \sum{x_i^2}-x_2 \sum{x_i} &amp; \cdots &amp; \sum{x_i^2}-x_n \sum{xi}\\ -\sum{x_i}+ nx_1 &amp; -\sum{x_i}+nx_2 &amp; \cdots &amp; -\sum{x_i}+nx_n \end{pmatrix} \begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix} \end{align*}\]</span>
 </p>
-Finally,
+<p>Finally,</p>
 <p align="center">
 <span class="math display">\[ \begin{align*}\hat{\beta}&amp;= (X^T X)^{-1}X^Ty \\ &amp;= \frac{1}{\Delta} \begin{pmatrix} \sum{x_i^2}-x_1 \sum{x_1} &amp; \sum{x_i^2}-x_2 \sum{x_i} &amp; \cdots &amp; \sum{x_i^2}-x_n \sum{xi}\\ -\sum{x_i}+ nx_1 &amp; -\sum{x_i}+nx_2 &amp; \cdots &amp; -\sum{x_i}+nx_n \end{pmatrix} \begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n\end{pmatrix}=\begin{pmatrix} a\\b \end{pmatrix} \end{align*}\]</span>
 </p>
-where,
+<p>where,</p>
 <p align="center">
 <span class="math display">\[\begin{align} a&amp;= \frac{1}{\Delta} \left [y_1 \left(\sum{x_i^2}- x_1 \sum{x_i} \right)+y_2 \left(\sum{x_i^2}-x_2 \sum{x_i} \right)+ \cdots + y_n \left(\sum{x_i^2}-x_n\sum{x_i} \right) \right] \\&amp;=\frac{1}{\Delta} \left[\left(\sum{y_i} \right) \left(\sum{x_i^2} \right)- \left(\sum{x_i y_i}\right) \left(\sum{x_i}\right) \right] \\ &amp;=\frac{S_yS_{xx}-S_{xy}S_x}{nS_{xx}-S_x^2} \end{align}\]</span>
 </p>
-and
+<p>and</p>
 <p align="center">
 <span class="math display">\[\begin{align} b&amp;= \frac{1}{\Delta} \left[y_1 \left(nx_1-\sum{x_i} \right)+y_2 \left(nx_2-\sum{x_i} \right)+ \cdots + y_n \left(nx_n - \sum{x_i} \right) \right] \\&amp;=\frac{1}{\Delta} \left [n \left(\sum{x_iy_i} \right)- \left(\sum{y_i} \right) \left(\sum{x_i} \right) \right]\\ &amp;=\frac{nS_{xy}-S_x S_y}{nS_{xx}-S_x^2}\end{align}\]</span> <span class="math display">\[\begin{align} a&amp;=\frac{1}{\Delta}[y_1(\sum{x_i^2}-x_1 \sum{x_i})+y_2(\sum{x_i^2}-x_2\sum{x_i})+ \cdots + y_n (\sum{x_i^2}-x_n\sum{x_i})] \\&amp;=\frac{1}{\Delta}[(\sum{y_i}(\sum{x_i^2})-(\sum{x_i y_i})(\sum{x_i})] \\ &amp;=\frac{S_yS_{xx}-S_{xy}S_x}{nS_{xx}-S_x^2} \end{align}\]</span>
 </p>
-and
+<p>and</p>
 <p align="center">
 <span class="math display">\[\begin{align} b&amp;= \frac{1}{\Delta}[y_1(nx_1-\sum{x_i})+y_2(nx_2-\sum{x_i})+ \cdots + y_n(nx_n - \sum{x_i})] \\&amp;=\frac{1}{\Delta}[n(\sum{x_iy_i}-(\sum{y_i})(\sum{x_i})]\\ &amp;=\frac{nS_{xy}-S_x S_y}{nS_{xx}-S_x^2}\end{align}\]</span>
 </p>

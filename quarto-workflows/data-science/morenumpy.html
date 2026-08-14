@@ -84,8 +84,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6ce37ee77bca2d3b47bc236b18647366.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-73130fe0d5b431fdc2da012628fbc394.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-11cc899231d20d43dc2253877daf14d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ee9a89ec392f23ae65306dbae8ac1c75.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -633,8 +633,8 @@ window.Quarto = {
 <h1>Numpy functions in Atomic Scale</h1>
 <p>This work is a short reference for some useful functionality of Numpy to study molecular dynamics of phonon eletron interfaces energy transport. The presentation on Numpy, SciPy, and Matplotlib will follow this sections:</p>
 <ol type="1">
-<li>Numpy provides a number of sub-packages for representing and manipulating data, the<code>numpy.polynomial.polynomial</code> class is basis function and commonly use in Numpy Polynomial.</li>
-<li>Scientific Python (SciPy). The package, <code>scipy.constants</code> provides the numerical values of many pf the constants used in physics and chemistry. The more common ones, in SI units, can be import directly.</li>
+<li><p>Numpy provides a number of sub-packages for representing and manipulating data, the<code>numpy.polynomial.polynomial</code> class is basis function and commonly use in Numpy Polynomial.</p></li>
+<li><p>Scientific Python (SciPy). The package, <code>scipy.constants</code> provides the numerical values of many pf the constants used in physics and chemistry. The more common ones, in SI units, can be import directly.</p></li>
 </ol>
 Physical constants that can be directly imported from scipy.constants in SI units
 <div style="width:90%; margin:auto;">
@@ -653,64 +653,64 @@ Physical constants that can be directly imported from scipy.constants in SI unit
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">c</td>
+<td style="text-align: left;">$c $</td>
 <td>299792458.0</td>
-<td style="text-align: left;">speed of light in vacuum, m s−1</td>
+<td style="text-align: left;">speed of light in vacuum, <span class="math inline">\(m \ s^{−1}\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">epsilon_0</td>
+<td style="text-align: left;"><span class="math inline">\(\epsilon_0\)</span></td>
 <td>8.8541878128e-12</td>
-<td style="text-align: left;">vacuum permittivity, 0,Fm−1</td>
+<td style="text-align: left;">vacuum permittivity, 0, <span class="math inline">\(F \ m^{−1}\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">h</td>
+<td style="text-align: left;">$h $</td>
 <td>6.62607015e-34</td>
-<td style="text-align: left;">Planck constant , h,Js</td>
+<td style="text-align: left;">Planck constant (h) <span class="math inline">\(Js\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">hbar</td>
+<td style="text-align: left;"><span class="math inline">\(\bar{h}\)</span></td>
 <td>1.0545718176461565e-34</td>
-<td style="text-align: left;">h¯ = h/(2π ),Js</td>
+<td style="text-align: left;">h¯ = h/(2π ), $Js $</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">e</td>
+<td style="text-align: left;"><span class="math inline">\(e\)</span></td>
 <td>1.602176634e-19</td>
-<td style="text-align: left;">elementary charge, C</td>
+<td style="text-align: left;">elementary charge, $C $</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">R</td>
+<td style="text-align: left;">$R $</td>
 <td>8.314462618</td>
-<td style="text-align: left;">molar gas constant, J K−1 mol−1</td>
+<td style="text-align: left;">molar gas constant, <span class="math inline">\(J \ K^{−1} \ mol^{−1}\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">N_A</td>
+<td style="text-align: left;">$N_A $</td>
 <td>6.02214076e+23</td>
-<td style="text-align: left;">Avogadro constant, mol−1</td>
+<td style="text-align: left;">Avogadro constant, <span class="math inline">\(mol^{−1}\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">k</td>
+<td style="text-align: left;"><span class="math inline">\(k\)</span></td>
 <td>1.380649e-23</td>
-<td style="text-align: left;">Boltzmann constant, J K−1</td>
+<td style="text-align: left;">Boltzmann constant, $J &nbsp;K^{−1} $</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Rydberg</td>
 <td>10973731.56816</td>
-<td style="text-align: left;">Rydberg constant, m−1</td>
+<td style="text-align: left;">Rydberg constant, <span class="math inline">\(m^{−1}\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">m_e</td>
+<td style="text-align: left;"><span class="math inline">\(m_e\)</span></td>
 <td>9.1093837015e-31</td>
-<td style="text-align: left;">electron mass, kg</td>
+<td style="text-align: left;">electron mass, <span class="math inline">\(kg\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">m_p</td>
+<td style="text-align: left;">$m_p $</td>
 <td>1.67262192369e-27</td>
-<td style="text-align: left;">proton mass, kg</td>
+<td style="text-align: left;">proton mass, $kg $</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">m_n</td>
+<td style="text-align: left;"><span class="math inline">\(m_n\)</span></td>
 <td>1.67492749804e-27</td>
-<td style="text-align: left;">neutron mass, kg</td>
+<td style="text-align: left;">neutron mass, <span class="math inline">\(kg\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -730,17 +730,17 @@ Physical constants that can be directly imported from scipy.constants in SI unit
 <section id="the-lennard-jones-potential" class="level3">
 <h3 class="anchored" data-anchor-id="the-lennard-jones-potential">The Lennard-Jones Potential</h3>
 <p>The Lennard-Jones potential (also referred to as the LJ potential, 6-12 potential or, less commonly, 12-6 potential) is a simple mathematical model that represents this behavior. It was proposed in 1924 by John Lennard-Jones. The LJ potential is of the form</p>
-<p><span class="math inline">\(V(r)=4\epsilon[(\frac{\sigma}{r})^{12}-(\frac{\sigma}{r})^{6}]\)</span></p>
+<p><span class="math display">\[V(r)=4\epsilon[(\frac{\sigma}{r})^{12}-(\frac{\sigma}{r})^{6}]\]</span></p>
 <p>Where <span class="math inline">\(\epsilon\)</span> is the depth of the potential well, providing a measure of the attraction strength, <span class="math inline">\(\sigma\)</span> is the (finite) distance at which the inter-particle potential is zero and <span class="math inline">\(r\)</span> is the distance between the particle. The <span class="math inline">\((\frac{1}{r})^{12}\)</span> term describes repulsion and the <span class="math inline">\((\frac{1}{r})^{6}\)</span> term describes attraction.</p>
 <p>The Lennard-Jones potential is an approximation. The form of the repulsion term has no theoritical justification, the repulsion force should depend exponentially on the distance, but the nverse poser form the repusion term of the LJ formula is more convenient due to the ease and efficiency of compiting <span class="math inline">\(r^{12}\)</span> as the square of <span class="math inline">\(r^{6}\)</span>.</p>
-Insimulation, the LJ potential is typically cut off beyond a specified distance <span class="math inline">\(r_{cut}\)</span>, i.e.&nbsp;the potential is zero for distance larger than the cutoff distance. Also an additional potential shif <span class="math inline">\(c_{shift}\)</span> can be addeed.
+<p>Insimulation, the LJ potential is typically cut off beyond a specified distance <span class="math inline">\(r_{cut}\)</span>, i.e.&nbsp;the potential is zero for distance larger than the cutoff distance. Also an additional potential shif <span class="math inline">\(c_{shift}\)</span> can be addeed.</p>
 <p align="center">
 <span class="math display">\[v(r)=4\epsilon[(\frac{\sigma}{r})^{12}-(\frac{\sigma}{r})^{6}]+c_{shift}\]</span>, where <span class="math display">\[0 \leq r \leq r_{cut}\]</span>
 </p>
 <p align="center">
 <span class="math display">\[v(r)= 0\]</span>, where <span class="math display">\[r \leq  r_{cut}\]</span>
 </p>
-For example, suppose you wish to fit a quartic polynomial to the Lennard-Jones potential of Xe. Where <span class="math inline">\(\epsilon=1.77\)</span> k<span class="math inline">\(J mol^{-1}\)</span>, and <span class="math inline">\(\sigma=4.1\)</span> <span class="math inline">\(\mathring{A}\)</span>. The interesting region of this function is around <span class="math inline">\(4.2\leq r \leq 5.5\)</span> <span class="math inline">\(\mathring{A}\)</span>.
+<p>For example, suppose you wish to fit a quartic polynomial to the Lennard-Jones potential of Xe. Where <span class="math inline">\(\epsilon=1.77\)</span> k<span class="math inline">\(J mol^{-1}\)</span>, and <span class="math inline">\(\sigma=4.1\)</span> <span class="math inline">\(\mathring{A}\)</span>. The interesting region of this function is around <span class="math inline">\(4.2\leq r \leq 5.5\)</span> <span class="math inline">\(\mathring{A}\)</span>.</p>
 <p align="center">
 <span class="math display">\[V(r)=4\epsilon[(\frac{\sigma}{r})^{12}-(\frac{\sigma}{r})^{6}]=\frac{A}{r^{12}}-\frac{B}{r^{6}}\]</span>
 </p>
@@ -784,15 +784,26 @@ For example, suppose you wish to fit a quartic polynomial to the Lennard-Jones p
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Polynomial.fit conefficients:'</span>, pfit.coef)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>1543.92526335 - 1212.86206256 x + 356.15664798 x**2 - 46.41324243 x**3 +
 2.26661429 x**4
-Polyfit coefficients: [    2.26661429   -46.41324243   356.15664798 -1212.86206256 1543.92526334]
-Polynomial.fit conefficients: [ 1543.92526335 -1212.86206256   356.15664798   -46.413242432.26661429]</code></pre>
+
+Polyfit coefficients: [2.26661429   -46.41324243   356.15664798 -1212.86206256 1543.92526334]
+
+Polynomial.fit conefficients: [1543.92526335 -1212.86206256   356.15664798   -46.413242432.26661429]</code></pre>
 </section>
 <section id="p9.2-case-study-physical-constants-scipy" class="level3">
 <h3 class="anchored" data-anchor-id="p9.2-case-study-physical-constants-scipy">P9.2 Case study: Physical Constants (SciPy)</h3>
 <p>SciPy is an open-source for mathematic, science, and engineering. SciPy is built to work with NumPy arrays, and provide manu user-friendly and efficient. NumPy and SciPy is powerful enough to be depended upon by some of the world’s leading scientist and engineers.</p>
-<p>Installation - <code>pip install scipy</code> - <code>conda install anaconda::scipy</code></p>
-<p>Key arguments - <code>scipy.constants</code>: complete data base constant - <code>scipy.constants.physical</code>: provides dictionary in the format <code>(value, unit, uncertainty)</code>.</p>
-<p>reference: <a href="https://physics.nist.gov/cuu/pdf/wall_2018.pdf">CODATA 2018</a></p>
+<p>Installation</p>
+<ul>
+<li><code>pip install scipy</code></li>
+<li><code>conda install anaconda::scipy</code></li>
+</ul>
+<p>Key arguments</p>
+<ul>
+<li><code>scipy.constants</code>: complete data base constant</li>
+<li><code>scipy.constants.physical</code>: provides dictionary in the format <code>(value, unit, uncertainty)</code>.</li>
+</ul>
+<p>reference:</p>
+<p><a href="https://physics.nist.gov/cuu/pdf/wall_2018.pdf">CODATA 2018</a></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import massa electron and proton</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.constants <span class="im">import</span> m_e, m_p</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'massa electron:'</span>, m_e)</span>

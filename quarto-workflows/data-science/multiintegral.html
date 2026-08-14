@@ -84,8 +84,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6ce37ee77bca2d3b47bc236b18647366.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-73130fe0d5b431fdc2da012628fbc394.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-11cc899231d20d43dc2253877daf14d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ee9a89ec392f23ae65306dbae8ac1c75.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -635,16 +635,18 @@ window.Quarto = {
 <p>Integrals of a function of two variables over a region in <span class="math display">\[\mathbb{R^2}\]</span> (the real-number plane) are called <strong>double integrals</strong> or two dimensional planar regions and surfaces, and integrals of a function of three variables over region in <span class="math inline">\(\mathbb{R^2}\)</span> (real-number 3D space (volumes) are called <strong>triple integrals</strong>. When integrating over curves and surfaces, one can integral vector fields, where the one integrates either the tangential (for curves) or the normal (for surfaces) component of the vector field.</p>
 <section id="double-integrals" class="level2">
 <h2 class="anchored" data-anchor-id="double-integrals">Double integrals</h2>
-<p>A double integral is defined as the limit of sums. Why bother with sums and limits in the first place?. Two reasons. There has to be a definition and a computation to fall back on, when the single intagrals are difficult or impossible. And also, this we emphasize multiple integrals represent more than <em>area and volume</em>. The true applications are mostly to other things, but the central idea is always the same: <em>Add up small pieces and take limits</em>. We begin with the area of <span class="math inline">\(R\)</span> and the volume of <span class="math inline">\(V\)</span>, by double integrals.</p>
-<p><strong>Question</strong>: What is the volume above <span class="math inline">\(R\)</span> and below the graph of <span class="math inline">\(z=f(x,y)\)</span>?.</p>
+<p>A double integral is defined as the limit of sums. Why bother with sums and limits in the first place?. Two reasons. There has to be a definition and a computation to fall back on, when the single intagrals are difficult or impossible. And also, this we emphasize multiple integrals represent more than <em>area and volume</em>. The true applications are mostly to other things, but the central idea is always the same:</p>
+<p><em>Add up small pieces and take limits</em>. We begin with the area of <span class="math inline">\(R\)</span> and the volume of <span class="math inline">\(V\)</span>, by double integrals.</p>
+<p><strong>Question</strong>: What is the volume above <span class="math inline">\(R\)</span> and below the graph of <span class="math inline">\(z=f(x,y)\)</span>?</p>
 <p><strong>Answer</strong>: It is a double integral, <strong>the integral of</strong> <span class="math inline">\(f(x, y)\)</span> over <span class="math inline">\(R\)</span>.</p>
-<p>For single integrals, the interval <span class="math inline">\([a,\; b]\)</span> is divided into short pieces of length <span class="math inline">\(\Delta x\)</span>. For double integrals, <span class="math inline">\(R\)</span> is divided into small rectangles of area <span class="math display">\[\Delta A = (\Delta x)(\Delta y)\]</span>.</p>
+<p>For single integrals, the interval <span class="math inline">\([a,\; b]\)</span> is divided into short pieces of length <span class="math inline">\(\Delta x\)</span>. For double integrals, <span class="math inline">\(R\)</span> is divided into small rectangles of area</p>
+<p><span class="math display">\[\Delta A = (\Delta x)(\Delta y)\]</span></p>
 <p>The simplest examples of such quantities are the <strong>volumes</strong> that have the surface <span class="math inline">\(f(x, y)\)</span> as height. Suppose that <span class="math inline">\(R =[a, b] \times [c, d]\)</span> is a rectangle in the <span class="math inline">\(xy\)</span>-plane, where <span class="math inline">\(x\)</span> runs from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> and <span class="math inline">\(y\)</span> runs from <span class="math inline">\(c\)</span> to <span class="math inline">\(d\)</span>. Let’s figure out the volume of the solid over the rectangle <span class="math inline">\(R\)</span>, between the <span class="math inline">\(xy\)</span>-plane and the surface <span class="math inline">\(z=f(x, y)\)</span>. We can divide the rectangle into a grid, <span class="math inline">\(m\)</span> subdivisions in one direction and <span class="math inline">\(n\)</span> in the other.</p>
-With functions of one variable, we take the limit of the approximations of area under a curve <span class="math inline">\(f\)</span> and get an integral:
+<p>With functions of one variable, we take the limit of the approximations of area under a curve <span class="math inline">\(f\)</span> and get an integral:</p>
 <p align="center">
 <span class="math display">\[A=\int_a^b f(x) dx = \lim_{m \rightarrow \infty} \sum_{i=1}^n f(x_i) \Delta x\]</span>
 </p>
-Similarly, given our double sum approximation the volume, the limit of this sum is the defenition of a (double) integral. The double integral of <span class="math inline">\(f\)</span> over <span class="math inline">\(R\)</span> is:
+<p>Similarly, given our double sum approximation the volume, the limit of this sum is the defenition of a (double) integral. The double integral of <span class="math inline">\(f\)</span> over <span class="math inline">\(R\)</span> is:</p>
 <p align="center">
 <span class="math display">\[\lim_{m \rightarrow \infty} \lim_{n \rightarrow \infty} \sum_{i=1}^m \sum_{j=1}^n f(x_{ij},\; y_{ij}) \Delta A = \int \int_{R} f(x,\; y) dx \; dy = \int \int_{R} f(x, \; y) dA\]</span>
 </p>
@@ -652,7 +654,7 @@ Similarly, given our double sum approximation the volume, the limit of this sum 
 </section>
 <section id="triple-integrals" class="level2">
 <h2 class="anchored" data-anchor-id="triple-integrals">Triple Integrals</h2>
-We can guess what triple integrals are like. Instead of a small interval or a small rectangle, there is a small box. Instead of length <span class="math inline">\(dx\)</span> or area <span class="math inline">\(dx \; dy\)</span>, the box has volume <span class="math inline">\(dV=dx dy dz\)</span>. The main problem will be to discover the correct limits on <span class="math inline">\(x, y, z\)</span>. Then we add them all up and take the limit, to get an integral:
+<p>We can guess what triple integrals are like. Instead of a small interval or a small rectangle, there is a small box. Instead of length <span class="math inline">\(dx\)</span> or area <span class="math inline">\(dx \; dy\)</span>, the box has volume <span class="math inline">\(dV=dx dy dz\)</span>. The main problem will be to discover the correct limits on <span class="math inline">\(x, y, z\)</span>. Then we add them all up and take the limit, to get an integral:</p>
 <p align="center">
 <span class="math display">\[\int_{x_0}^{x_1} \int_{y_0}^{y_1} \int_{z_0}^{z_1} dz \; dy \; dx\]</span>
 </p>
@@ -687,7 +689,7 @@ Second,
 <p align="center">
 <span class="math display">\[\begin{align} \int_0^3 \int_0^2 1 + (x-1)^2 + 4y^2 dy\; dx &amp;= \int_0^3 \left [y + (x-1)^2 y + \frac{4}{3} y^3 \right]_0^2 \; dx \\ &amp;= \int_0^3 2 + 2(x-1)^2 + \frac{32}{3}  dx \\ &amp;= \left [2x + \frac{2}{3} (x-1)^3 + \frac{32}{3} x \right]_0^3 \\ &amp;= 6 + \frac{16}{3} + 32 + \frac{2}{3} \\ &amp; = 44 \end{align}\]</span>
 </p>
-To calculate the integral, we can simply use <code>dlbquad</code>, the function must be defined with the innermost variable <span class="math inline">\((y)\)</span> given as the first argument, and its limits themselves defined as functions the outermost variable <span class="math inline">\((x)\)</span>.
+<p>To calculate the integral, we can simply use <code>dlbquad</code>, the function must be defined with the innermost variable <span class="math inline">\((y)\)</span> given as the first argument, and its limits themselves defined as functions the outermost variable <span class="math inline">\((x)\)</span>.</p>
 <p align="center">
 <span class="math display">\[\int_a^b \int_{c(x)}^{d(x)} f(x,\;y) \; dy\; dx\]</span>
 </p>
@@ -702,7 +704,8 @@ To calculate the integral, we can simply use <code>dlbquad</code>, the function 
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> dblquad(func, a, b, <span class="kw">lambda</span> x: <span class="dv">0</span>, <span class="kw">lambda</span> x: <span class="dv">2</span>)</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'result:'</span>, result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>result: (44.0, 4.884981308350689e-13)</code></pre>
+<pre><code>result: (44.0, 4.884981308350689e-13)
+</code></pre>
 </section>
 <section id="exercises-double-integrals" class="level2">
 <h2 class="anchored" data-anchor-id="exercises-double-integrals">Exercises: Double Integrals</h2>
@@ -768,11 +771,11 @@ Use integration by substitution <span class="math inline">\((u)\)</span>:
 <p align="center">
 <span class="math display">\[\begin{align} u &amp;= x^2 \\ du &amp;= 2x \; dx \\ x\; dx &amp;= \frac{1}{2} \; du \end{align}\]</span>
 </p>
-Change the limits:
+<p>Change the limits:</p>
 <p align="center">
 <span class="math display">\[\begin{align} x &amp;= 0 \Rightarrow u = 0^2 = 0 \\ x &amp;= \sqrt{\pi / 2} \Rightarrow u = (\sqrt{\pi / 2})^2 = \pi / 2 \end{align}\]</span>
 </p>
-Substitute the limits to integral:
+<p>Substitute the limits to integral:</p>
 <p align="center">
 <span class="math display">\[\begin{align} \int_0^{\pi / 2} \frac{1}{2} \; sin \; u \; du &amp;= \frac{1}{2} \left [-cos \; u \right]_0^{\pi / 2} \\ &amp;= \frac{1}{2} \;(-cos(\pi / 2) - (-cos(0)) \\ &amp;= \frac{1}{2} \end{align}\]</span>
 </p>
@@ -795,15 +798,15 @@ Substitute the limits to integral:
 <p align="center">
 <span class="math display">\[\begin{align} \int_0^{\sqrt{2} / 2} \int_{- \sqrt{1-2x^2}}^{\sqrt{1-2x^2}} x \; dy\; dx &amp;= \int_0^{\sqrt{2} / 2} [xy]_{- \sqrt{1-2x^2}}^{\sqrt{1-2x^2}} \; dx \\ &amp;= \int_0^{\sqrt{2} / 2} x(\sqrt{1-2x^2}) - x(-\sqrt{1-2x^2}) \; dx \\&amp; = \int_0^{\sqrt{2} / 2} 2x(\sqrt{1-2x^2}) \; dx \end{align}\]</span>
 </p>
-Use integration by substitution <span class="math inline">\((u)\)</span>:
+<p>Use integration by substitution <span class="math inline">\((u)\)</span>:</p>
 <p align="center">
 <span class="math display">\[\begin{align} u &amp;= 1-2x^2 \; dx \\ du &amp;=  -4x \; dx \\ x \; dx &amp;= -\frac{1}{4} \; du \end{align}\]</span>
 </p>
-Change the limits:
+<p>Change the limits:</p>
 <p align="center">
 <span class="math display">\[\begin{align} x &amp;= 0 \Rightarrow u = 1 -2(0)^2 = 1 \\ x &amp;= \frac{\sqrt{2}}{2} \Rightarrow u = 1 - 2 \left(\frac{\sqrt{2}}{2} \right)^2 = 0 \end{align}\]</span>
 </p>
-Substitute the limits to integral:
+<p>Substitute the limits to integral:</p>
 <p align="center">
 <span class="math display">\[\begin{align} \int_1^0 2 \; -\frac{1}{4} \; \sqrt{u} \; du &amp;= -\frac{1}{2} \int_1^0 u^{1/2} \; du \\ &amp;= -\frac{1}{2} \left[\frac{2}{3}\; x^{3/2} \right]_1^0 \\&amp; = \frac{1}{3} \end{align}\]</span>
 </p>
@@ -865,7 +868,7 @@ Substitute the limits to integral:
 <p align="center">
 <span class="math display">\[\begin{align} \int_0^{\pi / 2} \int_0^{sin \; \theta} \int_0^{r\; cos \; \theta} r^2 \;dz\;dr\;d\theta &amp;= \int_0^{\pi / 2} \int_0^{sin \; \theta} \left[r^2 z \right]_0^{r\; cos\; \theta} \; dr\; d\theta \\ &amp;= \int_0^{\pi / 2} \int_0^{sin \; \theta} r^3\; cos \; \theta \; dr\; d\theta \\ &amp;= \int_0^{\pi / 2} \left [\frac{1}{4} r^4 \; cos \theta \right]_0^{sin \; \theta} \\ &amp; = \int_0^{\pi / 2} \frac{1}{4} \; (sin\; \theta)^4 \; cos \theta - 0 \; d\theta \end{align}\]</span>
 </p>
-Change the limits:
+<p>Change the limits:</p>
 <p align="center">
 <span class="math display">\[\begin{align} x &amp;= 0 \Rightarrow u = sin \;(0) = 0 \\ x &amp;= \pi / 2 \Rightarrow u = sin (\pi / 2) = 1 \end{align}\]</span>
 </p>
@@ -887,7 +890,7 @@ Change the limits:
 <span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Result:'</span>, result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Result: (0.19645573720394408, 9.392880388361082e-15)</code></pre>
 <ol start="4" type="1">
-<li>Evaluate $_0^{2 } _0^{} _0^1 r^2 &nbsp;sin&nbsp;&nbsp;dr &nbsp;d&nbsp;d$</li>
+<li>Evaluate $_0^{2 } _0^{} _0^1 r^2 &nbsp;&nbsp;&nbsp;dr &nbsp;d&nbsp;d$</li>
 </ol>
 <p align="center">
 <span class="math display">\[\begin{align} \int_0^{2 \pi} \int_0^{\pi} \int_0^1 r^2 \; sin\; \theta \; dr\; d\theta \; d\phi &amp;=\int_0^{2 \pi} \int_0^{\pi} \left[\frac{1}{3} r^3 -cos\theta\right]_0^1 \; d\theta \; d\phi \\ &amp;= \int_0^{2 \pi} \int_0^{\pi} \left[\frac{1}{3}-cos\theta + cos\theta \right] \; d\theta \; d\phi \\ &amp;= \int_0^{2 \pi} \left [\frac{1}{3} sin \; \theta \right]_0^{\pi} \; d\theta \\ &amp;= \int_0^{2 \pi} \frac{2}{3} \; d\phi \\ &amp; = \left[\frac{2}{3} \; \phi \right]_0^{2 \pi} \\ &amp;= \frac{4 \pi}{3} \end{align}\]</span>

@@ -84,8 +84,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6ce37ee77bca2d3b47bc236b18647366.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-73130fe0d5b431fdc2da012628fbc394.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-11cc899231d20d43dc2253877daf14d1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ee9a89ec392f23ae65306dbae8ac1c75.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -669,9 +669,9 @@ window.Quarto = {
 <section id="reference" class="level2">
 <h2 class="anchored" data-anchor-id="reference">Reference:</h2>
 <ul>
-<li><a href="https://github.com/UCD-Physics/Python-HowTos/blob/main/Error_Bars.ipynb">UCD-Physics</a></li>
-<li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/04.03-errorbars.html#:~:text=In%20visualization%20of%20data%20and,errorbar%20.">Jake VanderPlas</a></li>
-<li><a href="https://scikit-learn.org/stable/auto_examples/gaussian_process/plot_gpr_noisy_targets.html">Scikit-Learn</a></li>
+<li><p><a href="https://github.com/UCD-Physics/Python-HowTos/blob/main/Error_Bars.ipynb">UCD-Physics</a></p></li>
+<li><p><a href="https://jakevdp.github.io/PythonDataScienceHandbook/04.03-errorbars.html#:~:text=In%20visualization%20of%20data%20and,errorbar%20.">Jake VanderPlas</a></p></li>
+<li><p><a href="https://scikit-learn.org/stable/auto_examples/gaussian_process/plot_gpr_noisy_targets.html">Scikit-Learn</a></p></li>
 </ul>
 </section>
 </section>
@@ -707,7 +707,8 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="description-of-ohms-law">Description of Ohm’s Law</h2>
 <p>The current that flows through most subtances is directly proportional to the voltage <span class="math inline">\(V\)</span> applied to it. The German Physicist Georg Simon <strong>Ohm</strong> (1787-1854) was the first to demonstrate experimentally that the current in a metal wire is <strong>directly proportial to the voltage applied</strong>: <span class="math display">\[
 I\;\infty\;V
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 V\;=\;IR
 \]</span></p>
 <p>where <span class="math inline">\(V\)</span> is the voltage measured in volts across the object in question, I is the current measured through the object in amps, and <span class="math inline">\(R\)</span> is the resistance in units of ohms. For full information is <a href="https://phys.libretexts.org/Bookshelves/University_Physics/University_Physics_(OpenStax)/University_Physics_II_-_Thermodynamics_Electricity_and_Magnetism_(OpenStax)/09%3A_Current_and_Resistance/9.05%3A_Ohm's_Law">here</a></p>
@@ -764,7 +765,7 @@ V\;=\;IR
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Voltage (V)'</span>)</span>
 <span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Current (A)'</span>)</span>
 <span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'Error bar Ohm Law bothdimensions.svg'</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'Error bar Ohm Law both dimensions.svg'</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
 <span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -784,7 +785,8 @@ V\;=\;IR
 <section id="python-implementation-and-scikit-learn" class="level2">
 <h2 class="anchored" data-anchor-id="python-implementation-and-scikit-learn">Python implementation and Scikit-Learn</h2>
 <p>The Scikit-Learn version is implemented mainly upon NumPy, which is simple and easy to use, but has limited hyperparameter tuning options.</p>
-<p>To illustrate how kernel work in GPR, we will look at a simple dataset curated intentionaly. We will start by generating a synthetic dataset. The true generative process is defined. <span class="math display">\[
+<p>To illustrate how kernel work in GPR, we will look at a simple dataset curated intentionaly. We will start by generating a synthetic dataset. The true generative process is defined.</p>
+<p><span class="math display">\[
 f(x)\;=\;x\;sin(x)
 \]</span></p>
 </section>

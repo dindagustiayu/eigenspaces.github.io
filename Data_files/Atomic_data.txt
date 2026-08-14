@@ -1,0 +1,4 @@
+Elements	Atomic weight  (g/mol)	Atomic Radii (cm)	Volume cell (cm^3)
+Al	26,98	1,43E-08	6,62E-23
+Cu	63,55	1,28E-08	6,75E-23
+Pb	207,2	1,80E-08	1,32E-22
