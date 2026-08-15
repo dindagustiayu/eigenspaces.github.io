@@ -19,12 +19,17 @@ First, real vibrational motions involve "anharmonicity", e.g., Their potential d
 
 The harmonic oscillator is a reasonable approximation of this potential near the equilibrium geometry, but deviates substantially for $x$ far from the center of the well. Correspondingly, the vibrational levels of the Morse potential will deviate from those of the HO model. Note that the Morse potential levels grow closer together as energy increases.
 
+
 ## Limitations of the Harmonic Oscillator Model for Molecular Vibrations
+
 The harmonic oscillation is a great approximation of a molecular vibration, but has key limitations:
+
 - Due to equal spacing of energy, all transitions occur at the _same_ frequency (i.e., single line spectrum). However, experimentally, many lines are often observed (called overtones).
 - The harmonic oscillator does not predict bond dissociation, you cannot break it, no matter how much energy is introduced.
 
+
 # Morse Oscillator Breakdown
+
 The Morse oscillator, named after physicist [Philip M. Morse](https://www.nae.edu/28848/Dr-Philip-M-Morse) is a better approximation for the vibrational structure of the molecule than the harmonic oscillator because it explicitly includes
 
 The Morse oscillator is a model for a particle in a one-dimensional anharmonic potential energy surface with a dissociative limit at infinite displacement. It is commonly used for describing the spectroscopy of diatomic molecules and anharmonic vibrational dynamics, and most of its properties can be expressed through analytically expressions. The Morse potential is
@@ -42,6 +47,7 @@ The Morse oscillator Hamiltonian for a diatomic molecule of reduced mass _mR_ bo
 </p>
 
 and has the eigenvalues
+
 <p align='center'>
     $$E_n = \hbar \omega_0 \left[\left(n + \frac{1}{2} \right) - x_e \left(n + \frac{1}{2} \right)^2 \right] \quad n =0, \ 1, 2, \ 3, \ldots \tag{2}$$
 </p>
@@ -54,6 +60,7 @@ where
 - The frequency $\omega_0$ is equivalent to equating the harmonic for constant $\mathcal{K} = (\partial^2 V/ \partial x^2)_{x=0}$ with $m_R \omega_0^2$.
 
 The harmonic oscillator approximation is convenient to use for diatomic molecules with quantized vibrational energy levels given by the following equation:
+
 <p align='center'>
     $$E_n=v = \left ( v + \frac{1}{2} \right) \omega_e$$
 </p>
@@ -69,13 +76,16 @@ where $\omega_e$ is the anharmonic oscillator frequency, and $x_e$ is the _anhar
 While it may seem that the harmonic oscillator and the anharmonic oscillator are closely related, this is in fact not the case. The difference in the wavefunctions leads to a breakdown of selection rules, specifically, $\Delta n = \pm 1$ selection rule can not be applied, and higher order terms must be accounted in the energy calculations. 
 
 On the other note is that anharmonicity also changes the selection rules for IR transitions. For absorption of IR light, we can now have:
+
 <p align='center'>
     $$\Delta v = +1, \ +2, \ +3, + \ldots$$
 </p>
 
 where $\Delta n = +1$ are _fundamental transition_ and $\Delta n = +2, \ +3, + \ldots$ are called _overtones_, and can occur but are much weaker in intensity than the _fundamental_. Overtone transitions are not always observed, especially in larger molecules, because the transitions become weaker with increasing $Delta n$.
 
+
 ## Overtones
+
 Based on the harmonic oscillator approximation, the energy of the overtone transition would be $n$ times larger than the energy of the fundamental transition frequency, but the _anharmonic oscillator_ calculations show that the overtones are less than a multiple of the fundamental frequency. This is demonstrated with the vibration of the diatomic in the gas phase:
 
 <p align='center'>
@@ -96,6 +106,7 @@ Based on the harmonic oscillator approximation, the energy of the overtone trans
 
 We can see from Table 1, that the anharmonic frequencies correspond much better with the observed frequencies, especially as the vibrational levels increase.
 
+
 ## The Morse oscillator $Schr\ddot{o} dinger$ equation
 
 Solving the $Schr\ddot{o}dinger$ with the Morse oscillator is not trivial, but can be done analytically in terms of associated __Laguerre polynomials__.
@@ -112,7 +123,9 @@ where
 
 - $n = 0, \ 1, \ 2, \ 3, \ldots, \left[ \lambda - \frac{1}{2} \right]$
 
+
 ## Preliminaries
+
 `scipy.constants`: is the package provides the internationally agreed standard values and uncertainties for physical constants include a large number of algorithms for calculating functions that appear in science.
 
 <p align='center'>
@@ -130,13 +143,15 @@ where
     
 </div>
 
-
 The code below defines the class Morse representing a Morse oscillator, which can be used to generate depictions of the wavefunctions and energy levels as given in the example for $HCl$.
 
+
 ## E24.1 Inferring Morse Parameters from a vibrational spectrum
+
 The vibrational spectrum of the $HCl$ molecule shows a fundamental band at $2,885.9 \ cm^{-1}$ and the first overtone band at $5,668.0$. This information can be used to estimate the Morse parameters, $D_e$ and $\alpha$, and hence the good strength and maximum vibrational level.
 
 __Solution__:
+
 1. Observe bands to estimate the parameters $\omega_e$ and $\omega_e x_e$. The fundamental vibrational band, corresponding to the transition $v = 0 \rightarrow 1$, occurs at a wavenumber given by
    
 <p align='center'>
@@ -284,5 +299,6 @@ plt.hlines(Ev, xm, xp)
 ![Figure. Morse Oscillator Potential with Vibrational Levels of HCl](/quarto-workflows/images/Morse Oscillator Potential with Vibrational Levels of HCl.svg)
 
 # Conclusion
+
 - The Morse oscillator is a bridge of the gap between idealized theory and real molecular behavior.
 - Understanding vibrational spectroscopy, chemical bonding, and molecular dissociation is very important.

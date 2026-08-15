@@ -6,10 +6,13 @@ date: "2026-1-20"
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Particle-in-2D-Box/tree/main)
 
+
 # Particles in Multidimensions
+
 In this work, we will discuss some particularly straightforward examples, such as the particle in a two-dimensional box. The novel feature, which occurs in multidimensional quantum problems, is called "degeneracy" where different wave functions with different PDF's (probability density function / $\Psi^{2}$) can have exactly the same energy. 
 
 The wavefunction in one-dimensional (1D):
+
 <p align='center'>
     $\Psi n_{x},n_{y}=\Psi n_{x}(x)\Psi n_{y}(y)$
 </p>
@@ -17,11 +20,13 @@ The wavefunction in one-dimensional (1D):
 Ultimately, the source of degeneracy is symmetry in the potential. With energy symmetry, there is a conserved quantity which can be used to "label" the states. For rotationally symmetric potentials, the conserved quantities, which serve to label the quantum states are angular momenta. 
 
 The most generate case is the square, $L_{x} = L{y}$, for which clearly $E_{m, n} = E_{n, m}$. Note if the box were rectangular rather than square, then instead of having a length of $L$ on both sides, there would be two different lengths $L_{x}$ and $L_{y}$. The formulas for the energies and wavefunctions become only slightly more complicated:
+
 <p align="center">
     $\Psi n_{x},n_{y}(x, y) = \frac{2}{\sqrt{L_{x}L_{y}}} sin(\frac{n_{x}\pi x}{L_{x}})sin(\frac{n_{y}\pi y}{L_{y}})$
 </p>
 
 This Python script visualized the particle in two-dimensional (contour and surface plots). Where the state is defined by $L_{x}$ and $L_{y}$ = 1 and the quantum number $n_{x}$= 1, 2,... and $n_{y}=$1, 2,the countour maps for the time-dependent solution, with being the highest point. 
+
 
 ## The key arguments:
 
@@ -32,7 +37,7 @@ This Python script visualized the particle in two-dimensional (contour and surfa
 - `nx, ny`: Quantum numbers in x and y directions.
 - `ax.contourf`: to make a filled contour plot.
 
-```python
+```Python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -81,7 +86,7 @@ plt.show()
 ```
 ![Figure 1. Contour plots of the first four states of the particle in a two-dimensional square box](/quarto-workflows/images/particles2d/Contour particle 2D.svg)
 
-```python
+```Python
 import numpy as np
 import matplotlib.pyplot as plt
 

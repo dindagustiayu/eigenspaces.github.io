@@ -6,17 +6,24 @@ date: "2026-2-23"
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Uncertainty-and-The-Gravitational-Acceleration/blob/main/Uncertainties.py)
 
+
 # Uncertainty and The Gravitational Acceleration
 
+
 # Propagation of Uncertainty
+
 Propagation of Error (or Propagation of Uncertainty) is defined as the effect on a function by a variable's uncertainty. It is a calculus derived statistical calculation designed to combine uncertainties from multiple variables to provide an accurate measurement of uncertainty.
 
+
 ## Why we need to calculate error propagation
+
 It's common for errors when combining many uncertain values or using calculations that amplify small differences (like multipication, division, or exponentation). Consequently, the final result can be much less precise than the original measurement error values suggest.
 
 Understanding error propagation helps us avoid overconfidence in results and recognize when further precision in measurement is necessary.
 
+
 ## Formula for error propagation
+
 If the uncertainties (random errors) in the measured quantities, $p,\;q,\;r,...$ can be assumed to be _uncorrelated_, a common approach is to propagate their uncertainties into an uncertainty in the function $y=y(p,\;q,\;r,...)$ with the formula:
 
 <p align='center'>
@@ -26,12 +33,18 @@ If the uncertainties (random errors) in the measured quantities, $p,\;q,\;r,...$
 This is effectively the first non-zero term in a multivariate Taylor series expansion of the variances, $\sigma_{i}^2$, and is therefore only approximate: For highly non-linear functions $y$ it might be expected to give flawed results.
 
 This approach assumes that:
+
 - The input variables are independent of each other.
 - The errors are random and normally distributed.
 - The function $y$ is differentiable with respect to each quantities $(p,\; q,\; r,...)$
 
+
+
 ## Error propagation worked example
+
+
 ## P20.1 Case study: Random uncertainties
+
 Use the equation above to show that the uncorrelated random uncertainties, $\sigma p$, $\sigma q$ and $\sigma x$ in the paramters $p,\; q$ and $x$ propagate into an uncertainty in the following functions of $y$ as follows (the quantities $a,\; b$ and $c$ may be assumed to be precisely known):
 
 1. If you measure,
@@ -69,14 +82,18 @@ Use the equation above to show that the uncorrelated random uncertainties, $\sig
     $$\begin{align} y&=ae^{bx} \\ y&=abx^{bx} \\ &=\frac{\partial y}{\partial x}=by \\ \sigma_y&=\sqrt{\left (\frac{\partial y}{\partial x} \right)^2 \sigma_x^2} \\&=\sqrt{(by)^2 \sigma_x^2} \\&=|by|\sigma_x \end{align}$$
 </p>
 
+
 ## P20.2 Case study: The gravitational acceleration
+
 A novel way to measure the gravitational acceleration, $g$, involves an indirect measurement of the pressure inside a submerged, inverted test tube containing a small amount of water. The experimental set-up proposed by Quiroga et. al.
 
 Let the ambient pressure be $p_0$, and the length and cross-sectional area of the test tube be $l_0$ and A, respectively, so that it has a volume $V_0=Al_0$. Treating the $n$ moles of air inside it as an ideal gas at temperature $T$, we have $p_0 V_0=nRT$.
 
 When the tube is submerged to a distance $h$, water rises inside it, and the air it contains is compressed to a pressure $p_1$ and volume $V_1$, where $p_1 V_1=p_0 V_0$ if the temperature is constant. The new pressure is $p_1=p_0 + \rho g l_1$, where $\rho = 1 g\;cm^-1$ is the water density, $g$ is the gravitational acceleration (to be determined) and $l_1$ is the measured distance from the bulk water surface to the top of the water level in the test tube.
 
+
 The $V_1=A[l_0 - (h-l_1)]$, and so
+
 <p align='center'>
     $$p_1=\frac{l_0}{l_0 - (h - l_1)} p_0$$
 </p>
@@ -89,18 +106,20 @@ therefore,
 That is, if measurements of $l_1$ are made for different submersion depths, $h$, a plot of the left-hand side of this equation against $l_1$ should yield a straight line with gradient $\rho g$, from which $g$ can be deduced.
 
 Assuming that $\sigma_h$ and $\sigma l_1$ (the uncertainties in the measurements of $h$ and $l_1$, respectively) dominate and that they are connected, show that the uncertainty in the quantity,
+
 <p align='center'>
     $$y=p_1 - p_0 = \left [\frac{l_0}{l_0 - (h-l_1)} -1 \right] \; p_0=\rho g l_1$$
 </p>
 
 is
+
 <p align='center'>
     $$\sigma_y=\frac{l_0 p_0}{[l_0 - (h - l_1]^2} \sqrt{\sigma_h^2 + \sigma_{l_1}^2}$$
 </p>
 
 Use the following data to estimate $g$ from a linear least squares fit and the uncertainty in this estimate. Take an average value for $\sigma_y$, calculated using the above formula.
 
-These data were collected on a day with an ambient air pressure of $p_0=1037$ mbar and using a test tube of length 20 cm. Take $\sigma_h = \sigma_{l_0} = 1 mm$. These data are given in the file [h and L1.txt](/quarto-workflows)
+These data were collected on a day with an ambient air pressure of $p_0=1037$ mbar and using a test tube of length 20 cm. Take $\sigma_h = \sigma_{l_0} = 1 mm$. These data are given in the file [h and L1.txt](Data_files/uncertainty.txt)
 
 ```
     # Measured distance, h and L1, in cm
@@ -121,12 +140,17 @@ These data were collected on a day with an ambient air pressure of $p_0=1037$ mb
     95	     93.4
     
 ```
+
+
 ### Step 1: Calculate the uncertainties in the measurements of h and l1
+
 <p align='center'>
     $$\begin{align} y &= p_1 - p_0 = \left [\frac{l_0}{l_0 - (h -l_1)} \right] \; p_0 = \rho g l_1 \\ \frac{\partial y}{\partial h} &=\frac{l_0 p_0}{[l_0 - (h -l_1)]^2} \\ \frac{\partial y}{\partial l_1} &= - \frac{l_0 p_0}{[l_0 - (h-l_1)]^2} \\ \sigma_y&=\sqrt{\left (\frac{\partial y}{\partial h} \right)^2 \sigma_h^2\;+\; \left (\frac{\partial y}{\partial l_1} \right)^2 \sigma_{l_1^2}} \\ &= \sqrt{\frac{l_0^2 p_0^2}{[l_0 - (h-l_1)]^4} (\sigma_h^2 + \sigma_{l_1}^2) } \\ &=\frac{l_0 p_0}{[l_0 - (h-l_1)]^2} \sqrt{\sigma_h^2 + \sigma_{l_1}^2 } \end{align}$$
 </p>
 
+
 ### Step 2: Measured distance h and l1 in cm
+
 ```Python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -164,23 +188,30 @@ plot_data()
 
 ![Figure 1. Uncertainty in The gravitational acceleration](/quarto-workflows/images/Uncertainty in The gravitational acceleration.svg)
 
+
 ### Step 3: Measure a straight line fit, $y = a \pm bx$
+
 A straight line fit, $y = a \pm bx$ through these data provides an estimated value for g:
+
 <p align='left'>
     $$\hat{\beta}=\begin{pmatrix} a\\b\end{pmatrix}\;where\;a=\frac{S_y S_{xx} - S_{xy} S_x}{nS_{xx} - S^2_x}\;and\;b=\frac{nS_{xy} S_y S_x}{nS_{xx} - S^2_x},$$
 </p>
+
 where
+
 <p align='center'>
     $$S_x=\overset{n}{\underset{i=1}{\sum x_i}},\;S_y=\overset{n}{\underset{i=1}{\sum Y_i}},\;S_{xx}=\overset{n}{\underset{i=1}{\sum x_i^2}},\;S_{xy}=\overset{n}{\underset{i=1}{\sum x_iy_i}}.$$
 </p>
 
 The uncertainty in the fitted parameter b is,
+
 <p align='center'>
     $$\sigma_b = \sigma_y \sqrt{\frac{n}{nS_{xx} - S_x^2}}$$
 </p>
+
 and we can estimate the uncertainty in g:
 
-```python
+```Python
 # Fit data
 Sx, Sy, Sxx, Sxy = np.sum(x), np.sum(y), np.sum(x*x), np.sum(x*y)
 Delta = n * Sxx - Sx**2
@@ -194,6 +225,7 @@ print('g-estimated =', g_est)
 sigma_b = np.mean(sigma_y) * np.sqrt(n / Delta) /rho
 print('sigma-b=',sigma_b)
 ```
+
 ```
 a, b = 113.64118138687233 9633.702167054678
 g-estimated = 9.633702167054679

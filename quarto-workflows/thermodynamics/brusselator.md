@@ -26,17 +26,18 @@ It is well known that reaction and diffusion of chemical or biochemical species 
 
 Brusselator model is a famous model of chemical reactions with oscillations and a theoritical model for a type of auto-catalytic reaction. In particular the Brusselator model consists of four reactions involving six-components A, B, D, E, X, Y where the chemical reactions follow the scheme (Table 1.)
 
-Table 1. Mechanism of Brusselator
+__Table 1__. Mechanism of Brusselator
 
 | Brusselator Model | Description|
 | --- | --- |
-| $A \rightarrow X \quad (1)$ | Species A makes species X |
-| $B + X \rightarrow Y + D \quad (2)$ | Species X makes species Y. (Actication)|
-| $2X + Y \rightarrow 3X \quad (3) $| Species Y makes species X. (Activation) |
-| $X \rightarrow E \quad (4)$| Species X makes species E. (Inactivatio)|
+| $A \rightarrow X \tag{1}$ | Species A makes species X |
+| $B + X \rightarrow Y + D \tag{2}$ | Species X makes species Y. (Actication)|
+| $2X + Y \rightarrow 3X \tag{3}$| Species Y makes species X. (Activation) |
+| $X \rightarrow E \tag{4}$| Species X makes species E. (Inactivatio)|
 
 
 Adding these reactions one obtains
+
 $$ A +B + 4X + Y \rightarrow 4X + Y + D + E \tag{5}$$
 
 and hence $A +B \rightarrow D +E$, $X$ and $Y$ are catalysis (in particular, X is auto-catalytic and provides the nonlinearity). 
@@ -47,11 +48,16 @@ $$\begin{align} \frac{d[X]}{dt} &= k_1[A] - k_2[B][X] + k_3[X]^{2}[Y] -k_4[X] \t
 
 There are severl known examples of auto-catalysis which can be modeled by the Brusselator equations, such as ferrocyanide-iodate-sulphite reaction, chlorite-iodite-malonic acid reaction, arsenite-iodate reaction, some enzyme catalytic reactions and fungal mycelia growth.
 
+
 ## Preliminaries
+
 Scipy's `solve_ivp` function can be used to integrate the differential equations of the Oregonator model, given a set of initial conditions, which here we take to be $x=(0) \ y=(0) \ z =(0) \ = 1$.
 
+
 ## Exercise
+
 Obtain expression for the constants $p, \ q \ \mbox{and} \ r$ that scale the time variable and intermediate concentrations into the non-dimensional form: $x=p[X], \ y=q[Y]$ and $\tau = r t$. By solving the pair of differential equations, plot $x$ and $y$ as a function of $\tau$ using the initial conditions $(x_0, \ y_0) = (0, \ 0)$ for reactant concentrations(a) $(a, \ b) = (1, \ 0.7)$, (b) $(a, \ b) = (1, \ 1.8)$, and (c) $(a, \ b) = (1, \ 2.05)$. For each solution, also plot the phase space plot (the curve of $y$ againts $x$).
+
 
 ## Solution
 
@@ -140,6 +146,7 @@ fig.tight_layout()
 plt.savefig("brusselator.svg")
 plt.show()
 ```
+
 ![Figure. The Brusselator model for different reactant concentrations (a, b). Left column: time evolutiion of the scaled intermediate consentration $x(\tau)$ and $y(\tau)$. Right column: phase potraits ($y \ vs \ x$)](/quarto-workflows/images/brusselator.svg)
 
 - When b is small, the system settles down to a stable steady state (no oscillation).

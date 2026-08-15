@@ -15,7 +15,7 @@ The __steady-state pproximation__ is widely used in chemical kinetics to calcula
 2. In Physics
 The __steady-state approximation__ is used in physics problems, such as semiconductors and Quantum optics, used in rate equations for excited states.
 
-__The Pyhton Function Basics:__
+## The Python Function Basics:
 
 - `def`: defines a function
 - `return`: sends a result back from the function
@@ -27,14 +27,18 @@ __The Pyhton Function Basics:__
 - `except`: used in try/except blocks for error handling.
 
 Reference:
+
 - [Cornell Chemical Engineering Lecture 7](https://duncan.cbe.cornell.edu/cheme2200/KINETICSLECTURES/ChemE_2200_lecture_K7.pdf)
 
 
 ## P7.1 - Particle Accelerator
+
 An electric filed of strength _E_ will apply a force $F=qE$ onto a particle with electric charge _q_. In one dimension, with an initial velocity $v_{0}$, the particle's velocity and position will be given as 
+
 <p align='center'>
-   $$x(t)=v_{0}t + 0.5 \frac{qE}{m} t^{2}$$, and
+   $$x(t)=v_{0}t + 0.5 \frac{qE}{m} t^{2}$$ and
 </p>
+
 <p align='center'>
    $$v(t)=v_{0} + \frac{qE}{m}t$$
 </p>
@@ -47,7 +51,7 @@ b) Rewrite your program to take $v_{0}$ and _t_, as well as _q_ and _m_ from the
 
 Protons have mass $m\approx 1.67 \times 10^{-27}$ kg and electric charge $q\approx 1.6 \times 10^{-19}$ C. Neutrons have virtually the same mass as protons, and no electric charge. Check the position and velocity of these two particles with the same parameters as in exercise.
 
-```python
+```Python
 # a) electron in an electric field
 #parameters
 me = 9.1e-31 # mass e in kg
@@ -79,6 +83,7 @@ print(f'{'electrons':^{cw}} | {xe:^{cw}.3e} | {ve:^{cw}.3e}')
 print(f'{'protons':^{cw}} | {xp:^{cw}.3e} | {vp:^{cw}.3e}')
 print(f'{'neutrons':^{cw}} | {xn:^{cw}.2e} | {vn:^{cw}}')
 ```
+
 ```
         The Particles          |     The position particles     |   The velocity of particles   
 ------------------------------------------------------------------------------------------
@@ -86,7 +91,8 @@ print(f'{'neutrons':^{cw}} | {xn:^{cw}.2e} | {vn:^{cw}}')
            protons             |           2.156e+08            |           2.874e+07           
            neutrons            |            3.30e+03            |             220.0
 ```
-```python
+
+```Python
 # Create bar
 import numpy as np
 import matplotlib.pyplot as plt
@@ -119,8 +125,11 @@ plt.show()
 
 
 ## P7.2 -Capacitor discharge
+
 __Physical introduction__: A caoacitor is simply two metals plates set up parallel to each other. We can charge up each plate with positive and negative electic charges by connection them to a battery. If we remove the battery and connect the two plates together, the charges will flow from the negative plate to the positive plate, and the capacitor will discahrge. To avoid the electrical current becoming infinite, we connect a resistor between the plates. We now have an RC-circuit.
+
 The cahrge _Q_ of a capacitor that discharge in a RC-circuit, is given as.
+
 <p align='center'>
    $$Q(t) = CVe^{-t/RC}$$
 </p>
@@ -130,7 +139,8 @@ The following program calculates this discharge for _n_ = 1000 time-steps over a
 a) RC-circuit discharge program and vectorize with Python list and loop.
 
 b) RC-circuit discharge program  and vectorize it with NumPy
-```python
+
+```Python
 # a) Vectorize with Python list
 import numpy as np
 import matplotlib.pyplot as plt
@@ -164,7 +174,8 @@ plt.show()
 ```
 ![Figure 2. Capacitor Discharge (loop)](/quarto-workflows/images/ssa/Capacitor Discharge (loop).svg)
 
-```python
+
+```Python
 # b) Vectorize with NumPy
 t_max = 10
 # time factor
@@ -185,9 +196,11 @@ plt.show()
 
 
 ## P7.3 - Kinetic Friction Wooden Block
+
 In this exercise, you are supposed to create a program which finds out hoe far a wooden block with initial velocity $v_{0}$ m/s will slide across surfaces of different materials. The material of the surfaces will affect the frictional force acting on the wooden block.
 
 The position of the block can be expressed as such:
+
 <p align='center'>
    $$x(t)=v_{0}t - \frac{1}{2}\mu gt^{2}$$
 </p>
@@ -195,18 +208,20 @@ The position of the block can be expressed as such:
 where $\mu$ is a coefficient of friction and g = 9.81 $m/s^{2}$.
 
 One can find  by some calculations at which time _T_ the block will stop moving. The time _T_ is found to be
+
 <p align='center'>
    $$T=\frac{v_{0}}{\mu g}$$
 </p>
 
 Define a function which takes a list of different coefficients of friction as a parameter, calculates the position at time _T_, that is $x(T)$, and then stories the results in a list. The list of the calculated positions must then be returned by the function. Distance before stopping.
+
 <p align='center'>
    $$x(T)=\frac{v_{0}^{2}}{2 \mu g}$$
 </p>
 
 Let $v_{0}=5$ m/s and the list of coefficients of friction be [0.62, 0.3, 0.45, 0.2]. Call the function and write out every position along with corresponding coefficient of friction.
 
-```python
+```Python
 # Calculate the kinetic friction 
 g = 9.81 # gravitation in m/s^2
 
@@ -240,6 +255,7 @@ print('-' * cw * 3)
 for r in results:
     print(f'{r['miu']:^{cw}} | {r['T_s']:^{cw}.3f} | {r['x_T']:^{cw}.4f}')
 ```
+
 ```
     Friction coefficient     |     Stopping time T (s)      |      Distances x(T) (m)     
 ------------------------------------------------------------------------------------
@@ -248,7 +264,8 @@ for r in results:
             0.45             |            11.036            |           55.1813           
             0.2              |            4.905             |           24.5250
 ```
-```python
+
+```Python
 # Create plot
 T_list=[r['T_s'] for r in results]
 xT_list=[r['x_T'] for r in results]
@@ -270,13 +287,18 @@ plt.show()
 ![Figure 4. Kinetic Friction](/quarto-workflows/images/ssa/Kinetic Friction.svg)
 
 
+
 ## P7.4 - Heisenberg's uncertainty relation
+
 Heisenberg proved in 1972 that we cannot exactly know the velocity of an article and its position _at the same time_. This means that if we know precisely the velocity of a particle, we will not be able to have a precise mesurement of the position of the particle, and vice versa.
 This can be written mathematically as:
+
 <p align='center'>
    $$\Delta x \Delta p \geq \frac{h}{4\pi}$$
 </p>
+
 where,
+
 - $\Delta x$ is the uncertainty (a measurement of how precise a measurement is) of the position of the particle
 - $\Delta p$ is the uncertainty of the momentum of the particle.
 
@@ -284,9 +306,11 @@ we will use that Vi bruker at $h \approx 6.626 \times 10^{-34}$
 
 write the program and use the function `assert` to test the relation.
 Test your program where,
+
 <p align='center'>
    $$\Delta x_{1} = 3.10165 \times 10^{-9}$ m, \Delta p_{1} = 1.7 \times 10^{-26} kgm/s$$
 </p>
+
 <p align='center'>
    $$\Delta x_{2} = 5.2 \times 10^{-32} m, \Delta p_{2} = 1 \times 10^{-3} kgm/s$$.
 </p>
@@ -294,9 +318,11 @@ Test your program where,
 The uncertainties $\Delta x_{1}$ and $\Delta p_{1}$ does not violate the principle. However, the uncertainties $\Delta x_{2}$ and $\Delta p_{2}$ will violate with the principle (and your program should therefore display an error message for this case).
 
 reference: 
+
 - [Heisenberg Equation](https://www.bing.com/videos/riverview/relatedvideo?q=Heisenberg+Quantum+Mechanics&mid=0C1F3C05C6A16C1995FF0C1F3C05C6A16C1995FF&FORM=VIRE)
 
-```python
+
+```Python
 # parameters
 h = 6.626e-34 # Planc's constant
 
@@ -328,28 +354,32 @@ try:
 except AssertionError as e:
     print('Error:', e)
 ```
+
 ```
 delta_x * delta_P = 5.272805e-35 >= 5.272803264634492e-35
 Error: ('Violation detected delta_x * delta_P = 5.2e-35', ' is smaller than threshold 5.272803264634492e-35')
 ```
 
 ## P7.5 - Reflectivity
+
 Crown glass has a refractive index of 1.51 in the visible spectral region. Calculate the reflectivity of the air-glass interface and the transmission of a typical glass window.
 
 Solution:
 The medium of glass is transparent, so that $\alpha=0$. 
 
 1. The reflectivity
+
 <p align='center'>
    $$R=\frac{(n-1)^{2} + k^{2}}{(n+1)^{2} + k^{2}}$$
 </p>
 
 2. Transmission
+
 <p align='center'>
     $$T=\frac{1-R}{1+R}$$
 </p>
 
-```python
+```Python
 # The absorption coefficient of the medium transparent  = 0
 k = 0
 n = 1.51 # refractive index
@@ -363,6 +393,7 @@ T = (1 - R)**2
 print('Reflectivity per inter-face:', R)
 print('Transmission through the glass:', T)
 ```
+
 ```
 Reflectivity per interface: 0.04128505896731798
 Transmission through the glass: 0.919134338159299

@@ -29,10 +29,14 @@ Thermodynamics is concerned with the change in $U$ (and other functions) between
 
 since $U$ is a state function, the path between these states does not affect the value of $\Delta U$: We can choose the path that is easiest to calculate $\Delta U$ for, knowing that this quantity is the same for all paths.
 
+
 ## Internal Energy
+
 The internal energy, $U$, of a thermodynamic system is the total energy, potential and kinetic, contained within it. For systems in equilibrium, the internal state can be thought of as entirely defined by the temperature, $T$, volume, $V$, pressure, $p$, and composition, $N_{i}$, of the system. 
 
+
 ## Adiabatic process
+
 An adiabatic process is one in which no heat is gained or lost by the system. The first law of thermodynamics with Q=0 shows that all the change in internal energy is in the form of work done. 
 
 An important alternative way the gas can expand is through an adiabatic process: if the cylinder is insulated so it is thermally isolated from its surroundings, $q=0$ and as it does expansion wirk its internal energy must decrease, $\Delta U = w < 0$ and its temperature drops. The reverse process, adiabatic compression, is familiar from inflating a bicycle tyre: As the air in the pump is compressed (rapidly enough that there is little time for heat flow to the surroundings) its temperature rises.
@@ -51,10 +55,13 @@ This expression is usually presented in the quivalent form $T_{1} V_{1}^{c}=T_{2
 <p align='center'>
     $\frac{T_{2}}{V_{2}} = \frac{p_{2}V_{2}}{p_{1}V_{1}}$
 </p>
+
 which leads to 
+
 <p align='center'>
     $p_{1}V_{1}^{\gamma}=p_{2}V_{2}^{\gamma}$
 </p>
+
 for a (monoatomic) ideal gas. That is, $pV^{\gamma}$ is constant along an adiabat.
 
 
@@ -62,7 +69,7 @@ for a (monoatomic) ideal gas. That is, $pV^{\gamma}$ is constant along an adiaba
 
 Another important thermodynamic cycle, the Carnot cycle, is based on a sequence of reversible isothermal and adiabatic processes between four states, A, B, C, and D.
 
-   I. $A\rightarrow B$: _a reversible isothermal has expansion process_ from a state $(p_{A}, V_{A})$ to $(p_{B}, V_{B})$ at a high temperature, $T_{high}$. During this step, the system absorbs $q_{in}$, expands and does work surroundings.
+I. $A\rightarrow B$: _a reversible isothermal has expansion process_ from a state $(p_{A}, V_{A})$ to $(p_{B}, V_{B})$ at a high temperature, $T_{high}$. During this step, the system absorbs $q_{in}$, expands and does work surroundings.
 
 II. $B\rightarrow C$: _a reversible adiabatic gas expansion process_ from state $(p_{B}, V_{B})$ to $(p_{C}, V_{C})$ at a lower temperature, $T_{low}$. This time the system is placed in thermal contact with a reservoir which receives heat.
 
@@ -88,7 +95,7 @@ Demonstrate that the efficiency, defined as $\nu=w/q-hot$ where $w$ is the work 
 
 ### Step 1: Set up and use function
 
-```python
+```Python
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.constants import R
@@ -137,7 +144,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 
 ### Step 2: Volumes at each state
 
-```python
+```Python
     # Calculate the state variables at each stage of the cycle.
     V2 = V1 * r_i
     V3 = V2 * r_a
@@ -153,7 +160,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 
 ### Step 3: Pressures and Temperature
 
-```python
+```Python
     # State Pressure 
     p1, p2 = get_p(V1, T_high), get_p(V2, T_high)
     T_low = T_high * (V2/V3) ** (gamma - 1)
@@ -166,7 +173,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 
 ### Step 4: Plot the cycle
 
-```python
+```Python
 # Plot the isotherms and adiabatic for the cycle.
     plot_isotherm(V1, V2, T_high, c='r')
     plot_adiabatic(V2, V3, p2, V2, c='g', gamma=gamma)
@@ -181,7 +188,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 
 ### Step 5: Work and Heat calculation
 
-```python
+```Python
 # Step 1: isothermal expansion, V1 => v2 AT T_high
     w1 = - n * R * T_high * np.log(V2 / V1)
     q1 = -w1
@@ -209,7 +216,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 ### Step 6: Efficiency
 
 
-```python
+```Python
     # Total energy input through heating:
     q_in = q1
 
@@ -230,7 +237,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 
 ### Step 7: Plot Labels
 
-```python
+```Python
   # Label the states
     states = [(p1, V1), (p2, V2), (p3, V3), (p4, V4)]
     for i, (p, V) in enumerate(states):
@@ -240,7 +247,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 
 ### Step 8: Running the code
 
-```python
+```Python
 # Run
 
 plt.figure(figsize=(6, 5))

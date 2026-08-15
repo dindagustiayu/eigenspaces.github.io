@@ -10,7 +10,9 @@ date: "2026-2-4"
 # The moment inertia of a molecule
 
 ## Moment inertia
+
 The moment of inertia of a molecule may be defined as the product of mass of each atom and the square of its distance from the rotational axis through the centre of mass of the molecule. Mathematically, it may be written as,
+
 <p align='center'>
     $$I = \sum_{i}\;m_{i}r_{i}^{2}$$
 </p>
@@ -41,6 +43,7 @@ but the __off-diagonal__ elements (called "products of inertia") must also be in
 
 In the case of a rotation molecule, the index __i__ runs over the atoms in the molecule.
 Thus, a molecule has three principal moments of inertia, usually designated as $I_{A}, I_{B}, I_{C}$. The three principal moments of inertia may be taken as,
+
 - $I_{A}$ for rotation about the bond axis
 - $I_{B}$ for end-over-end rotation in the plane of the paper
 - $I_{C}$ for end-over-end rotation at right angles to the plane of the paper. 
@@ -50,8 +53,9 @@ Based on the values of $I_{A},\;I_{B}, and\;I_{C}$, molecules may be classified 
 - $I_{A}=0$ while $I_{B}=I_{C}$ : __Linear molecule__, examples: $CO_{2}$, HCl, etc.
   
 - $I_{B}=I_{C}\neq I_{A}$, while $I_{A}\neq 0$ : __Symmetric top molecule__.
-  - (a) if $I_{B}=I_{C} >  I_{A}$ : __Prolate symmetric top molecule__. eg. $CH_{3}Cl$.
-  - (b) if $I_{B}=I_{C} <  I_{A}$ : __Oblate symmetric top molecule__. eg. $BCl_{3}$.
+
+  - if $I_{B}=I_{C} >  I_{A}$ : __Prolate symmetric top molecule__. eg. $CH_{3}Cl$.
+  - if $I_{B}=I_{C} <  I_{A}$ : __Oblate symmetric top molecule__. eg. $BCl_{3}$.
 
 - $I_{A}=I_{B}=I_{C}$ : __Spherical top molecule__. eg. $CH_{4}$
 
@@ -67,9 +71,9 @@ Furthermore, in spectroscopy, it is conventional to define the _rotational const
 
 which are reported in wavenumber units ($cm^{-1}$).
 
-The file [H2O.dat](https://github.com/dindagustiayu/The-moment-of-Inertia-of-H2O/blob/main/H2O.dat) contains the positions of the atoms in the molecule H2O in XYZ format. Determine the rotational constants for this molecule and classify it as a spherical, oblate, prolate, or asymmetric top.
+The file [H2O.dat](Data_files/H2O.dat) contains the positions of the atoms in the molecule H2O in XYZ format. Determine the rotational constants for this molecule and classify it as a spherical, oblate, prolate, or asymmetric top.
 
-```python
+```
 # H2O
 # mass		x           	y           	z       
   15.999	0.00000000  	0.00000000  	0.11779		#O
@@ -79,7 +83,7 @@ The file [H2O.dat](https://github.com/dindagustiayu/The-moment-of-Inertia-of-H2O
 
 The four columns of the provided data file are mass (in Da) and (x, y, z) coordinates (in $\mathring{A}$).
 
-```python
+```Python
 import numpy as np
 from scipy.constants import u, h, c
 m, x, y, z = np.genfromtxt('H2O.dat', unpack=True)
@@ -92,7 +96,7 @@ To ensure the atomic coordinates are stored relative to the molecular center of 
 </p>
 
 
-```python
+```Python
 def translate_to_cofm(m, x, y, z):
     """ Translate the atom positions to be relative to the CofM."""
 
@@ -127,7 +131,7 @@ def get_inertia_matrix(m, x, y, z):
 
 This function is used in the code below to construct and diagonalize the moment of inertia matrix.
 
-```python
+```Python
 def get_principal_moi(I):
     """ Determine the principal moments of inertia."""
 
@@ -154,7 +158,12 @@ def get_rotational_constants(filename):
 A, B, C = get_rotational_constants('H2O.dat')
 print(f'H2O: A = {A} cm-1, B = {B} cm-1, C = {C} cm-1')
 ```
+
 ```
 H2O: A = 27.148870802103488 cm-1, B = 14.654245226373835 cm-1, C = 9.51714245613036 cm-1
 ```
-We have $A\neq B\neq C$, it must be that $I_{A} \neq I_{B} \neq I_{C}$, and $H_{2}O$ is __Asymmetric top__.These values are consistent with published spectroscopy data. [J. Chem. Phys. 24, 1139–1165 (1956)](https://doi.org/10.1063/1.1742731).
+We have $A\neq B\neq C$, it must be that $I_{A} \neq I_{B} \neq I_{C}$, and $H_{2}O$ is __Asymmetric top__. These values are consistent with published spectroscopy data. 
+
+## Reference:
+
+[J. Chem. Phys. 24, 1139–1165 (1956)](https://doi.org/10.1063/1.1742731).

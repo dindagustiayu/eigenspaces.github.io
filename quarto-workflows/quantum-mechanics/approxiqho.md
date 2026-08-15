@@ -6,6 +6,7 @@ date: "2026-4-7"
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Approximation-in-Quantum-Chemistry/blob/main/Variational%20Principle.py)
 
+
 # Approximation in Quantum Chemistry
 
 Why humans aren't very good at solving equations?. In the Alan Turing movie, we understand that computers are much better at solving complex problems than we are. In quantum physics, we start with examples like the harmonic oscillator or the hydrogen atom and then proudly demonstrate how clever we all are by solving the $Schr\ddot{o}dinger$ equation exactly. But there are very very few examples where we can write down the solution in closed form. For the vast majority of problems, the answer is something complicated that isn't captured by some simple mathematical formula. For these problems we need to develop different tools. 
@@ -17,10 +18,13 @@ There are many complex problems in quantum mechanics. Instead, we hope we can bu
 3. Hartree-fock approximation
 4. WKB methods (semi-classical)
 
+
 ## The Variational Method
+
 The _variational method_ provides a simple way to place an uppper bound on the ground state energy of any quantum system and is particularly useful when trying to demonstrate that bound state exist. In some chases, it can also be used to estimate higher energy levels too. 
 
 ### Application of the variational method to the particle in a box problem
+
 In the standard problem of a particle of mass $m$ with zero potential energy confined to a one-dimensional box extending from the origin to the point $x=L$, a Hamiltonian operator of the form
 
 <p align='center'>
@@ -28,37 +32,46 @@ In the standard problem of a particle of mass $m$ with zero potential energy con
 </p>
 
 First, consider a one-dimensional box at length $L$ lying along the $x$ axis with the center of the box at the origin so that the ends of the box  are at $x= -L / 2$ and at $x = L/ 2$. Exact wave functions for a particle of mass $m$ in such a box are given by
+
 <p align='center'>
-    $$\psi (x) = \left \{\begin{array} \ \sqrt{\frac{2}{L}} sin \left(\frac{\pi n x}{L} \right) \\ \sqrt{\frac{2}{L}} \ cos \left(\frac{\pi n x}{L} \right) \end{array} \right \}$$ 
+    $$\psi (x) = \left \{\begin{array} \ \sqrt{\frac{2}{L}} \sin \left(\frac{\pi n x}{L} \right) \\ \sqrt{\frac{2}{L}} \ \cos \left(\frac{\pi n x}{L} \right) \end{array}$$ 
 </p>
 
 with corresponding energies of 
+
 <p align='center'>
     $$E_n = \frac{h^2 n^2}{8m L^2}$$
 </p>
 
+
 ### P8.4.4 Exercise
+
 Consider a one-dimensional quantum mechanical particle in a box $(-1 \leq x \leq 1)$ described by the $Schr \ddot{o} dinger$ equation:
+
 <p align='center'>
-    $$-\frac{d^2 \psi}{dx^2} = E \psi$$
+    $$\frac{d^2 \psi}{dx^2} = E \psi$$
 </p>
 
 in energy units for which $\hbar^2 / (2m) = 1$ with $m$ the mass of the particle. The exact solution for the ground state of this system is given by
+
 <p align='center'>
     $$\psi = cos \left(\frac{\pi x}{2} \right), \quad E = \frac{\pi^2}{4}$$
 </p>
 
 An approximate solution may be arrived at using the _variational principle_ by minimizing the expectation value of the energy of a trial wavefunction,
+
 <p align='center'>
     $$\psi_{trial} = \sum_{n=0}^{N} a_n \phi_n (x)$$
 </p>
 
 with respect to the coefficients $a_n$. Taking the basis functions to have the following symmetrized polynomial form,
+
 <p align='center'>
     $$\phi_n = (1-x)^{N - n + 1} (x + 1)^{n + 1}$$
 </p>
 
 use `scipy.optimize.minimize` and `scipy.integrate.quad` to find the optimum value of the expectation value (Rayleigh-Ritz ratio):
+
 <p align='center'>
     $$\mathcal{E} = \frac{\langle \psi_{trial} |\hat{H}| \psi_{trial}}{\langle \psi_{trial} | \psi_{trial} \rangle} \rangle = \frac{\int_{-1}^{1} \psi_{trial} \frac{d^2}{dx^2} \psi_{trial} \ dx}{\int_{-1}^{1} \psi_{trial} \psi_{trial} \ dx}$$
 </p>
@@ -160,6 +173,7 @@ m <E> / Eh error
 5.0000000 1.2337025 -999998.766 ppm
 6.0000000 1.2337013 -999998.766 ppm
 ```
+
 All the approximation wavefunctions apart from the quadratic one, overlap with the true ground state wavefunction, $\psi$. It might be better to plot the _difference_ between the approximation.
 
 ```Python
@@ -201,17 +215,23 @@ plt.show()
 
 The figure shows a comparison of the error to the ground state energy on the particle-in-a-box system using a polynomial function with an increasing number of terms.
 
+
 ### P22.2 Exercise
+
 The one-dimensional quartic oscillator is one characterized by a potential energy proportional to the fourth power of the displacement. Taking the Hamiltonian for a quantum mechanical quartic oscillator to be
+
 <p align='center'>
     $$\hat{H} = -\frac{\hbar^2}{2 \mu} \ \frac{d^2}{dx^2} + \frac{1}{2} kx^4$$
 </p>
 
 minimize the expectation energy, $\langle E \rangle$, of the trial wavefunction $\psi = exp(-\alpha x^2 / 2)$ with respectto its parameters,
+
 - (a) numerically, using `scipy.optimize.minimize` or `scipy.optimize.minimize_scalar`, $\alpha$ 
 - (b) analytically by differentiation of $\langle E \rangle$ with respect to $\alpha$.
 
+
 ### Solution
+
 We need the seconde derivative of the wavefunction:
 1. The first derivative
 
@@ -265,6 +285,7 @@ def rayleigh_ritz(alpha):
 # Final approximation
 minimize_scalar(rayleigh_ritz, bracket=(1, 1.5, 2))
 ```
+
 ```
  message: 
           Optimization terminated successfully;

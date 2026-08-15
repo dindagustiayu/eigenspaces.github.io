@@ -5,7 +5,8 @@ date: "2026-8-7"
 
 This section of the website contains data needed to solve the problems. If you want to download the data, then consult this list:
 
-- [Atomic data](Data_files/Atomic_data.txt)
+- [atomic_data.txt](Data_files/Atomic_data.txt)
+- [uncertainty.txt](Data_files/uncertainty.txt)
 - [H2O.dat](Data_files/H2O.dat)
 - [pepsin.txt](Data_files/pepsin.txt)
-- [data with errors.txt](Data_files/data_with_errors.txt)
+- [data_with_errors.txt](Data_files/data_with_errors.txt)
