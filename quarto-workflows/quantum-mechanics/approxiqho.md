@@ -34,7 +34,7 @@ In the standard problem of a particle of mass $m$ with zero potential energy con
 First, consider a one-dimensional box at length $L$ lying along the $x$ axis with the center of the box at the origin so that the ends of the box  are at $x= -L / 2$ and at $x = L/ 2$. Exact wave functions for a particle of mass $m$ in such a box are given by
 
 <p align='center'>
-    $$\psi (x) = \left \{\begin{array} \ \sqrt{\frac{2}{L}} \sin \left(\frac{\pi n x}{L} \right) \\ \sqrt{\frac{2}{L}} \ \cos \left(\frac{\pi n x}{L} \right) \end{array}$$ 
+    $$\psi (x) = \left \{\begin{array} \ \sqrt{\frac{2}{L}} \sin \left(\frac{\pi n x}{L} \right) \\ \sqrt{\frac{2}{L}} \ \cos \left(\frac{\pi n x}{L} \end{array} \nonumber$$ 
 </p>
 
 with corresponding energies of 
@@ -70,7 +70,7 @@ with respect to the coefficients $a_n$. Taking the basis functions to have the f
     $$\phi_n = (1-x)^{N - n + 1} (x + 1)^{n + 1}$$
 </p>
 
-use `scipy.optimize.minimize` and `scipy.integrate.quad` to find the optimum value of the expectation value (Rayleigh-Ritz ratio):
+use ``scipy.optimize.minimize`` and ``scipy.integrate.quad`` to find the optimum value of the expectation value (Rayleigh-Ritz ratio):
 
 <p align='center'>
     $$\mathcal{E} = \frac{\langle \psi_{trial} |\hat{H}| \psi_{trial}}{\langle \psi_{trial} | \psi_{trial} \rangle} \rangle = \frac{\int_{-1}^{1} \psi_{trial} \frac{d^2}{dx^2} \psi_{trial} \ dx}{\int_{-1}^{1} \psi_{trial} \psi_{trial} \ dx}$$

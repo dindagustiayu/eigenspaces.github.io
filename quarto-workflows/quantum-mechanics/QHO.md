@@ -3,7 +3,7 @@ date: "2026-3-2"
 ---
 
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Quantum-Harmonic-Oscillator/blob/main/Integral%20QHO.py)
+[![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Quantum-Harmonic-Oscillator/blob/main/Integral%20QHO.py)
 
 # Quantum Harmonic Oscillator (QHO)
 
@@ -132,7 +132,9 @@ The probability density of the oscillator's position is given by $P_{0} (x) = | 
 
 The wavefunction is symmetric about $x=0$, so the probability of tunneling is
 
-$$ \begin{align} P(x < -\alpha) + P(x > \alpha) &= 2P(x > \alpha) = 2 \sqrt{\frac{\alpha}{\pi}} \int_{\alpha^{-1/2}}^{\infty} exp(-\alpha x^{2}) \ dx \\ &= \frac{2}{\sqrt{\pi}} \int_{1}^{\infty} e^{-y^{2}} \ dy \end{align}$$
+<div align='center'>
+    $$\begin{align} P(|x| \geq \frac{1}{\sqrt{\alpha}}) &= 2P(x \alpha) = 2 \sqrt{\frac{\alpha}{\pi}} \int_{\alpha^{-1/2}}^{\infty} \exp(- \alpha x^{2}) \ dx \\ &= \frac{2}{\sqrt{\pi}} \int_{1}^{\infty} e^{-y^{2}} \ dy \end{align}$$
+</div>
 
 ```Python
 I, err = quad(func, 1, np.inf)
@@ -151,7 +153,7 @@ Ptunneling: 0.1572992070502851
 
 The particle in a box is the simplest problem in element quantum mechanics, and as such is useful in more places than one can easily enumerate. For instance, the molecular orbital theory is explained easily in terms os particle in a box wavefunctions, easier tha using standard atomic orbitals.
 
-Extending the (time-independent) $Schr\ddot{o}inger$ equation for a one-dimensional system,
+Extending the (time-independent) $Schr\ddot{o}dinger$ equation for a one-dimensional system,
 
 <p align='center'>
     $$ \frac{\hbar^2}{2m} \ \frac{d^2 \psi (x)}{dx^2} + V(x)\psi (x) = E \psi (x)$$
@@ -165,8 +167,7 @@ to a two dimensional system is:
 
 It can be simplified for the particle in a 2D box since we jnow that $V(x, \ y)=0$ within the box and $V(x, \ y)=\infty$ outside the box,
 
-$$  V(x, \ y) = \left \{ \begin{array} \\ 0  &  0 \leq x \leq a \ and \ 0 \leq y \leq b \\ \infty &  x < 0 \ and \ x > a \\ \infty & y<0 \ and \ y>b   \end{array} \right \}$$
-
+$$ V(x, \ y) = \left \{\begin{array} 0 & 0 \leq x \leq a \ \mbox{and} \ 0 \leq y \leq b \\ \infty & x< 0 \mbox{and} \ x> a \\ \infty & y< 0 \mbox{and} \ y> b \end{array} \nonumber$$
 
 So the wavefunctions becomes:
 
@@ -230,7 +231,7 @@ This Python script to illustrate the two-dimensional particle in a rectangular b
 Substituting the limits of integration into formula, we have
 
 <p align='center'>
-    $$\begin{align} P(x \in [0, \ 1.5] \mbox{~and~} \ y \in [0, \ 2.5] &= \left [\int_0^{1.5} \psi_2^2(x) \ dx \right] \left[\int_0^{2.5} \psi_1^2(y) \ dy \right] \\ &= \left [\frac{2}{L_x} \int_0^{1.5} \sin^2 \left(\frac{ 2 \pi x}{L_x} \right) \ dx \right] <br> \left[\frac{2}{L_y} \int_0^{2.5} sin^2 \left(\frac{\pi y}{L_y} \right) \ dy \right] \\ &= \left[\frac{2}{1.5} \left( 0.75 \frac{1.5}{8 \pi} \sin \left(\frac{6 \pi}{1.5} \right) \right) \right] <br>  \left[\frac{2}{2.5} \left( 1.25 \frac{2.5}{4 \pi} \sin \left(\frac{5 \pi}{2.5} \right) \right) \right]\end{align}$$
+    $$\begin{align} P(x \in [0, \ 1.5] \mbox{~and~} \ y \in [0, \ 2.5] &= \left [\int_0^{1.5} \psi_2^2(x) \ dx \right] \left[\int_0^{2.5} \psi_1^2(y) \ dy \right] \\ &= \left [\frac{2}{L_x} \int_0^{1.5} \sin^2 \left(\frac{ 2 \pi x}{L_x} \right) \ dx \right] \\ \left[\frac{2}{L_y} \int_0^{2.5} sin^2 \left(\frac{\pi y}{L_y} \right) \ dy \right] \\ &= \left[\frac{2}{1.5} \left( 0.75 \frac{1.5}{8 \pi} \sin \left(\frac{6 \pi}{1.5} \right) \right) \right] \\  \left[\frac{2}{2.5} \left( 1.25 \frac{2.5}{4 \pi} \sin \left(\frac{5 \pi}{2.5} \right) \right) \right]\end{align}$$
 </p>
 
 ```Python
