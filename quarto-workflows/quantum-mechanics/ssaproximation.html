@@ -589,6 +589,7 @@ window.Quarto = {
   <ul>
   <li><a href="#steady-state-approximation" id="toc-steady-state-approximation" class="nav-link active" data-scroll-target="#steady-state-approximation">Steady State Approximation</a>
   <ul class="collapse">
+  <li><a href="#the-python-function-basics" id="toc-the-python-function-basics" class="nav-link" data-scroll-target="#the-python-function-basics">The Python Function Basics:</a></li>
   <li><a href="#p7.1---particle-accelerator" id="toc-p7.1---particle-accelerator" class="nav-link" data-scroll-target="#p7.1---particle-accelerator">P7.1 - Particle Accelerator</a></li>
   <li><a href="#p7.2--capacitor-discharge" id="toc-p7.2--capacitor-discharge" class="nav-link" data-scroll-target="#p7.2--capacitor-discharge">P7.2 -Capacitor discharge</a></li>
   <li><a href="#p7.3---kinetic-friction-wooden-block" id="toc-p7.3---kinetic-friction-wooden-block" class="nav-link" data-scroll-target="#p7.3---kinetic-friction-wooden-block">P7.3 - Kinetic Friction Wooden Block</a></li>
@@ -633,7 +634,8 @@ window.Quarto = {
 <li><p>In chemistry The <strong>steady-state pproximation</strong> is widely used in chemical kinetics to calculations and help determine the overal reactions rate without considering the detailed time-dependent changes in intermediates concentrations.</p></li>
 <li><p>In Physics The <strong>steady-state approximation</strong> is used in physics problems, such as semiconductors and Quantum optics, used in rate equations for excited states.</p></li>
 </ol>
-<p><strong>The Pyhton Function Basics:</strong></p>
+<section id="the-python-function-basics" class="level2">
+<h2 class="anchored" data-anchor-id="the-python-function-basics">The Python Function Basics:</h2>
 <ul>
 <li><code>def</code>: defines a function</li>
 <li><code>return</code>: sends a result back from the function</li>
@@ -644,12 +646,16 @@ window.Quarto = {
 <li><code>assert</code>: used for debugging</li>
 <li><code>except</code>: used in try/except blocks for error handling.</li>
 </ul>
-<p>Reference: - <a href="https://duncan.cbe.cornell.edu/cheme2200/KINETICSLECTURES/ChemE_2200_lecture_K7.pdf">Cornell Chemical Engineering Lecture 7</a></p>
+<p>Reference:</p>
+<ul>
+<li><a href="https://duncan.cbe.cornell.edu/cheme2200/KINETICSLECTURES/ChemE_2200_lecture_K7.pdf">Cornell Chemical Engineering Lecture 7</a></li>
+</ul>
+</section>
 <section id="p7.1---particle-accelerator" class="level2">
 <h2 class="anchored" data-anchor-id="p7.1---particle-accelerator">P7.1 - Particle Accelerator</h2>
-An electric filed of strength <em>E</em> will apply a force <span class="math inline">\(F=qE\)</span> onto a particle with electric charge <em>q</em>. In one dimension, with an initial velocity <span class="math inline">\(v_{0}\)</span>, the particle’s velocity and position will be given as
+<p>An electric filed of strength <em>E</em> will apply a force <span class="math inline">\(F=qE\)</span> onto a particle with electric charge <em>q</em>. In one dimension, with an initial velocity <span class="math inline">\(v_{0}\)</span>, the particle’s velocity and position will be given as</p>
 <p align="center">
-<span class="math display">\[x(t)=v_{0}t + 0.5 \frac{qE}{m} t^{2}\]</span>, and
+<span class="math display">\[x(t)=v_{0}t + 0.5 \frac{qE}{m} t^{2}\]</span> and
 </p>
 <p align="center">
 <span class="math display">\[v(t)=v_{0} + \frac{qE}{m}t\]</span>
@@ -730,7 +736,8 @@ An electric filed of strength <em>E</em> will apply a force <span class="math in
 </section>
 <section id="p7.2--capacitor-discharge" class="level2">
 <h2 class="anchored" data-anchor-id="p7.2--capacitor-discharge">P7.2 -Capacitor discharge</h2>
-<strong>Physical introduction</strong>: A caoacitor is simply two metals plates set up parallel to each other. We can charge up each plate with positive and negative electic charges by connection them to a battery. If we remove the battery and connect the two plates together, the charges will flow from the negative plate to the positive plate, and the capacitor will discahrge. To avoid the electrical current becoming infinite, we connect a resistor between the plates. We now have an RC-circuit. The cahrge <em>Q</em> of a capacitor that discharge in a RC-circuit, is given as.
+<p><strong>Physical introduction</strong>: A caoacitor is simply two metals plates set up parallel to each other. We can charge up each plate with positive and negative electic charges by connection them to a battery. If we remove the battery and connect the two plates together, the charges will flow from the negative plate to the positive plate, and the capacitor will discahrge. To avoid the electrical current becoming infinite, we connect a resistor between the plates. We now have an RC-circuit.</p>
+<p>The cahrge <em>Q</em> of a capacitor that discharge in a RC-circuit, is given as.</p>
 <p align="center">
 <span class="math display">\[Q(t) = CVe^{-t/RC}\]</span>
 </p>
@@ -800,16 +807,16 @@ An electric filed of strength <em>E</em> will apply a force <span class="math in
 <section id="p7.3---kinetic-friction-wooden-block" class="level2">
 <h2 class="anchored" data-anchor-id="p7.3---kinetic-friction-wooden-block">P7.3 - Kinetic Friction Wooden Block</h2>
 <p>In this exercise, you are supposed to create a program which finds out hoe far a wooden block with initial velocity <span class="math inline">\(v_{0}\)</span> m/s will slide across surfaces of different materials. The material of the surfaces will affect the frictional force acting on the wooden block.</p>
-The position of the block can be expressed as such:
+<p>The position of the block can be expressed as such:</p>
 <p align="center">
 <span class="math display">\[x(t)=v_{0}t - \frac{1}{2}\mu gt^{2}\]</span>
 </p>
 <p>where <span class="math inline">\(\mu\)</span> is a coefficient of friction and g = 9.81 <span class="math inline">\(m/s^{2}\)</span>.</p>
-One can find by some calculations at which time <em>T</em> the block will stop moving. The time <em>T</em> is found to be
+<p>One can find by some calculations at which time <em>T</em> the block will stop moving. The time <em>T</em> is found to be</p>
 <p align="center">
 <span class="math display">\[T=\frac{v_{0}}{\mu g}\]</span>
 </p>
-Define a function which takes a list of different coefficients of friction as a parameter, calculates the position at time <em>T</em>, that is <span class="math inline">\(x(T)\)</span>, and then stories the results in a list. The list of the calculated positions must then be returned by the function. Distance before stopping.
+<p>Define a function which takes a list of different coefficients of friction as a parameter, calculates the position at time <em>T</em>, that is <span class="math inline">\(x(T)\)</span>, and then stories the results in a list. The list of the calculated positions must then be returned by the function. Distance before stopping.</p>
 <p align="center">
 <span class="math display">\[x(T)=\frac{v_{0}^{2}}{2 \mu g}\]</span>
 </p>
@@ -878,13 +885,17 @@ Define a function which takes a list of different coefficients of friction as a 
 </section>
 <section id="p7.4---heisenbergs-uncertainty-relation" class="level2">
 <h2 class="anchored" data-anchor-id="p7.4---heisenbergs-uncertainty-relation">P7.4 - Heisenberg’s uncertainty relation</h2>
-Heisenberg proved in 1972 that we cannot exactly know the velocity of an article and its position <em>at the same time</em>. This means that if we know precisely the velocity of a particle, we will not be able to have a precise mesurement of the position of the particle, and vice versa. This can be written mathematically as:
+<p>Heisenberg proved in 1972 that we cannot exactly know the velocity of an article and its position <em>at the same time</em>. This means that if we know precisely the velocity of a particle, we will not be able to have a precise mesurement of the position of the particle, and vice versa. This can be written mathematically as:</p>
 <p align="center">
 <span class="math display">\[\Delta x \Delta p \geq \frac{h}{4\pi}\]</span>
 </p>
-<p>where, - <span class="math inline">\(\Delta x\)</span> is the uncertainty (a measurement of how precise a measurement is) of the position of the particle - <span class="math inline">\(\Delta p\)</span> is the uncertainty of the momentum of the particle.</p>
+<p>where,</p>
+<ul>
+<li><span class="math inline">\(\Delta x\)</span> is the uncertainty (a measurement of how precise a measurement is) of the position of the particle</li>
+<li><span class="math inline">\(\Delta p\)</span> is the uncertainty of the momentum of the particle.</li>
+</ul>
 <p>we will use that Vi bruker at <span class="math inline">\(h \approx 6.626 \times 10^{-34}\)</span></p>
-write the program and use the function <code>assert</code> to test the relation. Test your program where,
+<p>write the program and use the function <code>assert</code> to test the relation. Test your program where,</p>
 <p align="center">
 <span class="math display">\[\Delta x_{1} = 3.10165 \times 10^{-9}$ m, \Delta p_{1} = 1.7 \times 10^{-26} kgm/s\]</span>
 </p>
@@ -892,7 +903,10 @@ write the program and use the function <code>assert</code> to test the relation.
 <span class="math display">\[\Delta x_{2} = 5.2 \times 10^{-32} m, \Delta p_{2} = 1 \times 10^{-3} kgm/s\]</span>.
 </p>
 <p>The uncertainties <span class="math inline">\(\Delta x_{1}\)</span> and <span class="math inline">\(\Delta p_{1}\)</span> does not violate the principle. However, the uncertainties <span class="math inline">\(\Delta x_{2}\)</span> and <span class="math inline">\(\Delta p_{2}\)</span> will violate with the principle (and your program should therefore display an error message for this case).</p>
-<p>reference: - <a href="https://www.bing.com/videos/riverview/relatedvideo?q=Heisenberg+Quantum+Mechanics&amp;mid=0C1F3C05C6A16C1995FF0C1F3C05C6A16C1995FF&amp;FORM=VIRE">Heisenberg Equation</a></p>
+<p>reference:</p>
+<ul>
+<li><a href="https://www.bing.com/videos/riverview/relatedvideo?q=Heisenberg+Quantum+Mechanics&amp;mid=0C1F3C05C6A16C1995FF0C1F3C05C6A16C1995FF&amp;FORM=VIRE">Heisenberg Equation</a></li>
+</ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># parameters</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="fl">6.626e-34</span> <span class="co"># Planc's constant</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -931,15 +945,17 @@ Error: ('Violation detected delta_x * delta_P = 5.2e-35', ' is smaller than thre
 <p>Crown glass has a refractive index of 1.51 in the visible spectral region. Calculate the reflectivity of the air-glass interface and the transmission of a typical glass window.</p>
 <p>Solution: The medium of glass is transparent, so that <span class="math inline">\(\alpha=0\)</span>.</p>
 <ol type="1">
-<li>The reflectivity
+<li>The reflectivity</li>
+</ol>
 <p align="center">
 <span class="math display">\[R=\frac{(n-1)^{2} + k^{2}}{(n+1)^{2} + k^{2}}\]</span>
-</p></li>
-<li>Transmission
+</p>
+<ol start="2" type="1">
+<li>Transmission</li>
+</ol>
 <p align="center">
 <span class="math display">\[T=\frac{1-R}{1+R}\]</span>
-</p></li>
-</ol>
+</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The absorption coefficient of the medium transparent  = 0</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="fl">1.51</span> <span class="co"># refractive index</span></span>

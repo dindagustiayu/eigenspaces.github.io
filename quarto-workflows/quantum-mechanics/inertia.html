@@ -590,6 +590,7 @@ window.Quarto = {
   <li><a href="#the-moment-inertia-of-a-molecule" id="toc-the-moment-inertia-of-a-molecule" class="nav-link active" data-scroll-target="#the-moment-inertia-of-a-molecule">The moment inertia of a molecule</a>
   <ul class="collapse">
   <li><a href="#moment-inertia" id="toc-moment-inertia" class="nav-link" data-scroll-target="#moment-inertia">Moment inertia</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference:</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/inertia.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -627,7 +628,7 @@ window.Quarto = {
 <h1>The moment inertia of a molecule</h1>
 <section id="moment-inertia" class="level2">
 <h2 class="anchored" data-anchor-id="moment-inertia">Moment inertia</h2>
-The moment of inertia of a molecule may be defined as the product of mass of each atom and the square of its distance from the rotational axis through the centre of mass of the molecule. Mathematically, it may be written as,
+<p>The moment of inertia of a molecule may be defined as the product of mass of each atom and the square of its distance from the rotational axis through the centre of mass of the molecule. Mathematically, it may be written as,</p>
 <p align="center">
 <span class="math display">\[I = \sum_{i}\;m_{i}r_{i}^{2}\]</span>
 </p>
@@ -644,18 +645,19 @@ The moment of inertia of a molecule may be defined as the product of mass of eac
 <p align="center">
 <span class="math display">\[I_{xy}= I_{yx} = -\sum_{i}m_{i}x_{i}y_{i},\]</span> <span class="math display">\[I_{xz}= I_{zx} = -\sum_{i}m_{i}x_{i}z_{i},\]</span> <span class="math display">\[I_{yz}= I_{zy} = -\sum_{i}m_{i}y_{i}z_{i}.\]</span>
 </p>
-<p>In the case of a rotation molecule, the index <strong>i</strong> runs over the atoms in the molecule. Thus, a molecule has three principal moments of inertia, usually designated as <span class="math inline">\(I_{A}, I_{B}, I_{C}\)</span>. The three principal moments of inertia may be taken as, - <span class="math inline">\(I_{A}\)</span> for rotation about the bond axis - <span class="math inline">\(I_{B}\)</span> for end-over-end rotation in the plane of the paper - <span class="math inline">\(I_{C}\)</span> for end-over-end rotation at right angles to the plane of the paper.</p>
+<p>In the case of a rotation molecule, the index <strong>i</strong> runs over the atoms in the molecule. Thus, a molecule has three principal moments of inertia, usually designated as <span class="math inline">\(I_{A}, I_{B}, I_{C}\)</span>. The three principal moments of inertia may be taken as,</p>
+<ul>
+<li><span class="math inline">\(I_{A}\)</span> for rotation about the bond axis</li>
+<li><span class="math inline">\(I_{B}\)</span> for end-over-end rotation in the plane of the paper</li>
+<li><span class="math inline">\(I_{C}\)</span> for end-over-end rotation at right angles to the plane of the paper.</li>
+</ul>
 <p>Based on the values of <span class="math inline">\(I_{A},\;I_{B}, and\;I_{C}\)</span>, molecules may be classified into several group as:</p>
 <ul>
 <li><p><span class="math inline">\(I_{A}=0\)</span> while <span class="math inline">\(I_{B}=I_{C}\)</span> : <strong>Linear molecule</strong>, examples: <span class="math inline">\(CO_{2}\)</span>, HCl, etc.</p></li>
 <li><p><span class="math inline">\(I_{B}=I_{C}\neq I_{A}\)</span>, while <span class="math inline">\(I_{A}\neq 0\)</span> : <strong>Symmetric top molecule</strong>.</p>
 <ul>
-<li><ol type="a">
 <li>if <span class="math inline">\(I_{B}=I_{C} &gt;  I_{A}\)</span> : <strong>Prolate symmetric top molecule</strong>. eg. <span class="math inline">\(CH_{3}Cl\)</span>.</li>
-</ol></li>
-<li><ol start="2" type="a">
 <li>if <span class="math inline">\(I_{B}=I_{C} &lt;  I_{A}\)</span> : <strong>Oblate symmetric top molecule</strong>. eg. <span class="math inline">\(BCl_{3}\)</span>.</li>
-</ol></li>
 </ul></li>
 <li><p><span class="math inline">\(I_{A}=I_{B}=I_{C}\)</span> : <strong>Spherical top molecule</strong>. eg. <span class="math inline">\(CH_{4}\)</span></p></li>
 <li><p><span class="math inline">\(I_{A}\neq I_{B}\neq I_{C}\)</span> : <strong>Asymmetric top molecule</strong>.<span class="math inline">\(CHCl\)</span>.</p></li>
@@ -665,12 +667,12 @@ The moment of inertia of a molecule may be defined as the product of mass of eac
 <span class="math display">\[A=\frac{h}{8\pi^{2}cI_{A}},\]</span> <span class="math display">\[A=\frac{h}{8\pi^{2}cI_{B}},\]</span> <span class="math display">\[A=\frac{h}{8\pi^{2}cI_{C}},\]</span>
 </p>
 <p>which are reported in wavenumber units (<span class="math inline">\(cm^{-1}\)</span>).</p>
-<p>The file <a href="https://github.com/dindagustiayu/The-moment-of-Inertia-of-H2O/blob/main/H2O.dat">H2O.dat</a> contains the positions of the atoms in the molecule H2O in XYZ format. Determine the rotational constants for this molecule and classify it as a spherical, oblate, prolate, or asymmetric top.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># H2O</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mass      x               y               z       </span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">15.999</span>    <span class="fl">0.00000000</span>      <span class="fl">0.00000000</span>      <span class="fl">0.11779</span>     <span class="co">#O</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fl">1.00784</span>   <span class="op">-</span><span class="fl">0.53418382</span>     <span class="fl">0.53418382</span>      <span class="op">-</span><span class="fl">0.47116</span>    <span class="co">#H</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fl">1.00784</span>   <span class="fl">0.53418382</span>      <span class="op">-</span><span class="fl">0.53418382</span>     <span class="op">-</span><span class="fl">0.47116</span>    <span class="co">#H</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The file <a href="Data_files/H2O.dat">H2O.dat</a> contains the positions of the atoms in the molecule H2O in XYZ format. Determine the rotational constants for this molecule and classify it as a spherical, oblate, prolate, or asymmetric top.</p>
+<pre><code># H2O
+# mass      x               y               z       
+  15.999    0.00000000      0.00000000      0.11779     #O
+  1.00784   -0.53418382     0.53418382      -0.47116    #H
+  1.00784   0.53418382      -0.53418382     -0.47116    #H</code></pre>
 <p>The four columns of the provided data file are mass (in Da) and (x, y, z) coordinates (in <span class="math inline">\(\mathring{A}\)</span>).</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.constants <span class="im">import</span> u, h, c</span>
@@ -735,7 +737,11 @@ The moment of inertia of a molecule may be defined as the product of mass of eac
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>A, B, C <span class="op">=</span> get_rotational_constants(<span class="st">'H2O.dat'</span>)</span>
 <span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'H2O: A = </span><span class="sc">{</span>A<span class="sc">}</span><span class="ss"> cm-1, B = </span><span class="sc">{</span>B<span class="sc">}</span><span class="ss"> cm-1, C = </span><span class="sc">{</span>C<span class="sc">}</span><span class="ss"> cm-1'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>H2O: A = 27.148870802103488 cm-1, B = 14.654245226373835 cm-1, C = 9.51714245613036 cm-1</code></pre>
-<p>We have <span class="math inline">\(A\neq B\neq C\)</span>, it must be that <span class="math inline">\(I_{A} \neq I_{B} \neq I_{C}\)</span>, and <span class="math inline">\(H_{2}O\)</span> is <strong>Asymmetric top</strong>.These values are consistent with published spectroscopy data. <a href="https://doi.org/10.1063/1.1742731">J. Chem. Phys. 24, 1139–1165 (1956)</a>.</p>
+<p>We have <span class="math inline">\(A\neq B\neq C\)</span>, it must be that <span class="math inline">\(I_{A} \neq I_{B} \neq I_{C}\)</span>, and <span class="math inline">\(H_{2}O\)</span> is <strong>Asymmetric top</strong>. These values are consistent with published spectroscopy data.</p>
+</section>
+<section id="reference" class="level2">
+<h2 class="anchored" data-anchor-id="reference">Reference:</h2>
+<p><a href="https://doi.org/10.1063/1.1742731">J. Chem. Phys. 24, 1139–1165 (1956)</a>.</p>
 
 
 </section>

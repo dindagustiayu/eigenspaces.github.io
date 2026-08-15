@@ -651,7 +651,12 @@ window.Quarto = {
 <span class="math display">\[\sigma_y=\sqrt{\left (\frac{\partial y}{\partial p} \right)^2 \; \sigma_p^2 \;+\; \left (\frac{\partial y}{\partial q} \right)^2 \; \sigma_q^2 \;+\; \left (\frac{\partial y}{\partial r} \right)^2 \; \sigma_r^2 \;+\;...}\]</span>
 </p>
 <p>This is effectively the first non-zero term in a multivariate Taylor series expansion of the variances, <span class="math inline">\(\sigma_{i}^2\)</span>, and is therefore only approximate: For highly non-linear functions <span class="math inline">\(y\)</span> it might be expected to give flawed results.</p>
-<p>This approach assumes that: - The input variables are independent of each other. - The errors are random and normally distributed. - The function <span class="math inline">\(y\)</span> is differentiable with respect to each quantities <span class="math inline">\((p,\; q,\; r,...)\)</span></p>
+<p>This approach assumes that:</p>
+<ul>
+<li>The input variables are independent of each other.</li>
+<li>The errors are random and normally distributed.</li>
+<li>The function <span class="math inline">\(y\)</span> is differentiable with respect to each quantities <span class="math inline">\((p,\; q,\; r,...)\)</span></li>
+</ul>
 </section>
 <section id="error-propagation-worked-example" class="level2">
 <h2 class="anchored" data-anchor-id="error-propagation-worked-example">Error propagation worked example</h2>
@@ -700,7 +705,7 @@ window.Quarto = {
 <p>A novel way to measure the gravitational acceleration, <span class="math inline">\(g\)</span>, involves an indirect measurement of the pressure inside a submerged, inverted test tube containing a small amount of water. The experimental set-up proposed by Quiroga et. al.</p>
 <p>Let the ambient pressure be <span class="math inline">\(p_0\)</span>, and the length and cross-sectional area of the test tube be <span class="math inline">\(l_0\)</span> and A, respectively, so that it has a volume <span class="math inline">\(V_0=Al_0\)</span>. Treating the <span class="math inline">\(n\)</span> moles of air inside it as an ideal gas at temperature <span class="math inline">\(T\)</span>, we have <span class="math inline">\(p_0 V_0=nRT\)</span>.</p>
 <p>When the tube is submerged to a distance <span class="math inline">\(h\)</span>, water rises inside it, and the air it contains is compressed to a pressure <span class="math inline">\(p_1\)</span> and volume <span class="math inline">\(V_1\)</span>, where <span class="math inline">\(p_1 V_1=p_0 V_0\)</span> if the temperature is constant. The new pressure is <span class="math inline">\(p_1=p_0 + \rho g l_1\)</span>, where <span class="math inline">\(\rho = 1 g\;cm^-1\)</span> is the water density, <span class="math inline">\(g\)</span> is the gravitational acceleration (to be determined) and <span class="math inline">\(l_1\)</span> is the measured distance from the bulk water surface to the top of the water level in the test tube.</p>
-The <span class="math inline">\(V_1=A[l_0 - (h-l_1)]\)</span>, and so
+<p>The <span class="math inline">\(V_1=A[l_0 - (h-l_1)]\)</span>, and so</p>
 <p align="center">
 <span class="math display">\[p_1=\frac{l_0}{l_0 - (h - l_1)} p_0\]</span>
 </p>
@@ -709,16 +714,16 @@ therefore,
 <span class="math display">\[\left [\frac{l_0}{l_0 - (h-l_1)} - 1 \right] \; p_0 = \rho g l_1 \]</span>
 </p>
 <p>That is, if measurements of <span class="math inline">\(l_1\)</span> are made for different submersion depths, <span class="math inline">\(h\)</span>, a plot of the left-hand side of this equation against <span class="math inline">\(l_1\)</span> should yield a straight line with gradient <span class="math inline">\(\rho g\)</span>, from which <span class="math inline">\(g\)</span> can be deduced.</p>
-Assuming that <span class="math inline">\(\sigma_h\)</span> and <span class="math inline">\(\sigma l_1\)</span> (the uncertainties in the measurements of <span class="math inline">\(h\)</span> and <span class="math inline">\(l_1\)</span>, respectively) dominate and that they are connected, show that the uncertainty in the quantity,
+<p>Assuming that <span class="math inline">\(\sigma_h\)</span> and <span class="math inline">\(\sigma l_1\)</span> (the uncertainties in the measurements of <span class="math inline">\(h\)</span> and <span class="math inline">\(l_1\)</span>, respectively) dominate and that they are connected, show that the uncertainty in the quantity,</p>
 <p align="center">
 <span class="math display">\[y=p_1 - p_0 = \left [\frac{l_0}{l_0 - (h-l_1)} -1 \right] \; p_0=\rho g l_1\]</span>
 </p>
-is
+<p>is</p>
 <p align="center">
 <span class="math display">\[\sigma_y=\frac{l_0 p_0}{[l_0 - (h - l_1]^2} \sqrt{\sigma_h^2 + \sigma_{l_1}^2}\]</span>
 </p>
 <p>Use the following data to estimate <span class="math inline">\(g\)</span> from a linear least squares fit and the uncertainty in this estimate. Take an average value for <span class="math inline">\(\sigma_y\)</span>, calculated using the above formula.</p>
-<p>These data were collected on a day with an ambient air pressure of <span class="math inline">\(p_0=1037\)</span> mbar and using a test tube of length 20 cm. Take <span class="math inline">\(\sigma_h = \sigma_{l_0} = 1 mm\)</span>. These data are given in the file <a href="../../quarto-workflows">h and L1.txt</a></p>
+<p>These data were collected on a day with an ambient air pressure of <span class="math inline">\(p_0=1037\)</span> mbar and using a test tube of length 20 cm. Take <span class="math inline">\(\sigma_h = \sigma_{l_0} = 1 mm\)</span>. These data are given in the file <a href="Data_files/uncertainty.txt">h and L1.txt</a></p>
 <pre><code>    # Measured distance, h and L1, in cm
     h        L1
     29.9     29.3
@@ -785,15 +790,15 @@ is
 </section>
 <section id="step-3-measure-a-straight-line-fit-y-a-pm-bx" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-measure-a-straight-line-fit-y-a-pm-bx">Step 3: Measure a straight line fit, <span class="math inline">\(y = a \pm bx\)</span></h3>
-A straight line fit, <span class="math inline">\(y = a \pm bx\)</span> through these data provides an estimated value for g:
+<p>A straight line fit, <span class="math inline">\(y = a \pm bx\)</span> through these data provides an estimated value for g:</p>
 <p align="left">
 <span class="math display">\[\hat{\beta}=\begin{pmatrix} a\\b\end{pmatrix}\;where\;a=\frac{S_y S_{xx} - S_{xy} S_x}{nS_{xx} - S^2_x}\;and\;b=\frac{nS_{xy} S_y S_x}{nS_{xx} - S^2_x},\]</span>
 </p>
-where
+<p>where</p>
 <p align="center">
 <span class="math display">\[S_x=\overset{n}{\underset{i=1}{\sum x_i}},\;S_y=\overset{n}{\underset{i=1}{\sum Y_i}},\;S_{xx}=\overset{n}{\underset{i=1}{\sum x_i^2}},\;S_{xy}=\overset{n}{\underset{i=1}{\sum x_iy_i}}.\]</span>
 </p>
-The uncertainty in the fitted parameter b is,
+<p>The uncertainty in the fitted parameter b is,</p>
 <p align="center">
 <span class="math display">\[\sigma_b = \sigma_y \sqrt{\frac{n}{nS_{xx} - S_x^2}}\]</span>
 </p>

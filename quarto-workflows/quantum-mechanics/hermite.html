@@ -682,12 +682,20 @@ window.Quarto = {
 <p align="center">
 <span class="math display">\[H_n(x) = (-1)^n e^{x^2} \frac{d^n}{dx^n} e^{-x^2} \tag{1}\]</span>
 </p>
-<p>for <span class="math inline">\(n=0, \ 1, \ 2, \ 3, \ldots\)</span> The first few Hermite polynomials are - for <span class="math inline">\(n=0\)</span> we have <span class="math inline">\(H_0 (x) = 1\)</span> - for <span class="math inline">\(n=1\)</span> we have <span class="math inline">\(H_1 (x) = 2x\)</span> - for <span class="math inline">\(n=2\)</span> we have <span class="math inline">\(H_2 (x) = 4x^2 - 2\)</span> - for <span class="math inline">\(n=3\)</span> we have <span class="math inline">\(H_3 (x) = 8x^3 - 12x\)</span> - for <span class="math inline">\(n=4\)</span> we have <span class="math inline">\(H_4 (x) = 16x^4 - 48x^2 + 12\)</span> - for <span class="math inline">\(n=5\)</span> we have <span class="math inline">\(H_5 (x) = 32x^5 - 160x^3 + 120x\)</span> - for <span class="math inline">\(n=6\)</span> we have <span class="math inline">\(H_6 (x) = 64x^6 - 480x^4 + 720x^2 -120\)</span> - for <span class="math inline">\(n=7\)</span> we have <span class="math inline">\(H_7 (x) = 128x^7 - 1344x^5 + 3360x^3 - 1680x\)</span></p>
-For <span class="math inline">\(n \in \mathbb{N}\)</span>, we define Hermite polynomials <span class="math inline">\(H_n (x)\)</span> by
-<p align="center">
-<span class="math display">\[\sum_{n=0}^{\infty} \frac{H_n (x)}{n!} r^n = e^{2xr - r^2}, \quad for |r| &lt; \infty \tag{2} \]</span>
-</p>
-To find <span class="math inline">\(H_n (x)\)</span>, expand the right-hand side of eq.(2) as a Maclaurin series in <span class="math inline">\(r\)</span> and equate coefficients. From eq.(2) we drive the closed expression
+<p>for <span class="math inline">\(n=0, \ 1, \ 2, \ 3, \ldots\)</span> The first few Hermite polynomials are</p>
+<ul>
+<li>for <span class="math inline">\(n=0\)</span> we have <span class="math inline">\(H_0 (x) = 1\)</span></li>
+<li>for <span class="math inline">\(n=1\)</span> we have <span class="math inline">\(H_1 (x) = 2x\)</span></li>
+<li>for <span class="math inline">\(n=2\)</span> we have <span class="math inline">\(H_2 (x) = 4x^2 - 2\)</span></li>
+<li>for <span class="math inline">\(n=3\)</span> we have <span class="math inline">\(H_3 (x) = 8x^3 - 12x\)</span></li>
+<li>for <span class="math inline">\(n=4\)</span> we have <span class="math inline">\(H_4 (x) = 16x^4 - 48x^2 + 12\)</span></li>
+<li>for <span class="math inline">\(n=5\)</span> we have <span class="math inline">\(H_5 (x) = 32x^5 - 160x^3 + 120x\)</span></li>
+<li>for <span class="math inline">\(n=6\)</span> we have <span class="math inline">\(H_6 (x) = 64x^6 - 480x^4 + 720x^2 -120\)</span></li>
+<li>for <span class="math inline">\(n=7\)</span> we have <span class="math inline">\(H_7 (x) = 128x^7 - 1344x^5 + 3360x^3 - 1680x\)</span></li>
+</ul>
+<p>For <span class="math inline">\(n \in \mathbb{N}\)</span>, we define Hermite polynomials <span class="math inline">\(H_n (x)\)</span> by</p>
+<p><span class="math display">\[\sum_{n=0}^{\infty} \frac{H_n (x)}{n!} r^n = e^{2xr - r^2}, \quad for |r| &lt; \infty \tag{2} \]</span></p>
+<p>To find <span class="math inline">\(H_n (x)\)</span>, expand the right-hand side of eq.(2) as a Maclaurin series in <span class="math inline">\(r\)</span> and equate coefficients. From eq.(2) we drive the closed expression</p>
 <p align="center">
 <span class="math display">\[H_n (x) = \sum_{k=0}^{[n/2]} \frac{(-1)^k n!}{k! (n-2k)!} (2x)^{n-2k} \tag{3} \]</span>
 </p>
@@ -728,11 +736,11 @@ The final form of the harmonic oscillator wavefunction is this
 <span class="math display">\[\psi_n (y) = N_n H_n (y) e^{-y^2 /2} \tag{10} \]</span>
 </p>
 <p>where <span class="math inline">\(y = \sqrt{\alpha} x\)</span> and <span class="math inline">\(\alpha = \frac{m \omega}{\hbar}\)</span>.</p>
-The general formula for the normalized wavefunctions is
+<p>The general formula for the normalized wavefunctions is</p>
 <p align="center">
 <span class="math display">\[\psi_n (y) = \left(\frac{\alpha}{\pi} \right)^{1/4} \frac{1}{\sqrt{2^n n!}} H_n (y)e^{-y^2 /2} \tag{11}\]</span>
 </p>
-where <span class="math inline">\(H_n\)</span> is the Hermite polynomial. First four harmonic oscillator normalized wavefunctions,
+<p>where <span class="math inline">\(H_n\)</span> is the Hermite polynomial. First four harmonic oscillator normalized wavefunctions,</p>
 <p align="center">
 <span class="math display">\[\begin{align} \psi_0 &amp;= \left(\frac{\alpha}{\pi} \right)^{1/4} e^{-y^2 /2} \\ \psi_1 &amp;= \left(\frac{\alpha}{\pi} \right)^{1/4} \sqrt{2} y e^{-y^2 /2} \\ \psi_2 &amp;= \left(\frac{\alpha}{\pi} \right)^{1/4} \frac{1}{\sqrt{2}} (2y^2 -1) e^{-y^2 /2} \\ \psi_3 &amp;= \left(\frac{\alpha}{\pi} \right)^{1/4} \frac{1}{\sqrt{3}} (2y^3 - 3y) e^{-y^2 /2} \end{align}\]</span>
 </p>
@@ -791,16 +799,17 @@ where <span class="math inline">\(H_n\)</span> is the Hermite polynomial. First 
 <p align="center">
 <span class="math display">\[\int_{-\infty}^{\infty} |\psi_n (y)|^2 \ dy = 1\]</span>
 </p>
-<p><strong>Solution</strong>: 1. Calculate Normalization constant and Hermite polynomial for quantum number, <span class="math inline">\(n =2\)</span> and variable <span class="math inline">\(x = 3\)</span>.</p>
-<ol start="2" type="1">
-<li>Calculate the one-dimensional harmonic oscillator wavefunction and energies is defined by eq.10 using Numpy:</li>
+<p><strong>Solution</strong>:</p>
+<ol type="1">
+<li><p>Calculate Normalization constant and Hermite polynomial for quantum number, <span class="math inline">\(n =2\)</span> and variable <span class="math inline">\(x = 3\)</span>.</p></li>
+<li><p>Calculate the one-dimensional harmonic oscillator wavefunction and energies is defined by eq.10 using Numpy:</p></li>
 </ol>
 <p align="center">
 <span class="math display">\[\psi_n (y) = N_n H_n (y) e^{-y^2 /2}\]</span>
 </p>
 <ol start="3" type="1">
-<li>Plotted using Matplotlib</li>
-<li>Verify that the wavefunctions are normalized using <code>scipy.integrate.quad</code>.</li>
+<li><p>Plotted using Matplotlib</p></li>
+<li><p>Verify that the wavefunctions are normalized using <code>scipy.integrate.quad</code>.</p></li>
 </ol>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Normalization constant Calculate Hermite polynomial</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.special <span class="im">import</span> hermite</span>
@@ -874,22 +883,22 @@ H2(3)= 34.00000000000001</code></pre>
 <p>In quantum mechanics, the behaviour of electrons and other small particles is not Newtonian. In fact, the behavior of quantum systems can almost appear random. Instead of having predictable trajectories that we expect of projectiles in Newtonian mechanics, individual quantum events are unpredictable. However, if we consider a large number of quantum events, a pattern emerges. This is known as a statistical distribution. We often use mathematical probabilities to describes the outcomes of quantum events. The probability of a single quantum events. The probability of a single quantum event is exactly proportional to the value of the statistical distribution.</p>
 The probability of a classical particle being found between <span class="math inline">\(x\)</span> and <span class="math inline">\(x + \delta x\)</span> is <span class="math inline">\(p(x) \delta x\)</span>. For the harmonic oscillator,
 <p align="center">
-<span class="math display">\[\begin{align} x(t) &amp;= x_0 \cos (\omega t) \quad (13) \\ t(x) &amp;=\frac{1}{\omega} \arccos (x/x_0) \quad (14) \\ |v(x(t))| &amp;= |\dot{x} (t) | = x_0 \omega | sin (\omega t) | \quad (15) \\ |v(x)| &amp;= x_0 \omega | \sin (\arccos(x/x_0))| \quad (16)\end{align}\]</span>
+<span class="math display">\[\begin{align} x(t) &amp;= x_0 \cos (\omega t) \tag{13} \\ t(x) &amp;=\frac{1}{\omega} \arccos (x/x_0) \tag{14} \\ |v(x(t))| &amp;= |\dot{x} (t) | = x_0 \omega | sin (\omega t) | \tag{15} \\ |v(x)| &amp;= x_0 \omega | \sin (\arccos(x/x_0))| \tag{16} \end{align}\]</span>
 </p>
-Now this can be simplified with
+<p>Now this can be simplified with</p>
 <p align="center">
-<span class="math display">\[ \begin{align} a &amp;= \sin (\arccos (b)) \quad (17) \\ a^2 &amp;= \sin^2 (\arccos (b)) = 1 - \cos^2 (\arccos (b)) = 1 - b^2 \quad (18) \\ |\sin (\arccos(b)) | &amp;= \sqrt{1- b^2} \quad (19) \end{align}\]</span>
+<span class="math display">\[ \begin{align} a &amp;= \sin (\arccos (b)) \tag{17} \\ a^2 &amp;= \sin^2 (\arccos (b)) = 1 - \cos^2 (\arccos (b)) = 1 - b^2 \tag{18} \\ |\sin (\arccos(b)) | &amp;= \sqrt{1- b^2} \tag{19} \end{align}\]</span>
 </p>
-So combining this we get
+<p>So combining this we get</p>
 <p align="center">
 <span class="math display">\[P (x) = \frac{N}{\sqrt{1-(x/x_0)^2}} \tag{20} \]</span>
 </p>
 <p>for <span class="math inline">\(|x| \leq x_0\)</span> and <span class="math inline">\(p(x) = 0\)</span> otherwise. <span class="math inline">\(N\)</span> is normalisation constant.</p>
-where the normalization constant, <span class="math inline">\(N\)</span> (eq.9), must be chosen so that
+<p>where the normalization constant, <span class="math inline">\(N\)</span> (eq.9), must be chosen so that</p>
 <p align="center">
 <span class="math display">\[\int_{-A}^{A} P (x) \ dx = 1\]</span>
 </p>
-The normalized classical probability density function is therefore
+<p>The normalized classical probability density function is therefore</p>
 <p align="center">
 <span class="math display">\[ P (x) = \frac{1}{\pi} \ \frac{1}{\sqrt{A^2 - x^2}} \tag{21}\]</span>
 </p>
@@ -939,7 +948,11 @@ The normalized classical probability density function is therefore
 <section id="p23.1-exercise" class="level1">
 <h1>P23.1 Exercise</h1>
 <p>By taking an average of <span class="math inline">\(|\psi_n (x)|^2\)</span> over a series of intervals of suitable constant with to smooth out its peaks, compare the classical and quantum mechanical probability density distribution for the <span class="math inline">\(n = 20\)</span> excited vibrational state of the harmonic oscillator.</p>
-<p><strong>Solution</strong>: 1. Use some preliminary syntax. 2. Plotting with its regions (<span class="math inline">\(n = 20\)</span>).</p>
+<p><strong>Solution</strong>:</p>
+<ol type="1">
+<li>Use some preliminary syntax.</li>
+<li>Plotting with its regions (<span class="math inline">\(n = 20\)</span>).</li>
+</ol>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.special <span class="im">import</span> hermite</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> quad</span>
@@ -999,10 +1012,10 @@ The normalized classical probability density function is therefore
 <section id="summary" class="level1">
 <h1>Summary</h1>
 <ol type="1">
-<li>Vibrational spectroscopy via Hermite Polynomials bridges quantum mechanics and classical physics.</li>
-<li>At low quantum numbers, quantum mechanics predicts probability distributions that differ strongly from classical expectations, respectively for the opposite.</li>
-<li>The quantum harmonic oscillator reproduces classical behaviour in the limit of large vibrational quantum numbers.</li>
-<li>Hermite polynomials structure encodes the oscillations, while the classical distribution emerges as the envelope in the large <span class="math inline">\(n\)</span> limit.</li>
+<li><p>Vibrational spectroscopy via Hermite Polynomials bridges quantum mechanics and classical physics.</p></li>
+<li><p>At low quantum numbers, quantum mechanics predicts probability distributions that differ strongly from classical expectations, respectively for the opposite.</p></li>
+<li><p>The quantum harmonic oscillator reproduces classical behaviour in the limit of large vibrational quantum numbers.</p></li>
+<li><p>Hermite polynomials structure encodes the oscillations, while the classical distribution emerges as the envelope in the large <span class="math inline">\(n\)</span> limit.</p></li>
 </ol>
 
 

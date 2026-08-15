@@ -648,34 +648,34 @@ window.Quarto = {
 <p align="center">
 <span class="math display">\[\hat{H} = - \frac{\hbar^2}{2m} \ \frac{d^2}{dx^2}\]</span>
 </p>
-First, consider a one-dimensional box at length <span class="math inline">\(L\)</span> lying along the <span class="math inline">\(x\)</span> axis with the center of the box at the origin so that the ends of the box are at <span class="math inline">\(x= -L / 2\)</span> and at <span class="math inline">\(x = L/ 2\)</span>. Exact wave functions for a particle of mass <span class="math inline">\(m\)</span> in such a box are given by
+<p>First, consider a one-dimensional box at length <span class="math inline">\(L\)</span> lying along the <span class="math inline">\(x\)</span> axis with the center of the box at the origin so that the ends of the box are at <span class="math inline">\(x= -L / 2\)</span> and at <span class="math inline">\(x = L/ 2\)</span>. Exact wave functions for a particle of mass <span class="math inline">\(m\)</span> in such a box are given by</p>
 <p align="center">
-<span class="math display">\[\psi (x) = \left \{\begin{array} \ \sqrt{\frac{2}{L}} sin \left(\frac{\pi n x}{L} \right) \\ \sqrt{\frac{2}{L}} \ cos \left(\frac{\pi n x}{L} \right) \end{array} \right \}\]</span>
+<span class="math display">\[\psi (x) = \left \{\begin{array} \ \sqrt{\frac{2}{L}} \sin \left(\frac{\pi n x}{L} \right) \\ \sqrt{\frac{2}{L}} \ \cos \left(\frac{\pi n x}{L} \right) \end{array}\]</span>
 </p>
-with corresponding energies of
+<p>with corresponding energies of</p>
 <p align="center">
 <span class="math display">\[E_n = \frac{h^2 n^2}{8m L^2}\]</span>
 </p>
 </section>
 <section id="p8.4.4-exercise" class="level3">
 <h3 class="anchored" data-anchor-id="p8.4.4-exercise">P8.4.4 Exercise</h3>
-Consider a one-dimensional quantum mechanical particle in a box <span class="math inline">\((-1 \leq x \leq 1)\)</span> described by the <span class="math inline">\(Schr \ddot{o} dinger\)</span> equation:
+<p>Consider a one-dimensional quantum mechanical particle in a box <span class="math inline">\((-1 \leq x \leq 1)\)</span> described by the <span class="math inline">\(Schr \ddot{o} dinger\)</span> equation:</p>
 <p align="center">
-<span class="math display">\[-\frac{d^2 \psi}{dx^2} = E \psi\]</span>
+<span class="math display">\[\frac{d^2 \psi}{dx^2} = E \psi\]</span>
 </p>
-in energy units for which <span class="math inline">\(\hbar^2 / (2m) = 1\)</span> with <span class="math inline">\(m\)</span> the mass of the particle. The exact solution for the ground state of this system is given by
+<p>in energy units for which <span class="math inline">\(\hbar^2 / (2m) = 1\)</span> with <span class="math inline">\(m\)</span> the mass of the particle. The exact solution for the ground state of this system is given by</p>
 <p align="center">
 <span class="math display">\[\psi = cos \left(\frac{\pi x}{2} \right), \quad E = \frac{\pi^2}{4}\]</span>
 </p>
-An approximate solution may be arrived at using the <em>variational principle</em> by minimizing the expectation value of the energy of a trial wavefunction,
+<p>An approximate solution may be arrived at using the <em>variational principle</em> by minimizing the expectation value of the energy of a trial wavefunction,</p>
 <p align="center">
 <span class="math display">\[\psi_{trial} = \sum_{n=0}^{N} a_n \phi_n (x)\]</span>
 </p>
-with respect to the coefficients <span class="math inline">\(a_n\)</span>. Taking the basis functions to have the following symmetrized polynomial form,
+<p>with respect to the coefficients <span class="math inline">\(a_n\)</span>. Taking the basis functions to have the following symmetrized polynomial form,</p>
 <p align="center">
 <span class="math display">\[\phi_n = (1-x)^{N - n + 1} (x + 1)^{n + 1}\]</span>
 </p>
-use <code>scipy.optimize.minimize</code> and <code>scipy.integrate.quad</code> to find the optimum value of the expectation value (Rayleigh-Ritz ratio):
+<p>use <code>scipy.optimize.minimize</code> and <code>scipy.integrate.quad</code> to find the optimum value of the expectation value (Rayleigh-Ritz ratio):</p>
 <p align="center">
 <span class="math display">\[\mathcal{E} = \frac{\langle \psi_{trial} |\hat{H}| \psi_{trial}}{\langle \psi_{trial} | \psi_{trial} \rangle} \rangle = \frac{\int_{-1}^{1} \psi_{trial} \frac{d^2}{dx^2} \psi_{trial} \ dx}{\int_{-1}^{1} \psi_{trial} \psi_{trial} \ dx}\]</span>
 </p>
@@ -813,11 +813,19 @@ use <code>scipy.optimize.minimize</code> and <code>scipy.integrate.quad</code> t
 </section>
 <section id="p22.2-exercise" class="level3">
 <h3 class="anchored" data-anchor-id="p22.2-exercise">P22.2 Exercise</h3>
-The one-dimensional quartic oscillator is one characterized by a potential energy proportional to the fourth power of the displacement. Taking the Hamiltonian for a quantum mechanical quartic oscillator to be
+<p>The one-dimensional quartic oscillator is one characterized by a potential energy proportional to the fourth power of the displacement. Taking the Hamiltonian for a quantum mechanical quartic oscillator to be</p>
 <p align="center">
 <span class="math display">\[\hat{H} = -\frac{\hbar^2}{2 \mu} \ \frac{d^2}{dx^2} + \frac{1}{2} kx^4\]</span>
 </p>
-<p>minimize the expectation energy, <span class="math inline">\(\langle E \rangle\)</span>, of the trial wavefunction <span class="math inline">\(\psi = exp(-\alpha x^2 / 2)\)</span> with respectto its parameters, - (a) numerically, using <code>scipy.optimize.minimize</code> or <code>scipy.optimize.minimize_scalar</code>, <span class="math inline">\(\alpha\)</span> - (b) analytically by differentiation of <span class="math inline">\(\langle E \rangle\)</span> with respect to <span class="math inline">\(\alpha\)</span>.</p>
+<p>minimize the expectation energy, <span class="math inline">\(\langle E \rangle\)</span>, of the trial wavefunction <span class="math inline">\(\psi = exp(-\alpha x^2 / 2)\)</span> with respectto its parameters,</p>
+<ul>
+<li><ol type="a">
+<li>numerically, using <code>scipy.optimize.minimize</code> or <code>scipy.optimize.minimize_scalar</code>, <span class="math inline">\(\alpha\)</span></li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>analytically by differentiation of <span class="math inline">\(\langle E \rangle\)</span> with respect to <span class="math inline">\(\alpha\)</span>.</li>
+</ol></li>
+</ul>
 </section>
 <section id="solution" class="level3">
 <h3 class="anchored" data-anchor-id="solution">Solution</h3>
