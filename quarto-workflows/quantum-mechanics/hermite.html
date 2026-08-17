@@ -599,8 +599,8 @@ window.Quarto = {
   <li><a href="#connection-with-harmonic-oscillator" id="toc-connection-with-harmonic-oscillator" class="nav-link" data-scroll-target="#connection-with-harmonic-oscillator">Connection with Harmonic Oscillator</a>
   <ul class="collapse">
   <li><a href="#the-wavefunctions" id="toc-the-wavefunctions" class="nav-link" data-scroll-target="#the-wavefunctions">The Wavefunctions</a></li>
-  </ul></li>
   <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  </ul></li>
   <li><a href="#the-classical-probability-density-pdf" id="toc-the-classical-probability-density-pdf" class="nav-link" data-scroll-target="#the-classical-probability-density-pdf">The Classical Probability Density (PDF)</a></li>
   <li><a href="#p23.1-exercise" id="toc-p23.1-exercise" class="nav-link" data-scroll-target="#p23.1-exercise">P23.1 Exercise</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
@@ -792,9 +792,8 @@ The final form of the harmonic oscillator wavefunction is this
 </table>
 <p>The wavefunctions for the quantum harmonic oscillator contain the Gaussian form, which allows them to satisfy the necessary boundary conditions at infinity. In the wavefunction associated with a given value of the quantum number <span class="math inline">\(n\)</span>, the Gaussian is multiplied by a polynomial of order <span class="math inline">\(n\)</span> (the Hermite polynomials above) and the constants necessary to normalize the wavefunctions.</p>
 </section>
-</section>
-<section id="example" class="level1">
-<h1>Example</h1>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
 <p>Visualizing the harmonic oscillator wavefunction for any vibrational quantum number <span class="math inline">\(n\)</span> use <code>scipy.special</code> package with normalized by integrating the corresponding probability distribution:</p>
 <p align="center">
 <span class="math display">\[\int_{-\infty}^{\infty} |\psi_n (y)|^2 \ dy = 1\]</span>
@@ -877,6 +876,7 @@ H2(3)= 34.00000000000001</code></pre>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>area, abserr <span class="op">=</span> quad(P_n, <span class="op">-</span>np.inf, np.inf, args<span class="op">=</span>(n,))</span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'area='</span>, area)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>area= 1.0000000000000004</code></pre>
+</section>
 </section>
 <section id="the-classical-probability-density-pdf" class="level1">
 <h1>The Classical Probability Density (PDF)</h1>
