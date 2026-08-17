@@ -81,7 +81,7 @@ IV. $D\rightarrow A$: _a reversible adiabatic gas compression process_ from stat
 This Python script to illustrate the Carnot Cycle with labelled plot for states A, B, C, and D with following parameters:
 
 - $V_{1}=0.2 m^{3}$
-- $T_{high}$= 800 K$
+- $T_{high}$= 800 $K$
 - Isothermal compression ratio, $r_{i}=V_{B}/V_{A}=2$
 - Adiabatic compression ratio,$r_{a}=V_{C}/V_{B}=2$
 
@@ -95,7 +95,7 @@ Demonstrate that the efficiency, defined as $\nu=w/q-hot$ where $w$ is the work 
 
 ### Step 1: Set up and use function
 
-```Python
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.constants import R
@@ -103,6 +103,7 @@ from scipy.constants import R
 # number of molecule gas
 n = 1
 ```
+
 ```python
 def get_p(V, T):
     """
@@ -144,7 +145,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 
 ### Step 2: Volumes at each state
 
-```Python
+```python
     # Calculate the state variables at each stage of the cycle.
     V2 = V1 * r_i
     V3 = V2 * r_a
@@ -160,7 +161,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 
 ### Step 3: Pressures and Temperature
 
-```Python
+```python
     # State Pressure 
     p1, p2 = get_p(V1, T_high), get_p(V2, T_high)
     T_low = T_high * (V2/V3) ** (gamma - 1)
@@ -173,7 +174,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 
 ### Step 4: Plot the cycle
 
-```Python
+```python
 # Plot the isotherms and adiabatic for the cycle.
     plot_isotherm(V1, V2, T_high, c='r')
     plot_adiabatic(V2, V3, p2, V2, c='g', gamma=gamma)
@@ -188,7 +189,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 
 ### Step 5: Work and Heat calculation
 
-```Python
+```python
 # Step 1: isothermal expansion, V1 => v2 AT T_high
     w1 = - n * R * T_high * np.log(V2 / V1)
     q1 = -w1
@@ -216,7 +217,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 ### Step 6: Efficiency
 
 
-```Python
+```python
     # Total energy input through heating:
     q_in = q1
 
@@ -237,7 +238,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 
 ### Step 7: Plot Labels
 
-```Python
+```python
   # Label the states
     states = [(p1, V1), (p2, V2), (p3, V3), (p4, V4)]
     for i, (p, V) in enumerate(states):
@@ -247,7 +248,7 @@ def carnot_cycle(V1, T_high, r_i, r_a):
 
 ### Step 8: Running the code
 
-```Python
+```python
 # Run
 
 plt.figure(figsize=(6, 5))

@@ -132,9 +132,7 @@ The probability density of the oscillator's position is given by $P_{0} (x) = | 
 
 The wavefunction is symmetric about $x=0$, so the probability of tunneling is
 
-<div align='center'>
-    $$\begin{align} P(|x| \geq \frac{1}{\sqrt{\alpha}}) &= 2P(x \alpha) = 2 \sqrt{\frac{\alpha}{\pi}} \int_{\alpha^{-1/2}}^{\infty} \exp(- \alpha x^{2}) \ dx \\ &= \frac{2}{\sqrt{\pi}} \int_{1}^{\infty} e^{-y^{2}} \ dy \end{align}$$
-</div>
+$$\begin{align} P(|x| \geq \frac{1}{\sqrt{\alpha}}) = 2P(x \alpha) &= 2 \sqrt{\frac{\alpha}{\pi}} \int_{\alpha^{-1/2}}^{\infty} \exp(- \alpha x^{2}) \ dx \\ &= \frac{2}{\sqrt{\pi}} \int_{1}^{\infty} e^{-y^{2}} \ dy \end{align}$$
 
 ```Python
 I, err = quad(func, 1, np.inf)
@@ -167,7 +165,7 @@ to a two dimensional system is:
 
 It can be simplified for the particle in a 2D box since we jnow that $V(x, \ y)=0$ within the box and $V(x, \ y)=\infty$ outside the box,
 
-$$ V(x, \ y) = \left \{\begin{array} 0 & 0 \leq x \leq a \ \mbox{and} \ 0 \leq y \leq b \\ \infty & x< 0 \mbox{and} \ x> a \\ \infty & y< 0 \mbox{and} \ y> b \end{array} \nonumber$$
+$$ V(x, \ y) = \left \{\begin{array} 0 & 0 \leq x \leq a \ \mbox{and} \ 0 \leq y \leq b \\ \infty & x< 0 \mbox{and} \ x> a \\ \infty & y< 0 \mbox{and} \ y> b \end{array} \right \}$$
 
 So the wavefunctions becomes:
 
@@ -231,7 +229,7 @@ This Python script to illustrate the two-dimensional particle in a rectangular b
 Substituting the limits of integration into formula, we have
 
 <p align='center'>
-    $$\begin{align} P(x \in [0, \ 1.5] \mbox{~and~} \ y \in [0, \ 2.5] &= \left [\int_0^{1.5} \psi_2^2(x) \ dx \right] \left[\int_0^{2.5} \psi_1^2(y) \ dy \right] \\ &= \left [\frac{2}{L_x} \int_0^{1.5} \sin^2 \left(\frac{ 2 \pi x}{L_x} \right) \ dx \right] \\ \left[\frac{2}{L_y} \int_0^{2.5} sin^2 \left(\frac{\pi y}{L_y} \right) \ dy \right] \\ &= \left[\frac{2}{1.5} \left( 0.75 \frac{1.5}{8 \pi} \sin \left(\frac{6 \pi}{1.5} \right) \right) \right] \\  \left[\frac{2}{2.5} \left( 1.25 \frac{2.5}{4 \pi} \sin \left(\frac{5 \pi}{2.5} \right) \right) \right]\end{align}$$
+    $$\begin{align} P(x \in [0, \ 1.5] \mbox{~and~} \ y \in [0, \ 2.5] &= \left [\int_0^{1.5} \psi_2^2(x) \ dx \right] \left[\int_0^{2.5} \psi_1^2(y) \ dy \right] \\ &= \left [\frac{2}{L_x} \int_0^{1.5} \sin^2 \left(\frac{ 2 \pi x}{L_x} \right) \ dx \right] \\  &\left[\frac{2}{L_y} \int_0^{2.5} sin^2 \left(\frac{\pi y}{L_y} \right) \ dy \right] \\ &= \left[\frac{2}{1.5} \left( 0.75 \frac{1.5}{8 \pi} \sin \left(\frac{6 \pi}{1.5} \right) \right) \right] \\ &\left[\frac{2}{2.5} \left( 1.25 \frac{2.5}{4 \pi} \sin \left(\frac{5 \pi}{2.5} \right) \right) \right]\end{align}$$
 </p>
 
 ```Python

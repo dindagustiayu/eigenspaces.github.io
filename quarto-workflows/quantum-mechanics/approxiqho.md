@@ -34,7 +34,7 @@ In the standard problem of a particle of mass $m$ with zero potential energy con
 First, consider a one-dimensional box at length $L$ lying along the $x$ axis with the center of the box at the origin so that the ends of the box  are at $x= -L / 2$ and at $x = L/ 2$. Exact wave functions for a particle of mass $m$ in such a box are given by
 
 <p align='center'>
-    $$\psi (x) = \left \{\begin{array} \ \sqrt{\frac{2}{L}} \sin \left(\frac{\pi n x}{L} \right) \\ \sqrt{\frac{2}{L}} \ \cos \left(\frac{\pi n x}{L} \end{array} \nonumber$$ 
+    $$\psi (x) = \left \{\begin{array} \ \sqrt{\frac{2}{L}} \sin \left(\frac{\pi n x}{L} \right) \\ \sqrt{\frac{2}{L}} \ \cos \left(\frac{\pi n x}{L} \right) \end{array} \right \}$$ 
 </p>
 
 with corresponding energies of 
@@ -80,7 +80,7 @@ Compare the estimated energy, $\mathcal{E}$, with the exact answer for $N = 1, \
 
 This Python script to illustrate the variational method applied to the Particle in a box with initial variables: mass and length of the box are 1 and 2, respectively.
 
-```Python
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -116,7 +116,7 @@ The approximate wavefunction chosen will be a polynomial in $x$. For convenience
 
 We need functions to set up the polynomial from the coefficient parameters, $x$, and to evaluate the normalization integral, and the Rayleigh-Ritz, $\langle E \rangle = \langle \phi |\hat{H}| \phi \rangle / \langle \phi | \phi \rangle$.
 
-```Python
+```python
 import numpy as np
 from scipy.optimize import minimize
 from numpy.polynomial import Polynomial 
@@ -164,6 +164,7 @@ for m in range (1, 7):
     error_ppm[m] = (Eapprox[m] - E1 / E1 * 1.e6)
     print(f'{m:.7f} {Eapprox[m]:.7f} {error_ppm[m]:>9.3f} ppm')
 ```
+
 ```
 m <E> / Eh error
 1.0000000 1.2500000 -999998.750 ppm
@@ -176,7 +177,7 @@ m <E> / Eh error
 
 All the approximation wavefunctions apart from the quadratic one, overlap with the true ground state wavefunction, $\psi$. It might be better to plot the _difference_ between the approximation.
 
-```Python
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -259,7 +260,7 @@ where
 
 4. Bracket the minimum in $\langle E' \rangle (\alpha)$ using the value $\alpha_a = 1.0, \ \alpha_b = 1.5 \ \mbox{and} \ \alpha_c = 2.0, \ \mbox{since} \langle E' \rangle (\alpha_a) > \langle E' \rangle (\alpha_b) \ \mbox{and} \ \langle E' \rangle (\alpha_c) > \langle E' \rangle (\alpha_b)$.
 
-```Python
+```python
 import numpy as np
 from scipy.integrate import quad
 from scipy.optimize import minimize_scalar
@@ -338,7 +339,7 @@ This function has a minimum at
 
 This Python script to confirm the numerical result with integrals:
 
-```Python
+```python
 alpha = 3**(1/3)
 print(f'alpha = {alpha:.3f}')
 print(f"optimum <E'> = {rayleigh_ritz(alpha):.3f}")
@@ -347,9 +348,10 @@ print(f"optimum <E'> = {rayleigh_ritz(alpha):.3f}")
 alpha = 1.442
 optimum <E'> = 0.541
 ```
+
 The optimum value of $\alpha$ is $1.422$, giving an energy of $\langle E' \rangle = 0.541$. We can learn more by plotting this $\langle E' \rangle$ as a function of $\alpha$:
 
-```Python
+```python
 import matplotlib.pyplot as plt
 
 alpha_grid = np.linspace(0.5, 2.5, 25)

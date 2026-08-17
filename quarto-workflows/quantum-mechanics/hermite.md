@@ -165,7 +165,7 @@ When the $Schr\ddot{o}dinger$ equation for the harmonic oscillator is solved by 
 The wavefunctions for the quantum harmonic oscillator contain the Gaussian form, which allows them to satisfy the necessary boundary conditions at infinity. In the wavefunction associated with a given value of the quantum number $n$, the Gaussian is multiplied by a polynomial of order $n$ (the Hermite polynomials above) and the constants necessary to normalize the wavefunctions. 
 
 
-# Example 
+## Example 
 
 Visualizing the harmonic oscillator wavefunction for any vibrational quantum number $n$ use `scipy.special` package with normalized by integrating the corresponding probability distribution:
 
