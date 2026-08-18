@@ -5,6 +5,7 @@ date: "2026-3-2"
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/dindagustiayu/Quantum-Harmonic-Oscillator/blob/main/Integral%20QHO.py)
 
+
 # Quantum Harmonic Oscillator (QHO)
 
 In Quantum Mechanics, the harmonic oscillator is an important pradigm because it provides a model for a variety of systems, such as the modes of the __electrodynamic field (photons)__ and __the vibrations of molecules and solids (phonons)__.
@@ -110,7 +111,7 @@ The equations to 1 if $c_0 = \left(\frac{m \omega}{\pi \hbar} \right)^{1/4}$, in
 
 This Python script illustrates the one-dimensional harmonic oscillator ground state wavefunction with the following parameters:
 
-```Python
+```python
 import numpy as np
 from scipy.integrate import quad, dblquad, tplquad
 
@@ -134,7 +135,7 @@ The wavefunction is symmetric about $x=0$, so the probability of tunneling is
 
 $$\begin{align} P(|x| \geq \frac{1}{\sqrt{\alpha}}) = 2P(x \alpha) &= 2 \sqrt{\frac{\alpha}{\pi}} \int_{\alpha^{-1/2}}^{\infty} \exp(- \alpha x^{2}) \ dx \\ &= \frac{2}{\sqrt{\pi}} \int_{1}^{\infty} e^{-y^{2}} \ dy \end{align}$$
 
-```Python
+```python
 I, err = quad(func, 1, np.inf)
 ptun = 2 / np.sqrt(np.pi) * I
 print('I:', I)
@@ -165,7 +166,8 @@ to a two dimensional system is:
 
 It can be simplified for the particle in a 2D box since we jnow that $V(x, \ y)=0$ within the box and $V(x, \ y)=\infty$ outside the box,
 
-$$ V(x, \ y) = \left \{\begin{array} 0 & 0 \leq x \leq a \ \mbox{and} \ 0 \leq y \leq b \\ \infty & x< 0 \mbox{and} \ x> a \\ \infty & y< 0 \mbox{and} \ y> b \end{array} \right \}$$
+
+<img src = "/images/particle2d.jpg" width="400">
 
 So the wavefunctions becomes:
 
@@ -214,7 +216,7 @@ so that the complete normalized 2D wavefunction is
 Reference: [Particle in 2D Box](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Quantum_Mechanics/05.5%3A_Particle_in_Boxes/Particle_in_a_2-Dimensional_Box#:~:text=Let%20us%20now%20consider%20the,BY-NC;%20%C3%9Cmit%20Kaya)
 
 
-## Example: Probability
+### Example: Probability
 
 For a particle in a two-dimensional rectangular box, if the particle is in the $\psi_{2, \ 1}(x, \ y)$ state, what is the probability that a esurement of the particle's position will yield $x \in [0, \ 1.5]$ and $y \in [0, \ 2.5]$ ?.
 
@@ -224,7 +226,7 @@ This Python script to illustrate the two-dimensional particle in a rectangular b
 - $n_x, \ n_y = $ 2, 1
 
 
-## Solution
+### Solution
 
 Substituting the limits of integration into formula, we have
 
@@ -232,7 +234,7 @@ Substituting the limits of integration into formula, we have
     $$\begin{align} P(x \in [0, \ 1.5] \mbox{~and~} \ y \in [0, \ 2.5] &= \left [\int_0^{1.5} \psi_2^2(x) \ dx \right] \left[\int_0^{2.5} \psi_1^2(y) \ dy \right] \\ &= \left [\frac{2}{L_x} \int_0^{1.5} \sin^2 \left(\frac{ 2 \pi x}{L_x} \right) \ dx \right] \\  &\left[\frac{2}{L_y} \int_0^{2.5} sin^2 \left(\frac{\pi y}{L_y} \right) \ dy \right] \\ &= \left[\frac{2}{1.5} \left( 0.75 \frac{1.5}{8 \pi} \sin \left(\frac{6 \pi}{1.5} \right) \right) \right] \\ &\left[\frac{2}{2.5} \left( 1.25 \frac{2.5}{4 \pi} \sin \left(\frac{5 \pi}{2.5} \right) \right) \right]\end{align}$$
 </p>
 
-```Python
+```python
 import numpy as np
 from scipy.integrate import quad, dblquad, tplquad
 
@@ -259,7 +261,7 @@ N: 1.0327955589886444
 
 We can also use $N=\frac{2}{\sqrt{L_{(x, \ y}}}$
 
-```Python
+```python
 N = 2 / np.sqrt(Lx * Ly)
 print('N:', N)
 ```
@@ -282,7 +284,7 @@ To compare value for $w$ obtained by analytical integration and by with numerica
 
 If the process is isothermal then the temperature, $T = 298 \ K$ is constant. Let the initial pressure be $p_1= 101325$ and the $V_1$ (to be determined). The final pressure and volume are $p_2 = 2 \times 10^7 \ Pa$.  
 
-```Python
+```python
 # 1. Parameters in the van der Waals
 import numpy as np
 from numpy.polynomial import Polynomial
@@ -318,7 +320,7 @@ The work integral can be evaluated analytically for a van der Waals gas,
     $$ \begin{align} -\int_{V_1}^{V_2} p \ dV &= -\int_{V_1}^{V_2} \frac{nRT}{V-nb} - \frac{n^2 a}{V^2} dV \\ &=-nRT \ ln(\frac{V_2 - nb}{V_1 - nb}) - n^2 a (\frac{1}{V_2} - \frac{1}{V_1}) \end{align}$$
 </p>
 
-```Python
+```python
 # Invert the van der Waals equation to return V from n, p, T
 def get_V(n, p, T, a, b):
     poly= Polynomial([-n**3 * a * b, n**2 * a, -n*(p * b + R * T), p])

@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-01-21">
 
-<title>adiabatic-process – Random Spaces</title>
+<title>adiabatic-process – Eigen Spaces</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <link href="../../quarto-workflows/thermodynamics/boltzman.html" rel="next">
 <link href="../../quarto-workflows/quantum-mechanics/anharmonicity.html" rel="prev">
+<link href="../../images/orbitalquarto.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -161,11 +162,11 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../images/logorandomspaces.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../images/eigenspaces.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://dindagustiayu.github.io/" title="dindagustiayu.github.io" class="quarto-navigation-tool px-1" aria-label="dindagustiayu.github.io"><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/dindagustiayu/randomspaces.github.io" title="Random Spaces" class="quarto-navigation-tool px-1" aria-label="Random Spaces"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/dindagustiayu/eigenspaces.github.io" title="Eigen Spaces" class="quarto-navigation-tool px-1" aria-label="Eigen Spaces"><i class="bi bi-github"></i></a>
     <a href="https://linkedin.com/in/dinda-gusti-ayu-8049a01b0" title="Dinda Gusti Ayu" class="quarto-navigation-tool px-1" aria-label="Dinda Gusti Ayu"><i class="bi bi-linkedin"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -234,7 +235,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/basicnumpy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Numpy and Matplot for Physics Problems</span></a>
+ <span class="menu-text">NumPy and Matplotlib for Physics Problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -382,13 +383,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/thermodynamics/boltzman.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Adiabatic process and Carnot Cycle</span></a>
+ <span class="menu-text">Maxwell-Boltzmann Distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/thermodynamics/brusselator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Brusselator</span></a>
   </div>
 </li>
       </ul>
   </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../acknowledgments.html" class="sidebar-item-text sidebar-link">
@@ -424,7 +437,7 @@ window.Quarto = {
   </ul></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/thermodynamics/adiabatic-process.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/thermodynamics/adiabatic-process.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -490,7 +503,7 @@ This expression is usually presented in the quivalent form <span class="math inl
 <p align="center">
 <span class="math inline">\(\frac{T_{2}}{V_{2}} = \frac{p_{2}V_{2}}{p_{1}V_{1}}\)</span>
 </p>
-which leads to
+<p>which leads to</p>
 <p align="center">
 <span class="math inline">\(p_{1}V_{1}^{\gamma}=p_{2}V_{2}^{\gamma}\)</span>
 </p>
@@ -508,7 +521,7 @@ which leads to
 <p>This Python script to illustrate the Carnot Cycle with labelled plot for states A, B, C, and D with following parameters:</p>
 <ul>
 <li><span class="math inline">\(V_{1}=0.2 m^{3}\)</span></li>
-<li><span class="math inline">\(T_{high}\)</span>= 800 K$</li>
+<li><span class="math inline">\(T_{high}\)</span>= 800 <span class="math inline">\(K\)</span></li>
 <li>Isothermal compression ratio, <span class="math inline">\(r_{i}=V_{B}/V_{A}=2\)</span></li>
 <li>Adiabatic compression ratio,<span class="math inline">\(r_{a}=V_{C}/V_{B}=2\)</span></li>
 </ul>
@@ -1243,8 +1256,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../quarto-workflows/thermodynamics/boltzman.html" class="pagination-link" aria-label="Adiabatic process and Carnot Cycle">
-        <span class="nav-page-text">Adiabatic process and Carnot Cycle</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../quarto-workflows/thermodynamics/boltzman.html" class="pagination-link" aria-label="Maxwell-Boltzmann Distribution">
+        <span class="nav-page-text">Maxwell-Boltzmann Distribution</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1252,13 +1265,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0 unless otherwise stated.</p>
+<p>© 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/thermodynamics/adiabatic-process.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/thermodynamics/adiabatic-process.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
-<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>

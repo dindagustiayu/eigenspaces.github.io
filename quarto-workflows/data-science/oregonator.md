@@ -1,7 +1,7 @@
 ---
 date: "2026-5-6" 
 ---
-[![](https://colab.research.google.com/assets/colab-badge.svg)](pyfile/oregonator.py)
+[![](https://colab.research.google.com/assets/colab-badge.svg)](/pyfile/oregonator.py)
 
 
 # The Oscillatory Chemical Reactions

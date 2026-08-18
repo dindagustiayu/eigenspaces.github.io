@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-03-02">
 
-<title>qho – Random Spaces</title>
+<title>qho – Eigen Spaces</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <link href="../../quarto-workflows/quantum-mechanics/approxiqho.html" rel="next">
 <link href="../../quarto-workflows/quantum-mechanics/inertia.html" rel="prev">
+<link href="../../images/orbitalquarto.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -161,11 +162,11 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../images/logorandomspaces.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../images/eigenspaces.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://dindagustiayu.github.io/" title="dindagustiayu.github.io" class="quarto-navigation-tool px-1" aria-label="dindagustiayu.github.io"><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/dindagustiayu/randomspaces.github.io" title="Random Spaces" class="quarto-navigation-tool px-1" aria-label="Random Spaces"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/dindagustiayu/eigenspaces.github.io" title="Eigen Spaces" class="quarto-navigation-tool px-1" aria-label="Eigen Spaces"><i class="bi bi-github"></i></a>
     <a href="https://linkedin.com/in/dinda-gusti-ayu-8049a01b0" title="Dinda Gusti Ayu" class="quarto-navigation-tool px-1" aria-label="Dinda Gusti Ayu"><i class="bi bi-linkedin"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -234,7 +235,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/basicnumpy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Numpy and Matplot for Physics Problems</span></a>
+ <span class="menu-text">NumPy and Matplotlib for Physics Problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -323,7 +324,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/ssaproximation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Steady-State Approximation</span></a>
+ <span class="menu-text">Steady State Approximation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -382,13 +383,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/thermodynamics/boltzman.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Adiabatic process and Carnot Cycle</span></a>
+ <span class="menu-text">Maxwell-Boltzmann Distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/thermodynamics/brusselator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Brusselator</span></a>
   </div>
 </li>
       </ul>
   </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../acknowledgments.html" class="sidebar-item-text sidebar-link">
@@ -420,7 +433,7 @@ window.Quarto = {
   <li><a href="#solution-1" id="toc-solution-1" class="nav-link" data-scroll-target="#solution-1">Solution</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/QHO.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/QHO.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -449,12 +462,7 @@ window.Quarto = {
 </header>
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://github.com/dindagustiayu/Quantum-Harmonic-Oscillator/blob/main/Integral%20QHO.py"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img" alt="Open in Colab"></a></p>
-<figcaption>Open in Colab</figcaption>
-</figure>
-</div>
+<p><a href="https://github.com/dindagustiayu/Quantum-Harmonic-Oscillator/blob/main/Integral%20QHO.py"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
 <section id="quantum-harmonic-oscillator-qho" class="level1">
 <h1>Quantum Harmonic Oscillator (QHO)</h1>
 <p>In Quantum Mechanics, the harmonic oscillator is an important pradigm because it provides a model for a variety of systems, such as the modes of the <strong>electrodynamic field (photons)</strong> and <strong>the vibrations of molecules and solids (phonons)</strong>.</p>
@@ -479,11 +487,16 @@ window.Quarto = {
 <section id="classical-harmonic-oscillator" class="level2">
 <h2 class="anchored" data-anchor-id="classical-harmonic-oscillator">Classical harmonic oscillator</h2>
 <p>The classical harmonic oscillator describes a particle subject to a restoring force <span class="math inline">\(F=-m \omega^2 x\)</span> proportional to the distance from an equilibrium position <span class="math inline">\(x=0\)</span>. Newton’s equation <span class="math inline">\(m\ddot{x} = F\)</span> results in an oscillatory motion <span class="math inline">\(x(t)=x_0 \ cos \omega t + (v_0/ \omega) \ sin \omega t\)</span>, where <span class="math inline">\(\omega = \frac{2 \pi}{T}\)</span> and <span class="math inline">\(T\)</span> is the oscillation period. In this solution, <span class="math inline">\(x_0 = x(0)\)</span> is the initial position and <span class="math inline">\(v_0 = \dot{x} (0)\)</span> is the initial velocity of the particle. According to <span class="math inline">\(F = -V^{'}\)</span>, the force <span class="math inline">\(F = -m \omega^2 x\)</span> corresponds to a parabolic potential energy.</p>
-The simple quantum harmonic oscillator is:
+<p>The simple quantum harmonic oscillator is:</p>
 <p align="center">
 <span class="math display">\[ V(x) = \frac{1}{2} \times m \times \omega \times x^{2}\]</span>
 </p>
-<p>where, - <em>m</em> is the mass of the particle - <span class="math inline">\(\omega\)</span> is the angular frequency of the oscillator - <em>x</em> is the displacement from equilibrium</p>
+<p>where,</p>
+<ul>
+<li><em>m</em> is the mass of the particle</li>
+<li><span class="math inline">\(\omega\)</span> is the angular frequency of the oscillator</li>
+<li><em>x</em> is the displacement from equilibrium</li>
+</ul>
 </section>
 <section id="schrddotodinger-equation-of-the-quantum-harmonic-oscillator" class="level2">
 <h2 class="anchored" data-anchor-id="schrddotodinger-equation-of-the-quantum-harmonic-oscillator"><span class="math inline">\(Schr\ddot{o}dinger\)</span> equation of the quantum harmonic oscillator</h2>
@@ -491,7 +504,12 @@ The simple quantum harmonic oscillator is:
 <p align="center">
 <span class="math display">\[E \psi (x) = - \frac{\hbar}{2m} \psi^{"}(x) + \frac{1}{2} m \omega^2 x^2 \psi(x)\]</span>
 </p>
-<p>where, - <span class="math inline">\(\hbar\)</span> is the reduced Planck’s constant - <span class="math inline">\(\psi\)</span> is the wavefunction - <span class="math inline">\(E\)</span> is the energy of the state</p>
+<p>where,</p>
+<ul>
+<li><span class="math inline">\(\hbar\)</span> is the reduced Planck’s constant</li>
+<li><span class="math inline">\(\psi\)</span> is the wavefunction</li>
+<li><span class="math inline">\(E\)</span> is the energy of the state</li>
+</ul>
 <p>This equation is again a linear differential equation of second order, but now one coefficient is position dependent. From our general considerations we already can anticipate the following:</p>
 <ul>
 <li>The solution <span class="math inline">\(\psi(x)\)</span> are continous.</li>
@@ -544,9 +562,7 @@ The simple quantum harmonic oscillator is:
 c0: 0.7511255444649425</code></pre>
 <p>The probability density of the oscillator’s position is given by <span class="math inline">\(P_{0} (x) = | \psi_{0} (x)|^{2}\)</span> and is non zero outside the classical turning points, <span class="math inline">\(\neq \alpha^{- 1/2}\)</span>, a phenomenon known as tunneling. We will calculate the probability f tunneling for an oscillator in the state <span class="math inline">\(\psi_{0}\)</span>.</p>
 <p>The wavefunction is symmetric about <span class="math inline">\(x=0\)</span>, so the probability of tunneling is</p>
-<p align="center">
-<span class="math display">\[ \begin{align} P(x &lt; -\alpha) + P(x &gt; \alpha) &amp;= 2P(x &gt; \alpha) = 2 \sqrt{\frac{\alpha}{\pi}} \int_{\alpha^{-1/2}}^{\infty} exp(-\alpha x^{2}) \ dx \\ &amp;= \frac{2}{\sqrt{\pi}} \int_{1}^{\infty} e^{-y^{2}} \ dy \end{align}\]</span>
-</p>
+<p><span class="math display">\[\begin{align} P(|x| \geq \frac{1}{\sqrt{\alpha}}) = 2P(x \alpha) &amp;= 2 \sqrt{\frac{\alpha}{\pi}} \int_{\alpha^{-1/2}}^{\infty} \exp(- \alpha x^{2}) \ dx \\ &amp;= \frac{2}{\sqrt{\pi}} \int_{1}^{\infty} e^{-y^{2}} \ dy \end{align}\]</span></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>I, err <span class="op">=</span> quad(func, <span class="dv">1</span>, np.inf)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ptun <span class="op">=</span> <span class="dv">2</span> <span class="op">/</span> np.sqrt(np.pi) <span class="op">*</span> I</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I:'</span>, I)</span>
@@ -557,28 +573,28 @@ Ptunneling: 0.1572992070502851</code></pre>
 <section id="the-particle-in-a-box" class="level2">
 <h2 class="anchored" data-anchor-id="the-particle-in-a-box">The Particle in a Box</h2>
 <p>The particle in a box is the simplest problem in element quantum mechanics, and as such is useful in more places than one can easily enumerate. For instance, the molecular orbital theory is explained easily in terms os particle in a box wavefunctions, easier tha using standard atomic orbitals.</p>
-Extending the (time-independent) <span class="math inline">\(Schr\ddot{o}inger\)</span> equation for a one-dimensional system,
+<p>Extending the (time-independent) <span class="math inline">\(Schr\ddot{o}dinger\)</span> equation for a one-dimensional system,</p>
 <p align="center">
-<span class="math display">\[- \frac{\hbar^2}{2m} \ \frac{d^2 \psi (x)}{dx^2} + V(x)\psi (x) = E \psi (x)\]</span>
+<span class="math display">\[ \frac{\hbar^2}{2m} \ \frac{d^2 \psi (x)}{dx^2} + V(x)\psi (x) = E \psi (x)\]</span>
 </p>
-to a two dimensional system is:
+<p>to a two dimensional system is:</p>
 <p align="center">
-<span class="math display">\[-\frac{\hbar^2}{2m} \left(\frac{\partial^2 \psi(x,\ y)}{\partial x^2} + \frac{\partial^2 \psi (x, \ y)}{\partial y^2} \right) + V(x, \ y) \psi(x, \ y) = E \psi(x, \ y)\]</span>
+<span class="math display">\[\frac{\hbar^2}{2m} \left(\frac{\partial^2 \psi(x,\ y)}{\partial x^2} + \frac{\partial^2 \psi (x, \ y)}{\partial y^2} \right) + V(x, \ y) \psi(x, \ y) = E \psi(x, \ y)\]</span>
 </p>
 <p>It can be simplified for the particle in a 2D box since we jnow that <span class="math inline">\(V(x, \ y)=0\)</span> within the box and <span class="math inline">\(V(x, \ y)=\infty\)</span> outside the box,</p>
+<div data-align="center">
+<p><img src="../../images/particle2d.jpg" width="300"></p>
+</div>
+<p>So the wavefunctions becomes:</p>
 <p align="center">
-<span class="math display">\[  V(x, \ y) = \left \{ \begin{array} \\ 0  &amp;  0 \leq x \leq a \ and \ 0 \leq y \leq b \\ \infty &amp;  x &lt; 0 \ and \ x &gt; a \\ \infty &amp; y&lt;0 \ and \ y&gt;b   \end{array} \right \}\]</span>
-</p>
-So the wavefunctions becomes:
-<p align="center">
-<span class="math display">\[ -\frac{\hbar^2}{2m} \left(\frac{\partial^2 \psi (x, \ y)}{\partial x^2} + \frac{\partial^2 \psi (x, \ y)}{\partial y^2} \right) = E\psi (x, \ y)\]</span>
+<span class="math display">\[ \frac{\hbar^2}{2m} \left(\frac{\partial^2 \psi (x, \ y)}{\partial x^2} + \frac{\partial^2 \psi (x, \ y)}{\partial y^2} \right) = E\psi (x, \ y)\]</span>
 </p>
 <p>When we talk about rectangular and square boxes in two dimensional particle in a box problems, we are getting set up to discuss degeneracy. The wave equation itself offers no hint of the complexity that is coming, but the boundary conditions, which are inestricably bound to the solutions of the <span class="math inline">\(schr\ddot{o}inger\)</span> Equation, are the key here.</p>
-Assuming we are working in the x-y space (2 dimensions), so <span class="math inline">\(\psi(x, \ y)\)</span> is what is being sought, we have,
+<p>Assuming we are working in the x-y space (2 dimensions), so <span class="math inline">\(\psi(x, \ y)\)</span> is what is being sought, we have,</p>
 <p align="center">
 <span class="math display">\[\frac{\hbar^2}{2\mu} \left(\frac{\partial^2 \psi}{\partial x^2} + \frac{\partial^2 \psi}{\partial y^2} \right) = E \psi\]</span>
 </p>
-where x and y are the standard Cartesian coordinates. The solution to this variable separable differential equation is discussed in all texts, and has the form,
+<p>where x and y are the standard Cartesian coordinates. The solution to this variable separable differential equation is discussed in all texts, and has the form,</p>
 <p align="center">
 <span class="math display">\[X(x)Y(y) = N_{\ell_x, \ell_y} sin \frac{n_x \pi x}{\ell_x} sin \frac{n_y \pi y}{\ell_y}\]</span>
 </p>
@@ -586,15 +602,15 @@ where x and y are the standard Cartesian coordinates. The solution to this varia
 <p align="center">
 <span class="math display">\[N_{\ell_x, \ell_y} = \sqrt{\frac{2}{\ell_x}} \sqrt{\frac{2}{\ell_y}}\]</span>
 </p>
-The two-dimensional particle in a rectangular box of has wavefuntions become:
+<p>The two-dimensional particle in a rectangular box of has wavefuntions become:</p>
 <p align="center">
 <span class="math display">\[\psi_{n_x, n_y}(x, \ y) = N \ sin \left(\frac{n_x \pi x}{L_x} \right) \ sin \ \left(\frac{n_y \pi y}{L_y} \right)\]</span>
 </p>
-The constant <span class="math inline">\(N\)</span> is now determined by the normalization condition
+<p>The constant <span class="math inline">\(N\)</span> is now determined by the normalization condition</p>
 <p align="center">
 <span class="math display">\[\begin{align} \int_0^{L_y} \int_0^{L_x} |\psi_{n_x, n_y}(x, \ y)|^2 \ dx \ dy \ &amp;= 1 \\ N^2 \int_0^{L_x} sin^2 \left (\frac{n_x \pi x}{L_x} \right) \ dx \ \int_0^{L_y} sin^2 \left(\frac{n_y \pi y}{L_y} \right) \ dy \ &amp;=1 \\ N^2 \frac{L_x}{2} . \frac{L_y}{2} &amp;= 1 \\ N &amp;= \frac{2}{\sqrt{L_{(x, \ y)}}} \end{align}\]</span>
 </p>
-so that the complete normalized 2D wavefunction is
+<p>so that the complete normalized 2D wavefunction is</p>
 <p align="center">
 <span class="math display">\[\psi_{n_x, n_y}(x, \ y) = \frac{2}{\sqrt{L_{(x, \ y)}}} sin \left(\frac{n_x \pi x}{L_x} \right) sin \left(\frac{n_y \pi y}{L_y} \right)\]</span>
 </p>
@@ -603,13 +619,17 @@ so that the complete normalized 2D wavefunction is
 <section id="example-probability" class="level2">
 <h2 class="anchored" data-anchor-id="example-probability">Example: Probability</h2>
 <p>For a particle in a two-dimensional rectangular box, if the particle is in the <span class="math inline">\(\psi_{2, \ 1}(x, \ y)\)</span> state, what is the probability that a esurement of the particle’s position will yield <span class="math inline">\(x \in [0, \ 1.5]\)</span> and <span class="math inline">\(y \in [0, \ 2.5]\)</span> ?.</p>
-<p>This Python script to illustrate the two-dimensional particle in a rectangular box with following parameters: Box dimensions (length units) and quantum numbers. - <span class="math inline">\(L_x, \ L_y =\)</span> 1.5, 2.5 - $n_x, &nbsp;n_y = $ 2, 1</p>
+<p>This Python script to illustrate the two-dimensional particle in a rectangular box with following parameters: Box dimensions (length units) and quantum numbers.</p>
+<ul>
+<li><span class="math inline">\(L_x, \ L_y =\)</span> 1.5, 2.5</li>
+<li>$n_x, &nbsp;n_y = $ 2, 1</li>
+</ul>
 </section>
 <section id="solution" class="level2">
 <h2 class="anchored" data-anchor-id="solution">Solution</h2>
-Substituting the limits of integration into formula, we have
+<p>Substituting the limits of integration into formula, we have</p>
 <p align="center">
-<span class="math display">\[\begin{align} P(x \in [0, \ 1.5] \mbox{~and~} \ y \in [0, \ 2.5] &amp;= \left [\int_0^{1.5} \psi_2^2(x) \ dx \right] \left[\int_0^{2.5} \psi_1^2(y) \ dy \right] \\ &amp;= \left [\frac{2}{L_x} \int_0^{1.5} sin^2 \left(\frac{ 2 \pi x}{L_x} \right) \ dx \right] \left[\frac{2}{L_y} \int_0^{2.5} sin^2 \left(\frac{\pi y}{L_y} \right) \ dy \right] \\ &amp;= \left[\frac{2}{1.5} \left( 0.75 \frac{1.5}{8 \pi} sin \left(\frac{6 \pi}{1.5} \right) \right) \right] \  \left[\frac{2}{2.5} \left( 1.25 \frac{2.5}{4 \pi} sin \left(\frac{5 \pi}{2.5} \right) \right) \right]\end{align}\]</span>
+<span class="math display">\[\begin{align} P(x \in [0, \ 1.5] \mbox{~and~} \ y \in [0, \ 2.5] &amp;= \left [\int_0^{1.5} \psi_2^2(x) \ dx \right] \left[\int_0^{2.5} \psi_1^2(y) \ dy \right] \\ &amp;= \left [\frac{2}{L_x} \int_0^{1.5} \sin^2 \left(\frac{ 2 \pi x}{L_x} \right) \ dx \right] \\  &amp;\left[\frac{2}{L_y} \int_0^{2.5} sin^2 \left(\frac{\pi y}{L_y} \right) \ dy \right] \\ &amp;= \left[\frac{2}{1.5} \left( 0.75 \frac{1.5}{8 \pi} \sin \left(\frac{6 \pi}{1.5} \right) \right) \right] \\ &amp;\left[\frac{2}{2.5} \left( 1.25 \frac{2.5}{4 \pi} \sin \left(\frac{5 \pi}{2.5} \right) \right) \right]\end{align}\]</span>
 </p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> quad, dblquad, tplquad</span>
@@ -639,12 +659,12 @@ N: 1.0327955589886444</code></pre>
 <section id="case-study-integral-in-van-der-waals-equation" class="level2">
 <h2 class="anchored" data-anchor-id="case-study-integral-in-van-der-waals-equation">Case study: Integral in van der Waals equation</h2>
 <p>P21.1 Calculate the work required, per kg, to compress <span class="math inline">\(H_2\)</span> at 298 K to 200 bar. What proportion of the combustion enthalpy does this correspond to? Take <span class="math inline">\(m(H_2)\)</span>= 2 <span class="math inline">\(g \ mol^-1\)</span> and treat hydrogen as an van der Walls gas with parameters <span class="math inline">\(a = 0.2476 \ L^2 \ bar \ mol^{-2}\)</span> and <span class="math inline">\(b = 0.02661 \ L \ mol^{-1}\)</span>. The molar entalphy of combustion is <span class="math inline">\(\Delta_c H_m^{\ominus} (H_2) = -286 \ kJ \ mol^{-1}\)</span>.</p>
-<p>Repeat the exercise for methane, using the values <span class="math inline">\(m(CH_4) = 16 g \ mol^{-1}\)</span>, $a=2.300 &nbsp;L^2 bar &nbsp;mol^{-2}, $b = 0.04301 &nbsp;L &nbsp;mol^{-1}, <span class="math inline">\(\Delta_c H_m^{\ominus} (CH_4) = -891 \ kJ \ mol^{-1}\)</span>. Comment on the difference between the two gases.</p>
+<p>Repeat the exercise for methane, using the values <span class="math inline">\(m(CH_{4}) = 16 g \ mol^{-1}\)</span>, <span class="math inline">\(a=2.300 \ L^2 bar \ mol^{-2}\)</span>, <span class="math inline">\(b = 0.04301 \ L  \ mol^{-1}\)</span>, <span class="math inline">\(\Delta_c H_m^{\ominus} (CH_4) = -891 \ kJ \ mol^{-1}\)</span>. Comment on the difference between the two gases.</p>
 <p>To compare value for <span class="math inline">\(w\)</span> obtained by analytical integration and by with numerical integration using <code>scipy.integrate.quad</code>.</p>
 </section>
 <section id="solution-1" class="level2">
 <h2 class="anchored" data-anchor-id="solution-1">Solution</h2>
-<p>If the process is isothermal then the temperature, <span class="math inline">\(T = 298 \ K\)</span> is constant. Let the initial pressure be <span class="math inline">\(p_1= 101325\)</span> and the <span class="math inline">\(V_1\)</span> (to be determined). The final pressure and volume are <span class="math inline">\(p_2= 2 \times 10^7 \ Pa\)</span>.</p>
+<p>If the process is isothermal then the temperature, <span class="math inline">\(T = 298 \ K\)</span> is constant. Let the initial pressure be <span class="math inline">\(p_1= 101325\)</span> and the <span class="math inline">\(V_1\)</span> (to be determined). The final pressure and volume are <span class="math inline">\(p_2 = 2 \times 10^7 \ Pa\)</span>.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Parameters in the van der Waals</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy.polynomial <span class="im">import</span> Polynomial</span>
@@ -665,7 +685,7 @@ N: 1.0327955589886444</code></pre>
 <span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co"># In SI units, the van der Waals parameters in m6.Pa.mol-2 and m3.mol-1.</span></span>
 <span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>a_H2, b_H2 <span class="op">=</span> <span class="fl">2.476e-2</span>, <span class="fl">2.661e-5</span></span>
 <span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>a_CH4, b_CH4 <span class="op">=</span> <span class="fl">0.2300</span>, <span class="fl">4.301e-5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-We need to know <span class="math inline">\(V\)</span>, the number of moles of gas compressed, and the van der Waals equation can be arranged into the following cubic equation in <span class="math inline">\(V\)</span>, which can be solve for its real root if <span class="math inline">\(p_2, \ n,\)</span> and <span class="math inline">\(T\)</span> are known. Rearranging the van der Waals equation gives:
+<p>We need to know <span class="math inline">\(V\)</span>, the number of moles of gas compressed, and the van der Waals equation can be arranged into the following cubic equation in <span class="math inline">\(V\)</span>, which can be solve for its real root if <span class="math inline">\(p_2, \ n,\)</span> and <span class="math inline">\(T\)</span> are known. Rearranging the van der Waals equation gives:</p>
 <p align="center">
 <span class="math display">\[ \begin{align} PV^2(V-nb)=nRTV^2 - n^2 a (V-nb) \\ \Rightarrow pV^3 - n(Pb + RT) V^2 + n^2 aV - n^3 ab = 0 \end{align}\]</span>
 </p>
@@ -1288,13 +1308,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0 unless otherwise stated.</p>
+<p>© 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/QHO.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/QHO.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
-<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>

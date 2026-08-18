@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-04-16">
 
-<title>anharmonicity – Random Spaces</title>
+<title>anharmonicity – Eigen Spaces</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <link href="../../quarto-workflows/thermodynamics/adiabatic-process.html" rel="next">
 <link href="../../quarto-workflows/quantum-mechanics/hermite.html" rel="prev">
+<link href="../../images/orbitalquarto.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -161,11 +162,11 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../images/logorandomspaces.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../images/eigenspaces.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://dindagustiayu.github.io/" title="dindagustiayu.github.io" class="quarto-navigation-tool px-1" aria-label="dindagustiayu.github.io"><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/dindagustiayu/randomspaces.github.io" title="Random Spaces" class="quarto-navigation-tool px-1" aria-label="Random Spaces"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/dindagustiayu/eigenspaces.github.io" title="Eigen Spaces" class="quarto-navigation-tool px-1" aria-label="Eigen Spaces"><i class="bi bi-github"></i></a>
     <a href="https://linkedin.com/in/dinda-gusti-ayu-8049a01b0" title="Dinda Gusti Ayu" class="quarto-navigation-tool px-1" aria-label="Dinda Gusti Ayu"><i class="bi bi-linkedin"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -234,7 +235,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/data-science/basicnumpy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Numpy and Matplot for Physics Problems</span></a>
+ <span class="menu-text">NumPy and Matplotlib for Physics Problems</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -317,13 +318,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/particles-2d.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Particle in 2D box</span></a>
+ <span class="menu-text">Particles in Multidimensions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/ssaproximation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Steady-State Approximation</span></a>
+ <span class="menu-text">Steady State Approximation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -335,13 +336,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/inertia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Moment Inertia of a Molecule</span></a>
+ <span class="menu-text">The moment inertia of a molecule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/quantum-mechanics/QHO.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quantum Harmonic Oscillator</span></a>
+ <span class="menu-text">Quantum Harmonic Oscillator (QHO)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -382,13 +383,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../quarto-workflows/thermodynamics/boltzman.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Adiabatic process and Carnot Cycle</span></a>
+ <span class="menu-text">Maxwell-Boltzmann Distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../quarto-workflows/thermodynamics/brusselator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Brusselator</span></a>
   </div>
 </li>
       </ul>
   </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../acknowledgments.html" class="sidebar-item-text sidebar-link">
@@ -420,7 +433,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/anharmonicity.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/anharmonicity.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -469,7 +482,11 @@ window.Quarto = {
 </section>
 <section id="limitations-of-the-harmonic-oscillator-model-for-molecular-vibrations" class="level2">
 <h2 class="anchored" data-anchor-id="limitations-of-the-harmonic-oscillator-model-for-molecular-vibrations">Limitations of the Harmonic Oscillator Model for Molecular Vibrations</h2>
-<p>The harmonic oscillation is a great approximation of a molecular vibration, but has key limitations: - Due to equal spacing of energy, all transitions occur at the <em>same</em> frequency (i.e., single line spectrum). However, experimentally, many lines are often observed (called overtones). - The harmonic oscillator does not predict bond dissociation, you cannot break it, no matter how much energy is introduced.</p>
+<p>The harmonic oscillation is a great approximation of a molecular vibration, but has key limitations:</p>
+<ul>
+<li>Due to equal spacing of energy, all transitions occur at the <em>same</em> frequency (i.e., single line spectrum). However, experimentally, many lines are often observed (called overtones).</li>
+<li>The harmonic oscillator does not predict bond dissociation, you cannot break it, no matter how much energy is introduced.</li>
+</ul>
 </section>
 </section>
 <section id="morse-oscillator-breakdown" class="level1">
@@ -484,7 +501,7 @@ window.Quarto = {
 <p align="center">
 <span class="math display">\[H = \frac{p^2}{2m_R} + V(x)\]</span>
 </p>
-and has the eigenvalues
+<p>and has the eigenvalues</p>
 <p align="center">
 <span class="math display">\[E_n = \hbar \omega_0 \left[\left(n + \frac{1}{2} \right) - x_e \left(n + \frac{1}{2} \right)^2 \right] \quad n =0, \ 1, 2, \ 3, \ldots \tag{2}\]</span>
 </p>
@@ -495,7 +512,7 @@ and has the eigenvalues
 <li><span class="math inline">\(x_e = \frac{\hbar \omega_0}{4 D_e}\)</span> is the harmonic constant.</li>
 <li>The frequency <span class="math inline">\(\omega_0\)</span> is equivalent to equating the harmonic for constant <span class="math inline">\(\mathcal{K} = (\partial^2 V/ \partial x^2)_{x=0}\)</span> with <span class="math inline">\(m_R \omega_0^2\)</span>.</li>
 </ul>
-The harmonic oscillator approximation is convenient to use for diatomic molecules with quantized vibrational energy levels given by the following equation:
+<p>The harmonic oscillator approximation is convenient to use for diatomic molecules with quantized vibrational energy levels given by the following equation:</p>
 <p align="center">
 <span class="math display">\[E_n=v = \left ( v + \frac{1}{2} \right) \omega_e\]</span>
 </p>
@@ -505,7 +522,7 @@ The harmonic oscillator approximation is convenient to use for diatomic molecule
 </p>
 <p>where <span class="math inline">\(\omega_e\)</span> is the anharmonic oscillator frequency, and <span class="math inline">\(x_e\)</span> is the <em>anharmonic constant</em>, which is typically much smaller than <span class="math inline">\(\omega_e\)</span>.</p>
 <p>While it may seem that the harmonic oscillator and the anharmonic oscillator are closely related, this is in fact not the case. The difference in the wavefunctions leads to a breakdown of selection rules, specifically, <span class="math inline">\(\Delta n = \pm 1\)</span> selection rule can not be applied, and higher order terms must be accounted in the energy calculations.</p>
-On the other note is that anharmonicity also changes the selection rules for IR transitions. For absorption of IR light, we can now have:
+<p>On the other note is that anharmonicity also changes the selection rules for IR transitions. For absorption of IR light, we can now have:</p>
 <p align="center">
 <span class="math display">\[\Delta v = +1, \ +2, \ +3, + \ldots\]</span>
 </p>
@@ -637,7 +654,10 @@ On the other note is that anharmonicity also changes the selection rules for IR 
 <section id="e24.1-inferring-morse-parameters-from-a-vibrational-spectrum" class="level2">
 <h2 class="anchored" data-anchor-id="e24.1-inferring-morse-parameters-from-a-vibrational-spectrum">E24.1 Inferring Morse Parameters from a vibrational spectrum</h2>
 <p>The vibrational spectrum of the <span class="math inline">\(HCl\)</span> molecule shows a fundamental band at <span class="math inline">\(2,885.9 \ cm^{-1}\)</span> and the first overtone band at <span class="math inline">\(5,668.0\)</span>. This information can be used to estimate the Morse parameters, <span class="math inline">\(D_e\)</span> and <span class="math inline">\(\alpha\)</span>, and hence the good strength and maximum vibrational level.</p>
-<p><strong>Solution</strong>: 1. Observe bands to estimate the parameters <span class="math inline">\(\omega_e\)</span> and <span class="math inline">\(\omega_e x_e\)</span>. The fundamental vibrational band, corresponding to the transition <span class="math inline">\(v = 0 \rightarrow 1\)</span>, occurs at a wavenumber given by</p>
+<p><strong>Solution</strong>:</p>
+<ol type="1">
+<li>Observe bands to estimate the parameters <span class="math inline">\(\omega_e\)</span> and <span class="math inline">\(\omega_e x_e\)</span>. The fundamental vibrational band, corresponding to the transition <span class="math inline">\(v = 0 \rightarrow 1\)</span>, occurs at a wavenumber given by</li>
+</ol>
 <p align="center">
 <span class="math display">\[v_{0 \rightarrow 1} = G(1) - G(0) = \omega_e - 2\omega_e x_e\]</span>
 </p>
@@ -1343,13 +1363,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0 unless otherwise stated.</p>
+<p>© 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/anharmonicity.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/randomspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/edit/main/quarto-workflows/quantum-mechanics/anharmonicity.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dindagustiayu/eigenspaces.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
-<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>

@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../acknowledgments.html" rel="next">
+<link href="../../data.html" rel="next">
 <link href="../../quarto-workflows/thermodynamics/boltzman.html" rel="prev">
 <link href="../../images/orbitalquarto.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -398,6 +398,12 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
   </div>
@@ -452,7 +458,7 @@ window.Quarto = {
 </header>
 
 
-<p><a href="pyfile/brusselator.py/"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
+<p><a href="../../pyfile/brusselator.py"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
 <section id="mathematical-modelling-of-the-brusselator" class="level1">
 <h1>Mathematical Modelling of the Brusselator</h1>
 <p>The Brusselator is a model for predicting oscillations in chemcial reations under some conditions. As we progress, various models have been used to represent natural phenomenon. In classical thermodynamics, we model phenomena through simple linear equations. However, in the recent past, it is common to represent nature by non-linear equations. There are four laws that dominate traditional tehrmodynamics, which still hold true today [1]:</p>
@@ -467,7 +473,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="why-brusselator-is-important">Why Brusselator is important?</h2>
 <p>It is well known that reaction and diffusion of chemical or biochemical species can produce a variety of spatial patterns. This class of reaction diffusion systems includes some significant pattern formation equations arising from the modelling of kinetics of chemical or biochemical reactions and from the biological pattern formation theory. For this reason, the Brusselator is typicaly important and serves as mathematical model in physical chemistry and in biology. Nonlinear reaction-diffusion equations and systems play an important role in the modelling and study of many phenomena [2].</p>
 <p>Brusselator model is a famous model of chemical reactions with oscillations and a theoritical model for a type of auto-catalytic reaction. In particular the Brusselator model consists of four reactions involving six-components A, B, D, E, X, Y where the chemical reactions follow the scheme (Table 1.)</p>
-<p>Table 1. Mechanism of Brusselator</p>
+<p><strong>Table 1</strong>. Mechanism of Brusselator</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -481,24 +487,25 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(A \rightarrow X \quad (1)\)</span></td>
+<td><span class="math inline">\(A \rightarrow X \tag{1}\)</span></td>
 <td>Species A makes species X</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(B + X \rightarrow Y + D \quad (2)\)</span></td>
+<td><span class="math inline">\(B + X \rightarrow Y + D \tag{2}\)</span></td>
 <td>Species X makes species Y. (Actication)</td>
 </tr>
 <tr class="odd">
-<td>$2X + Y 3X (3) $</td>
+<td><span class="math inline">\(2X + Y \rightarrow 3X \tag{3}\)</span></td>
 <td>Species Y makes species X. (Activation)</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(X \rightarrow E \quad (4)\)</span></td>
+<td><span class="math inline">\(X \rightarrow E \tag{4}\)</span></td>
 <td>Species X makes species E. (Inactivatio)</td>
 </tr>
 </tbody>
 </table>
-<p>Adding these reactions one obtains <span class="math display">\[ A +B + 4X + Y \rightarrow 4X + Y + D + E \tag{5}\]</span></p>
+<p>Adding these reactions one obtains</p>
+<p><span class="math display">\[ A +B + 4X + Y \rightarrow 4X + Y + D + E \tag{5}\]</span></p>
 <p>and hence <span class="math inline">\(A +B \rightarrow D +E\)</span>, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are catalysis (in particular, X is auto-catalytic and provides the nonlinearity).</p>
 <p>The concentrations <span class="math inline">\([X]\)</span> and <span class="math inline">\([Y]\)</span> come from an infinite supply in this reaction scheme. The variable <span class="math inline">\(k_i\)</span> is reresented in units of <span class="math inline">\(\left(\frac{mole}{l \ s} \right)^{-1}\)</span>. The equations for the evolution of <span class="math inline">\([X]\)</span> and [Y]$ are as follows:</p>
 <p><span class="math display">\[\begin{align} \frac{d[X]}{dt} &amp;= k_1[A] - k_2[B][X] + k_3[X]^{2}[Y] -k_4[X] \tag{6} \\ \frac{d[Y]}{dt} &amp;= k_2[B][X] -k_3[X]^2[Y] \tag{7} \\ [X](0) &amp;= 0 \tag{8} \\ [Y](0) &amp;=0 \end{align}\]</span></p>
@@ -1177,8 +1184,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../acknowledgments.html" class="pagination-link" aria-label="Acknowledgments">
-        <span class="nav-page-text">Acknowledgments</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../data.html" class="pagination-link" aria-label="Data">
+        <span class="nav-page-text">Data</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1186,7 +1193,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0 unless otherwise stated.</p>
+<p>© 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

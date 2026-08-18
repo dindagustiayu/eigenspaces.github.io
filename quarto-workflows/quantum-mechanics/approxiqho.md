@@ -33,9 +33,9 @@ In the standard problem of a particle of mass $m$ with zero potential energy con
 
 First, consider a one-dimensional box at length $L$ lying along the $x$ axis with the center of the box at the origin so that the ends of the box  are at $x= -L / 2$ and at $x = L/ 2$. Exact wave functions for a particle of mass $m$ in such a box are given by
 
-<p align='center'>
-    $$\psi (x) = \left \{\begin{array} \ \sqrt{\frac{2}{L}} \sin \left(\frac{\pi n x}{L} \right) \\ \sqrt{\frac{2}{L}} \ \cos \left(\frac{\pi n x}{L} \right) \end{array} \right \}$$ 
-</p>
+
+<img src="/images/approxi.jpg" width="400">
+
 
 with corresponding energies of 
 
