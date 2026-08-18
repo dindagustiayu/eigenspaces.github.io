@@ -595,9 +595,11 @@ window.Quarto = {
   <li><a href="#schrddotodinger-equation-of-the-quantum-harmonic-oscillator" id="toc-schrddotodinger-equation-of-the-quantum-harmonic-oscillator" class="nav-link" data-scroll-target="#schrddotodinger-equation-of-the-quantum-harmonic-oscillator"><span class="math inline">\(Schr\ddot{o}dinger\)</span> equation of the quantum harmonic oscillator</a></li>
   <li><a href="#ground-state-and-first-excited-state" id="toc-ground-state-and-first-excited-state" class="nav-link" data-scroll-target="#ground-state-and-first-excited-state">Ground state and first excited state</a></li>
   <li><a href="#normalisation-of-the-ground-state-wavefunction" id="toc-normalisation-of-the-ground-state-wavefunction" class="nav-link" data-scroll-target="#normalisation-of-the-ground-state-wavefunction">Normalisation of the ground state wavefunction</a></li>
-  <li><a href="#the-particle-in-a-box" id="toc-the-particle-in-a-box" class="nav-link" data-scroll-target="#the-particle-in-a-box">The Particle in a Box</a></li>
+  <li><a href="#the-particle-in-a-box" id="toc-the-particle-in-a-box" class="nav-link" data-scroll-target="#the-particle-in-a-box">The Particle in a Box</a>
+  <ul class="collapse">
   <li><a href="#example-probability" id="toc-example-probability" class="nav-link" data-scroll-target="#example-probability">Example: Probability</a></li>
   <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  </ul></li>
   <li><a href="#case-study-integral-in-van-der-waals-equation" id="toc-case-study-integral-in-van-der-waals-equation" class="nav-link" data-scroll-target="#case-study-integral-in-van-der-waals-equation">Case study: Integral in van der Waals equation</a></li>
   <li><a href="#solution-1" id="toc-solution-1" class="nav-link" data-scroll-target="#solution-1">Solution</a></li>
   </ul></li>
@@ -752,7 +754,7 @@ Ptunneling: 0.1572992070502851</code></pre>
 <span class="math display">\[\frac{\hbar^2}{2m} \left(\frac{\partial^2 \psi(x,\ y)}{\partial x^2} + \frac{\partial^2 \psi (x, \ y)}{\partial y^2} \right) + V(x, \ y) \psi(x, \ y) = E \psi(x, \ y)\]</span>
 </p>
 <p>It can be simplified for the particle in a 2D box since we jnow that <span class="math inline">\(V(x, \ y)=0\)</span> within the box and <span class="math inline">\(V(x, \ y)=\infty\)</span> outside the box,</p>
-<p><span class="math display">\[ V(x, \ y) = \left \{\begin{array} 0 &amp; 0 \leq x \leq a \ \mbox{and} \ 0 \leq y \leq b \\ \infty &amp; x&lt; 0 \mbox{and} \ x&gt; a \\ \infty &amp; y&lt; 0 \mbox{and} \ y&gt; b \end{array} \right \}\]</span></p>
+<p><img src="../../images/particle2d.jpg" width="400"></p>
 <p>So the wavefunctions becomes:</p>
 <p align="center">
 <span class="math display">\[ \frac{\hbar^2}{2m} \left(\frac{\partial^2 \psi (x, \ y)}{\partial x^2} + \frac{\partial^2 \psi (x, \ y)}{\partial y^2} \right) = E\psi (x, \ y)\]</span>
@@ -783,9 +785,8 @@ Ptunneling: 0.1572992070502851</code></pre>
 <span class="math display">\[\psi_{n_x, n_y}(x, \ y) = \frac{2}{\sqrt{L_{(x, \ y)}}} sin \left(\frac{n_x \pi x}{L_x} \right) sin \left(\frac{n_y \pi y}{L_y} \right)\]</span>
 </p>
 <p>Reference: <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Quantum_Mechanics/05.5%3A_Particle_in_Boxes/Particle_in_a_2-Dimensional_Box#:~:text=Let%20us%20now%20consider%20the,BY-NC;%20%C3%9Cmit%20Kaya">Particle in 2D Box</a></p>
-</section>
-<section id="example-probability" class="level2">
-<h2 class="anchored" data-anchor-id="example-probability">Example: Probability</h2>
+<section id="example-probability" class="level3">
+<h3 class="anchored" data-anchor-id="example-probability">Example: Probability</h3>
 <p>For a particle in a two-dimensional rectangular box, if the particle is in the <span class="math inline">\(\psi_{2, \ 1}(x, \ y)\)</span> state, what is the probability that a esurement of the particle’s position will yield <span class="math inline">\(x \in [0, \ 1.5]\)</span> and <span class="math inline">\(y \in [0, \ 2.5]\)</span> ?.</p>
 <p>This Python script to illustrate the two-dimensional particle in a rectangular box with following parameters: Box dimensions (length units) and quantum numbers.</p>
 <ul>
@@ -793,8 +794,8 @@ Ptunneling: 0.1572992070502851</code></pre>
 <li>$n_x, &nbsp;n_y = $ 2, 1</li>
 </ul>
 </section>
-<section id="solution" class="level2">
-<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<section id="solution" class="level3">
+<h3 class="anchored" data-anchor-id="solution">Solution</h3>
 <p>Substituting the limits of integration into formula, we have</p>
 <p align="center">
 <span class="math display">\[\begin{align} P(x \in [0, \ 1.5] \mbox{~and~} \ y \in [0, \ 2.5] &amp;= \left [\int_0^{1.5} \psi_2^2(x) \ dx \right] \left[\int_0^{2.5} \psi_1^2(y) \ dy \right] \\ &amp;= \left [\frac{2}{L_x} \int_0^{1.5} \sin^2 \left(\frac{ 2 \pi x}{L_x} \right) \ dx \right] \\  &amp;\left[\frac{2}{L_y} \int_0^{2.5} sin^2 \left(\frac{\pi y}{L_y} \right) \ dy \right] \\ &amp;= \left[\frac{2}{1.5} \left( 0.75 \frac{1.5}{8 \pi} \sin \left(\frac{6 \pi}{1.5} \right) \right) \right] \\ &amp;\left[\frac{2}{2.5} \left( 1.25 \frac{2.5}{4 \pi} \sin \left(\frac{5 \pi}{2.5} \right) \right) \right]\end{align}\]</span>
@@ -823,6 +824,7 @@ N: 1.0327955589886444</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">2</span> <span class="op">/</span> np.sqrt(Lx <span class="op">*</span> Ly)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'N:'</span>, N)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>N: 1.0327955589886444</code></pre>
+</section>
 </section>
 <section id="case-study-integral-in-van-der-waals-equation" class="level2">
 <h2 class="anchored" data-anchor-id="case-study-integral-in-van-der-waals-equation">Case study: Integral in van der Waals equation</h2>
