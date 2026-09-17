@@ -939,7 +939,7 @@
     "href": "index.html#what-is-eigen-spaces",
     "title": "Python for Scientific Computing and Data Visualizations",
     "section": "What is Eigen Spaces?",
-    "text": "What is Eigen Spaces?\nEigen Spaces is an open learning resource for students and researchers who interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The goal is to take the most efficient approach for describing the link between Python language to a particular concepts in mathematics, Physics and Chemistry.\nAll materials are shared openly on my repositories \nVideo tutorials are also available on Youtube",
+    "text": "What is Eigen Spaces?\nEigen Spaces is an open learning resource for students and researchers who interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The goal is to take the most efficient approach for describing the link between Python language to a particular concepts in mathematics, Physics and Chemistry.\nAll materials are shared openly on my repositories \nVideo tutorials are also available on YouTube",
     "crumbs": [
       "Home"
     ]
@@ -1308,6 +1308,18 @@
       "Contents",
       "Data Science",
       "Gaussian Distribution Functions"
+    ]
+  },
+  {
+    "objectID": "quarto-workflows/data-science/chemspy.html",
+    "href": "quarto-workflows/data-science/chemspy.html",
+    "title": "Chemistry Databases and File Formats",
+    "section": "",
+    "text": "Video tutorial is available here",
+    "crumbs": [
+      "Contents",
+      "Data Science",
+      "Chemistry Databases and File Formats"
     ]
   },
   {
