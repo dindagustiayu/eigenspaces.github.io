@@ -18,7 +18,9 @@ This blog is as a knowledge base in understanding application of computational t
 
 __Eigen Spaces__ is a free, open learning resource for students and researchers who interested in applying Python to solve complex problems, to manage and transform data, and to produce publication-quality figures. The tutorials are created by integrating mathematics, chemistry and computational tools.
 
-All materials are shared openly on my repositories and YouTube [![Badge](https://img.shields.io/badge/github-repositories-black?style=for-the-badge&logo=github&logoColor=black&logoSize=auto&label=github&labelColor=hex&color=black)](https://github.com/dindagustiayu?tab=repositories) [![](https://img.shields.io/badge/youtube-tutorial-red?style=flat&logo=youtube&logoColor=red&logoSize=auto&label=YouTube&labelColor=black&color=red)](https://www.youtube.com/@dindagustiayuedu/videos)
+All materials are shared openly on my repositories [![](https://img.shields.io/badge/github-repo-blue?style=flat&logo=github&logoColor=white&logoSize=auto&label=GitHub&labelColor=grey&color=blue)](https://github.com/dindagustiayu?tab=repositories)
+
+Video tutorials are also available on Youtube [![](https://img.shields.io/badge/youtube-tutorial-red?style=flat&logo=youtube&logoColor=red&logoSize=auto&label=YouTube&labelColor=black&color=red)](https://www.youtube.com/@dindagustiayuedu/videos)
 
 
 ## Contact
