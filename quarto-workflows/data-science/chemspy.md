@@ -3,9 +3,9 @@ title: "Chemistry Databases and File Formats"
 date: "2025-12-09"
 ---
 
-[![](https://img.shields.io/badge/youtube-tutorial-red?style=flat&logo=youtube&logoColor=red&logoSize=auto&label=YouTube&labelColor=black&color=red)](https://www.youtube.com/watch?v=vuUUPKMinOM&feature=youtu.be) [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-2rWSNOJqnaicUY3Jz3NbL8Oog94fekK?usp=sharing)
+[![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-2rWSNOJqnaicUY3Jz3NbL8Oog94fekK?usp=sharing)
 
-
+Video tutorial is available [here](https://www.youtube.com/watch?v=vuUUPKMinOM)
  
  
 # Storing and Transmitting Chemical Database

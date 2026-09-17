@@ -21,13 +21,16 @@ website:
     align: center
     tools: 
       - icon: globe
-        href: https://dindagustiayu.github.io/
+        href: https://dindagustiayu.com/
         text: "dindagustiayu.github.io"
       - icon: github
         href: https://github.com/dindagustiayu/eigenspaces.github.io
         text: "Eigen Spaces"
       - icon: linkedin
         href: https://linkedin.com/in/dinda-gusti-ayu-8049a01b0
+        text: "Dinda Gusti Ayu"
+      - icon: youtube
+        href: https://www.youtube.com/@dindagustiayuedu
         text: "Dinda Gusti Ayu"
 
     style: "docked"

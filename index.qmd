@@ -24,7 +24,7 @@ __Eigen Spaces__ is an open learning resource for students and researchers who i
 
 All materials are shared openly on my repositories [![](https://img.shields.io/badge/github-repo-blue?style=flat&logo=github&logoColor=white&logoSize=auto&label=GitHub&labelColor=grey&color=blue)](https://github.com/dindagustiayu?tab=repositories)
 
-Video tutorials are also available on Youtube [![](https://img.shields.io/badge/youtube-tutorial-red?style=flat&logo=youtube&logoColor=red&logoSize=auto&label=YouTube&labelColor=black&color=red)](https://www.youtube.com/@dindagustiayuedu/videos)
+Video tutorials are also available on [YouTube](https://www.youtube.com/@dindagustiayuedu/videos)
 
 ## Navigation {#navigation}
 
