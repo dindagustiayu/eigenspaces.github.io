@@ -12,7 +12,7 @@ website:
   
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
-    left: "&copy; 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY 4.0"
+    left: "&copy; 2026 Dinda Gusti Ayu <br> The content on this page is licensed under CC-BY-NC 4.0"
     
 
   sidebar:
@@ -22,7 +22,7 @@ website:
     tools: 
       - icon: globe
         href: https://dindagustiayu.com/
-        text: "dindagustiayu.github.io"
+        text: "dindagustiayu.com"
       - icon: github
         href: https://github.com/dindagustiayu/eigenspaces.github.io
         text: "Eigen Spaces"

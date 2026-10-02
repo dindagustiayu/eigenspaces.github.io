@@ -32,5 +32,5 @@ Feel free to contact me through email: [materials@dindagustiayu.com](mailto:mate
 
 ©️2026 Dinda Gusti Ayu
 
-The content on this page is licensed under CC-BY 4.0 unless otherwise stated.
+The content on this page is licensed under CC-BY-NC 4.0 unless otherwise stated.
 
