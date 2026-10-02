@@ -9,7 +9,7 @@ This blog is as a knowledge base in understanding application of computational t
 
 <div align='center'>
   <a href="https://dindagustiayu.com/eigenspaces.github.io/">
-    <img src="images/eigenspaces.png" width="600">
+    <img src="images/eigenspaces.png" width="500">
   </a>
 </div>
 
@@ -32,5 +32,5 @@ Feel free to contact me through email: [materials@dindagustiayu.com](mailto:mate
 
 ©️2026 Dinda Gusti Ayu
 
-The content on this page is licensed under CC-BY-NC 4.0 unless otherwise stated.
+The content on this page is licensed under CC BY-NC 4.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"> <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"> <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 
