@@ -20,6 +20,14 @@ And me? Well, I'm __Dinda Gusti Ayu__ [![GitHub](https://img.shields.io/badge/--
 ## What is Eigen Spaces?
 
 __Eigen Spaces__ is an open learning resource for students and researchers who interested in applying Python to solve complex problems, to manage and tranform data, and to produce publication-quality figures. The goal is to take the most efficient approach for describing the link between Python language to a particular concepts in mathematics, Physics and Chemistry.
+
+<div align="center" style="font-size: 0.75em;">
+
+  <img src="/images/eigens.jpg" width="550">
+  
+  <em>Figure. Examples of data visualizations using Python on various topics.</em>
+  
+</div>
  
 
 All materials are shared openly on my repositories [![](https://img.shields.io/badge/github-repo-blue?style=flat&logo=github&logoColor=white&logoSize=auto&label=GitHub&labelColor=grey&color=blue)](https://github.com/dindagustiayu?tab=repositories)
