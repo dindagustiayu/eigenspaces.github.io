@@ -1,0 +1,137 @@
+---
+title: Periodic Table
+date: "2026-11-7"
+format: html
+
+---
+
+This section of the website contains information needed to solve the problems. Click any element in the periodic table to see its properties, and use it in your own Python code.
+
+<br>
+<br>
+
+```{ojs}
+//| echo: false
+elements = FileAttachment("PubChemElements_all.csv").csv({typed: true})
+```
+
+```{ojs}
+//| echo: false
+{
+  const position = n => {
+    if (n === 1)  return {row: 1, col: 1};
+    if (n === 2)  return {row: 1, col: 18};
+    if (n <= 4)   return {row: 2, col: n - 2};
+    if (n <= 10)  return {row: 2, col: n + 8};
+    if (n <= 12)  return {row: 3, col: n - 10};
+    if (n <= 18)  return {row: 3, col: n};
+    if (n <= 36)  return {row: 4, col: n - 18};
+    if (n <= 54)  return {row: 5, col: n - 36};
+    if (n <= 56)  return {row: 6, col: n - 54};
+    if (n <= 71)  return {row: 9, col: n - 54};
+    if (n <= 86)  return {row: 6, col: n - 68};
+    if (n <= 88)  return {row: 7, col: n - 86};
+    if (n <= 103) return {row: 10, col: n - 86};
+    return {row: 7, col: n - 100};
+  };
+
+  const color = d3.scaleOrdinal(d3.schemeTableau10);
+
+  const val = (v, unit = "") =>
+    (v === null || v === undefined || v === "") ? "-" : `${v}${unit}`;
+
+  const sup = s => (s === null || s === undefined || s === "")
+    ? "-" : String(s).replace(/([spdf])(\d+)/g, "$1<sup>$2</sup>");
+
+  // Metal / Metalloid / Nonmetal, worked out from GroupBlock
+  const kind = g => {
+    const t = String(g ?? "").toLowerCase();
+    if (t.includes("metalloid")) return "Metalloid";
+    if (t.includes("nonmetal") || t.includes("halogen") || t.includes("noble")) return "Nonmetal";
+    return t ? "Metal" : "-";
+  };
+
+  const row = (label, value) => `
+    <tr style="border-bottom:1px solid #ddd;">
+      <td style="padding:8px; font-weight:bold; width:50%;">${label}</td>
+      <td style="padding:8px; color:#0b6fb8;">${value}</td>
+    </tr>`;
+
+  //popup (modal)
+  const modal = html`<div style="display:none; position:fixed; inset:0; z-index:9999;
+      background:rgba(0,0,0,.55); align-items:center; justify-content:center; padding:1rem;"></div>`;
+
+  const close = () => { modal.style.display = "none"; };
+  modal.onclick = e => { if (e.target === modal) close(); };   // click outside to close
+  document.onkeydown = e => { if (e.key === "Escape") close(); }; // Esc key to close
+
+  const open = d => {
+    const c = color(d.GroupBlock);
+    modal.innerHTML = `
+      <div style="background:#fff; color:#111; width:100%; max-width:900px; max-height:90vh;
+                  overflow:auto; border-radius:4px; box-shadow:0 8px 30px rgba(0,0,0,.4);">
+        <div style="display:flex; justify-content:space-between; align-items:center;
+                    padding:14px 22px; border-bottom:1px solid #ddd;">
+          <span style="font-size:1.2rem; letter-spacing:.5px;">ELEMENT PROPERTIES</span>
+          <span id="pt-close" style="font-size:1.8rem; cursor:pointer; line-height:1;">&times;</span>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:22px; padding:22px;">
+          <div style="flex:1 1 260px; min-height:300px; display:flex; flex-direction:column;
+                      align-items:center; justify-content:center; text-align:center;
+                      background:linear-gradient(135deg, ${c}66, ${c}22);">
+            <div style="font-size:2rem;">${d.AtomicNumber}</div>
+            <div style="font-size:5rem; font-weight:bold; line-height:1.1;">${d.Symbol}</div>
+            <div style="font-size:1.8rem;">${d.Name}</div>
+            <div style="font-size:1.1rem; margin-top:6px;">${val(d.GroupBlock)}</div>
+            <a href="https://pubchem.ncbi.nlm.nih.gov/element/${d.AtomicNumber}" target="_blank"
+               style="margin-top:14px; color:#333;">${d.Name} Element Page ↗</a>
+          </div>
+          <table style="flex:2 1 320px; border-collapse:collapse; align-self:flex-start;">
+            ${row("Metal / Metalloid / Nonmetal", kind(d.GroupBlock))}
+            ${row("Atomic Mass", val(d.AtomicMass, " u"))}
+            ${row("Standard State", val(d.StandardState))}
+            ${row("Electron Configuration", sup(d.ElectronConfiguration))}
+            ${row("Oxidation States", val(d.OxidationStates))}
+            ${row("Electronegativity (Pauling Scale)", val(d.Electronegativity))}
+            ${row("Atomic Radius (van der Waals)", val(d.AtomicRadius, " pm"))}
+            ${row("Ionization Energy", val(d.IonizationEnergy, " eV"))}
+            ${row("Electron Affinity", val(d.ElectronAffinity, " eV"))}
+            ${row("Melting Point", val(d.MeltingPoint, " K"))}
+            ${row("Boiling Point", val(d.BoilingPoint, " K"))}
+            ${row("Density", val(d.Density, " g/cm³"))}
+            ${row("Year Discovered", val(d.YearDiscovered))}
+          </table>
+        </div>
+      </div>`;
+    modal.querySelector("#pt-close").onclick = close;
+    modal.style.display = "flex";
+  };
+
+  // periodic table figure
+  const grid = html`<div style="display:grid; width:100%; max-width:900px; margin:auto;
+      grid-template-columns:repeat(18, 1fr); gap:3px;"></div>`;
+
+  for (const d of elements) {
+    const {row: r, col: c} = position(d.AtomicNumber);
+    const cell = html`<div title="${d.Name}"
+      style="grid-row:${r}; grid-column:${c}; background:${color(d.GroupBlock)};
+             text-align:center; padding:4px 2px; border-radius:4px; color:#111; cursor:pointer;">
+      <div style="font-size:.6rem">${d.AtomicNumber}</div>
+      <div style="font-size:1rem; font-weight:bold">${d.Symbol}</div>
+      <div style="font-size:.5rem">${d.Name}</div>
+    </div>`;
+    cell.onclick = () => open(d);
+    grid.appendChild(cell);
+  }
+
+  return html`${grid}${modal}`;
+}
+```
+
+<div align="center">
+<em> Figure. Periodic Table Data</em>
+</div>
+
+<br>
+
+__Reference__: National Center for Biotechnology Information (2026). Periodic Table of Elements. Retrieved November 7, 2026 from [https://pubchem.ncbi.nlm.nih.gov/periodic-table/](https://pubchem.ncbi.nlm.nih.gov/periodic-table/).

@@ -76,6 +76,7 @@ website:
               - quarto-workflows/thermodynamics/boltzman.md
               - quarto-workflows/thermodynamics/brusselator.md
       - data.qmd
+      - periodic_table.qmd
       - acknowledgments.qmd
        
        
